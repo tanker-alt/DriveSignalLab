@@ -1,0 +1,33 @@
+# Python and compiled extensions
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.venv/
+
+# Local models, datasets, and experiment output
+/ckpts/
+/pretrained/
+/work_dirs/
+/outputs/
+/eval_results/
+/results_planning_only/
+/carla/
+/data/bench2drive/
+/data/chat-b2d-plus/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.log
+
+# Personal settings and notes
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+conversation_handoff.md
