@@ -1,0 +1,60 @@
+diff --git a/LAVIS/lavis/models/drive_models/drive.py b/LAVIS/lavis/models/drive_models/drive.py
+index 278c973..18ad6d8 100644
+--- a/LAVIS/lavis/models/drive_models/drive.py
++++ b/LAVIS/lavis/models/drive_models/drive.py
+@@ -257,7 +257,7 @@ class Blip2VicunaDrive(Blip2Base):
+             this_notice_input_ones = input_notice_atts[i].sum()
+             if image_atts is None:
+                 bs, t, n, dim = image_embeds.size()
+-                if notice_frame_id[i] <= 0: # which means the scenario do not include any notice
++                if notice_frame_id[i] < 0: # negative means no notice; zero inserts before first frame
+                     llm_inputs.append(
+                         torch.cat([
+                             input_embeds[i][:this_input_ones],
+@@ -270,9 +270,9 @@ class Blip2VicunaDrive(Blip2Base):
+                     llm_inputs.append(
+                         torch.cat([
+                             input_embeds[i][:this_input_ones],
+-                            image_embeds[i, :notice_frame_id[i]].view(notice_frame_id[i]*n, -1),
++                            image_embeds[i, :notice_frame_id[i]].reshape(notice_frame_id[i]*n, dim),
+                             notice_embeds[i][:this_notice_input_ones],
+-                            image_embeds[i, notice_frame_id[i]:].view((t-notice_frame_id[i])*n, -1),
++                            image_embeds[i, notice_frame_id[i]:].reshape((t-notice_frame_id[i])*n, dim),
+                             input_embeds[i][this_input_ones:],
+                             notice_embeds[i][this_notice_input_ones:],
+                         ])
+diff --git a/vision_encoder/timm/models/memfuser.py b/vision_encoder/timm/models/memfuser.py
+index eff5389..0b66cff 100644
+--- a/vision_encoder/timm/models/memfuser.py
++++ b/vision_encoder/timm/models/memfuser.py
+@@ -1,4 +1,5 @@
+ import math
++import os
+ import copy
+ import logging
+ from typing import Optional, List
+@@ -561,21 +562,21 @@ class Memfuser(nn.Module):
+ 
+         if rgb_backbone_name == "r50":
+             self.rgb_backbone = resnet50d(
+-                pretrained=True,
++                pretrained=os.environ.get('LMDRIVE_SKIP_BACKBONE_PRETRAIN') != '1',
+                 in_chans=in_chans,
+                 features_only=True,
+                 out_indices=[4],
+             )
+         elif rgb_backbone_name == "r26":
+             self.rgb_backbone = resnet26d(
+-                pretrained=True,
++                pretrained=os.environ.get('LMDRIVE_SKIP_BACKBONE_PRETRAIN') != '1',
+                 in_chans=in_chans,
+                 features_only=True,
+                 out_indices=[4],
+             )
+         elif rgb_backbone_name == "r18":
+             self.rgb_backbone = resnet18d(
+-                pretrained=True,
++                pretrained=os.environ.get('LMDRIVE_SKIP_BACKBONE_PRETRAIN') != '1',
+                 in_chans=in_chans,
+                 features_only=True,
+                 out_indices=[4],

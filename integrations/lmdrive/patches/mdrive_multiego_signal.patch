@@ -1,0 +1,396 @@
+diff --git a/simulation/leaderboard/leaderboard/autoagents/agent_wrapper.py b/simulation/leaderboard/leaderboard/autoagents/agent_wrapper.py
+index 132632b..ed9ac05 100755
+--- a/simulation/leaderboard/leaderboard/autoagents/agent_wrapper.py
++++ b/simulation/leaderboard/leaderboard/autoagents/agent_wrapper.py
+@@ -124,6 +124,27 @@ class AgentWrapper(object):
+         """
+         return self._agent()
+ 
++    def start_traffic_signals(self):
++        hook = getattr(self._agent, 'start_traffic_signals', None)
++        if callable(hook):
++            hook()
++
++    def before_world_tick(self):
++        hook = getattr(self._agent, 'before_world_tick', None)
++        if callable(hook):
++            hook()
++
++    def after_world_tick(self):
++        hook = getattr(self._agent, 'after_world_tick', None)
++        if callable(hook):
++            hook()
++
++    def background_traffic_status(self):
++        hook = getattr(self._agent, 'background_traffic_status', None)
++        if callable(hook):
++            return hook()
++        return {'enabled': False, 'drained': True}
++
+     def setup_sensors(self, vehicle, vehicle_num = 0, save_root=None, debug_mode=False):
+         """
+         Create the sensors defined by the user and attach them to the ego-vehicle
+@@ -206,6 +227,11 @@ class AgentWrapper(object):
+                             bp.set_attribute('lens_circle_multiplier', str(1.0))
+                             bp.set_attribute('lens_circle_falloff', str(1.0))                                        
+ 
++                    # Allow planner-specific training-time camera calibration.
++                    for name in ('lens_circle_multiplier', 'lens_circle_falloff'):
++                        if name in sensor_spec and not is_clean_camera:
++                            bp.set_attribute(name, str(sensor_spec[name]))
++
+                     sensor_location = carla.Location(x=sensor_spec['x'], y=sensor_spec['y'],
+                                                      z=sensor_spec['z'])
+                     sensor_rotation = carla.Rotation(pitch=sensor_spec['pitch'],
+@@ -599,6 +625,9 @@ class AgentWrapper(object):
+         """
+         Remove and destroy all sensors
+         """
++        retire_ego = getattr(self._agent, "retire_ego", None)
++        if callable(retire_ego):
++            retire_ego(vehicle_num)
+         self._cleanup_vehicle_sensors(vehicle_num, fast=True)
+ 
+     def cleanup_rsu(self, vehicle_num):
+diff --git a/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py b/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py
+index c0d21a7..a75fbee 100755
+--- a/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py
++++ b/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py
+@@ -947,6 +947,8 @@ class ScenarioManager(object):
+         self._watchdog.start()
+         self._running = True
+ 
++        self._agent.start_traffic_signals()
++
+         # ------------------------------------------------------------------
+         # Tick forensics: comprehensive instrumentation for tick rate,
+         # phase timing, RPC liveness, and stall detection.  Off unless
+@@ -996,7 +998,9 @@ class ScenarioManager(object):
+                     _warmup_failed_at = None
+                     for _i in range(_warmup_n):
+                         try:
++                            self._agent.before_world_tick()
+                             _world.tick(self._timeout)
++                            self._agent.after_world_tick()
+                             _warmup_completed += 1
+                         except Exception as _e:
+                             _warmup_failed_at = (_i, str(_e))
+@@ -1235,6 +1239,8 @@ class ScenarioManager(object):
+             # Execute driving control signal
+             for vehicle_num in range(self.ego_vehicles_num):
+                 try:
++                    if getattr(self, '_background_drain_active', False):
++                        continue
+                     if vehicle_num in self._runtime_completed_ego_cleanup_done:
+                         continue
+                     ego = CarlaDataProvider.get_hero_actor(hero_id=vehicle_num)
+@@ -1252,6 +1258,8 @@ class ScenarioManager(object):
+             # Tick scenario
+             for vehicle_num in range(self.ego_vehicles_num):
+                 try:
++                    if getattr(self, '_background_drain_active', False):
++                        continue
+                     if vehicle_num in self._runtime_completed_ego_cleanup_done:
+                         continue
+                     ego = CarlaDataProvider.get_hero_actor(hero_id=vehicle_num)
+@@ -1770,6 +1778,12 @@ class ScenarioManager(object):
+                     if (ego_completed or ego_route_completion_100) and idx not in self._runtime_completed_ego_cleanup_done:
+                         # Once route completion reaches terminal state (SUCCESS or 100% RC),
+                         # retire this ego immediately so it cannot keep receiving controls.
++                        # Evaluation sensors also belong to this ego. Unsubscribe
++                        # before despawning the parent, while retaining their scores.
++                        for criterion in self.scenario[idx].get_criteria():
++                            stop_stream = getattr(criterion, 'stop_sensor_stream', None)
++                            if callable(stop_stream):
++                                stop_stream()
+                         try:
+                             self._agent.cleanup_single(idx)
+                         except Exception:
+@@ -1885,6 +1899,57 @@ class ScenarioManager(object):
+                         all_egos_done = False
+                         break
+ 
++            background_trigger = 'all_egos_done'
++            background_status = None
++            if all_egos_done and self._running:
++                try:
++                    background_status = self._agent.background_traffic_status()
++                except Exception as exc:
++                    raise RuntimeError(f"Failed to read background traffic status: {exc}")
++                if background_status.get('enabled'):
++                    try:
++                        now_background = float(GameTime.get_time())
++                    except Exception:
++                        now_background = float(timestamp.elapsed_seconds)
++                    if not hasattr(self, '_background_drain_start'):
++                        self._background_drain_start = now_background
++                        self._background_last_report = -1e9
++                        self._background_drain_active = True
++                        print(
++                            f"[BACKGROUND_DRAIN_START] sim_t={now_background:.1f}s "
++                            f"status={background_status}", flush=True)
++                    timeout_s = float(os.environ.get('BACKGROUND_DRAIN_TIMEOUT_SECONDS', '120'))
++                    drain_age = now_background - self._background_drain_start
++                    if background_status.get('drained'):
++                        background_trigger = 'background_drained'
++                    elif drain_age < timeout_s:
++                        all_egos_done = False
++                        if now_background - self._background_last_report >= 5.0:
++                            self._background_last_report = now_background
++                            print(
++                                f"[BACKGROUND_DRAIN_WAIT] sim_t={now_background:.1f}s "
++                                f"drain_age_s={drain_age:.1f} status={background_status}",
++                                flush=True)
++                    else:
++                        background_trigger = 'background_drain_timeout'
++                        print(
++                            f"[BACKGROUND_DRAIN_TIMEOUT] sim_t={now_background:.1f}s "
++                            f"timeout_s={timeout_s:.1f} status={background_status}",
++                            flush=True)
++
++            if all_egos_done and background_trigger in (
++                    'background_drained', 'background_drain_timeout'):
++                # The route-driving score was already final when both egos
++                # completed. Background draining may exceed the short route's
++                # timeout and must not retroactively turn that score into a
++                # failure.
++                for route_scenario in self.scenario:
++                    try:
++                        route_scenario.timeout_node.timeout = False
++                    except Exception:
++                        pass
++                self._background_termination_trigger = background_trigger
++
+             if all_egos_done and self._running:
+                 if log_replay_ego and self.ego_vehicles_num > 0:
+                     flags = []
+@@ -1913,7 +1978,8 @@ class ScenarioManager(object):
+                 )
+                 print(
+                     f"[SCENARIO_TERMINATED] sim_t={_now_sim_end:.1f}s "
+-                    f"trigger=all_egos_done n_egos={self.ego_vehicles_num} paths=[{paths_summary}]",
++                    f"trigger={background_trigger} n_egos={self.ego_vehicles_num} "
++                    f"paths=[{paths_summary}] background={background_status}",
+                     flush=True,
+                 )
+                 self._running = False
+@@ -1962,7 +2028,9 @@ class ScenarioManager(object):
+                 self._forensics.begin_phase("world_tick")
+             except Exception:
+                 pass
++            self._agent.before_world_tick()
+             CarlaDataProvider.get_world().tick(self._timeout)
++            self._agent.after_world_tick()
+             try:
+                 self._forensics.end_phase("world_tick")
+                 self._forensics.end_tick()
+@@ -2319,6 +2387,20 @@ class ScenarioManager(object):
+                     if self.scenario[ego_vehicle_id] is not None:
+                         self.scenario[ego_vehicle_id].terminate()
+ 
++            # Scenario.terminate() terminates every behavior, including the
++            # route Timeout node.  Depending on py_trees status, that final
++            # termination can set ``timeout`` again after it was cleared when
++            # the egos completed.  Time spent draining background demand is
++            # outside the ego route score, so restore the intended score state
++            # immediately before result rendering/statistics collection.
++            if getattr(self, '_background_termination_trigger', None) in (
++                    'background_drained', 'background_drain_timeout'):
++                for scenario_item in self.scenario:
++                    try:
++                        scenario_item.timeout_node.timeout = False
++                    except Exception:
++                        pass
++
+             if watchdog_ok:
+                 self.analyze_scenario()
+         finally:
+diff --git a/simulation/leaderboard/leaderboard/sensors/fixed_sensors.py b/simulation/leaderboard/leaderboard/sensors/fixed_sensors.py
+index 2a4e023..44e1f5d 100755
+--- a/simulation/leaderboard/leaderboard/sensors/fixed_sensors.py
++++ b/simulation/leaderboard/leaderboard/sensors/fixed_sensors.py
+@@ -707,7 +707,7 @@ class SensorUnit(object):
+         data = {}
+         _id = 0
+         for actor_type in list(TPE.keys()):
+-            actors = CarlaDataProvider.get_world().get_level_bbs(actor_type=actor_type)
++            actors = CarlaDataProvider.get_world().get_level_bbs(actor_type)
+             for actor in actors:
+                 loc = actor.location
+                 if loc.distance(self._rsu_loc) > 50:
+diff --git a/simulation/leaderboard/leaderboard/utils/route_parser.py b/simulation/leaderboard/leaderboard/utils/route_parser.py
+index e8d80a7..ed6723c 100755
+--- a/simulation/leaderboard/leaderboard/utils/route_parser.py
++++ b/simulation/leaderboard/leaderboard/utils/route_parser.py
+@@ -233,7 +233,9 @@ def _load_ego_vehicle_models() -> Dict[int, str]:
+             if model:
+                 # Try to extract index from filename
+                 import re
+-                match = re.search(r'_actor_(\d+)\.xml$', file_path)
++                # Both editor-generated *_actor_N and native *_vehicle_N routes
++                # must honor the manifest's model instead of silently falling back.
++                match = re.search(r'_(?:actor|vehicle)_(\d+)\.xml$', file_path)
+                 if match:
+                     ego_idx = int(match.group(1))
+                     ego_models[ego_idx] = model
+diff --git a/simulation/leaderboard/team_code/auto_pilot.py b/simulation/leaderboard/team_code/auto_pilot.py
+index 48db82b..269ee5e 100755
+--- a/simulation/leaderboard/team_code/auto_pilot.py
++++ b/simulation/leaderboard/team_code/auto_pilot.py
+@@ -324,6 +324,11 @@ class AutoPilot(MapAgent):
+ 
+         return steer, throttle, brake, target_speed
+ 
++    def retire_ego(self, vehicle_num):
++        # Sensor teardown can precede completion of the actor-destroy RPC.
++        # Keep the completed ego out of subsequent sensor and planner calls.
++        self.ego_freeze_sign[vehicle_num] = 1
++
+     def run_step(self, input_data, timestamp) -> List:
+         """
+         Execute one step of navigation.
+@@ -364,6 +369,9 @@ class AutoPilot(MapAgent):
+         
+         # produce control signal and save sensor data
+         for vehicle_num in range(self.ego_vehicles_num):
++            if self.ego_freeze_sign[vehicle_num]:
++                control_all[vehicle_num] = carla.VehicleControl(brake=1.0)
++                continue
+             self._vehicle = CarlaDataProvider.get_hero_actor(hero_id=vehicle_num) # current hero
+             if self._vehicle is None:
+             # if not self._vehicle.is_alive:
+diff --git a/simulation/leaderboard/team_code/base_agent.py b/simulation/leaderboard/team_code/base_agent.py
+index f24ae36..9e10e72 100755
+--- a/simulation/leaderboard/team_code/base_agent.py
++++ b/simulation/leaderboard/team_code/base_agent.py
+@@ -821,7 +821,7 @@ class BaseAgent(autonomous_agent.AutonomousAgent):
+         data = {}
+         _id = 0
+         for actor_type in list(TPE.keys()):
+-            actors = CarlaDataProvider.get_world().get_level_bbs(actor_type=actor_type)
++            actors = CarlaDataProvider.get_world().get_level_bbs(actor_type)
+             for actor in actors:
+                 loc = actor.location
+                 if loc.distance(self._vehicle.get_location()) > 100:
+diff --git a/simulation/leaderboard/team_code/lmdriver_agent.py b/simulation/leaderboard/team_code/lmdriver_agent.py
+index f89c49d..9dbcee3 100755
+--- a/simulation/leaderboard/team_code/lmdriver_agent.py
++++ b/simulation/leaderboard/team_code/lmdriver_agent.py
+@@ -1670,7 +1670,7 @@ class LMDriveAgent(autonomous_agent.AutonomousAgent):
+ 		else:
+ 			if self.debug_force_fresh_control:
+ 				reuse_reason = None
+-			elif self.step[ego_id] % 5 != 0 and self.step[ego_id]:
++			elif self.step[ego_id] % int(getattr(self.lm_config, 'inference_stride', 5)) != 0 and self.step[ego_id]:
+ 				reuse_reason = "non_realtime_skip"
+ 		if reuse_reason is not None:
+ 			prev_control = self.prev_control[ego_id]
+@@ -1840,7 +1840,8 @@ class LMDriveAgent(autonomous_agent.AutonomousAgent):
+ 		# If the predictor collapses to tiny waypoints at standstill while the route target
+ 		# is clearly ahead, allow a gentle launch nudge to escape deadlock.
+ 		if (
+-			self.step[ego_id] < 220
++			getattr(self.lm_config, 'launch_assist', True)
++			and self.step[ego_id] < 220
+ 			and float(velocity) < 0.15
+ 			and float(metadata["desired_speed"]) < float(self.lm_config.brake_speed)
+ 			and float(brake) > 0.5
+@@ -2029,7 +2030,7 @@ class LMDriveAgent(autonomous_agent.AutonomousAgent):
+ 			velocity (tensor): speedometer input
+ 		'''
+ 		assert(waypoints.size(0)==5)
+-		waypoints = waypoints.data.cpu().numpy()
++		waypoints = waypoints.data.cpu().numpy().copy()
+ 
+ 		# flip y is (forward is negative in our waypoints)
+ 		waypoints[:,1] *= -1
+@@ -2037,7 +2038,9 @@ class LMDriveAgent(autonomous_agent.AutonomousAgent):
+ 
+ 		# Use the full predicted trajectory instead of only wp0->wp1. This is less jittery
+ 		# and reduces false brake toggles from tiny first-segment predictions.
+-		if waypoints.shape[0] > 1:
++		if getattr(self.lm_config, 'pid_speed_mode', 'full_trajectory') == 'first_segment':
++			desired_speed = float(np.linalg.norm(waypoints[0] - waypoints[1]) * 2.0)
++		elif waypoints.shape[0] > 1:
+ 			segment_speeds = np.linalg.norm(np.diff(waypoints, axis=0), axis=1) * 2.0
+ 			desired_speed = float(np.mean(segment_speeds))
+ 		else:
+diff --git a/simulation/scenario_runner/srunner/scenariomanager/scenarioatomics/atomic_criteria.py b/simulation/scenario_runner/srunner/scenariomanager/scenarioatomics/atomic_criteria.py
+index d0c2bcd..648edbe 100755
+--- a/simulation/scenario_runner/srunner/scenariomanager/scenarioatomics/atomic_criteria.py
++++ b/simulation/scenario_runner/srunner/scenariomanager/scenarioatomics/atomic_criteria.py
+@@ -70,6 +70,10 @@ class Criterion(py_trees.behaviour.Behaviour):
+         """
+         self.logger.debug("%s.initialise()" % (self.__class__.__name__))
+ 
++    def stop_sensor_stream(self):
++        """Detach criterion-owned sensor streams without changing its score."""
++        pass
++
+     def terminate(self, new_status):
+         """
+         Terminate the criterion. Can be extended by the user-derived class
+@@ -355,7 +359,7 @@ class CollisionTest(Criterion):
+         """
+         Cleanup sensor
+         """
+-        # print("terminate1!!!\n\n")
++        self.stop_sensor_stream()
+         if self._collision_sensor is not None:
+             # print("terminate2!!!\n\n")
+             # print(self._collision_sensor.id)
+@@ -364,6 +368,10 @@ class CollisionTest(Criterion):
+ 
+         super(CollisionTest, self).terminate(new_status)
+ 
++    def stop_sensor_stream(self):
++        if self._collision_sensor is not None and self._collision_sensor.is_listening:
++            self._collision_sensor.stop()
++
+     @staticmethod
+     def _count_collisions(weak_self, event):     # pylint: disable=too-many-return-statements
+         """
+@@ -569,10 +577,15 @@ class KeepLaneTest(Criterion):
+         Cleanup sensor
+         """
+         if self._lane_sensor is not None:
++            self.stop_sensor_stream()
+             self._lane_sensor.destroy()
+         self._lane_sensor = None
+         super(KeepLaneTest, self).terminate(new_status)
+ 
++    def stop_sensor_stream(self):
++        if self._lane_sensor is not None and self._lane_sensor.is_listening:
++            self._lane_sensor.stop()
++
+     @staticmethod
+     def _count_lane_invasion(weak_self, event):
+         """
+diff --git a/simulation/scenario_runner/srunner/scenarios/basic_scenario.py b/simulation/scenario_runner/srunner/scenarios/basic_scenario.py
+index 8d3f4ea..ad8c6c8 100755
+--- a/simulation/scenario_runner/srunner/scenarios/basic_scenario.py
++++ b/simulation/scenario_runner/srunner/scenarios/basic_scenario.py
+@@ -68,6 +68,7 @@ class BasicScenario(object):
+             
+         has_ego = len(self.ego_vehicles) > 0
+         setup_count = len(self.ego_vehicles) if has_ego else 1
++        multi_ego_criteria = None
+         for ego_vehicle_id in range(setup_count):
+             # print("------------basic_scenario-----------")
+             # print(len(self.ego_vehicles))
+@@ -80,7 +81,14 @@ class BasicScenario(object):
+             # A list of criteria
+             criteria = None
+             if criteria_enable and has_ego:
+-                criteria = self._create_test_criteria()
++                if multi_ego_criteria is None:
++                    criteria = self._create_test_criteria()
++                    # Multi-ego factories already create every ego's sensors.
++                    # Reuse those lists instead of orphaning unused listeners.
++                    if isinstance(criteria, list) and criteria and isinstance(criteria[0], list):
++                        multi_ego_criteria = criteria
++                else:
++                    criteria = multi_ego_criteria
+             if isinstance(criteria,list):
+                 if criteria and isinstance(criteria[0],list):
+                     criteria = criteria[ego_vehicle_id]

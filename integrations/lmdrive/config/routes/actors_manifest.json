@@ -1,0 +1,24 @@
+{
+  "ego": [
+    {
+      "file": "town02_ego_vehicle_0.xml",
+      "kind": "ego",
+      "name": "ego_vehicle_0",
+      "route_id": "zlj_fixed_signal_ego_0",
+      "town": "Town02",
+      "model": "vehicle.lincoln.mkz_2017"
+    },
+    {
+      "file": "town02_ego_vehicle_1.xml",
+      "kind": "ego",
+      "name": "ego_vehicle_1",
+      "route_id": "zlj_fixed_signal_ego_1",
+      "town": "Town02",
+      "model": "vehicle.lincoln.mkz_2017"
+    }
+  ],
+  "npc": [],
+  "bicycle": [],
+  "pedestrian": [],
+  "static": []
+}

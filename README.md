@@ -47,6 +47,11 @@ not include maps, checkpoints, CARLA binaries, datasets, or experiment logs.
 See [`docs/TRAFFIC_SIGNAL_INTEGRATION.md`](docs/TRAFFIC_SIGNAL_INTEGRATION.md)
 for the collector and vehicle-message integration boundary.
 
+The runnable CARLA + two-ego LMDrive adapter, MDrive patch, Town02 routes,
+launcher, environment pins, and evaluation scripts are under
+[`integrations/lmdrive`](integrations/lmdrive). Model weights, CARLA, maps, and
+generated experiment artifacts remain external to Git.
+
 ## Getting Started
 
 ```
