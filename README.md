@@ -38,6 +38,15 @@ Current Vision-Language-Action (VLA) paradigms in autonomous driving primarily r
 - [√] MindDrive Checkpoint
 - [√] MindDrive Training Framework
 
+## Traffic-signal control prototype
+
+The [`traffic_signal`](traffic_signal) module contains an initial two-movement
+CARLA traffic-signal prototype with fixed-time, Max Pressure, and a locally
+trained PressLight-style DQN behind one safety transition interface. It does
+not include maps, checkpoints, CARLA binaries, datasets, or experiment logs.
+See [`docs/TRAFFIC_SIGNAL_INTEGRATION.md`](docs/TRAFFIC_SIGNAL_INTEGRATION.md)
+for the collector and vehicle-message integration boundary.
+
 ## Getting Started
 
 ```

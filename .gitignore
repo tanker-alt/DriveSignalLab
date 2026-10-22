@@ -23,6 +23,8 @@ dist/
 *.ckpt
 *.safetensors
 *.log
+/traffic_signal/checkpoints/
+/traffic_signal/outputs/
 
 # Personal settings and notes
 .env
