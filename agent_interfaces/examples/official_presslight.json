@@ -1,0 +1,12 @@
+{
+  "schema": "drive_agent_plugin_v1",
+  "kind": "signal",
+  "factory": "agent_interfaces.presslight:OfficialPressLightAgent",
+  "kwargs": {
+    "python": "${PRESSLIGHT_PYTHON}",
+    "models": "${PRESSLIGHT_MODELS}",
+    "checkpoint": "round_059",
+    "log": "/tmp/presslight_plugin.log",
+    "seed": 2026
+  }
+}

@@ -39,3 +39,14 @@ dist/
 .vscode/
 .idea/
 conversation_handoff.md
+
+# Model artifacts and generated output in imported integrations
+*.h5
+*.hdf5
+*.npz
+*.pkl
+*.pickle
+*.zip
+*.tar
+*.tar.gz
+/integrations/carla_handoff/**/evaluation/outputs/

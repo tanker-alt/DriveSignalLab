@@ -22,7 +22,8 @@ class FixedSignalLMDrive(LMDriveAgent):
         if getattr(self.lm_config, 'navigation_mode', 'legacy') == 'route_geometry':
             from team_code.lmdrive_route_instructions import RouteInstructionAdapter
             self._instruction_planners = [RouteInstructionAdapter(
-                planner, self._global_plan_world_coord_all[i], self._carla_map)
+                planner, self._global_plan_world_coord_all[i], self._carla_map,
+                training_vocabulary=getattr(self.lm_config, 'training_navigation_vocabulary', False))
                 for i, planner in enumerate(self._instruction_planners)]
             previous_ego = self.active_ego
             for i, planner in enumerate(self._instruction_planners):
@@ -39,10 +40,16 @@ class FixedSignalLMDrive(LMDriveAgent):
 
     def setup(self, path_to_conf_file, ego_vehicles_num):
         self.signal_runtime = None
+        self.handoff_collector = None
         self.background_runtime = None
         self.active_ego = None
         self.active_camera_frame = None
         super().setup(path_to_conf_file, ego_vehicles_num)
+        if os.environ.get('LMDRIVE_WAYPOINT_HEAD'):
+            adapted = torch.load(os.environ['LMDRIVE_WAYPOINT_HEAD'], map_location='cpu')
+            if adapted['metadata']['schema'] != 'lmdrive_waypoint_head_v1':
+                raise ValueError('Unexpected waypoint adaptation schema')
+            self.net.waypoints_predictor.load_state_dict(adapted['state_dict'], strict=True)
         self.light_messages = os.environ.get('LMDRIVE_LIGHT_MESSAGES', 'off')
         if self.light_messages not in ('off', 'on'):
             raise ValueError('LMDRIVE_LIGHT_MESSAGES must be off or on')
@@ -70,9 +77,14 @@ class FixedSignalLMDrive(LMDriveAgent):
         self.audited_actor_ids = set()
         (self.save_path / 'experiment_config.json').write_text(json.dumps(dict(
             config_path=str(path_to_conf_file), ego_count=ego_vehicles_num,
+            agent_class=type(self).__name__,
+            stable_stop_pid=getattr(self.lm_config, 'stable_stop_pid', False),
             light_messages=self.light_messages, notice_adapter='camera_snapshot_v1',
             signal_controller=os.environ.get('LMDRIVE_SIGNAL_CONTROLLER', 'fixed').lower(),
+            signal_phase_mode=os.environ.get('SIGNAL_PHASE_MODE', 'legacy'),
+            background_strict_routes=os.environ.get('BACKGROUND_STRICT_ROUTES') == '1',
             presslight_checkpoint=os.environ.get('PRESSLIGHT_CHECKPOINT'),
+            waypoint_head=os.environ.get('LMDRIVE_WAYPOINT_HEAD'),
             background_traffic_profile=os.environ.get('BACKGROUND_TRAFFIC_PROFILE', 'none'),
             background_traffic_seed=int(os.environ.get('BACKGROUND_TRAFFIC_SEED', '2000')),
             background_vehicles_per_movement=os.environ.get('BACKGROUND_VEHICLES_PER_MOVEMENT'),
@@ -84,6 +96,7 @@ class FixedSignalLMDrive(LMDriveAgent):
             native_traffic=getattr(self.lm_config, 'native_traffic', False),
             expected_vehicle_model=getattr(self.lm_config, 'expected_vehicle_model', None),
             navigation_mode=getattr(self.lm_config, 'navigation_mode', 'legacy'),
+            training_navigation_vocabulary=getattr(self.lm_config, 'training_navigation_vocabulary', False),
             traffic_light=getattr(self.lm_config, 'traffic_light', {})), indent=2))
         self.replay_saved = set()
         self.net.register_forward_pre_hook(self._before_model, with_kwargs=True)
@@ -109,7 +122,14 @@ class FixedSignalLMDrive(LMDriveAgent):
         self.notice_span = None
         self.notice_source = source if self.light_messages == 'on' else None
         capture_key = (self.active_ego, signal.get('actual_state'))
-        if os.environ.get('LMDRIVE_CAPTURE_REPLAY') == '1' and capture_key not in self.replay_saved:
+        if os.environ.get('LMDRIVE_CAPTURE_APPROACH') == '1':
+            distance = signal.get('distance_to_stop_line_m', 1e9)
+            bucket = 'near' if 8 <= distance <= 20 else ('far' if 25 <= distance <= 35 else None)
+            capture_key = (self.active_ego, bucket)
+            if bucket is None:
+                capture_key = None
+        if (os.environ.get('LMDRIVE_CAPTURE_REPLAY') == '1' and capture_key is not None
+                and capture_key not in self.replay_saved):
             def cpu(value):
                 if torch.is_tensor(value):
                     return value.detach().cpu()
@@ -145,26 +165,55 @@ class FixedSignalLMDrive(LMDriveAgent):
                          predicted_brake_by_speed=target_speed < float(self.lm_config.brake_speed),
                          waypoints=waypoints, end_logits=end_logits))
 
+    def control_pid(self, waypoints, velocity, ego_id):
+        result = super().control_pid(waypoints, velocity, ego_id)
+        if getattr(self.lm_config, 'stable_stop_pid', False):
+            from common.lmdrive_pid_guard import stabilize_stop_control
+            result = stabilize_stop_control(
+                result, waypoints.detach().float().cpu().numpy(),
+                float(self.lm_config.brake_speed), self.turn_controller[ego_id],
+                self.speed_controller[ego_id])
+        return result
+
     def start_traffic_signals(self):
         if getattr(self.lm_config, 'native_traffic', False):
             return
         if self.signal_runtime is None:
             controller = os.environ.get('LMDRIVE_SIGNAL_CONTROLLER', 'fixed').lower()
-            if controller == 'fixed':
+            if controller == 'fixed' and os.environ.get('SIGNAL_PHASE_MODE') == 'paired_straight':
+                from common.grouped_fixed_signal import GroupedFixedPolicy
+                policy = GroupedFixedPolicy(
+                    green_seconds=float(os.environ.get('SIGNAL_GREEN_SECONDS', 20)),
+                    yellow_seconds=float(os.environ.get('SIGNAL_YELLOW_SECONDS', 3)),
+                    clearance_seconds=float(os.environ.get('SIGNAL_CLEARANCE_SECONDS', 2)))
+            elif controller == 'fixed':
                 policy = TrafficLightAgent(**getattr(self.lm_config, 'traffic_light', {}))
             else:
                 policy = build_signal_policy(
                     controller,
                     checkpoint=os.environ.get('PRESSLIGHT_CHECKPOINT'),
+                    movements=int(os.environ.get('SIGNAL_MOVEMENTS', '2')),
                     initial_red_seconds=float(os.environ.get('SIGNAL_INITIAL_RED_SECONDS', 2)),
                     min_green_seconds=float(os.environ.get('SIGNAL_MIN_GREEN_SECONDS', 5)),
                     decision_interval_seconds=float(os.environ.get('SIGNAL_DECISION_INTERVAL_SECONDS', 2)),
                     yellow_seconds=float(os.environ.get('SIGNAL_YELLOW_SECONDS', 3)),
                     clearance_seconds=float(os.environ.get('SIGNAL_CLEARANCE_SECONDS', 2)),
                     max_green_seconds=float(os.environ.get('SIGNAL_MAX_GREEN_SECONDS', 15)))
+            control_routes = None
+            control_path = os.environ.get('SIGNAL_CONTROL_ROUTES')
+            if control_path:
+                import carla
+                from pathlib import Path
+                data = json.loads(Path(control_path).read_text())
+                world_map = CarlaDataProvider.get_world().get_map()
+                import hashlib
+                if hashlib.sha256(world_map.to_opendrive().encode()).hexdigest() != data['opendrive_sha256']:
+                    raise ValueError('Control routes belong to a different OpenDRIVE map')
+                control_routes = [[(carla.Transform(carla.Location(**point)), None)
+                                   for point in route] for route in data['extra_routes']]
             self.signal_runtime = CarlaTrafficLightRuntime(CarlaDataProvider.get_world(),
                 self._global_plan_world_coord_all, self.save_path,
-                policy)
+                policy, control_routes=control_routes)
             profile = os.environ.get('BACKGROUND_TRAFFIC_PROFILE', 'none').lower()
             count = os.environ.get('BACKGROUND_VEHICLES_PER_MOVEMENT')
             self.background_runtime = BackgroundTrafficRuntime(
@@ -174,8 +223,14 @@ class FixedSignalLMDrive(LMDriveAgent):
                 count_override=None if count in (None, '') else int(count),
                 spawn_distance_m=float(os.environ.get('BACKGROUND_SPAWN_DISTANCE_M', '12')),
                 headway_s=float(os.environ.get('BACKGROUND_HEADWAY_SECONDS', '6')),
-                speed_difference=float(os.environ.get('BACKGROUND_SPEED_DIFFERENCE', '0')))
+                speed_difference=float(os.environ.get('BACKGROUND_SPEED_DIFFERENCE', '0')),
+                strict_routes=os.environ.get('BACKGROUND_STRICT_ROUTES') == '1')
             self.signal_runtime.background_runtime = self.background_runtime
+            if os.environ.get('HANDOFF_METRICS_ROOT'):
+                from common.handoff_metrics import create
+                self.handoff_collector = create(
+                    CarlaDataProvider.get_world(), self.signal_runtime.mappings[0]['junction_id'],
+                    os.environ['HANDOFF_METRICS_ROOT'], self.save_path/'handoff_metrics')
 
     def before_world_tick(self):
         if self.signal_runtime:
@@ -187,6 +242,8 @@ class FixedSignalLMDrive(LMDriveAgent):
                 self.background_runtime.prepare(next_time - self.signal_runtime.origin)
 
     def after_world_tick(self):
+        if self.handoff_collector is not None:
+            self.handoff_collector.sample(CarlaDataProvider.get_world().get_snapshot())
         if self.signal_runtime:
             self.signal_runtime.record_snapshot()
             if self.background_runtime and self.signal_runtime.latest_lane_state:
@@ -233,6 +290,11 @@ class FixedSignalLMDrive(LMDriveAgent):
 
     def destroy(self):
         try:
+            if self.handoff_collector is not None:
+                recording_status = ('completed' if self.background_runtime is not None
+                                    and self.background_runtime.status().get('drained') else 'interrupted')
+                self.handoff_collector.close(recording_status)
+                self.handoff_collector = None
             if self.background_runtime:
                 self.background_runtime.close()
                 self.background_runtime = None

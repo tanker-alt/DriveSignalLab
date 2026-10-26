@@ -1,0 +1,5 @@
+{
+  "stop_speed_mps": 0.1,
+  "resume_speed_mps": 0.3,
+  "observation_warmup_seconds": 1.0
+}

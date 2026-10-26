@@ -40,6 +40,10 @@ Current Vision-Language-Action (VLA) paradigms in autonomous driving primarily r
 
 ## Traffic-signal control prototype
 
+Replaceable Cross3 signal and driving agents now share a versioned plugin
+configuration mechanism. See [the interface guide](agent_interfaces/README.md)
+for contracts, LMDrive/official PressLight adapters, examples and evaluation commands.
+
 The [`traffic_signal`](traffic_signal) module contains an initial two-movement
 CARLA traffic-signal prototype with fixed-time, Max Pressure, and a locally
 trained PressLight-style DQN behind one safety transition interface. It does

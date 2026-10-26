@@ -1,0 +1,7 @@
+{
+  "archive": "carla_handoff_2026-10-21_v2.zip",
+  "sha256": "a72afd731a7e6d20593e03c9550e0e60c8d345a6035ef90f6d01f7cd03285c70",
+  "modifications": [
+    "spawn_junction_traffic.py: Vector3D.length replaced by component norm for CARLA 0.9.12"
+  ]
+}

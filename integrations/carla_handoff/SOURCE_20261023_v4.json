@@ -1,0 +1,8 @@
+{
+  "archive": "carla_cross3_handoff_20261023_v4.zip",
+  "sha256": "624248b36d110dce2d4588082ede52961cc10a1d54c35e1d5efe7ea0f1b885ae",
+  "verified_files": 55,
+  "upstream_tested_carla": "0.9.15",
+  "local_carla": "0.9.12",
+  "modifications": []
+}

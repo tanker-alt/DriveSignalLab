@@ -1,0 +1,31 @@
+--- a/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py
++++ b/simulation/leaderboard/leaderboard/scenarios/scenario_manager.py
+@@ -1375,7 +1375,8 @@
+                 if ego_actor is None:
+                     missing_egos.append(vehicle_num)
+                     stop_flag += 1
+-                    if stop_flag == self.ego_vehicles_num:
++                    if (stop_flag == self.ego_vehicles_num and
++                            not self._agent.background_traffic_status().get('enabled', False)):
+                         self._debug_reset(
+                             "all_egos_missing",
+                             details=f"missing={missing_egos}",
+@@ -1422,7 +1423,8 @@
+                                 phase="destroy_ego_type_3",
+                             )
+                         self._runtime_dead_ego_cleanup_done.add(vehicle_num)
+-                    if stop_flag == self.ego_vehicles_num:
++                    if (stop_flag == self.ego_vehicles_num and
++                            not self._agent.background_traffic_status().get('enabled', False)):
+                         status_list = []
+                         for idx in range(self.ego_vehicles_num):
+                             try:
+@@ -1775,7 +1777,7 @@
+                                 f"rc={route_completion_pct_for_ego:.1f}%",
+                                 flush=True,
+                             )
+-                    if (ego_completed or ego_route_completion_100) and idx not in self._runtime_completed_ego_cleanup_done:
++                    if (ego_completed or ego_route_completion_100 or ego_deviated or ego_collided_terminal or ego_blocked) and idx not in self._runtime_completed_ego_cleanup_done:
+                         # Once route completion reaches terminal state (SUCCESS or 100% RC),
+                         # retire this ego immediately so it cannot keep receiving controls.
+                         # Evaluation sensors also belong to this ego. Unsubscribe

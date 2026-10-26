@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "notes": "Uncalibrated stop reference candidates. Add calibrated arrival/exit lines before enabling.",
+  "lines": [
+    {
+      "id": "stop_18_0_1",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -47.006,
+        20.426
+      ],
+      "normal_xy": [
+        -0.006283143965559632,
+        -0.9999802608561371
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_18_0_2",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -43.506,
+        20.38
+      ],
+      "normal_xy": [
+        -0.006283143965559632,
+        -0.9999802608561371
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_0_0_-1",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -29.951,
+        -0.878
+      ],
+      "normal_xy": [
+        -0.9999970147507714,
+        0.0024434585213449064
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_0_0_-2",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -29.953,
+        -4.378
+      ],
+      "normal_xy": [
+        -0.9999970147507714,
+        0.0024434585213449064
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_17_0_-1",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -51.074,
+        -18.345
+      ],
+      "normal_xy": [
+        0.005934084629718873,
+        0.9999823931648033
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_17_0_-2",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -54.574,
+        -18.342
+      ],
+      "normal_xy": [
+        0.005934084629718873,
+        0.9999823931648033
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_1_0_1",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -68.748,
+        2.717
+      ],
+      "normal_xy": [
+        0.9999970147507714,
+        -0.0024434585213450287
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    },
+    {
+      "id": "stop_1_0_2",
+      "kind": "stop_reference",
+      "junction_id": 1427,
+      "center_xy": [
+        -68.747,
+        6.217
+      ],
+      "normal_xy": [
+        0.9999970147507714,
+        -0.0024434585213450287
+      ],
+      "half_width_m": 1.5,
+      "enabled": false
+    }
+  ]
+}

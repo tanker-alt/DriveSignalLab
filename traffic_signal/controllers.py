@@ -81,17 +81,22 @@ class PressLightSelector:
         import numpy as np
         self.np = np
         self.metadata = json.loads(metadata_path.read_text())
-        expected = {'schema': self.schema, 'state_dim': 6, 'action_dim': 2,
-                    'features': ['phase_0', 'phase_1', 'incoming_0',
-                                 'outgoing_0', 'incoming_1', 'outgoing_1']}
+        self.movements = int(self.metadata.get('action_dim', 0))
+        if self.movements < 2:
+            raise ValueError('At least two signal movements required')
+        n = self.movements
+        features = ['phase_%d' % i for i in range(n)]
+        features += [key + '_%d' % i for i in range(n) for key in ('incoming', 'outgoing')]
+        expected = {'schema': (self.schema if n == 2 else 'carla_n_movement_presslight_v1'),
+                    'state_dim': 3*n, 'action_dim': n, 'features': features}
         for key, value in expected.items():
             if self.metadata.get(key) != value:
                 raise ValueError('PressLight checkpoint %s mismatch: expected %r, got %r' %
                                  (key, value, self.metadata.get(key)))
         arrays = np.load(str(self.path), allow_pickle=False)
-        required = {'dense_0_kernel': (6, 20), 'dense_0_bias': (20,),
+        required = {'dense_0_kernel': (3*self.movements, 20), 'dense_0_bias': (20,),
                     'dense_1_kernel': (20, 20), 'dense_1_bias': (20,),
-                    'q_values_kernel': (20, 2), 'q_values_bias': (2,)}
+                    'q_values_kernel': (20, self.movements), 'q_values_bias': (self.movements,)}
         self.weights = {}
         for name, shape in required.items():
             if name not in arrays or arrays[name].shape != shape:
@@ -100,13 +105,20 @@ class PressLightSelector:
 
     @staticmethod
     def state_vector(observation, current_action):
-        phase = [0.0, 0.0]
-        if current_action in (0, 1):
+        n = len(observation['incoming'])
+        if len(observation['outgoing']) != n:
+            raise ValueError('Incoming/outgoing movement mismatch')
+        phase = [0.0] * n
+        if current_action is not None:
+            if not 0 <= current_action < n:
+                raise ValueError('Current phase outside movement range')
             phase[current_action] = 1.0
-        return phase + [float(observation['incoming'][0]), float(observation['outgoing'][0]),
-                        float(observation['incoming'][1]), float(observation['outgoing'][1])]
+        return phase + [float(values[i]) for i in range(n)
+                        for values in (observation['incoming'], observation['outgoing'])]
 
     def select(self, observation, current_action=None):
+        if len(observation['incoming']) != self.movements:
+            raise ValueError('Checkpoint does not match junction movement count')
         x = self.np.asarray(self.state_vector(observation, current_action), dtype='float32')
         w = self.weights
         x = self.np.maximum(0, x @ w['dense_0_kernel'] + w['dense_0_bias'])
@@ -133,8 +145,8 @@ class SafeAdaptivePolicy:
         values = (self.initial_red_seconds, self.min_green_seconds,
                   self.decision_interval_seconds, self.yellow_seconds,
                   self.clearance_seconds, self.max_green_seconds)
-        if self.movements != 2 or any(value <= 0 for value in values):
-            raise ValueError('Adaptive demo requires two movements and positive durations')
+        if self.movements < 2 or any(value <= 0 for value in values):
+            raise ValueError('Adaptive policy requires at least two movements and positive durations')
         if self.max_green_seconds < self.min_green_seconds:
             raise ValueError('Maximum green must be at least minimum green')
         timing = getattr(selector, 'metadata', {}).get('signal_timing_seconds')
@@ -149,6 +161,8 @@ class SafeAdaptivePolicy:
             if mismatches:
                 raise ValueError('PressLight checkpoint/safety-layer timing mismatch: %r' %
                                  mismatches)
+        if getattr(selector, 'movements', self.movements) != self.movements:
+            raise ValueError('Checkpoint/action-space mismatch')
         self.mode = 'initial_all_red'
         self.mode_start = 0.0
         self.active = None
@@ -171,13 +185,14 @@ class SafeAdaptivePolicy:
                 self.mode, self.mode_start, self.last_decision = 'green', elapsed, elapsed
                 changed = True
             elif self.mode == 'green':
-                forced = (age >= self.max_green_seconds and
-                          observation['incoming'][1 - self.active] > 0)
+                others = [(self.active + i) % self.movements for i in range(1, self.movements)]
+                waiting = [i for i in others if observation['incoming'][i] > 0]
+                forced = age >= self.max_green_seconds and bool(waiting)
                 due = forced or (age >= self.min_green_seconds and
                                  elapsed - self.last_decision >= self.decision_interval_seconds)
                 if not due:
                     break
-                target = 1 - self.active if forced else self.selector.select(observation, self.active)
+                target = waiting[0] if forced else self.selector.select(observation, self.active)
                 self._validate_action(target)
                 self.last_decision = elapsed
                 self.last_forced_switch = forced
@@ -223,7 +238,7 @@ class SafeAdaptivePolicy:
                               max(0.0, self.clearance_seconds-age))
 
     def _decision(self, phase, active, state, remaining):
-        result = {'phase': phase, 'active_movement': active, 'state': state,
+        result = {'phase': phase, 'active_movement': active, 'active_ego': active, 'state': state,
                   'remaining_s': remaining, 'controller': self.selector.name,
                   'target_action': self.pending if self.pending is not None else self.active,
                   'forced_by_max_green': self.last_forced_switch}

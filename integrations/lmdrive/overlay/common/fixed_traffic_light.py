@@ -72,7 +72,7 @@ class TrafficLightAgent:
 
 
 class CarlaTrafficLightRuntime:
-    def __init__(self, world, routes, output_dir, policy):
+    def __init__(self, world, routes, output_dir, policy, control_routes=None):
         import carla
         self.carla = carla
         self.world = world
@@ -89,11 +89,16 @@ class CarlaTrafficLightRuntime:
         self.signal_apply_lag_frames = 0
         self.progress = [{ 'waiting_s': 0.0, 'entered_s': None, 'exited_s': None, 'start_s': None} for _ in routes]
         self.messages = {}
+        self.associated_vehicle_ids = set()
         self.signal_history = {}
         self.latest_lane_state = None
         self.background_runtime = None
         self.last_lane_log_frame = None
         self.mappings = []
+        if control_routes is not None:
+            if not 1 <= len(routes) <= 4:
+                raise ValueError('Four-arm mode requires one to four VLA routes')
+            routes = list(routes) + list(control_routes)
         lights = list(world.get_actors().filter('*traffic_light*'))
         for ego, route in enumerate(routes):
             points = [item[0].location for item in route]
@@ -129,6 +134,8 @@ class CarlaTrafficLightRuntime:
                     candidates.append((cumulative[idx], light, wp, idx))
             if not candidates:
                 raise ValueError('No route-matched signal for ego %d' % ego)
+            if getattr(policy, 'requires_verified_mapping', False) and len({c[1].id for c in candidates}) != 1:
+                raise ValueError('Ambiguous route-to-control-light association')
             _, light, stop, idx = min(candidates, key=lambda item: item[0])
             exit_wp = next((w for w in wps[first_junction:] if not w.is_junction), None)
             if exit_wp is None:
@@ -141,10 +148,18 @@ class CarlaTrafficLightRuntime:
                                   'stop_index':idx,'stop_arc':project_arc(stop.transform.location,points,cumulative),
                                   'exit_wp':exit_wp,
                                   'group':group})
-        if len(self.mappings) not in (1, 2) or len({m['light'].id for m in self.mappings}) != len(self.mappings):
-            raise ValueError('This minimal policy requires one or two distinct incoming signals')
+        if not self.mappings or len({m['light'].id for m in self.mappings}) != len(self.mappings):
+            raise ValueError('Each control route must have a distinct incoming signal')
         if any(m['junction_id'] != self.mappings[0]['junction_id'] or set(m['group']) != set(self.mappings[0]['group']) for m in self.mappings):
             raise ValueError('Both routes must be controlled by one verified signal group')
+        if hasattr(policy, 'movements') and policy.movements != len(self.mappings):
+            raise ValueError('Policy/control-route movement mismatch')
+        if hasattr(policy, 'configure'):
+            policy.configure(self.mappings)
+            (self.output/'signal_phase_plan.json').write_text(json.dumps(dict(
+                phase_groups=policy.phase_groups, centerline_clearance_m=policy.clearances,
+                green_s=policy.green, yellow_s=policy.yellow, all_red_s=policy.clearance,
+                initial_red_s=policy.initial_red), indent=2))
         self.group = self.mappings[0]['group']
         self.previous = {i:(a.get_state(),a.is_frozen()) for i,a in self.group.items()}
         for light in self.group.values():
@@ -171,6 +186,8 @@ class CarlaTrafficLightRuntime:
         desired = {i:'Red' for i in self.group}
         if decision['active_ego'] is not None and decision['active_ego'] < len(self.mappings):
             desired[self.mappings[decision['active_ego']]['light'].id] = decision['state']
+        for movement in decision.get('active_movements', []):
+            desired[self.mappings[movement]['light'].id] = decision['state']
         for i,light in self.group.items():
             light.set_state(getattr(self.carla.TrafficLightState,desired[i]))
         # ``simulation_time`` is the timestamp of the world frame these
@@ -276,7 +293,11 @@ class CarlaTrafficLightRuntime:
             desired = {i:'Red' for i in self.group}
             if decision['active_ego'] is not None and decision['active_ego'] < len(self.mappings):
                 desired[self.mappings[decision['active_ego']]['light'].id] = decision['state']
-        if sum(s == 'Green' for s in states.values()) > 1:
+            for movement in decision.get('active_movements', []):
+                desired[self.mappings[movement]['light'].id] = decision['state']
+        green_ids = {i for i, state in states.items() if state == 'Green'}
+        compatible = getattr(self.policy, 'compatible_green_sets', [{i} for i in self.group])
+        if not any(green_ids <= group for group in compatible):
             raise RuntimeError('Signal group snapshot contains conflicting green lights')
         if states != desired:
             # CARLA 0.9.12 may expose the previous frozen state for one frame
@@ -327,6 +348,15 @@ class CarlaTrafficLightRuntime:
             # a command that remains unapplied for more than two frames.  Do
             # not perform a second zero-latency check here: CARLA 0.9.12 can
             # expose the previous state for one bounded transition frame.
+            if actor.id not in self.associated_vehicle_ids:
+                self.write(dict(type='vehicle_route_association', actor_id=actor.id,
+                    ego_index=m['ego'], role='LMDrive', movement=m['movement'],
+                    traffic_light_id=m['light'].id, junction_id=m['junction_id'],
+                    incoming_road_id=m['stop'].road_id, incoming_lane_id=m['stop'].lane_id,
+                    exit_road_id=m['exit_wp'].road_id, exit_lane_id=m['exit_wp'].lane_id,
+                    stop_line_arc_m=m['stop_arc'],
+                    route_points=[dict(x=p.x,y=p.y,z=p.z) for p in m['points']]))
+                self.associated_vehicle_ids.add(actor.id)
             location = actor.get_location()
             # Project onto the dense route rather than using Euclidean distance.
             distance=m['stop_arc']-project_arc(location,m['points'],m['cumulative'])
@@ -345,6 +375,16 @@ class CarlaTrafficLightRuntime:
             if progress['entered_s'] is None and 0 <= distance <= 40 and speed<0.1 and state in ('Red','Yellow'):
                 progress['waiting_s']+=dt
             stage='approach' if progress['entered_s'] is None else ('inside' if inside else 'departed')
+            if getattr(self.policy, 'requires_verified_mapping', False):
+                native = actor.get_traffic_light() if actor.is_at_traffic_light() else None
+                ok = stage != 'approach' or native is None or native.id == m['light'].id
+                self.write(dict(type='vehicle_signal_association_check', actor_id=actor.id,
+                    ego_index=m['ego'], stage=stage, expected_light_id=m['light'].id,
+                    native_light_id=native.id if native else None, association_ok=ok))
+                if not ok:
+                    raise RuntimeError('VLA controlling-signal mismatch')
+                if progress.get('exited_s') == elapsed and (wp.road_id,wp.lane_id) != (m['exit_wp'].road_id,m['exit_wp'].lane_id):
+                    raise RuntimeError('VLA vehicle used the wrong exit lane')
             message={'type':'vehicle_signal_message','ego_index':m['ego'],'vehicle_id':actor.id,
                      'carla_frame':snapshot.frame,'simulation_time':now,'elapsed_s':elapsed,
                      'camera_frame':(camera_frames or {}).get(m['ego']),

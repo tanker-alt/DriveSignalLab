@@ -16,8 +16,9 @@ def turn_text(entry_yaw, exit_yaw):
 
 
 class RouteInstructionAdapter:
-    def __init__(self, delegate, route, world_map):
+    def __init__(self, delegate, route, world_map, training_vocabulary=False):
         self.delegate = delegate
+        self.training_vocabulary = training_vocabulary
         self.route = [entry[0] for entry in route]
         self.progress = 0
         self.arc = [0.0]
@@ -68,6 +69,11 @@ class RouteInstructionAdapter:
             if self.arc[turn['start']] - self.arc[self.progress] <= 30.0:
                 text = turn['text']
             break
+        if self.training_vocabulary:
+            text = {'Go straight through the next intersection.': 'Please proceed straight at the next intersection.',
+                    'Turn left at the next intersection.': 'Next intersection, turn left.',
+                    'Turn right at the next intersection.': 'Next intersection, turn right.',
+                    'Follow the road.': 'Follow the road.'}.get(text, text)
         self.last_navigation = dict(source='assigned_route_junction_geometry',
                                     route_index=self.progress, text=text)
         return text

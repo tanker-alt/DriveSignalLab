@@ -37,7 +37,10 @@ class BackgroundTrafficRuntime:
     """Spawn a reproducible queue on each mapped approach and audit its life cycle."""
     def __init__(self, world, mappings, output_dir, profile='none', seed=2000,
                  count_override=None, spawn_distance_m=12.0, headway_s=6.0,
-                 speed_difference=0.0):
+                 speed_difference=0.0, strict_routes=False):
+        self.strict_routes = bool(strict_routes)
+        self.route_agents = {}
+        self.assigned_route_points = {}
         self.world = world
         self.map = world.get_map()
         self.output = Path(output_dir)
@@ -57,6 +60,7 @@ class BackgroundTrafficRuntime:
         plan = {'schema': 'carla_route_background_v1', 'profile': profile, 'seed': self.seed,
                 'vehicles_per_movement': len(self.demand) // max(1, len(mappings)),
                 'total_vehicles': len(self.demand),
+                'routing_mode': 'BasicAgent_exact_waypoints' if self.strict_routes else 'TrafficManager',
                 'spawn_distance_m': float(spawn_distance_m), 'headway_s': float(headway_s),
                 'traffic_manager_port': self.tm_port, 'demand': self.demand}
         (self.output / 'background_traffic_plan.json').write_text(json.dumps(plan, indent=2))
@@ -67,6 +71,8 @@ class BackgroundTrafficRuntime:
         return int(CarlaDataProvider.get_traffic_manager_port())
 
     def _traffic_manager(self):
+        if self.strict_routes:
+            return None
         from srunner.scenariomanager.carla_data_provider import CarlaDataProvider
         return CarlaDataProvider._client.get_trafficmanager(self.tm_port)
 
@@ -77,13 +83,20 @@ class BackgroundTrafficRuntime:
 
     @staticmethod
     def _previous(wp, distance):
-        candidates = wp.previous(float(distance))
-        if not candidates:
-            raise RuntimeError('No waypoint %.1fm behind ego start' % distance)
-        # Stay on the same road/lane when CARLA returns multiple predecessors.
-        same = [item for item in candidates
-                if (item.road_id, item.lane_id) == (wp.road_id, wp.lane_id)]
-        return (same or candidates)[0]
+        # Never cross an upstream junction: TM may turn there before reaching
+        # the controlled intersection. Short approaches inject closer to the ego
+        # start and retry when occupied, rather than changing the demand route.
+        start = wp
+        travelled = 0.0
+        while travelled + 0.5 <= float(distance) + 1e-6:
+            candidates = [item for item in wp.previous(0.5)
+                          if not item.is_junction and
+                          (item.road_id, item.lane_id) == (start.road_id, start.lane_id)]
+            if len(candidates) != 1:
+                break
+            wp = candidates[0]
+            travelled += 0.5
+        return wp
 
     def prepare(self, elapsed_s):
         """Try each due demand at most once per simulated second until admitted."""
@@ -96,6 +109,11 @@ class BackgroundTrafficRuntime:
             self.last_attempt[demand_id] = elapsed_s
             if self._spawn(item, elapsed_s):
                 del self.pending[demand_id]
+
+        for demand_id, agent in self.route_agents.items():
+            actor = self.actors.get(demand_id)
+            if actor is not None and actor.is_alive and not self.states[demand_id].get('removed'):
+                actor.apply_control(agent.run_step())
 
     def _spawn(self, item, elapsed_s):
         blueprints = self.world.get_blueprint_library()
@@ -115,13 +133,48 @@ class BackgroundTrafficRuntime:
             self._write({'type': 'background_spawn_deferred', **item, 'elapsed_s': elapsed_s,
                          'x': transform.location.x, 'y': transform.location.y})
             return False
-        actor.set_autopilot(True, self.tm_port)
-        self.tm.auto_lane_change(actor, False)
-        self.tm.ignore_lights_percentage(actor, 0.0)
-        self.tm.ignore_vehicles_percentage(actor, 0.0)
-        self.tm.vehicle_percentage_speed_difference(actor, self.speed_difference)
-        if hasattr(self.tm, 'set_path'):
-            self.tm.set_path(actor, [point.location for point in mapping['points'][1:]])
+        if self.strict_routes:
+            from agents.navigation.basic_agent import BasicAgent
+            from agents.navigation.local_planner import RoadOption
+            # New actors are manual by default; do not create a default-port TM.
+            agent = BasicAgent(actor, target_speed=18)
+            # Give background demand its own outlet destination, before the
+            # next intersection's signals. The VLA route may extend farther.
+            route_points = list(mapping['points'])
+            exit_location = mapping['exit_wp'].transform.location
+            exit_index = min(range(len(route_points)), key=lambda i:
+                math.hypot(route_points[i].x-exit_location.x, route_points[i].y-exit_location.y))
+            end_index, outlet_distance = exit_index, 0.0
+            for i in range(exit_index+1, len(route_points)):
+                point, previous = route_points[i], route_points[i-1]
+                distance = math.hypot(point.x-previous.x, point.y-previous.y)
+                if outlet_distance+distance > 20.0 or self.map.get_waypoint(point).is_junction:
+                    break
+                outlet_distance += distance
+                end_index = i
+            if outlet_distance < 5.0:
+                raise RuntimeError('Background outlet is too short for a destination')
+            route_points = route_points[:end_index+1]
+            waypoints = [self.map.get_waypoint(point) for point in route_points]
+            agent.set_global_plan([(wp, RoadOption.STRAIGHT if wp.is_junction else RoadOption.LANEFOLLOW)
+                                   for wp in waypoints])
+            self.route_agents[item['demand_id']] = agent
+            self.assigned_route_points[item['demand_id']] = [transform.location] + route_points
+            self._write(dict(type='vehicle_route_association', actor_id=actor.id,
+                demand_id=item['demand_id'], movement=item['movement'], maneuver='STRAIGHT',
+                traffic_light_id=mapping['light'].id, junction_id=mapping['junction_id'],
+                incoming_road_id=mapping['stop'].road_id, incoming_lane_id=mapping['stop'].lane_id,
+                exit_road_id=mapping['exit_wp'].road_id, exit_lane_id=mapping['exit_wp'].lane_id,
+                stop_line_arc_m=mapping['stop_arc'], outlet_length_m=outlet_distance,
+                route_points=[dict(x=p.x,y=p.y,z=p.z) for p in self.assigned_route_points[item['demand_id']]]))
+        else:
+            actor.set_autopilot(True, self.tm_port)
+            self.tm.auto_lane_change(actor, False)
+            self.tm.ignore_lights_percentage(actor, 0.0)
+            self.tm.ignore_vehicles_percentage(actor, 0.0)
+            self.tm.vehicle_percentage_speed_difference(actor, self.speed_difference)
+            if hasattr(self.tm, 'set_path'):
+                self.tm.set_path(actor, [point.location for point in mapping['points'][1:]])
         self.actors[item['demand_id']] = actor
         self.states[item['demand_id']] = {'seen_approach': False, 'entered': False,
                                            'exited': False, 'waiting_s': 0.0,
@@ -137,6 +190,21 @@ class BackgroundTrafficRuntime:
             state = self.states[demand_id]
             now = float(elapsed_s)
             if state['exited']:
+                if self.strict_routes and not state.get('removed'):
+                    if not actor.is_alive:
+                        raise RuntimeError('Route-bound background disappeared before its destination')
+                    location = actor.get_location()
+                    end = self.assigned_route_points[demand_id][-1]
+                    distance = math.hypot(location.x-end.x, location.y-end.y)
+                    if self.route_agents[demand_id].done() and distance <= 4.0:
+                        state['route_finished'] = True
+                        state['removed'] = True
+                        self._write(dict(type='background_route_completed', demand_id=demand_id,
+                            actor_id=actor.id, movement=self.demand[demand_id]['movement'],
+                            distance_to_goal_m=distance, goal_tolerance_m=4.0,
+                            x=location.x,y=location.y, elapsed_s=now))
+                        actor.destroy()
+                    continue
                 if (not state.get('removed') and
                         now >= state.get('sink_at_s', float('inf'))):
                     if actor.is_alive:
@@ -168,7 +236,24 @@ class BackgroundTrafficRuntime:
                 state['entered'] = True
                 self._write({'type': 'background_junction_enter', 'demand_id': demand_id,
                              'actor_id': actor.id, 'movement': movement, 'elapsed_s': now})
+            if self.strict_routes:
+                from common.grouped_fixed_signal import point_segment_distance
+                mapping = self.mappings[movement]
+                lateral = min(point_segment_distance((loc.x,loc.y),(a.x,a.y),(b.x,b.y))
+                              for a,b in zip(self.assigned_route_points[demand_id],self.assigned_route_points[demand_id][1:]))
+                native = actor.get_traffic_light() if actor.is_at_traffic_light() else None
+                association_ok = (native is None or native.id == mapping['light'].id or inside)
+                self._write(dict(type='route_validation', actor_id=actor.id, demand_id=demand_id,
+                    movement=movement, lateral_error_m=lateral, inside=inside,
+                    expected_light_id=mapping['light'].id,
+                    native_light_id=native.id if native else None, association_ok=association_ok,
+                    actual_light_state=str(mapping['light'].get_state()),
+                    road_id=wp.road_id,lane_id=wp.lane_id))
+                if lateral > 1.5 or not association_ok:
+                    raise RuntimeError('Background route or controlling-signal mismatch for %s' % actor.id)
             if state['entered'] and not inside:
+                if self.strict_routes and (wp.road_id,wp.lane_id) != (self.mappings[movement]['exit_wp'].road_id,self.mappings[movement]['exit_wp'].lane_id):
+                    raise RuntimeError('Background vehicle used the wrong junction exit')
                 state['exited'] = True
                 state['sink_at_s'] = now + 1.0
                 state['removed'] = False
@@ -182,7 +267,10 @@ class BackgroundTrafficRuntime:
         exited = sum(x['exited'] for x in self.states.values())
         return {'enabled': planned > 0, 'profile': self.profile, 'planned': planned,
                 'spawned': spawned, 'pending': len(self.pending), 'exited': exited,
-                'drained': planned == spawned == exited and not self.pending}
+                'route_finished': sum(x.get('route_finished', False) for x in self.states.values()),
+                'drained': planned == spawned == exited and not self.pending and
+                (not getattr(self, 'strict_routes', False) or
+                 all(x.get('route_finished', False) for x in self.states.values()))}
 
     def close(self):
         summary = {'schema': 'carla_route_background_metrics_v1', 'profile': self.profile,
@@ -191,6 +279,8 @@ class BackgroundTrafficRuntime:
                    'approach_seen': sum(x['seen_approach'] for x in self.states.values()),
                    'junction_entered': sum(x['entered'] for x in self.states.values()),
                    'junction_exited': sum(x['exited'] for x in self.states.values()),
+                   'route_finished': sum(x.get('route_finished', False) for x in self.states.values()),
+                   'strict_routes': self.strict_routes,
                    'vehicles': []}
         for demand_id, state in sorted(self.states.items()):
             summary['vehicles'].append({'demand_id': demand_id,

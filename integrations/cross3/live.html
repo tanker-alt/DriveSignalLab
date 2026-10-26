@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cross3 实时运行</title>
+<style>body{margin:24px;background:#101925;color:#e5edf7;font:16px system-ui}h1{font-size:26px}article{background:#1b293a;padding:18px;border-radius:14px;margin:12px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}img{width:100%;min-height:80px}canvas{width:100%;max-width:580px}small{color:#a9bacd}#lights{display:flex;gap:12px;flex-wrap:wrap}.lamp{padding:8px;border-radius:8px;color:#111}pre{white-space:pre-wrap;overflow-wrap:anywhere}@media(max-width:800px){.grid{grid-template-columns:1fr}}</style>
+<h1>Cross3 · 双 LMDrive 实时运行</h1><p id="status">正在连接…</p><small>每秒读取最新保存的数据；相机与俯视图可能有采样延迟。启动时模型加载需要等待。此轮使用冻结的 PressLight 策略，不更新权重。</small>
+<div class="grid"><article><h2>主车 0</h2><img id="cam0" alt="等待主车 0 相机"><p id="ego0"></p></article><article><h2>主车 1</h2><img id="cam1" alt="等待主车 1 相机"><p id="ego1"></p></article></div>
+<div class="grid"><article><h2>路口实时位置（道路示意）</h2><canvas id="map" width="580" height="580"></canvas></article><article><h2>信号与进度</h2><p id="progress">等待运行数据</p><div id="lights"></div><p id="queue"></p><pre id="run"></pre><small>运行结束后保留末帧；退出码非零时请查看对应 .log 日志。</small></article></div>
+<script>
+const $=id=>document.getElementById(id);let busy=false;
+async function update(){if(busy)return;busy=true;try{const r=await fetch('/api');if(!r.ok)throw Error(r.status);const d=await r.json();
+$('status').textContent=d.exit_code!==null&&d.exit_code!==0?'运行异常退出：'+d.exit_code:d.mode==='live'?'运行中 · 自动刷新':d.summary?'运行已结束 · 保留末帧':'查看已有数据';
+$('run').textContent=d.run+'\n'+d.episode;let p=d.progress||{},s=d.signal||{};
+$('progress').textContent=`仿真 ${(s.time||p.elapsed||0).toFixed(1)} 秒 · 完成 ${p.completed??0}/${p.planned??'—'} · ${s.phase||'—'} ${s.stage||''}`;
+$('lights').replaceChildren();Object.entries(s.actual||{}).forEach(([id,color])=>{let el=document.createElement('span');el.className='lamp';el.style.background={Red:'#ff7d7d',Green:'#65dda1',Yellow:'#ffdb72'}[color]||'#aaa';el.textContent=id+' '+color;$('lights').append(el)});
+$('queue').textContent='各车道排队：'+(s.observation?.lane_queued||[]).join(' / ');
+const c=$('map').getContext('2d');c.fillStyle='#172b26';c.fillRect(0,0,580,580);c.fillStyle='#46505b';c.fillRect(0,257,580,66);c.fillRect(257,0,66,580);c.strokeStyle='#c3c7cb';c.setLineDash([8,8]);c.beginPath();c.moveTo(0,290);c.lineTo(580,290);c.moveTo(290,0);c.lineTo(290,580);c.stroke();c.setLineDash([]);
+const records=p.vehicles||[];for(const v of d.vehicles){const rec=records.find(x=>x.actor_id===v.actor);if(rec?.completed)continue;c.fillStyle=rec?.role?.startsWith('hero')?'#69cfff':'#f6c66e';let x=290+v.x*2.5,y=290+v.y*2.5;c.fillRect(x-4,y-4,8,8);c.fillStyle='white';c.font='11px sans-serif';c.fillText(rec?.role||v.actor,x+6,y)}
+for(let i=0;i<2;i++){const rec=records.find(x=>x.role==='hero_'+i);$('ego'+i).textContent=rec?.completed?'已完成 · 保留最后相机画面':'最新保存相机画面';const response=await fetch('/camera/'+i+'?t='+Date.now());if(response.ok){const url=URL.createObjectURL(await response.blob());const img=$('cam'+i);const old=img.dataset.url;img.src=url;img.dataset.url=url;if(old)URL.revokeObjectURL(old)}}
+}catch(e){$('status').textContent='连接中断，正在重试：'+e.message}finally{busy=false}}
+update();setInterval(update,1000);
+</script></html>
