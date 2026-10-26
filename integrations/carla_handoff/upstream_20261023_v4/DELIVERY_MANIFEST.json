@@ -1,0 +1,281 @@
+{
+  "files": [
+    {
+      "path": "control_four_phases.py",
+      "bytes": 19028,
+      "sha256": "649a5321c95a90310410efa7223a9fc31fa1a0ab43d0f9bf09ee7ad0a5a3b87d"
+    },
+    {
+      "path": "control_junction_phases.py",
+      "bytes": 16194,
+      "sha256": "9e1ffefb91ca521c7408fa1b06a97f624efec164f9870020679f62c70b851c73"
+    },
+    {
+      "path": "DELIVERY_README.txt",
+      "bytes": 7268,
+      "sha256": "6142276168ca9c155c83eb0971d41bafb78a67c906d1cf09fd9c6a142661eecf"
+    },
+    {
+      "path": "demo_four_phase_traffic.py",
+      "bytes": 8947,
+      "sha256": "ff9d658a379798d0f2781ce7db29163ebb376f284145a6caeb9f88ba76af80cb"
+    },
+    {
+      "path": "evaluation/__init__.py",
+      "bytes": 88,
+      "sha256": "cc3959121d857c85cf5f693e4a58fb6fdb638c100e0dc6c5ef1643d4b9266499"
+    },
+    {
+      "path": "evaluation/api.py",
+      "bytes": 1788,
+      "sha256": "299f1bb6e4c6a45cdc4aa7db17f50f07d9da0c132ce765b2adf76107c5e3db59"
+    },
+    {
+      "path": "evaluation/approach_geometry.py",
+      "bytes": 8299,
+      "sha256": "aaa8274a2ab4285716c27e4ff3afe3c97c4169d2633d317d007b0d2555295aff"
+    },
+    {
+      "path": "evaluation/approach_metrics.py",
+      "bytes": 10920,
+      "sha256": "124ec333183f9f67d42adadf9bce8ec2b6cceafb24593fbc59f77702beed35b2"
+    },
+    {
+      "path": "evaluation/collector.py",
+      "bytes": 18925,
+      "sha256": "5e8e2db6d70bbe8d26f3fc0b4f7e4809888d8283271b4ddf2e4cc306c1dea14d"
+    },
+    {
+      "path": "evaluation/collision_events.py",
+      "bytes": 8287,
+      "sha256": "7a7bb5ad01b82aa23aee0d24f93a0fbef71152e9308b964cbb717992256307c6"
+    },
+    {
+      "path": "evaluation/collision_recorder.py",
+      "bytes": 6099,
+      "sha256": "93d3ca940b1fd2fcbd28a3e5dec862f416d6d82bcd0191a58f8f4b4aa93abe87"
+    },
+    {
+      "path": "evaluation/configs/approach_metrics.json",
+      "bytes": 167,
+      "sha256": "af948127306bf79ab92b484f53fa6a66fc272bef57becbac86f6e420bf28f703"
+    },
+    {
+      "path": "evaluation/configs/metrics.json",
+      "bytes": 92,
+      "sha256": "d3910262e2dee2f5caf17e5689f57b524880fd33b27204e09e5d2866604fdaf0"
+    },
+    {
+      "path": "evaluation/configs/traffic.json",
+      "bytes": 636,
+      "sha256": "494fca713e6e810d19c5f7a32c29c0a1f21fe9578ba120d6af4f7cf6c1fbdeda"
+    },
+    {
+      "path": "evaluation/default_experiment.py",
+      "bytes": 727,
+      "sha256": "e90aa6328d4ea25026e4590a3091d5efc715acadac3ebb412624ce9135f2dd72"
+    },
+    {
+      "path": "evaluation/detection_lines.py",
+      "bytes": 2787,
+      "sha256": "a6d8cf5efeee332bfcaab626b046439b44f68143b01bfcd0098735887dc9d744"
+    },
+    {
+      "path": "evaluation/map_context.py",
+      "bytes": 1629,
+      "sha256": "1d7665aa08cbba74abf29296e2f52fbacc5ce8901f836b590d9ab4b561890537"
+    },
+    {
+      "path": "evaluation/map_profile.py",
+      "bytes": 4472,
+      "sha256": "e40dc9f8d51d5fb3de8e02178ba3aa8fe96607cb4abbc0dbb785fc8ed4600f1c"
+    },
+    {
+      "path": "evaluation/metrics.py",
+      "bytes": 2676,
+      "sha256": "651a472d9badd4200d59c31e7188a191b25542c6832aa2bd92947d5325b94547"
+    },
+    {
+      "path": "evaluation/recorder.py",
+      "bytes": 9222,
+      "sha256": "5489d868a169a7d3561df2f07523e6f50ba7646096ed6e48e3234c2052d28118"
+    },
+    {
+      "path": "evaluation/run_collection.py",
+      "bytes": 3368,
+      "sha256": "8c69cc645d275076bf33b10bb10168c9ece98a9653e76d54f0bf75649bb22366"
+    },
+    {
+      "path": "evaluation/signal_association.py",
+      "bytes": 1300,
+      "sha256": "723ef84e5e0b91c61f3facff5bbce6ef7f561bc2997661758dfe43b6eb86a8f7"
+    },
+    {
+      "path": "evaluation/summarize.py",
+      "bytes": 5708,
+      "sha256": "081d57334b6bcc2aabc1e3c3a3b0cb30651032a40ba09c9861789fac0fdf96b6"
+    },
+    {
+      "path": "evaluation/topology.py",
+      "bytes": 8321,
+      "sha256": "b820d6b6bd7ba995cf02d885f55b0c5958fc0261a07afdc27220162404014dd3"
+    },
+    {
+      "path": "evaluation/trip_tracker.py",
+      "bytes": 7797,
+      "sha256": "5d2f6a310e30db956222cbe9fbbc51f2070b341486545416e50ed840968bbe9a"
+    },
+    {
+      "path": "evaluation/vehicle_tracker.py",
+      "bytes": 7320,
+      "sha256": "45c74b416449cf859e29b69db70343c47023c38afc7ad8fe1917aa70a8ff4674"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/experiment.py",
+      "bytes": 5474,
+      "sha256": "df599023c3f7588a4a1c2a107bcfcb3fb831b83bdebd33b0f102066de4ef841c"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/lane_signals.py",
+      "bytes": 5264,
+      "sha256": "2bd5c6bd124f8b4f3a19a594ae634d7e8db25760c05600867a6d9171aca600dd"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/layout.py",
+      "bytes": 2278,
+      "sha256": "ee63ee60c78e2b82b5dbb8888ebb407a0def4d59debf180afe11e3c315bf0366"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/maps/cross3/config.json",
+      "bytes": 376,
+      "sha256": "5c82623c528690449dde2811c5366773606a27592bd49a4317476e5ebc790d2a"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/maps/cross3/manifest.json",
+      "bytes": 5368,
+      "sha256": "d686d70a23fda9ef9156fb560151d9ebc525a5b48910c764d08a910af0b903d6"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/maps/cross3/map.xodr",
+      "bytes": 37532,
+      "sha256": "37b0a2630bbf82e02284b811a41ffe1df7957d59f5e04f636afd513a1275ffd5"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/maps/cross3/topology_validation.json",
+      "bytes": 2777,
+      "sha256": "33f995b6a30dbb142e4fd6c762d5dd6741907e742b6275ec818e61f6ea1191cb"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/project_bridge.py",
+      "bytes": 3357,
+      "sha256": "d27f93db1c82e5e1f850342690465235fb4db3d41fec111297c95c267ed50cf3"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/scenery.py",
+      "bytes": 4487,
+      "sha256": "e76e8b3576f295e015bf973036b91177d0bc741a98ce7ba650f5f1efeb3d1947"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/validate.py",
+      "bytes": 7408,
+      "sha256": "cd8cd43d46139d354c7ffdfdcbcf817f664c66bc22c42ef99411e3395be0bb06"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/view.py",
+      "bytes": 5689,
+      "sha256": "cda791e61fc185d5a7e0580a188cd74b07b17e7853cb5c97088179eb5ca804e9"
+    },
+    {
+      "path": "map_profiles/generated_cross3/approach_geometry.json",
+      "bytes": 135132,
+      "sha256": "967355f3dfd9d797f5bf0ff8b315d3fc7d507ad11645ab684e81bbdf50f03f47"
+    },
+    {
+      "path": "map_profiles/generated_cross3/detection_config.json",
+      "bytes": 11565,
+      "sha256": "b2e9d6b5af7d0e52999c742d145dc703f985d9498959971c4b1c07a0e78ad0b1"
+    },
+    {
+      "path": "map_profiles/generated_cross3/inventory.json",
+      "bytes": 4806,
+      "sha256": "c9e87ba35a11395558da2c1c9ed8b2bdc21eb489b54c0f4665daa7dac5e4abf1"
+    },
+    {
+      "path": "map_profiles/generated_cross3/profile.json",
+      "bytes": 1461,
+      "sha256": "02b444bffecbe43648b209b5a5419616e11b9a7f078e9545fd6861e9a09f5dc5"
+    },
+    {
+      "path": "map_tools/__init__.py",
+      "bytes": 82,
+      "sha256": "cfa2f4634675947c485c75093be3c28f99d0ec268f0f52f47123fb481cecb7f7"
+    },
+    {
+      "path": "map_tools/__main__.py",
+      "bytes": 3789,
+      "sha256": "4be76455ef3c7b1b24b9c566ec40bbf9d6ea68e9c1140e48cb8ed94eb73bd807"
+    },
+    {
+      "path": "requirements-visualization.txt",
+      "bytes": 143,
+      "sha256": "fcf32254c7801a87cbc6713322a27a2d5213768f3067b3eb731f5e04d02a8044"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 79,
+      "sha256": "164c453d118e7f8fcdc79261d9bb7088495b8f8e9388b90f94eb88b8771272a9"
+    },
+    {
+      "path": "run_experiment.py",
+      "bytes": 2057,
+      "sha256": "4775389d863607f6026e2007630676e765a159bcf802d516ec8188a303c8cc2b"
+    },
+    {
+      "path": "spawn_junction_traffic.py",
+      "bytes": 20054,
+      "sha256": "2df082d0ee8cdb3f179f3c195a3dbdba121ca4950c4cd49b4db1adb3d1e1b7e3"
+    },
+    {
+      "path": "tools/__init__.py",
+      "bytes": 42,
+      "sha256": "d1cc2c579b954fa0b000b966709e6d92113aa333c6ba131e85d66d1b3304c501"
+    },
+    {
+      "path": "tools/build_delivery.py",
+      "bytes": 4425,
+      "sha256": "ad067e667c10fb0f7d50f7259596edeb2f8ee408206074dcfe43f1a3ca5f4a54"
+    },
+    {
+      "path": "tools/map_setup.py",
+      "bytes": 15180,
+      "sha256": "839e4a44a6236020eaed1eb00e6cdbeb952710342ee1d54808ee3844fc838e80"
+    },
+    {
+      "path": "tools/selfcheck.py",
+      "bytes": 1938,
+      "sha256": "08a98e2995d4a1cbeb3a3b701776c7fa4c499ac4107af53d0f888b271f2580eb"
+    },
+    {
+      "path": "tools/stop_reference_review.py",
+      "bytes": 5457,
+      "sha256": "35d6c7e8808e15352b504f99eb73cde27c3414906b4d8621c05f0ed4b1421f49"
+    },
+    {
+      "path": "traffic_scenario.py",
+      "bytes": 7864,
+      "sha256": "323fe672f298e456b43d2172e5be032ec3f780f30f880187d33b61871cba133d"
+    },
+    {
+      "path": "evaluation/configs/active_map_profile.json",
+      "bytes": 71,
+      "sha256": "a180d05db983b497f0ede6f05a92c91114a8eaf3d60453796d515874506925c6"
+    },
+    {
+      "path": "map_dataset/junction_toolkit/settings.json",
+      "bytes": 78,
+      "sha256": "056436906520fb796bff0416882ae4a9f395705c398965fc5079ac6236397b03"
+    }
+  ],
+  "excluded": "All Markdown, experiments/raw outputs, screenshots, reports, tests, archives, caches, other maps and local environment paths",
+  "note": "See DELIVERY_README.txt. topology_validation.json is retained only because the map loader requires it. Two mutually exclusive signal controllers are included."
+}

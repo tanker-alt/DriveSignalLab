@@ -1,0 +1,6 @@
+{
+  "schema": "drive_agent_plugin_v1",
+  "kind": "signal",
+  "factory": "agent_interfaces.signals:MaxPressureAgent",
+  "kwargs": {}
+}

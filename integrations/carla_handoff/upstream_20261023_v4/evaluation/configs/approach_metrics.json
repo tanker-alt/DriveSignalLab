@@ -1,0 +1,8 @@
+{
+  "detection_length_m": 50.0,
+  "sample_step_m": 1.0,
+  "queue_speed_mps": 1.0,
+  "queue_gap_m": 5.0,
+  "queue_head_distance_m": 10.0,
+  "height_tolerance_m": 2.0
+}

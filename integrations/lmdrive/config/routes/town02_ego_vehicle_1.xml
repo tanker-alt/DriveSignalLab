@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes><route id="zlj_fixed_signal_ego_1" model="vehicle.lincoln.mkz_2017" role="ego" town="Town02"><waypoint x="88.979000" y="240.898000" yaw="0.033423" z="0.000000" /><waypoint x="136.139000" y="225.0" yaw="-89.942808" z="0.000000" /></route></routes>

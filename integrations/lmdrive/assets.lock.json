@@ -1,0 +1,20 @@
+{
+  "models": [
+    {
+      "repo": "OpenDILabCommunity/LMDrive-llava-v1.5-7b-v1.0",
+      "revision": "081ca1b028c73ceb83918a0b45a5e7c5322b26a8",
+      "file": "llava-v1.5-checkpoint.pth",
+      "sha256": "1d3c934a4cc44a35ee92ab8b26b3578d151e39a3f21804f41b12ff31cbff0091"
+    },
+    {
+      "repo": "OpenDILabCommunity/LMDrive-vision-encoder-r50-v1.0",
+      "revision": "ce055800ef3a458bad5b7fff18ed52034edcea45",
+      "file": "vision-encoder-r50.pth.tar",
+      "sha256": "718c7f1acae1607dc35355b1782685e29c98d65233de83fa8a6309ed6df6076a"
+    },
+    {
+      "repo": "liuhaotian/llava-v1.5-7b",
+      "revision": "4481d270cc22fd5c4d1bb5df129622006ccd9234"
+    }
+  ]
+}

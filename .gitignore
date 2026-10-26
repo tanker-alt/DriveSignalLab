@@ -23,6 +23,14 @@ dist/
 *.ckpt
 *.safetensors
 *.log
+/traffic_signal/checkpoints/
+/traffic_signal/outputs/
+/integrations/lmdrive/checkpoints/*.npz
+/integrations/lmdrive/checkpoints/*.json
+!/integrations/lmdrive/checkpoints/metadata.example.json
+/integrations/lmdrive/checkpoints/*.pth
+/integrations/lmdrive/checkpoints/*.pt
+/outputs/
 
 # Personal settings and notes
 .env
@@ -31,3 +39,14 @@ dist/
 .vscode/
 .idea/
 conversation_handoff.md
+
+# Model artifacts and generated output in imported integrations
+*.h5
+*.hdf5
+*.npz
+*.pkl
+*.pickle
+*.zip
+*.tar
+*.tar.gz
+/integrations/carla_handoff/**/evaluation/outputs/

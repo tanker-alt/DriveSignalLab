@@ -1,0 +1,9 @@
+{
+  "carla": "0.9.12",
+  "mdrive_repository": "https://github.com/ucla-mobility/MDrive.git",
+  "mdrive_commit": "9e08377042b8f2e2860bb00de2416b3ebcfa3be4",
+  "lmdrive_commit": "308d8da0b4ff3463b1649fe483a9b2c56b108189",
+  "python": "3.8",
+  "torch": "2.0.1+cu118",
+  "transformers": "4.31.0"
+}

@@ -1,6 +1,7 @@
 # DriveSignalLab 协作说明
 
-本项目基于 Xiaomi MindDrive。当前包含上游代码及协作准备文件，车路协同框架尚未实现。
+本项目基于 Xiaomi MindDrive，包含灯控原型、CARLA/LMDrive 集成、Cross3 实验和可替换 agent 接口。
+代码共享与本机资源边界见 [CODE_SHARING.md](docs/CODE_SHARING.md)。
 原项目说明见 README.md，使用和分发时保留 LICENSE 及原作者声明。
 
 ## 开发流程

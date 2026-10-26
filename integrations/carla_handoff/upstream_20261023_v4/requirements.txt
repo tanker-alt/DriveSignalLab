@@ -1,0 +1,2 @@
+# Tested on Windows x64 / Python 3.7.9. See DELIVERY_README.txt.
+carla==0.9.15

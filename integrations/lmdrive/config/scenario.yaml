@@ -1,0 +1,185 @@
+Background:
+  vehicle_amount: 0
+  pedestrian_amount: 0
+  CRAZY_LEVEL: 3
+  CRAZY_PROPORTION: 50
+  turn_off_light: false
+Scenario1:
+  ControlLoss:
+    proportion: 0.0
+    no_of_jitter: 10
+    noise_mean: 0
+    noise_std: 0.01
+    dynamic_mean_for_steer: 0.001
+    dynamic_mean_for_throttle: 0.045
+    abort_distance_to_intersection: 10
+    start_distance: 20
+    trigger_dist: 2
+    end_distance: 30
+    ego_vehicle_max_steer: 0.0
+    ego_vehicle_max_throttle: 1.0
+    ego_vehicle_target_velocity: 15
+    distance:
+    - 14
+    - 48
+    - 74
+  CutIn:
+    proportion: 0.0
+    velocity: 40
+    delta_velocity: 10
+    trigger_distance: 30
+    catch_distance: 40
+  FreeRide:
+    proportion: 1.0
+Scenario2:
+  FollowLeadingVehicle:
+    proportion: 0.0
+    first_vehicle_location: 25
+    first_vehicle_speed: 10
+    other_actor_max_brake: 1.0
+    other_actor_stop_in_front_intersection: 20
+    trigger_distance: 20
+  FollowLeadingVehicleWithObstacle:
+    proportion: 0.0
+    first_actor_location: 25
+    second_head_distance: 41
+    second_actor_location: 66
+    first_actor_speed: 10
+    second_actor_speed: 1.5
+    other_actor_max_brake: 1.0
+  CutIn:
+    proportion: 0.0
+    velocity: 40
+    delta_velocity: 10
+    trigger_distance: 30
+    catch_distance: 40
+  ChangeLane:
+    proportion: 0.0
+    fast_vehicle_velocity: 70
+    slow_vehicle_velocity: 0
+    change_lane_velocity: 15
+    slow_vehicle_distance: 100
+    fast_vehicle_distance: 20
+    trigger_distance: 30
+    max_brake: 1
+  FreeRide:
+    proportion: 1.0
+Scenario3:
+  StationaryObjectCrossing:
+    proportion: 0.0
+    ego_vehicle_distance_driven: 40
+    other_actor_target_velocity: 15
+    start_distance: 40
+  DynamicObjectCrossing:
+    proportion: 0.0
+    trigger_distance: 10
+    ego_vehicle_distance_driven: 40
+    other_actor_target_velocity: 3
+    other_actor_max_brake: 1.0
+    time_to_reach: 10
+    adversary_type: false
+    walker_yaw: 0
+    num_lane_changes: 1
+    number_of_attempts: 500
+  ConstructionSetupCrossing:
+    proportion: 0.0
+    start_distance: 40
+  FreeRide:
+    proportion: 1.0
+Scenario4:
+  VehicleTurningRight:
+    proportion: 0.0
+    other_actor_target_velocity: 3
+    pass_distance: 30
+    number_of_attempts: 100
+  VehicleTurningLeft:
+    proportion: 0.0
+    other_actor_target_velocity: 10
+    number_of_attempts: 100
+  VehicleTurningRoute:
+    proportion: 0.0
+    other_actor_target_velocity: 10
+    pass_distance: 30
+    number_of_attempts: 100
+  FreeRide:
+    proportion: 1.0
+Scenario5:
+  OtherLeadingVehicle:
+    proportion: 0.0
+    first_vehicle_location: 35
+    second_vehicle_location: 36
+    ego_vehicle_drive_distance: 140
+    first_vehicle_speed: 55
+    second_vehicle_speed: 45
+    other_actor_max_brake: 1.0
+  CutIn:
+    propoton: 0.0
+    velocity: 40
+    delta_velocity: 10
+    trigger_distance: 30
+    catch_distance: 40
+  FreeRide:
+    proportion: 1.0
+Scenario6:
+  ManeuverOppositeDirection:
+    proportion: 0.0
+    first_vehicle_location: 8
+    second_vehicle_location: 16
+    ego_vehicle_drive_distance: 32
+    start_distance: 7.2
+    opposite_speed: 5.56
+    source_gap: 40
+  FreeRide:
+    proportion: 1.0
+Scenario7:
+  SignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  NoSignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  FreeRide:
+    proportion: 1.0
+Scenario8:
+  SignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  NoSignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  FreeRide:
+    proportion: 1.0
+Scenario9:
+  SignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  NoSignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  FreeRide:
+    proportion: 1.0
+Scenario10:
+  SignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  NoSignalJunctionCrossingRoute:
+    proportion: 0.0
+    ego_max_velocity_allowed: 20
+    ego_expected_driven_distance: 50
+    ego_distance_to_drive: 20
+  FreeRide:
+    proportion: 1.0

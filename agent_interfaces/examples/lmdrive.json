@@ -1,0 +1,10 @@
+{
+  "schema": "drive_agent_plugin_v1",
+  "kind": "driving",
+  "factory": "agent_interfaces.lmdrive:create_agent",
+  "kwargs": {
+    "config": "${LMDRIVE_AGENT_CONFIG}",
+    "output": "${LMDRIVE_MODEL_OUTPUT}",
+    "ego_vehicles_num": 2
+  }
+}

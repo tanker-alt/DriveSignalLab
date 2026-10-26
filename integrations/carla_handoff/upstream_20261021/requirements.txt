@@ -1,0 +1,2 @@
+# Tested on Windows x64 / Python 3.7.9. See docs/SETUP.md for CARLA wheel fallback.
+carla==0.9.15

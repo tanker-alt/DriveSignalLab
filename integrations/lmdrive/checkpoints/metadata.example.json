@@ -1,0 +1,13 @@
+{
+  "schema": "carla_two_movement_presslight_v1",
+  "state_dim": 6,
+  "action_dim": 2,
+  "features": ["phase_0", "phase_1", "incoming_0", "outgoing_0", "incoming_1", "outgoing_1"],
+  "signal_timing_seconds": {
+    "decision_interval": 2.0,
+    "yellow": 3.0,
+    "all_red_clearance": 2.0,
+    "minimum_green_after_switch": 5.0,
+    "maximum_green": 15.0
+  }
+}

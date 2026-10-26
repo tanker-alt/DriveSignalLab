@@ -38,6 +38,24 @@ Current Vision-Language-Action (VLA) paradigms in autonomous driving primarily r
 - [√] MindDrive Checkpoint
 - [√] MindDrive Training Framework
 
+## Traffic-signal control prototype
+
+Replaceable Cross3 signal and driving agents now share a versioned plugin
+configuration mechanism. See [the interface guide](agent_interfaces/README.md)
+for contracts, LMDrive/official PressLight adapters, examples and evaluation commands.
+
+The [`traffic_signal`](traffic_signal) module contains an initial two-movement
+CARLA traffic-signal prototype with fixed-time, Max Pressure, and a locally
+trained PressLight-style DQN behind one safety transition interface. It does
+not include maps, checkpoints, CARLA binaries, datasets, or experiment logs.
+See [`docs/TRAFFIC_SIGNAL_INTEGRATION.md`](docs/TRAFFIC_SIGNAL_INTEGRATION.md)
+for the collector and vehicle-message integration boundary.
+
+The runnable CARLA + two-ego LMDrive adapter, MDrive patch, Town02 routes,
+launcher, environment pins, and evaluation scripts are under
+[`integrations/lmdrive`](integrations/lmdrive). Model weights, CARLA, maps, and
+generated experiment artifacts remain external to Git.
+
 ## Getting Started
 
 ```
