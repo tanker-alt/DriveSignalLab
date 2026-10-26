@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "approaches": [
+    {
+      "road": 1,
+      "lanes": [
+        {
+          "signal_id": "1011",
+          "lane_id": -1,
+          "vehicle_id": 3705,
+          "red_stop": true,
+          "observed_signal": "1011",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1012",
+          "lane_id": -2,
+          "vehicle_id": 3707,
+          "red_stop": true,
+          "observed_signal": "1012",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1013",
+          "lane_id": -3,
+          "vehicle_id": 3709,
+          "red_stop": true,
+          "observed_signal": "1013",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lanes": [
+        {
+          "signal_id": "1021",
+          "lane_id": -1,
+          "vehicle_id": 3711,
+          "red_stop": true,
+          "observed_signal": "1021",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1022",
+          "lane_id": -2,
+          "vehicle_id": 3713,
+          "red_stop": true,
+          "observed_signal": "1022",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1023",
+          "lane_id": -3,
+          "vehicle_id": 3715,
+          "red_stop": true,
+          "observed_signal": "1023",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lanes": [
+        {
+          "signal_id": "1031",
+          "lane_id": -1,
+          "vehicle_id": 3717,
+          "red_stop": true,
+          "observed_signal": "1031",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1032",
+          "lane_id": -2,
+          "vehicle_id": 3719,
+          "red_stop": true,
+          "observed_signal": "1032",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1033",
+          "lane_id": -3,
+          "vehicle_id": 3721,
+          "red_stop": true,
+          "observed_signal": "1033",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lanes": [
+        {
+          "signal_id": "1041",
+          "lane_id": -1,
+          "vehicle_id": 3723,
+          "red_stop": true,
+          "observed_signal": "1041",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1042",
+          "lane_id": -2,
+          "vehicle_id": 3725,
+          "red_stop": true,
+          "observed_signal": "1042",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        },
+        {
+          "signal_id": "1043",
+          "lane_id": -3,
+          "vehicle_id": 3727,
+          "red_stop": true,
+          "observed_signal": "1043",
+          "green_release": true,
+          "neighbours_still_red": true,
+          "states_independent": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "collisions": [],
+  "restored": true
+}

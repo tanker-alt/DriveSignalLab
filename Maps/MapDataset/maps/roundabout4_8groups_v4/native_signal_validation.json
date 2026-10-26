@@ -1,0 +1,231 @@
+{
+  "passed": true,
+  "signals": [
+    {
+      "signal_id": "1011",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 1,
+        "lane": -1,
+        "s": 112.23291015625003
+      },
+      "observed_signal": "1011",
+      "passed": true
+    },
+    {
+      "signal_id": "1012",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 1,
+        "lane": -2,
+        "s": 112.23291015625003
+      },
+      "observed_signal": "1012",
+      "passed": true
+    },
+    {
+      "signal_id": "20201",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 20,
+        "lane": -1,
+        "s": 7.027477817609913
+      },
+      "observed_signal": "20201",
+      "passed": true
+    },
+    {
+      "signal_id": "20202",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 20,
+        "lane": -2,
+        "s": 7.233595326542861
+      },
+      "observed_signal": "20202",
+      "passed": true
+    },
+    {
+      "signal_id": "1021",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 2,
+        "lane": -1,
+        "s": 112.23367309570315
+      },
+      "observed_signal": "1021",
+      "passed": true
+    },
+    {
+      "signal_id": "1022",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 2,
+        "lane": -2,
+        "s": 112.23367309570315
+      },
+      "observed_signal": "1022",
+      "passed": true
+    },
+    {
+      "signal_id": "20211",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 21,
+        "lane": -1,
+        "s": 7.080713152885444
+      },
+      "observed_signal": "20211",
+      "passed": true
+    },
+    {
+      "signal_id": "20212",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 21,
+        "lane": -2,
+        "s": 7.264152169227607
+      },
+      "observed_signal": "20212",
+      "passed": true
+    },
+    {
+      "signal_id": "1031",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 3,
+        "lane": -1,
+        "s": 112.2334899902344
+      },
+      "observed_signal": "1031",
+      "passed": true
+    },
+    {
+      "signal_id": "1032",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 3,
+        "lane": -2,
+        "s": 112.2334899902344
+      },
+      "observed_signal": "1032",
+      "passed": true
+    },
+    {
+      "signal_id": "20221",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 22,
+        "lane": -1,
+        "s": 7.0210334435105395
+      },
+      "observed_signal": "20221",
+      "passed": true
+    },
+    {
+      "signal_id": "20222",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 22,
+        "lane": -2,
+        "s": 7.287456423044212
+      },
+      "observed_signal": "20222",
+      "passed": true
+    },
+    {
+      "signal_id": "1041",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 4,
+        "lane": -1,
+        "s": 112.23506164550784
+      },
+      "observed_signal": "1041",
+      "passed": true
+    },
+    {
+      "signal_id": "1042",
+      "role": "entry",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 4,
+        "lane": -2,
+        "s": 112.23506164550784
+      },
+      "observed_signal": "1042",
+      "passed": true
+    },
+    {
+      "signal_id": "20231",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 23,
+        "lane": -1,
+        "s": 7.108360670506961
+      },
+      "observed_signal": "20231",
+      "passed": true
+    },
+    {
+      "signal_id": "20232",
+      "role": "circulating",
+      "red_stop": true,
+      "green_release": true,
+      "collisions": [],
+      "stop_waypoint": {
+        "road": 23,
+        "lane": -2,
+        "s": 7.42818349599839
+      },
+      "observed_signal": "20232",
+      "passed": true
+    }
+  ],
+  "opendrive_sha256": "43b98ae2b79674e69aff702c8fd109602d81d409477bc05f4a244782779df23a",
+  "limits": "Single Model3, target red and other lights green; does not validate simultaneous queues, lane neighbours or phase transitions."
+}

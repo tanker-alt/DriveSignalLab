@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "vehicle_sizes": [
+    {
+      "blueprint": "vehicle.carlamotors.european_hgv",
+      "roof_z": 3.4580740928649902,
+      "height_m": 3.4621654874645174,
+      "width_m": 2.8910882472991943
+    },
+    {
+      "blueprint": "vehicle.carlamotors.carlacola",
+      "roof_z": 2.466017007827759,
+      "height_m": 2.4674768137047067,
+      "width_m": 2.6269896030426025
+    },
+    {
+      "blueprint": "vehicle.mitsubishi.fusorosa",
+      "roof_z": 4.24932861328125,
+      "height_m": 4.253197314916179,
+      "width_m": 3.9441518783569336
+    },
+    {
+      "blueprint": "vehicle.tesla.cybertruck",
+      "roof_z": 2.0952205657958984,
+      "height_m": 2.0981911467388272,
+      "width_m": 2.3895740509033203
+    }
+  ],
+  "passes": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 7.397643566131592,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 3.897642135620117,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1013",
+      "road_id": 1,
+      "lane_id": -3,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 0.3976430892944336,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1021",
+      "road_id": 2,
+      "lane_id": -1,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 7.397644679978007,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1022",
+      "road_id": 2,
+      "lane_id": -2,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.297539234161377,
+      "vertical_clearance_m": 0.6790124177932739,
+      "minimum_roadside_base_clearance_m": 3.897683171914931,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1023",
+      "road_id": 2,
+      "lane_id": -3,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 0.3976451568151642,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 7.397642183624985,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 3.8976412299506684,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1033",
+      "road_id": 3,
+      "lane_id": -3,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 0.39760673253037915,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 7.397642077125362,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 3.897641123451046,
+      "rear_passed_gantry": true,
+      "passed": true
+    },
+    {
+      "signal_id": "1043",
+      "road_id": 4,
+      "lane_id": -3,
+      "vehicle": "vehicle.mitsubishi.fusorosa",
+      "lamp_bottom_z": 4.976551651954651,
+      "max_roof_z": 4.343534469604492,
+      "vertical_clearance_m": 0.6330171823501587,
+      "minimum_roadside_base_clearance_m": 0.3976411234510451,
+      "rear_passed_gantry": true,
+      "passed": true
+    }
+  ],
+  "collision_events": [],
+  "limits": "Visual supports have collision disabled. Bounding clearance, plus controlled straight passes; not turn routing or structural collision certification.",
+  "opendrive_sha256": "37b0a2630bbf82e02284b811a41ffe1df7957d59f5e04f636afd513a1275ffd5",
+  "support_model": "CARLA SM_TrafficLight01 complete mast + official ground base + independent native heads"
+}

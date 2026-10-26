@@ -1,0 +1,50 @@
+{
+  "status": "visual_demo_only_not_traffic_validated",
+  "source": "User-supplied eight-group roundabout phase diagram",
+  "phases": [
+    {
+      "name": "A",
+      "green_groups": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "seconds": 24
+    },
+    {
+      "name": "B",
+      "green_groups": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "seconds": 36
+    },
+    {
+      "name": "C",
+      "green_groups": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "seconds": 24
+    },
+    {
+      "name": "D",
+      "green_groups": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "seconds": 36
+    }
+  ],
+  "yellow_seconds": 3,
+  "all_red_seconds": 1,
+  "transition_note": "3s yellow + 1s all-red are provisional demo additions, not provided by the reference image; total demo cycle 136s.",
+  "conflict_note": "Inner-lane entry/exit crosses outer circulating trajectories. This demo rejects vehicles; no safe traffic phase claim."
+}

@@ -1,0 +1,23 @@
+{
+  "phase": "A",
+  "held": true,
+  "states": {
+    "1011": "Red",
+    "1012": "Red",
+    "20201": "Green",
+    "20202": "Green",
+    "1021": "Red",
+    "1022": "Red",
+    "20211": "Green",
+    "20212": "Green",
+    "1031": "Red",
+    "1032": "Red",
+    "20221": "Green",
+    "20222": "Green",
+    "1041": "Red",
+    "1042": "Red",
+    "20231": "Green",
+    "20232": "Green"
+  },
+  "mode": "visual_only_no_vehicles"
+}

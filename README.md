@@ -161,3 +161,8 @@ If this work is helpful for your research, please consider citing:
   year={2025}
 }
 ```
+
+
+## Map collection and evaluation
+
+See [COLLECTION_EVALUATION.md](COLLECTION_EVALUATION.md) for the Maps, InformationCollector, EvaluationMetrics and Toolkits modules.

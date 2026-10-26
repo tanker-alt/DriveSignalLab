@@ -1,0 +1,23 @@
+{
+  "name": "cross2",
+  "incoming_lanes": 2,
+  "allowed_turns": [
+    [
+      "left",
+      "straight"
+    ],
+    [
+      "straight",
+      "right"
+    ]
+  ],
+  "junction_radius_m": 22,
+  "rows": 1,
+  "columns": 1,
+  "spacing_m": 344.0,
+  "arm_length_m": 150.0,
+  "lane_width_m": 3.5,
+  "sidewalk_width_m": 2.0,
+  "seed": 42,
+  "roadside_props": true
+}

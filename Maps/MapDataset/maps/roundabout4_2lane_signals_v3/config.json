@@ -1,0 +1,19 @@
+{
+  "type": "roundabout",
+  "name": "roundabout4_2lane_signals_v3",
+  "rows": 1,
+  "columns": 1,
+  "incoming_lanes": 2,
+  "outgoing_lanes": 2,
+  "circulating_lanes": 2,
+  "internal_signals": true,
+  "lane_routing": "lane_preserving_no_lane_changes",
+  "ring_centerline_radius_m": 30.0,
+  "junction_radius_m": 30.0,
+  "arm_length_m": 120.0,
+  "lane_width_m": 3.5,
+  "spacing_m": 348.0,
+  "sidewalk_width_m": 2,
+  "roadside_props": false,
+  "seed": 42
+}

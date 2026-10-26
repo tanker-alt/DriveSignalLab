@@ -1,0 +1,820 @@
+{
+  "schema_version": 1,
+  "signal_policy": "one_signal_per_incoming_lane",
+  "status": "experimental_offline_only",
+  "config": {
+    "type": "roundabout",
+    "name": "roundabout4_2in2out_v1",
+    "rows": 1,
+    "columns": 1,
+    "incoming_lanes": 2,
+    "outgoing_lanes": 2,
+    "circulating_lanes": 1,
+    "ring_centerline_radius_m": 30,
+    "junction_radius_m": 30,
+    "arm_length_m": 120,
+    "lane_width_m": 3.5,
+    "spacing_m": 348,
+    "sidewalk_width_m": 2,
+    "roadside_props": false,
+    "seed": 42
+  },
+  "junctions": [
+    {
+      "id": 10,
+      "center": [
+        -54.0,
+        6.6130927153957075e-15
+      ],
+      "roads": [
+        1
+      ],
+      "lengths": [
+        120
+      ],
+      "arms": {
+        "west": 1
+      }
+    },
+    {
+      "id": 11,
+      "center": [
+        -9.91963907309356e-15,
+        -54.0
+      ],
+      "roads": [
+        2
+      ],
+      "lengths": [
+        120
+      ],
+      "arms": {
+        "south": 2
+      }
+    },
+    {
+      "id": 12,
+      "center": [
+        54.0,
+        -1.3226185430791415e-14
+      ],
+      "roads": [
+        3
+      ],
+      "lengths": [
+        120
+      ],
+      "arms": {
+        "east": 3
+      }
+    },
+    {
+      "id": 13,
+      "center": [
+        1.653273178848927e-14,
+        54.0
+      ],
+      "roads": [
+        4
+      ],
+      "lengths": [
+        120
+      ],
+      "arms": {
+        "north": 4
+      }
+    }
+  ],
+  "signals": {
+    "1011": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 0,
+      "approach_slot": 0,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1012": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 1,
+      "approach_slot": 0,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1021": {
+      "road_id": 2,
+      "junction_id": 11,
+      "phase_slot": 2,
+      "approach_slot": 1,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1022": {
+      "road_id": 2,
+      "junction_id": 11,
+      "phase_slot": 3,
+      "approach_slot": 1,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1031": {
+      "road_id": 3,
+      "junction_id": 12,
+      "phase_slot": 4,
+      "approach_slot": 2,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1032": {
+      "road_id": 3,
+      "junction_id": 12,
+      "phase_slot": 5,
+      "approach_slot": 2,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1041": {
+      "road_id": 4,
+      "junction_id": 13,
+      "phase_slot": 6,
+      "approach_slot": 3,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1042": {
+      "road_id": 4,
+      "junction_id": 13,
+      "phase_slot": 7,
+      "approach_slot": 3,
+      "reference_s": 114,
+      "incoming_lanes": [
+        -2
+      ]
+    }
+  },
+  "connections": [
+    {
+      "road": 100,
+      "source": 23,
+      "source_lane": -1,
+      "target": 20,
+      "target_lane": -1
+    },
+    {
+      "road": 101,
+      "source": 1,
+      "source_lane": -1,
+      "target": 20,
+      "target_lane": -1
+    },
+    {
+      "road": 103,
+      "source": 23,
+      "source_lane": -1,
+      "target": 1,
+      "target_lane": 1
+    },
+    {
+      "road": 102,
+      "source": 1,
+      "source_lane": -2,
+      "target": 20,
+      "target_lane": -1
+    },
+    {
+      "road": 104,
+      "source": 23,
+      "source_lane": -1,
+      "target": 1,
+      "target_lane": 2
+    },
+    {
+      "road": 110,
+      "source": 20,
+      "source_lane": -1,
+      "target": 21,
+      "target_lane": -1
+    },
+    {
+      "road": 111,
+      "source": 2,
+      "source_lane": -1,
+      "target": 21,
+      "target_lane": -1
+    },
+    {
+      "road": 113,
+      "source": 20,
+      "source_lane": -1,
+      "target": 2,
+      "target_lane": 1
+    },
+    {
+      "road": 112,
+      "source": 2,
+      "source_lane": -2,
+      "target": 21,
+      "target_lane": -1
+    },
+    {
+      "road": 114,
+      "source": 20,
+      "source_lane": -1,
+      "target": 2,
+      "target_lane": 2
+    },
+    {
+      "road": 120,
+      "source": 21,
+      "source_lane": -1,
+      "target": 22,
+      "target_lane": -1
+    },
+    {
+      "road": 121,
+      "source": 3,
+      "source_lane": -1,
+      "target": 22,
+      "target_lane": -1
+    },
+    {
+      "road": 123,
+      "source": 21,
+      "source_lane": -1,
+      "target": 3,
+      "target_lane": 1
+    },
+    {
+      "road": 122,
+      "source": 3,
+      "source_lane": -2,
+      "target": 22,
+      "target_lane": -1
+    },
+    {
+      "road": 124,
+      "source": 21,
+      "source_lane": -1,
+      "target": 3,
+      "target_lane": 2
+    },
+    {
+      "road": 130,
+      "source": 22,
+      "source_lane": -1,
+      "target": 23,
+      "target_lane": -1
+    },
+    {
+      "road": 131,
+      "source": 4,
+      "source_lane": -1,
+      "target": 23,
+      "target_lane": -1
+    },
+    {
+      "road": 133,
+      "source": 22,
+      "source_lane": -1,
+      "target": 4,
+      "target_lane": 1
+    },
+    {
+      "road": 132,
+      "source": 4,
+      "source_lane": -2,
+      "target": 23,
+      "target_lane": -1
+    },
+    {
+      "road": 134,
+      "source": 22,
+      "source_lane": -1,
+      "target": 4,
+      "target_lane": 2
+    }
+  ],
+  "ring_roads": [
+    20,
+    21,
+    22,
+    23
+  ],
+  "ring_continuations": [
+    100,
+    110,
+    120,
+    130
+  ],
+  "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
+  "circulation": "counterclockwise",
+  "phase_plan": null,
+  "opendrive_sha256": "466ab54b7826945fd6f2c2782100319c68df5e7ea9f1f4cbd378a08547651092",
+  "road_geometry": {
+    "1": {
+      "length": 120,
+      "geometry": [
+        -174.0,
+        2.1308854305163947e-14,
+        6.283185307179586,
+        "line",
+        {}
+      ],
+      "junction": -1
+    },
+    "20": {
+      "length": 29.58333082130389,
+      "geometry": [
+        -27.28740459266618,
+        -7.3116380241462124,
+        4.974188368183839,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": -1
+    },
+    "2": {
+      "length": 120,
+      "geometry": [
+        -3.196328145774592e-14,
+        -174.0,
+        7.853981633974483,
+        "line",
+        {}
+      ],
+      "junction": -1
+    },
+    "21": {
+      "length": 29.58333082130389,
+      "geometry": [
+        7.311638024146198,
+        -27.28740459266618,
+        6.544984694978735,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": -1
+    },
+    "3": {
+      "length": 120,
+      "geometry": [
+        174.0,
+        -4.2617708610327895e-14,
+        9.42477796076938,
+        "line",
+        {}
+      ],
+      "junction": -1
+    },
+    "22": {
+      "length": 29.58333082130389,
+      "geometry": [
+        27.28740459266618,
+        7.3116380241461965,
+        8.115781021773632,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": -1
+    },
+    "4": {
+      "length": 120,
+      "geometry": [
+        5.3272135762909865e-14,
+        174.0,
+        10.995574287564276,
+        "line",
+        {}
+      ],
+      "junction": -1
+    },
+    "23": {
+      "length": 29.58333082130389,
+      "geometry": [
+        -7.311638024146196,
+        27.28740459266618,
+        9.686577348568528,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": -1
+    },
+    "100": {
+      "length": 14.791665410651941,
+      "geometry": [
+        -27.287404592666178,
+        7.311638024146219,
+        4.4505895925855405,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": 10
+    },
+    "101": {
+      "length": 29.784324191608796,
+      "geometry": [
+        -54.0,
+        6.6130927153957075e-15,
+        6.283185307179586,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.079935374777538,
+          "cU": 14.451474367103462,
+          "dU": -16.818814334547177,
+          "aV": 0,
+          "bV": 0,
+          "cV": 6.154146532876062,
+          "dV": -13.465784557022275,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 10
+    },
+    "103": {
+      "length": 29.784324191608793,
+      "geometry": [
+        -27.287404592666178,
+        7.311638024146219,
+        4.4505895925855405,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.079935374777538,
+          "cU": -23.757626548289647,
+          "dU": 8.65391960904823,
+          "aV": 0,
+          "bV": 0,
+          "cV": -43.64092325351436,
+          "dV": 19.730928633904675,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 10
+    },
+    "102": {
+      "length": 29.153282576492114,
+      "geometry": [
+        -54.0,
+        -3.4999999999999933,
+        6.283185307179586,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.332326059642362,
+          "cU": 16.140188526426833,
+          "dU": -17.75991917873538,
+          "aV": 0,
+          "bV": 0,
+          "cV": 15.932011387412714,
+          "dV": -19.743649411558927,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 10
+    },
+    "104": {
+      "length": 29.153282576492114,
+      "geometry": [
+        -27.287404592666178,
+        7.311638024146219,
+        4.4505895925855405,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.332326059642366,
+          "cU": -32.21113356500149,
+          "dU": 14.4742955488835,
+          "aV": 0,
+          "bV": 0,
+          "cV": -47.08065837255417,
+          "dV": 22.264797095085665,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 10
+    },
+    "110": {
+      "length": 14.791665410651941,
+      "geometry": [
+        -7.311638024146208,
+        -27.28740459266618,
+        6.021385919380437,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": 11
+    },
+    "111": {
+      "length": 29.784324191608796,
+      "geometry": [
+        -9.91963907309356e-15,
+        -54.0,
+        7.853981633974483,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.079935374777534,
+          "cU": 14.451474367103469,
+          "dU": -16.81881433454718,
+          "aV": 0,
+          "bV": 0,
+          "cV": 6.154146532876094,
+          "dV": -13.465784557022296,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 11
+    },
+    "113": {
+      "length": 29.784324191608786,
+      "geometry": [
+        -7.311638024146208,
+        -27.28740459266618,
+        6.021385919380437,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.07993537477753,
+          "cU": -23.75762654828967,
+          "dU": 8.653919609048247,
+          "aV": 0,
+          "bV": 0,
+          "cV": -43.640923253514366,
+          "dV": 19.730928633904682,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 11
+    },
+    "112": {
+      "length": 29.153282576492114,
+      "geometry": [
+        3.4999999999999902,
+        -54.0,
+        7.853981633974483,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.332326059642362,
+          "cU": 16.140188526426833,
+          "dU": -17.75991917873538,
+          "aV": 0,
+          "bV": 0,
+          "cV": 15.932011387412752,
+          "dV": -19.743649411558952,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 11
+    },
+    "114": {
+      "length": 29.153282576492114,
+      "geometry": [
+        -7.311638024146208,
+        -27.28740459266618,
+        6.021385919380437,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.33232605964236,
+          "cU": -32.21113356500151,
+          "dU": 14.47429554888352,
+          "aV": 0,
+          "bV": 0,
+          "cV": -47.08065837255418,
+          "dV": 22.264797095085672,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 11
+    },
+    "120": {
+      "length": 14.791665410651941,
+      "geometry": [
+        27.28740459266618,
+        -7.311638024146209,
+        7.592182246175334,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": 12
+    },
+    "121": {
+      "length": 29.784324191608796,
+      "geometry": [
+        54.0,
+        -1.3226185430791415e-14,
+        9.42477796076938,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.079935374777534,
+          "cU": 14.451474367103469,
+          "dU": -16.81881433454718,
+          "aV": 0,
+          "bV": 0,
+          "cV": 6.154146532876094,
+          "dV": -13.465784557022296,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 12
+    },
+    "123": {
+      "length": 29.784324191608786,
+      "geometry": [
+        27.28740459266618,
+        -7.311638024146209,
+        7.592182246175334,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.07993537477753,
+          "cU": -23.75762654828967,
+          "dU": 8.65391960904825,
+          "aV": 0,
+          "bV": 0,
+          "cV": -43.640923253514366,
+          "dV": 19.730928633904682,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 12
+    },
+    "122": {
+      "length": 29.153282576492114,
+      "geometry": [
+        54.0,
+        3.4999999999999867,
+        9.42477796076938,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.332326059642362,
+          "cU": 16.140188526426833,
+          "dU": -17.75991917873538,
+          "aV": 0,
+          "bV": 0,
+          "cV": 15.932011387412752,
+          "dV": -19.743649411558952,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 12
+    },
+    "124": {
+      "length": 29.153282576492114,
+      "geometry": [
+        27.28740459266618,
+        -7.311638024146209,
+        7.592182246175334,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.33232605964236,
+          "cU": -32.21113356500151,
+          "dU": 14.47429554888352,
+          "aV": 0,
+          "bV": 0,
+          "cV": -47.08065837255418,
+          "dV": 22.264797095085672,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 12
+    },
+    "130": {
+      "length": 14.791665410651941,
+      "geometry": [
+        7.311638024146211,
+        27.28740459266618,
+        9.16297857297023,
+        "arc",
+        {
+          "curvature": 0.035398230088495575
+        }
+      ],
+      "junction": 13
+    },
+    "131": {
+      "length": 29.784324191608793,
+      "geometry": [
+        1.653273178848927e-14,
+        54.0,
+        10.995574287564276,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.079935374777538,
+          "cU": 14.451474367103462,
+          "dU": -16.818814334547177,
+          "aV": 0,
+          "bV": 0,
+          "cV": 6.154146532876098,
+          "dV": -13.465784557022298,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 13
+    },
+    "133": {
+      "length": 29.784324191608786,
+      "geometry": [
+        7.311638024146211,
+        27.28740459266618,
+        9.16297857297023,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 29.07993537477753,
+          "cU": -23.75762654828967,
+          "dU": 8.65391960904825,
+          "aV": 0,
+          "bV": 0,
+          "cV": -43.640923253514366,
+          "dV": 19.730928633904682,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 13
+    },
+    "132": {
+      "length": 29.153282576492114,
+      "geometry": [
+        -3.4999999999999836,
+        54.0,
+        10.995574287564276,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.332326059642362,
+          "cU": 16.140188526426833,
+          "dU": -17.75991917873538,
+          "aV": 0,
+          "bV": 0,
+          "cV": 15.93201138741275,
+          "dV": -19.743649411558952,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 13
+    },
+    "134": {
+      "length": 29.153282576492114,
+      "geometry": [
+        7.311638024146211,
+        27.28740459266618,
+        9.16297857297023,
+        "paramPoly3",
+        {
+          "aU": 0,
+          "bU": 28.33232605964236,
+          "cU": -32.21113356500151,
+          "dU": 14.47429554888352,
+          "aV": 0,
+          "bV": 0,
+          "cV": -47.08065837255418,
+          "dV": 22.264797095085672,
+          "pRange": "normalized"
+        }
+      ],
+      "junction": 13
+    }
+  },
+  "limits": [
+    "Two entry lanes merge into one circulating lane; conflicting arrivals require explicit control.",
+    "One circulating lane branches to two exit lanes; no extra circulating lane is implied.",
+    "Four CARLA junction IDs form one logical roundabout; existing single-junction evaluator is not yet integrated.",
+    "No signal phase assignment or live driving certification."
+  ]
+}

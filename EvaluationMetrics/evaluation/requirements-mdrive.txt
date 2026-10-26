@@ -1,0 +1,4 @@
+numpy>=1.21.6
+scipy>=1.7.3
+shapely>=1.8.5
+# Install the CARLA Python API matching the simulator separately.

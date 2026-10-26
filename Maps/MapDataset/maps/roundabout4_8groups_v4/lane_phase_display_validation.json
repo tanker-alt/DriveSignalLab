@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "phases": [
+    {
+      "name": "ring_inner",
+      "states": {
+        "1042": "Red",
+        "1011": "Red",
+        "1041": "Red",
+        "1012": "Red",
+        "1022": "Red",
+        "20212": "Red",
+        "20201": "Green",
+        "20211": "Green",
+        "1021": "Red",
+        "20202": "Red",
+        "1031": "Red",
+        "1032": "Red",
+        "20221": "Green",
+        "20222": "Red",
+        "20231": "Green",
+        "20232": "Red"
+      },
+      "passed": true
+    },
+    {
+      "name": "ring_outer",
+      "states": {
+        "1042": "Red",
+        "1011": "Red",
+        "1041": "Red",
+        "1012": "Red",
+        "1022": "Red",
+        "20212": "Green",
+        "20201": "Red",
+        "20211": "Red",
+        "1021": "Red",
+        "20202": "Green",
+        "1031": "Red",
+        "1032": "Red",
+        "20221": "Red",
+        "20222": "Green",
+        "20231": "Red",
+        "20232": "Green"
+      },
+      "passed": true
+    },
+    {
+      "name": "entry_inner",
+      "states": {
+        "1042": "Red",
+        "1011": "Green",
+        "1041": "Green",
+        "1012": "Red",
+        "1022": "Red",
+        "20212": "Red",
+        "20201": "Red",
+        "20211": "Red",
+        "1021": "Green",
+        "20202": "Red",
+        "1031": "Green",
+        "1032": "Red",
+        "20221": "Red",
+        "20222": "Red",
+        "20231": "Red",
+        "20232": "Red"
+      },
+      "passed": true
+    },
+    {
+      "name": "entry_outer",
+      "states": {
+        "1042": "Green",
+        "1011": "Red",
+        "1041": "Red",
+        "1012": "Green",
+        "1022": "Green",
+        "20212": "Red",
+        "20201": "Red",
+        "20211": "Red",
+        "1021": "Red",
+        "20202": "Red",
+        "1031": "Red",
+        "1032": "Green",
+        "20221": "Red",
+        "20222": "Red",
+        "20231": "Red",
+        "20232": "Red"
+      },
+      "passed": true
+    }
+  ],
+  "traffic_test": false
+}

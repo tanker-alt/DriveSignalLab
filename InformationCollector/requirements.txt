@@ -1,0 +1,5 @@
+# Tested on Windows x64 / Python 3.7.9. See DELIVERY_README.txt.
+carla==0.9.15
+
+# Driving-lane polygon union and whole-vehicle boundary checks.
+shapely==1.8.5.post1

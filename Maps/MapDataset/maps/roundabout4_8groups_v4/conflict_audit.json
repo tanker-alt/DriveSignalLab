@@ -1,0 +1,284 @@
+{
+  "conflicts": [
+    {
+      "paths": [
+        {
+          "road": 100,
+          "lane": -2,
+          "source": 23,
+          "source_lane": -2,
+          "target": 20,
+          "target_lane": -2
+        },
+        {
+          "road": 101,
+          "lane": -1,
+          "source": 1,
+          "source_lane": -1,
+          "target": 20,
+          "target_lane": -1
+        }
+      ],
+      "groups": [
+        8,
+        3
+      ],
+      "locations_opendrive": [
+        [
+          -32.560168082941246,
+          -7.878984793729508
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 100,
+          "lane": -2,
+          "source": 23,
+          "source_lane": -2,
+          "target": 20,
+          "target_lane": -2
+        },
+        {
+          "road": 103,
+          "lane": -1,
+          "source": 23,
+          "source_lane": -1,
+          "target": 1,
+          "target_lane": 1
+        }
+      ],
+      "groups": [
+        8,
+        8
+      ],
+      "locations_opendrive": [
+        [
+          -32.56016778803583,
+          7.878986319677013
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 110,
+          "lane": -2,
+          "source": 20,
+          "source_lane": -2,
+          "target": 21,
+          "target_lane": -2
+        },
+        {
+          "road": 111,
+          "lane": -1,
+          "source": 2,
+          "source_lane": -1,
+          "target": 21,
+          "target_lane": -1
+        }
+      ],
+      "groups": [
+        7,
+        2
+      ],
+      "locations_opendrive": [
+        [
+          7.878984275612794,
+          -32.56016844034697
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 110,
+          "lane": -2,
+          "source": 20,
+          "source_lane": -2,
+          "target": 21,
+          "target_lane": -2
+        },
+        {
+          "road": 113,
+          "lane": -1,
+          "source": 20,
+          "source_lane": -1,
+          "target": 2,
+          "target_lane": 1
+        }
+      ],
+      "groups": [
+        7,
+        7
+      ],
+      "locations_opendrive": [
+        [
+          -7.87898577193824,
+          -32.56016826843008
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 120,
+          "lane": -2,
+          "source": 21,
+          "source_lane": -2,
+          "target": 22,
+          "target_lane": -2
+        },
+        {
+          "road": 121,
+          "lane": -1,
+          "source": 3,
+          "source_lane": -1,
+          "target": 22,
+          "target_lane": -1
+        }
+      ],
+      "groups": [
+        6,
+        1
+      ],
+      "locations_opendrive": [
+        [
+          32.560168280013215,
+          7.878985889538944
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 120,
+          "lane": -2,
+          "source": 21,
+          "source_lane": -2,
+          "target": 22,
+          "target_lane": -2
+        },
+        {
+          "road": 123,
+          "lane": -1,
+          "source": 21,
+          "source_lane": -1,
+          "target": 3,
+          "target_lane": 1
+        }
+      ],
+      "groups": [
+        6,
+        6
+      ],
+      "locations_opendrive": [
+        [
+          32.56016812874753,
+          -7.8789858703099815
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 130,
+          "lane": -2,
+          "source": 22,
+          "source_lane": -2,
+          "target": 23,
+          "target_lane": -2
+        },
+        {
+          "road": 131,
+          "lane": -1,
+          "source": 4,
+          "source_lane": -1,
+          "target": 23,
+          "target_lane": -1
+        }
+      ],
+      "groups": [
+        5,
+        4
+      ],
+      "locations_opendrive": [
+        [
+          -7.878984793729508,
+          32.560168082941246
+        ]
+      ]
+    },
+    {
+      "paths": [
+        {
+          "road": 130,
+          "lane": -2,
+          "source": 22,
+          "source_lane": -2,
+          "target": 23,
+          "target_lane": -2
+        },
+        {
+          "road": 133,
+          "lane": -1,
+          "source": 22,
+          "source_lane": -1,
+          "target": 4,
+          "target_lane": 1
+        }
+      ],
+      "groups": [
+        5,
+        5
+      ],
+      "locations_opendrive": [
+        [
+          7.878985491844565,
+          32.56016798906497
+        ]
+      ]
+    }
+  ],
+  "phase_checks": [
+    {
+      "name": "A",
+      "simultaneous_crossing_indices": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "clear_of_detected_crossings": false
+    },
+    {
+      "name": "B",
+      "simultaneous_crossing_indices": [
+        1,
+        5
+      ],
+      "clear_of_detected_crossings": false
+    },
+    {
+      "name": "C",
+      "simultaneous_crossing_indices": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "clear_of_detected_crossings": false
+    },
+    {
+      "name": "D",
+      "simultaneous_crossing_indices": [
+        3,
+        7
+      ],
+      "clear_of_detected_crossings": false
+    }
+  ],
+  "safe_for_traffic": false,
+  "limits": "Centreline intersections only; excludes vehicle width, merging conflicts, queues and clearance times. No detected crossings is not proof of safety."
+}

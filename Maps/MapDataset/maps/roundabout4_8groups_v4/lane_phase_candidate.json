@@ -1,0 +1,165 @@
+{
+  "opendrive_sha256": "43b98ae2b79674e69aff702c8fd109602d81d409477bc05f4a244782779df23a",
+  "phases": [
+    {
+      "name": "ring_inner",
+      "green_signal_ids": [
+        "20201",
+        "20211",
+        "20221",
+        "20231"
+      ],
+      "detected_conflicts": []
+    },
+    {
+      "name": "ring_outer",
+      "green_signal_ids": [
+        "20202",
+        "20212",
+        "20222",
+        "20232"
+      ],
+      "detected_conflicts": []
+    },
+    {
+      "name": "entry_inner",
+      "green_signal_ids": [
+        "1011",
+        "1021",
+        "1031",
+        "1041"
+      ],
+      "detected_conflicts": []
+    },
+    {
+      "name": "entry_outer",
+      "green_signal_ids": [
+        "1012",
+        "1022",
+        "1032",
+        "1042"
+      ],
+      "detected_conflicts": []
+    }
+  ],
+  "conflicts": [
+    {
+      "signals": [
+        "20232",
+        "1011"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20232",
+        "20231"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20202",
+        "1021"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20202",
+        "20201"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20212",
+        "1031"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20212",
+        "20211"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20222",
+        "1041"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20222",
+        "20221"
+      ],
+      "kind": "crossing"
+    },
+    {
+      "signals": [
+        "20231",
+        "1011"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20232",
+        "1012"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20201",
+        "1021"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20202",
+        "1022"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20211",
+        "1031"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20212",
+        "1032"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20221",
+        "1041"
+      ],
+      "kind": "merge"
+    },
+    {
+      "signals": [
+        "20222",
+        "1042"
+      ],
+      "kind": "merge"
+    }
+  ],
+  "static_check_passed": true,
+  "traffic_ready": false,
+  "green_seconds": null,
+  "yellow_seconds": null,
+  "clearance_seconds": null,
+  "limits": "Candidate only. No swept vehicle volumes, stopping, queue storage or transition clearance validation. Do not run traffic from this plan."
+}
