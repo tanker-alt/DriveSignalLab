@@ -1,4 +1,0 @@
-{
-  "harsh_braking": {"trigger_mps2": -3.0, "release_mps2": -1.0, "minimum_duration_s": 0.5},
-  "harsh_acceleration": {"trigger_mps2": 3.0, "release_mps2": 1.0, "minimum_duration_s": 0.5}
-}

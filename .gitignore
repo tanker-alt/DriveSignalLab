@@ -50,13 +50,3 @@ conversation_handoff.md
 *.tar
 *.tar.gz
 /integrations/carla_handoff/**/evaluation/outputs/
-
-# Collection and evaluation local artifacts
-LocalArtifacts/
-**/__pycache__/
-*.py[cod]
-**/.test-deps*/
-InformationCollector/evaluation/outputs/
-InformationCollector/dist/
-EvaluationMetrics/outputs/
-Maps/MapDataset/candidates/

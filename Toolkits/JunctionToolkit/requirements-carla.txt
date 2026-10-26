@@ -1,2 +1,0 @@
-# Python 3.7.9; CARLA server 0.9.15
-carla==0.9.15

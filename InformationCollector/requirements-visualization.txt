@@ -1,4 +1,0 @@
--r requirements.txt
-# Only needed for evaluation.topology PNG output, not map discovery / CARLA debug drawing.
-numpy==1.20.0
-matplotlib==3.4.2
