@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "signal_policy": "one_signal_per_incoming_lane",
+  "config": {
+    "name": "cross3_final",
+    "standard_profile": "urban_cross3_v1",
+    "incoming_lanes": 3,
+    "lane_width_m": 3.5,
+    "allowed_turns": [
+      [
+        "left"
+      ],
+      [
+        "straight"
+      ],
+      [
+        "right"
+      ]
+    ],
+    "sidewalk_width_m": 2.0,
+    "curb_width_m": 0.2,
+    "curb_height_m": 0.15,
+    "corner_radius_m": 12.0,
+    "road_class": "urban_uniform",
+    "roadside_props": false,
+    "shoulder_enabled": false,
+    "shoulder_width_m": 0.0,
+    "junction_radius_m": 22.5,
+    "spacing_m": 350.0,
+    "arm_length_m": 150.0,
+    "rows": 1,
+    "columns": 1,
+    "seed": 42
+  },
+  "junctions": [
+    {
+      "id": 10,
+      "center": [
+        0.0,
+        0.0
+      ],
+      "roads": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "lengths": [
+        150.0,
+        150.0,
+        150.0,
+        150.0
+      ],
+      "arms": {
+        "west": 1,
+        "south": 2,
+        "east": 3,
+        "north": 4
+      }
+    }
+  ],
+  "movements": [
+    {
+      "road": 1,
+      "lane": -1,
+      "target_road": 4,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 1,
+      "lane": -2,
+      "target_road": 3,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10
+    },
+    {
+      "road": 1,
+      "lane": -3,
+      "target_road": 2,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10
+    },
+    {
+      "road": 2,
+      "lane": -1,
+      "target_road": 1,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 2,
+      "lane": -2,
+      "target_road": 4,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10
+    },
+    {
+      "road": 2,
+      "lane": -3,
+      "target_road": 3,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10
+    },
+    {
+      "road": 3,
+      "lane": -1,
+      "target_road": 2,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 3,
+      "lane": -2,
+      "target_road": 1,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10
+    },
+    {
+      "road": 3,
+      "lane": -3,
+      "target_road": 4,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10
+    },
+    {
+      "road": 4,
+      "lane": -1,
+      "target_road": 3,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 4,
+      "lane": -2,
+      "target_road": 2,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10
+    },
+    {
+      "road": 4,
+      "lane": -3,
+      "target_road": 1,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10
+    }
+  ],
+  "seams": [],
+  "signals": {
+    "1011": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 0,
+      "approach_slot": 0,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1012": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 1,
+      "approach_slot": 0,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1013": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 2,
+      "approach_slot": 0,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -3
+      ]
+    },
+    "1021": {
+      "road_id": 2,
+      "junction_id": 10,
+      "phase_slot": 3,
+      "approach_slot": 1,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1022": {
+      "road_id": 2,
+      "junction_id": 10,
+      "phase_slot": 4,
+      "approach_slot": 1,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1023": {
+      "road_id": 2,
+      "junction_id": 10,
+      "phase_slot": 5,
+      "approach_slot": 1,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -3
+      ]
+    },
+    "1031": {
+      "road_id": 3,
+      "junction_id": 10,
+      "phase_slot": 6,
+      "approach_slot": 2,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1032": {
+      "road_id": 3,
+      "junction_id": 10,
+      "phase_slot": 7,
+      "approach_slot": 2,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1033": {
+      "road_id": 3,
+      "junction_id": 10,
+      "phase_slot": 8,
+      "approach_slot": 2,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -3
+      ]
+    },
+    "1041": {
+      "road_id": 4,
+      "junction_id": 10,
+      "phase_slot": 9,
+      "approach_slot": 3,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -1
+      ]
+    },
+    "1042": {
+      "road_id": 4,
+      "junction_id": 10,
+      "phase_slot": 10,
+      "approach_slot": 3,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -2
+      ]
+    },
+    "1043": {
+      "road_id": 4,
+      "junction_id": 10,
+      "phase_slot": 11,
+      "approach_slot": 3,
+      "reference_s": 142.85,
+      "signal_s": 147.0,
+      "incoming_lanes": [
+        -3
+      ]
+    }
+  },
+  "status": "generated_requires_validation",
+  "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
+  "opendrive_sha256": "f6efc47f73117c866a4c6c8b08fb327afb4d31279180aa551fbfed3cca3bca77"
+}

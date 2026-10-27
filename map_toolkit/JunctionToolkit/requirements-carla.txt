@@ -1,0 +1,2 @@
+# Python 3.7; server must match this version
+carla==0.9.15

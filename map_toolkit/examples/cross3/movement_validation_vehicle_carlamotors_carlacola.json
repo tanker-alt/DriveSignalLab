@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "movements": [
+    {
+      "road": 1,
+      "lane": -1,
+      "target_road": 4,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 1,
+      "lane": -2,
+      "target_road": 3,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 1,
+      "lane": -3,
+      "target_road": 2,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -1,
+      "target_road": 1,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -2,
+      "target_road": 4,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -3,
+      "target_road": 3,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004794716835022,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -1,
+      "target_road": 2,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004806637763977,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -2,
+      "target_road": 1,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004806637763977,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -3,
+      "target_road": 4,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004806637763977,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -1,
+      "target_road": 3,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004779815673828,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -2,
+      "target_road": 2,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004779815673828,
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -3,
+      "target_road": 1,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "completed": true,
+      "min_z": -0.13004779815673828,
+      "collisions": [],
+      "passed": true
+    }
+  ],
+  "blueprint": "vehicle.carlamotors.carlacola",
+  "world_settings_restored": true,
+  "limits": "One vehicle per movement, all green. Not conflict safety, traffic capacity or complete collision coverage certification."
+}

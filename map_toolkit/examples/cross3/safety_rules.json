@@ -1,0 +1,122 @@
+{
+  "schema_version": "safety_rules.1",
+  "opendrive_sha256": "f6efc47f73117c866a4c6c8b08fb327afb4d31279180aa551fbfed3cca3bca77",
+  "coordinate_system": "OpenDRIVE road_id/lane_id/s_m; resolved world coordinates use CARLA XY",
+  "geometry_status": "designed_stop_line_not_tm_calibrated",
+  "position_source": "Map-designed stop line, 1m upstream of crosswalk paint",
+  "line_convention": "Transverse lane-width segment centered at s_m; paint is centered on this segment",
+  "visualization": {
+    "color_rgb": [
+      2,
+      2,
+      2
+    ],
+    "thickness_m": 0.3,
+    "height_above_road_m": 0.12
+  },
+  "stop_lines": [
+    {
+      "id": "stop_1_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_1_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_1_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1013",
+      "road_id": 1,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1021",
+      "road_id": 2,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1022",
+      "road_id": 2,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1023",
+      "road_id": 2,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_3_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_3_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_3_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1033",
+      "road_id": 3,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_4_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_4_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_4_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1043",
+      "road_id": 4,
+      "lane_id": -3,
+      "s_m": 142.85
+    }
+  ],
+  "assessment": {
+    "status": "pending_user_definition",
+    "red_light_violation": null,
+    "speeding": null,
+    "out_of_bounds": null,
+    "wrong_way": null
+  }
+}

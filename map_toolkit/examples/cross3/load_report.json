@@ -1,0 +1,664 @@
+{
+  "map_hash": "f6efc47f73117c866a4c6c8b08fb327afb4d31279180aa551fbfed3cca3bca77",
+  "signal_count": 12,
+  "signal_validity_passed": true,
+  "decoration_ids": [],
+  "decoration_failures": [],
+  "debug_overlays": true,
+  "scenery": {
+    "actor_ids": [
+      399
+    ],
+    "failed_assets": [],
+    "preview_paint_segments": 348,
+    "road_material": "Native CARLA OpenDRIVE mesh; no square junction tile overlay",
+    "curb_geometry": "Native raised straight/arc sidewalk lanes, 0.20m curb + 2m sidewalk",
+    "collision_policy": "Native OpenDRIVE road/sidewalk physics; ground decoration has no collision",
+    "markings": "XODR roadMark + crosswalk/stop objects; debug preview requires reload through view"
+  },
+  "lane_signals": {
+    "native_heads": [
+      {
+        "signal_id": "1011",
+        "road_id": 1,
+        "lane_id": -1,
+        "lateral_error_m": 0.0,
+        "head": [
+          -25.920000076293945,
+          1.75,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1012",
+        "road_id": 1,
+        "lane_id": -2,
+        "lateral_error_m": 0.0,
+        "head": [
+          -25.920000076293945,
+          5.25,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1013",
+        "road_id": 1,
+        "lane_id": -3,
+        "lateral_error_m": 0.0,
+        "head": [
+          -25.920000076293945,
+          8.75,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1021",
+        "road_id": 2,
+        "lane_id": -1,
+        "lateral_error_m": 2.5868142794580485e-07,
+        "head": [
+          1.75,
+          25.920000076293945,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1022",
+        "road_id": 2,
+        "lane_id": -2,
+        "lateral_error_m": 2.5868142794580485e-07,
+        "head": [
+          5.25,
+          25.920000076293945,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1023",
+        "road_id": 2,
+        "lane_id": -3,
+        "lateral_error_m": 2.5868025319442794e-07,
+        "head": [
+          8.75,
+          25.920000076293945,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1031",
+        "road_id": 3,
+        "lane_id": -1,
+        "lateral_error_m": 1.7514217704310304e-06,
+        "head": [
+          25.920000076293945,
+          -1.7500017881393433,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1032",
+        "road_id": 3,
+        "lane_id": -2,
+        "lateral_error_m": 1.8706310599818116e-06,
+        "head": [
+          25.920000076293945,
+          -5.250001907348633,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1033",
+        "road_id": 3,
+        "lane_id": -3,
+        "lateral_error_m": 1.8706310599818116e-06,
+        "head": [
+          25.920000076293945,
+          -8.750001907348633,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1041",
+        "road_id": 4,
+        "lane_id": -1,
+        "lateral_error_m": 7.266758257309498e-06,
+        "head": [
+          -1.7500072717666626,
+          -25.91999626159668,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1042",
+        "road_id": 4,
+        "lane_id": -2,
+        "lateral_error_m": 7.147548967758717e-06,
+        "head": [
+          -5.250007152557373,
+          -25.91999626159668,
+          5.569999694824219
+        ]
+      },
+      {
+        "signal_id": "1043",
+        "road_id": 4,
+        "lane_id": -3,
+        "lateral_error_m": 6.670711809555592e-06,
+        "head": [
+          -8.750006675720215,
+          -25.91999626159668,
+          5.569999694824219
+        ]
+      }
+    ],
+    "hidden_stock_supports": [
+      17670840342470280421,
+      15438016059396266896,
+      2889801813615996393,
+      10209510075612204762,
+      10167044957639599283,
+      2552078083775393366,
+      8491607333204348361,
+      10229825638632990252,
+      80288269650008595,
+      16445877026962632490,
+      8819433593903581987,
+      4478884435584151691,
+      3839399808475982917,
+      12306956805907821916,
+      16696187545427152607,
+      4345083605165784245,
+      4952856202553117101,
+      9348412261211411792,
+      9006775976988945405,
+      6971803038471507616,
+      14607363850923632244,
+      6076857837394364163,
+      17523398167546340526,
+      13838611242671935541,
+      16486336893669243186,
+      12929752742537999130,
+      284149614783996399,
+      15523501891654036321,
+      10354157856402024924,
+      2136187706039672082,
+      2860276048645174451,
+      12848089302796153483,
+      2702529475515303087,
+      10418836890043013758,
+      12273295143507337979,
+      8237578737335613384
+    ],
+    "gantry_actor_ids": [
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419
+    ],
+    "model": "native CARLA controllable heads + official complete mast meshes",
+    "official_frames": [
+      {
+        "road_id": 1,
+        "actor_id": 400,
+        "asset": "SM_TrafficLight01",
+        "scale": 1.0,
+        "hangers": [
+          {
+            "lane_id": -1,
+            "arm_attachment_z": 7.131590907366191
+          },
+          {
+            "lane_id": -2,
+            "arm_attachment_z": 7.088904139884673
+          },
+          {
+            "lane_id": -3,
+            "arm_attachment_z": 6.612125000000001
+          }
+        ]
+      },
+      {
+        "road_id": 2,
+        "actor_id": 405,
+        "asset": "SM_TrafficLight01",
+        "scale": 1.0,
+        "hangers": [
+          {
+            "lane_id": -1,
+            "arm_attachment_z": 7.131590907366191
+          },
+          {
+            "lane_id": -2,
+            "arm_attachment_z": 7.088904139884673
+          },
+          {
+            "lane_id": -3,
+            "arm_attachment_z": 6.612125000000001
+          }
+        ]
+      },
+      {
+        "road_id": 3,
+        "actor_id": 410,
+        "asset": "SM_TrafficLight01",
+        "scale": 1.0,
+        "hangers": [
+          {
+            "lane_id": -1,
+            "arm_attachment_z": 7.131590907366191
+          },
+          {
+            "lane_id": -2,
+            "arm_attachment_z": 7.088904139884673
+          },
+          {
+            "lane_id": -3,
+            "arm_attachment_z": 6.612125000000001
+          }
+        ]
+      },
+      {
+        "road_id": 4,
+        "actor_id": 415,
+        "asset": "SM_TrafficLight01",
+        "scale": 1.0,
+        "hangers": [
+          {
+            "lane_id": -1,
+            "arm_attachment_z": 7.131590907366191
+          },
+          {
+            "lane_id": -2,
+            "arm_attachment_z": 7.088904139884673
+          },
+          {
+            "lane_id": -3,
+            "arm_attachment_z": 6.612125000000001
+          }
+        ]
+      }
+    ],
+    "collision_policy": "support meshes visual only; original lane triggers retained"
+  },
+  "stop_lines": {
+    "schema_version": "stop_line_render.1",
+    "opendrive_sha256": "f6efc47f73117c866a4c6c8b08fb327afb4d31279180aa551fbfed3cca3bca77",
+    "geometry_status": "designed_stop_line_not_tm_calibrated",
+    "stop_lines": [
+      {
+        "id": "stop_1_-1",
+        "junction_id": 10,
+        "signal_opendrive_id": "1011",
+        "road_id": 1,
+        "lane_id": -1,
+        "s_m": 142.85,
+        "center_world_m": [
+          -29.649993896484375,
+          1.75,
+          0.0
+        ],
+        "start_world_m": [
+          -29.649993896484375,
+          0.0,
+          0.0
+        ],
+        "end_world_m": [
+          -29.649993896484375,
+          3.5,
+          0.0
+        ],
+        "forward_world": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_1_-2",
+        "junction_id": 10,
+        "signal_opendrive_id": "1012",
+        "road_id": 1,
+        "lane_id": -2,
+        "s_m": 142.85,
+        "center_world_m": [
+          -29.649993896484375,
+          5.25,
+          0.0
+        ],
+        "start_world_m": [
+          -29.649993896484375,
+          3.5,
+          0.0
+        ],
+        "end_world_m": [
+          -29.649993896484375,
+          7.0,
+          0.0
+        ],
+        "forward_world": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_1_-3",
+        "junction_id": 10,
+        "signal_opendrive_id": "1013",
+        "road_id": 1,
+        "lane_id": -3,
+        "s_m": 142.85,
+        "center_world_m": [
+          -29.649993896484375,
+          8.75,
+          0.0
+        ],
+        "start_world_m": [
+          -29.649993896484375,
+          7.0,
+          0.0
+        ],
+        "end_world_m": [
+          -29.649993896484375,
+          10.5,
+          0.0
+        ],
+        "forward_world": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_2_-1",
+        "junction_id": 10,
+        "signal_opendrive_id": "1021",
+        "road_id": 2,
+        "lane_id": -1,
+        "s_m": 142.85,
+        "center_world_m": [
+          1.75,
+          29.649993896484375,
+          0.0
+        ],
+        "start_world_m": [
+          0.0,
+          29.649992818645288,
+          0.0
+        ],
+        "end_world_m": [
+          3.5,
+          29.649994974323462,
+          0.0
+        ],
+        "forward_world": [
+          6.159080498946423e-07,
+          -1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_2_-2",
+        "junction_id": 10,
+        "signal_opendrive_id": "1022",
+        "road_id": 2,
+        "lane_id": -2,
+        "s_m": 142.85,
+        "center_world_m": [
+          5.25,
+          29.649993896484375,
+          0.0
+        ],
+        "start_world_m": [
+          3.5,
+          29.649992818645288,
+          0.0
+        ],
+        "end_world_m": [
+          7.0,
+          29.649994974323462,
+          0.0
+        ],
+        "forward_world": [
+          6.159080498946423e-07,
+          -1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_2_-3",
+        "junction_id": 10,
+        "signal_opendrive_id": "1023",
+        "road_id": 2,
+        "lane_id": -3,
+        "s_m": 142.85,
+        "center_world_m": [
+          8.75,
+          29.649995803833008,
+          0.0
+        ],
+        "start_world_m": [
+          7.0,
+          29.64999472599392,
+          0.0
+        ],
+        "end_world_m": [
+          10.5,
+          29.649996881672095,
+          0.0
+        ],
+        "forward_world": [
+          6.159080498946423e-07,
+          -1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_3_-1",
+        "junction_id": 10,
+        "signal_opendrive_id": "1031",
+        "road_id": 3,
+        "lane_id": -1,
+        "s_m": 142.85,
+        "center_world_m": [
+          29.649993896484375,
+          -1.75,
+          0.0
+        ],
+        "start_world_m": [
+          29.649994049474234,
+          0.0,
+          0.0
+        ],
+        "end_world_m": [
+          29.649993743494516,
+          -3.5,
+          0.0
+        ],
+        "forward_world": [
+          -1.0,
+          8.742277657347586e-08,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_3_-2",
+        "junction_id": 10,
+        "signal_opendrive_id": "1032",
+        "road_id": 3,
+        "lane_id": -2,
+        "s_m": 142.85,
+        "center_world_m": [
+          29.649993896484375,
+          -5.25,
+          0.0
+        ],
+        "start_world_m": [
+          29.649994049474234,
+          -3.5,
+          0.0
+        ],
+        "end_world_m": [
+          29.649993743494516,
+          -7.0,
+          0.0
+        ],
+        "forward_world": [
+          -1.0,
+          8.742277657347586e-08,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_3_-3",
+        "junction_id": 10,
+        "signal_opendrive_id": "1033",
+        "road_id": 3,
+        "lane_id": -3,
+        "s_m": 142.85,
+        "center_world_m": [
+          29.649993896484375,
+          -8.75,
+          0.0
+        ],
+        "start_world_m": [
+          29.649994049474234,
+          -7.0,
+          0.0
+        ],
+        "end_world_m": [
+          29.649993743494516,
+          -10.5,
+          0.0
+        ],
+        "forward_world": [
+          -1.0,
+          8.742277657347586e-08,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_4_-1",
+        "junction_id": 10,
+        "signal_opendrive_id": "1041",
+        "road_id": 4,
+        "lane_id": -1,
+        "s_m": 142.85,
+        "center_world_m": [
+          -1.75,
+          -29.649993896484375,
+          0.0
+        ],
+        "start_world_m": [
+          0.0,
+          -29.649993917352916,
+          0.0
+        ],
+        "end_world_m": [
+          -3.5,
+          -29.649993875615834,
+          0.0
+        ],
+        "forward_world": [
+          1.1924880638503055e-08,
+          1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_4_-2",
+        "junction_id": 10,
+        "signal_opendrive_id": "1042",
+        "road_id": 4,
+        "lane_id": -2,
+        "s_m": 142.85,
+        "center_world_m": [
+          -5.25,
+          -29.649993896484375,
+          0.0
+        ],
+        "start_world_m": [
+          -3.5,
+          -29.649993917352916,
+          0.0
+        ],
+        "end_world_m": [
+          -7.0,
+          -29.649993875615834,
+          0.0
+        ],
+        "forward_world": [
+          1.1924880638503055e-08,
+          1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      },
+      {
+        "id": "stop_4_-3",
+        "junction_id": 10,
+        "signal_opendrive_id": "1043",
+        "road_id": 4,
+        "lane_id": -3,
+        "s_m": 142.85,
+        "center_world_m": [
+          -8.75,
+          -29.649993896484375,
+          0.0
+        ],
+        "start_world_m": [
+          -7.0,
+          -29.649993917352916,
+          0.0
+        ],
+        "end_world_m": [
+          -10.5,
+          -29.649993875615834,
+          0.0
+        ],
+        "forward_world": [
+          1.1924880638503055e-08,
+          1.0,
+          0.0
+        ],
+        "lane_width_m": 3.5
+      }
+    ],
+    "visualization": {
+      "color_rgb": [
+        2,
+        2,
+        2
+      ],
+      "thickness_m": 0.3,
+      "height_above_road_m": 0.12
+    },
+    "rendering": "Persistent debug overlay; restored by toolkit map loader; no collision geometry"
+  }
+}

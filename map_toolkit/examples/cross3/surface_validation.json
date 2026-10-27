@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "samples": [
+    {
+      "junction": 10,
+      "kind": "pavement",
+      "expected_z": -0.02,
+      "actual_z": -0.019999999552965164,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "curb",
+      "expected_z": 0.15,
+      "actual_z": 0.1524002104997635,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "straight_curb",
+      "expected_z": 0.15,
+      "actual_z": 0.15240004658699036,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "infill",
+      "expected_z": -0.02,
+      "actual_z": 3.0517577442878974e-07,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "curb",
+      "expected_z": 0.15,
+      "actual_z": 0.1524002104997635,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "straight_curb",
+      "expected_z": 0.15,
+      "actual_z": 0.15240004658699036,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "infill",
+      "expected_z": -0.02,
+      "actual_z": 3.0517577442878974e-07,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "curb",
+      "expected_z": 0.15,
+      "actual_z": 0.1524002104997635,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "straight_curb",
+      "expected_z": 0.15,
+      "actual_z": 0.15240004658699036,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "infill",
+      "expected_z": -0.02,
+      "actual_z": 3.0517577442878974e-07,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "curb",
+      "expected_z": 0.15,
+      "actual_z": 0.1524002104997635,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "straight_curb",
+      "expected_z": 0.15,
+      "actual_z": 0.15240004658699036,
+      "passed": true
+    },
+    {
+      "junction": 10,
+      "kind": "infill",
+      "expected_z": -0.02,
+      "actual_z": 3.0517577442878974e-07,
+      "passed": true
+    }
+  ],
+  "limits": "Sampled collision surface heights, not exhaustive mesh or material certification"
+}

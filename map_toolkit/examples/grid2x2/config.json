@@ -1,0 +1,31 @@
+{
+  "name": "grid2x2_final",
+  "rows": 2,
+  "columns": 2,
+  "shoulder_enabled": true,
+  "standard_profile": "urban_cross3_v1",
+  "incoming_lanes": 3,
+  "lane_width_m": 3.5,
+  "allowed_turns": [
+    [
+      "left"
+    ],
+    [
+      "straight"
+    ],
+    [
+      "right"
+    ]
+  ],
+  "sidewalk_width_m": 2.0,
+  "curb_width_m": 0.2,
+  "curb_height_m": 0.15,
+  "corner_radius_m": 12.0,
+  "road_class": "urban_uniform",
+  "roadside_props": false,
+  "shoulder_width_m": 0.5,
+  "junction_radius_m": 23.0,
+  "spacing_m": 350.0,
+  "arm_length_m": 150.0,
+  "seed": 42
+}

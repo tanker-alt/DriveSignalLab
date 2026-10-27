@@ -1,0 +1,3303 @@
+<?xml version='1.0' encoding='utf-8'?>
+<OpenDRIVE>
+  <header revMajor="1" revMinor="4" name="cross3_final" version="1" date="2026-10-27" north="0" south="0" east="0" west="0">
+    <geoReference>+proj=tmerc +lat_0=0 +lon_0=0 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</geoReference>
+  </header>
+  <road rule="RHT" id="1" junction="-1" length="150.0">
+    <link>
+      <successor elementType="junction" elementId="10" />
+    </link>
+    <planView>
+      <geometry s="0" x="-172.5" y="0.0" hdg="0" length="150.0">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false">
+            <roadMark sOffset="0" type="solid solid" weight="standard" color="yellow" width="0.15" laneChange="none">
+              <type name="solid solid" width="0.45">
+                <line length="0" space="0" tOffset="-0.15" sOffset="0" rule="no passing" width="0.15" />
+                <line length="0" space="0" tOffset="0.15" sOffset="0" rule="no passing" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="-5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+    <objects>
+      <object id="100" name="pedestrian_crossing" type="crosswalk" s="146.0" t="0" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="21" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="10.5" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="10.5" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="101" name="stop_line" type="none" s="142.85" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="0.3" width="10.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="1" u="0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="2" u="0.15" v="5.25" z="0" height="0" />
+          <cornerLocal id="3" u="-0.15" v="5.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="102" name="crosswalk_stripe" type="none" s="146.0" t="-10.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="103" name="crosswalk_stripe" type="none" s="146.0" t="-9.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="104" name="crosswalk_stripe" type="none" s="146.0" t="-8.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="105" name="crosswalk_stripe" type="none" s="146.0" t="-7.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="106" name="crosswalk_stripe" type="none" s="146.0" t="-6.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="107" name="crosswalk_stripe" type="none" s="146.0" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="108" name="crosswalk_stripe" type="none" s="146.0" t="-4.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="109" name="crosswalk_stripe" type="none" s="146.0" t="-3.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="110" name="crosswalk_stripe" type="none" s="146.0" t="-2.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="111" name="crosswalk_stripe" type="none" s="146.0" t="-1.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="112" name="crosswalk_stripe" type="none" s="146.0" t="-0.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="113" name="crosswalk_stripe" type="none" s="146.0" t="0.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="114" name="crosswalk_stripe" type="none" s="146.0" t="1.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="115" name="crosswalk_stripe" type="none" s="146.0" t="2.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="116" name="crosswalk_stripe" type="none" s="146.0" t="3.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="117" name="crosswalk_stripe" type="none" s="146.0" t="4.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="118" name="crosswalk_stripe" type="none" s="146.0" t="5.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="119" name="crosswalk_stripe" type="none" s="146.0" t="6.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="120" name="crosswalk_stripe" type="none" s="146.0" t="7.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="121" name="crosswalk_stripe" type="none" s="146.0" t="8.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="122" name="crosswalk_stripe" type="none" s="146.0" t="9.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+    </objects>
+    <signals>
+      <signal s="147.0" t="-7.75" id="1011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-1" toLane="-1" />
+        <positionInertial x="-25.5" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-11.25" id="1012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-2" toLane="-2" />
+        <positionInertial x="-25.5" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-14.75" id="1013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-3" toLane="-3" />
+        <positionInertial x="-25.5" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
+      </signal>
+    </signals>
+  </road>
+  <road rule="RHT" id="2" junction="-1" length="150.0">
+    <link>
+      <successor elementType="junction" elementId="10" />
+    </link>
+    <planView>
+      <geometry s="0" x="-2.842170943040401e-14" y="-172.5" hdg="7.853981633974483" length="150.0">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false">
+            <roadMark sOffset="0" type="solid solid" weight="standard" color="yellow" width="0.15" laneChange="none">
+              <type name="solid solid" width="0.45">
+                <line length="0" space="0" tOffset="-0.15" sOffset="0" rule="no passing" width="0.15" />
+                <line length="0" space="0" tOffset="0.15" sOffset="0" rule="no passing" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="-5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+    <objects>
+      <object id="200" name="pedestrian_crossing" type="crosswalk" s="146.0" t="0" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="21" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="10.5" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="10.5" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="201" name="stop_line" type="none" s="142.85" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="0.3" width="10.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="1" u="0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="2" u="0.15" v="5.25" z="0" height="0" />
+          <cornerLocal id="3" u="-0.15" v="5.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="202" name="crosswalk_stripe" type="none" s="146.0" t="-10.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="203" name="crosswalk_stripe" type="none" s="146.0" t="-9.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="204" name="crosswalk_stripe" type="none" s="146.0" t="-8.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="205" name="crosswalk_stripe" type="none" s="146.0" t="-7.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="206" name="crosswalk_stripe" type="none" s="146.0" t="-6.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="207" name="crosswalk_stripe" type="none" s="146.0" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="208" name="crosswalk_stripe" type="none" s="146.0" t="-4.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="209" name="crosswalk_stripe" type="none" s="146.0" t="-3.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="210" name="crosswalk_stripe" type="none" s="146.0" t="-2.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="211" name="crosswalk_stripe" type="none" s="146.0" t="-1.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="212" name="crosswalk_stripe" type="none" s="146.0" t="-0.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="213" name="crosswalk_stripe" type="none" s="146.0" t="0.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="214" name="crosswalk_stripe" type="none" s="146.0" t="1.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="215" name="crosswalk_stripe" type="none" s="146.0" t="2.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="216" name="crosswalk_stripe" type="none" s="146.0" t="3.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="217" name="crosswalk_stripe" type="none" s="146.0" t="4.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="218" name="crosswalk_stripe" type="none" s="146.0" t="5.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="219" name="crosswalk_stripe" type="none" s="146.0" t="6.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="220" name="crosswalk_stripe" type="none" s="146.0" t="7.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="221" name="crosswalk_stripe" type="none" s="146.0" t="8.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="222" name="crosswalk_stripe" type="none" s="146.0" t="9.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+    </objects>
+    <signals>
+      <signal s="147.0" t="-7.75" id="1021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-1" toLane="-1" />
+        <positionInertial x="7.750000000000017" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-11.25" id="1022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-2" toLane="-2" />
+        <positionInertial x="11.250000000000016" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-14.75" id="1023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-3" toLane="-3" />
+        <positionInertial x="14.750000000000016" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+      </signal>
+    </signals>
+  </road>
+  <road rule="RHT" id="3" junction="-1" length="150.0">
+    <link>
+      <successor elementType="junction" elementId="10" />
+    </link>
+    <planView>
+      <geometry s="0" x="172.5" y="7.444625512977249e-22" hdg="3.141592653589793" length="150.0">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false">
+            <roadMark sOffset="0" type="solid solid" weight="standard" color="yellow" width="0.15" laneChange="none">
+              <type name="solid solid" width="0.45">
+                <line length="0" space="0" tOffset="-0.15" sOffset="0" rule="no passing" width="0.15" />
+                <line length="0" space="0" tOffset="0.15" sOffset="0" rule="no passing" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="-5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+    <objects>
+      <object id="300" name="pedestrian_crossing" type="crosswalk" s="146.0" t="0" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="21" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="10.5" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="10.5" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="301" name="stop_line" type="none" s="142.85" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="0.3" width="10.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="1" u="0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="2" u="0.15" v="5.25" z="0" height="0" />
+          <cornerLocal id="3" u="-0.15" v="5.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="302" name="crosswalk_stripe" type="none" s="146.0" t="-10.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="303" name="crosswalk_stripe" type="none" s="146.0" t="-9.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="304" name="crosswalk_stripe" type="none" s="146.0" t="-8.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="305" name="crosswalk_stripe" type="none" s="146.0" t="-7.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="306" name="crosswalk_stripe" type="none" s="146.0" t="-6.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="307" name="crosswalk_stripe" type="none" s="146.0" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="308" name="crosswalk_stripe" type="none" s="146.0" t="-4.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="309" name="crosswalk_stripe" type="none" s="146.0" t="-3.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="310" name="crosswalk_stripe" type="none" s="146.0" t="-2.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="311" name="crosswalk_stripe" type="none" s="146.0" t="-1.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="312" name="crosswalk_stripe" type="none" s="146.0" t="-0.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="313" name="crosswalk_stripe" type="none" s="146.0" t="0.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="314" name="crosswalk_stripe" type="none" s="146.0" t="1.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="315" name="crosswalk_stripe" type="none" s="146.0" t="2.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="316" name="crosswalk_stripe" type="none" s="146.0" t="3.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="317" name="crosswalk_stripe" type="none" s="146.0" t="4.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="318" name="crosswalk_stripe" type="none" s="146.0" t="5.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="319" name="crosswalk_stripe" type="none" s="146.0" t="6.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="320" name="crosswalk_stripe" type="none" s="146.0" t="7.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="321" name="crosswalk_stripe" type="none" s="146.0" t="8.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="322" name="crosswalk_stripe" type="none" s="146.0" t="9.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+    </objects>
+    <signals>
+      <signal s="147.0" t="-7.75" id="1031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-1" toLane="-1" />
+        <positionInertial x="25.5" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-11.25" id="1032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-2" toLane="-2" />
+        <positionInertial x="25.5" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-14.75" id="1033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-3" toLane="-3" />
+        <positionInertial x="25.500000000000004" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+      </signal>
+    </signals>
+  </road>
+  <road rule="RHT" id="4" junction="-1" length="150.0">
+    <link>
+      <successor elementType="junction" elementId="10" />
+    </link>
+    <planView>
+      <geometry s="0" x="-5.684341886080802e-14" y="172.5" hdg="4.71238898038469" length="150.0">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false">
+            <roadMark sOffset="0" type="solid solid" weight="standard" color="yellow" width="0.15" laneChange="none">
+              <type name="solid solid" width="0.45">
+                <line length="0" space="0" tOffset="-0.15" sOffset="0" rule="no passing" width="0.15" />
+                <line length="0" space="0" tOffset="0.15" sOffset="0" rule="no passing" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="144.0" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-2" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="broken" weight="standard" color="white" width="0.15" laneChange="both">
+              <type name="broken" width="0.15">
+                <line length="3" space="6" tOffset="0.0" sOffset="0" rule="none" width="0.15" />
+              </type>
+            </roadMark>
+            <roadMark sOffset="117.85" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-3" type="driving" level="false">
+            <link />
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+            <roadMark sOffset="0" type="solid" weight="standard" color="white" width="0.15" laneChange="none" />
+            <roadMark sOffset="142.7" type="none" weight="standard" color="white" width="0.15" laneChange="none" />
+          </lane>
+          <lane id="-4" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="-5" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+    <objects>
+      <object id="400" name="pedestrian_crossing" type="crosswalk" s="146.0" t="0" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="21" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-10.5" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="10.5" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="10.5" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="401" name="stop_line" type="none" s="142.85" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="0.3" width="10.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="1" u="0.15" v="-5.25" z="0" height="0" />
+          <cornerLocal id="2" u="0.15" v="5.25" z="0" height="0" />
+          <cornerLocal id="3" u="-0.15" v="5.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="402" name="crosswalk_stripe" type="none" s="146.0" t="-10.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="403" name="crosswalk_stripe" type="none" s="146.0" t="-9.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="404" name="crosswalk_stripe" type="none" s="146.0" t="-8.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="405" name="crosswalk_stripe" type="none" s="146.0" t="-7.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="406" name="crosswalk_stripe" type="none" s="146.0" t="-6.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="407" name="crosswalk_stripe" type="none" s="146.0" t="-5.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="408" name="crosswalk_stripe" type="none" s="146.0" t="-4.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="409" name="crosswalk_stripe" type="none" s="146.0" t="-3.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="410" name="crosswalk_stripe" type="none" s="146.0" t="-2.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="411" name="crosswalk_stripe" type="none" s="146.0" t="-1.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="412" name="crosswalk_stripe" type="none" s="146.0" t="-0.25" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="413" name="crosswalk_stripe" type="none" s="146.0" t="0.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="414" name="crosswalk_stripe" type="none" s="146.0" t="1.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="415" name="crosswalk_stripe" type="none" s="146.0" t="2.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="416" name="crosswalk_stripe" type="none" s="146.0" t="3.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="417" name="crosswalk_stripe" type="none" s="146.0" t="4.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="418" name="crosswalk_stripe" type="none" s="146.0" t="5.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="419" name="crosswalk_stripe" type="none" s="146.0" t="6.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="420" name="crosswalk_stripe" type="none" s="146.0" t="7.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="421" name="crosswalk_stripe" type="none" s="146.0" t="8.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+      <object id="422" name="crosswalk_stripe" type="none" s="146.0" t="9.75" zOffset="0.02" orientation="none" hdg="0" pitch="0" roll="0" length="4" width="0.5" height="0">
+        <outline closed="true" outer="true">
+          <cornerLocal id="0" u="-2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="1" u="2.0" v="-0.25" z="0" height="0" />
+          <cornerLocal id="2" u="2.0" v="0.25" z="0" height="0" />
+          <cornerLocal id="3" u="-2.0" v="0.25" z="0" height="0" />
+        </outline>
+      </object>
+    </objects>
+    <signals>
+      <signal s="147.0" t="-7.75" id="1041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-1" toLane="-1" />
+        <positionInertial x="-7.7500000000000835" y="25.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-11.25" id="1042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-2" toLane="-2" />
+        <positionInertial x="-11.250000000000083" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+      </signal>
+      <signal s="147.0" t="-14.75" id="1043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+        <validity fromLane="-3" toLane="-3" />
+        <positionInertial x="-14.750000000000083" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+      </signal>
+    </signals>
+  </road>
+  <road rule="RHT" id="100" junction="10" length="37.355960946168736">
+    <link>
+      <predecessor elementType="road" elementId="1" contactPoint="end" />
+      <successor elementType="road" elementId="4" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="-22.5" y="0.0" hdg="0.0" length="11.780307143054895">
+        <spiral curvStart="1e-09" curvEnd="0.061417640663533855" />
+      </geometry>
+      <geometry s="11.780307143054895" x="-10.872930268916605" y="1.4073215385361544" hdg="0.36175934139925686" length="13.795346660058948">
+        <arc curvature="0.06141764066353389" />
+      </geometry>
+      <geometry s="25.575653803113845" x="-1.407321538536138" y="10.872930268916612" hdg="1.2090369853956398" length="11.780307143054895">
+        <spiral curvStart="0.06141764066353391" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-1" />
+              <successor id="1" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="101" junction="10" length="45.0">
+    <link>
+      <predecessor elementType="road" elementId="1" contactPoint="end" />
+      <successor elementType="road" elementId="3" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="-22.5" y="-3.5" hdg="0.0" length="14.999999999999998">
+        <line />
+      </geometry>
+      <geometry s="14.999999999999998" x="-7.5" y="-3.49999994375" hdg="3.750000000000002e-09" length="15.000000000000004">
+        <line />
+      </geometry>
+      <geometry s="30.0" x="7.5" y="-3.49999994375" hdg="-3.749999999999997e-09" length="14.999999999999998">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-2" />
+              <successor id="2" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="102" junction="10" length="25.734106493200144">
+    <link>
+      <predecessor elementType="road" elementId="1" contactPoint="end" />
+      <successor elementType="road" elementId="2" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="-22.5" y="-7.0" hdg="0.0" length="8.115322698548928">
+        <spiral curvStart="1e-09" curvEnd="-0.08915464048018387" />
+      </geometry>
+      <geometry s="8.115322698548928" x="-14.490240845147241" y="-7.969488126786292" hdg="-0.3617593347272413" length="9.503461096102289">
+        <arc curvature="-0.0891546404801839" />
+      </geometry>
+      <geometry s="17.618783794651215" x="-7.9694881267863025" y="-14.490240845147227" hdg="-1.2090369920676554" length="8.115322698548928">
+        <spiral curvStart="-0.08915464048018393" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-3" />
+              <successor id="3" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="103" junction="10" length="37.355960946168736">
+    <link>
+      <predecessor elementType="road" elementId="2" contactPoint="end" />
+      <successor elementType="road" elementId="1" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="0.0" y="-22.5" hdg="1.5707963267948966" length="11.780307143054896">
+        <spiral curvStart="1e-09" curvEnd="0.0614176406635339" />
+      </geometry>
+      <geometry s="11.780307143054896" x="-1.4073215385361664" y="-10.872930268916612" hdg="1.9325556681941538" length="13.795346660058945">
+        <arc curvature="0.061417640663533876" />
+      </geometry>
+      <geometry s="25.57565380311384" x="-10.872930268916633" y="-1.407321538536154" hdg="2.7798333121905365" length="11.780307143054896">
+        <spiral curvStart="0.061417640663533855" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-1" />
+              <successor id="1" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="104" junction="10" length="45.0">
+    <link>
+      <predecessor elementType="road" elementId="2" contactPoint="end" />
+      <successor elementType="road" elementId="4" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="3.5" y="-22.5" hdg="1.5707963267948966" length="14.999999999999998">
+        <line />
+      </geometry>
+      <geometry s="14.999999999999998" x="3.499999943749998" y="-7.500000000000002" hdg="1.5707963305448966" length="15.000000000000004">
+        <line />
+      </geometry>
+      <geometry s="30.0" x="3.499999943749998" y="7.500000000000002" hdg="1.5707963230448967" length="14.999999999999998">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-2" />
+              <successor id="2" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="105" junction="10" length="25.734106493200144">
+    <link>
+      <predecessor elementType="road" elementId="2" contactPoint="end" />
+      <successor elementType="road" elementId="3" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="7.0" y="-22.5" hdg="1.5707963267948966" length="8.115322698548928">
+        <spiral curvStart="1e-09" curvEnd="-0.08915464048018387" />
+      </geometry>
+      <geometry s="8.115322698548928" x="7.9694881267863025" y="-14.490240845147227" hdg="1.2090369920676554" length="9.503461096102289">
+        <arc curvature="-0.0891546404801839" />
+      </geometry>
+      <geometry s="17.618783794651215" x="14.490240845147241" y="-7.96948812678629" hdg="0.3617593347272414" length="8.115322698548928">
+        <spiral curvStart="-0.08915464048018393" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-3" />
+              <successor id="3" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="106" junction="10" length="37.355960946168736">
+    <link>
+      <predecessor elementType="road" elementId="3" contactPoint="end" />
+      <successor elementType="road" elementId="2" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="22.5" y="0.0" hdg="3.141592653589793" length="11.780307143054896">
+        <spiral curvStart="1e-09" curvEnd="0.0614176406635339" />
+      </geometry>
+      <geometry s="11.780307143054896" x="10.872930268916605" y="-1.4073215385361546" hdg="3.50335199498905" length="13.795346660058945">
+        <arc curvature="0.061417640663533876" />
+      </geometry>
+      <geometry s="25.57565380311384" x="1.407321538536138" y="-10.872930268916612" hdg="4.350629638985433" length="11.780307143054896">
+        <spiral curvStart="0.061417640663533855" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-1" />
+              <successor id="1" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="107" junction="10" length="45.0">
+    <link>
+      <predecessor elementType="road" elementId="3" contactPoint="end" />
+      <successor elementType="road" elementId="1" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="22.5" y="3.5" hdg="3.141592653589793" length="14.999999999999998">
+        <line />
+      </geometry>
+      <geometry s="14.999999999999998" x="7.5" y="3.4999999437500016" hdg="3.1415926573397934" length="15.000000000000004">
+        <line />
+      </geometry>
+      <geometry s="30.0" x="-7.5" y="3.499999943749998" hdg="3.1415926498397937" length="14.999999999999998">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-2" />
+              <successor id="2" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="108" junction="10" length="25.734106493200144">
+    <link>
+      <predecessor elementType="road" elementId="3" contactPoint="end" />
+      <successor elementType="road" elementId="4" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="22.5" y="7.0" hdg="3.141592653589793" length="8.115322698548928">
+        <spiral curvStart="1e-09" curvEnd="-0.08915464048018387" />
+      </geometry>
+      <geometry s="8.115322698548928" x="14.490240845147241" y="7.969488126786293" hdg="2.779833318862552" length="9.503461096102289">
+        <arc curvature="-0.0891546404801839" />
+      </geometry>
+      <geometry s="17.618783794651215" x="7.9694881267863025" y="14.490240845147229" hdg="1.932555661522138" length="8.115322698548928">
+        <spiral curvStart="-0.08915464048018393" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-3" />
+              <successor id="3" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="109" junction="10" length="37.355960946168736">
+    <link>
+      <predecessor elementType="road" elementId="4" contactPoint="end" />
+      <successor elementType="road" elementId="3" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="0.0" y="22.499999999999996" hdg="4.71238898038469" length="11.780307143054896">
+        <spiral curvStart="1e-09" curvEnd="0.0614176406635339" />
+      </geometry>
+      <geometry s="11.780307143054896" x="1.4073215385361664" y="10.872930268916608" hdg="5.074148321783947" length="13.795346660058945">
+        <arc curvature="0.061417640663533876" />
+      </geometry>
+      <geometry s="25.57565380311384" x="10.872930268916633" y="1.4073215385361504" hdg="5.92142596578033" length="11.780307143054896">
+        <spiral curvStart="0.061417640663533855" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-1" />
+              <successor id="1" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="110" junction="10" length="45.0">
+    <link>
+      <predecessor elementType="road" elementId="4" contactPoint="end" />
+      <successor elementType="road" elementId="2" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="-3.5" y="22.499999999999996" hdg="4.71238898038469" length="14.999999999999998">
+        <line />
+      </geometry>
+      <geometry s="14.999999999999998" x="-3.499999943749998" y="7.499999999999998" hdg="4.71238898413469" length="15.000000000000004">
+        <line />
+      </geometry>
+      <geometry s="30.0" x="-3.499999943749998" y="-7.500000000000005" hdg="4.71238897663469" length="14.999999999999998">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-2" />
+              <successor id="2" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road rule="RHT" id="111" junction="10" length="25.73410649320015">
+    <link>
+      <predecessor elementType="road" elementId="4" contactPoint="end" />
+      <successor elementType="road" elementId="1" contactPoint="end" />
+    </link>
+    <planView>
+      <geometry s="0" x="-7.0" y="22.499999999999996" hdg="4.71238898038469" length="8.11532269854893">
+        <spiral curvStart="1e-09" curvEnd="-0.08915464048018382" />
+      </geometry>
+      <geometry s="8.11532269854893" x="-7.9694881267863025" y="14.49024084514722" hdg="4.350629645657449" length="9.50346109610229">
+        <arc curvature="-0.08915464048018387" />
+      </geometry>
+      <geometry s="17.618783794651222" x="-14.490240845147241" y="7.969488126786279" hdg="3.503351988317035" length="8.11532269854893">
+        <spiral curvStart="-0.08915464048018397" curvEnd="9.999999994736442e-10" />
+      </geometry>
+    </planView>
+    <elevationProfile />
+    <lateralProfile />
+    <lanes>
+      <laneSection s="0">
+        <center>
+          <lane id="0" type="none" level="false">
+                        </lane>
+        </center>
+        <right>
+          <lane id="-1" type="driving" level="false">
+            <link>
+              <predecessor id="-3" />
+              <successor id="3" />
+            </link>
+            <width a="3.5" b="0.0" c="-0.0" d="0.0" sOffset="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road id="900" name="rounded_junction_pavement" junction="-1" length="45.0">
+    <planView>
+      <geometry s="0" x="-22.5" y="0.0" hdg="0" length="45.0">
+        <line />
+      </geometry>
+    </planView>
+    <elevationProfile>
+      <elevation s="0" a="-0.02" b="0" c="0" d="0" />
+    </elevationProfile>
+    <lanes>
+      <laneSection s="0.0">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.5" b="0.016363922135312556" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.5" b="0.016363922135312556" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="0.3926289938613152">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.506424950283613" b="0.04912684976946931" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.506424950283613" b="0.04912684976946931" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="0.7848375507617185">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.52569292113676" b="0.08199532888655706" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.52569292113676" b="0.08199532888655706" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="1.176205683954727">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.557783279933638" b="0.11504073729939863" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.557783279933638" b="0.11504073729939863" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="1.5663143066406207">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.602661663514276" b="0.1483359875383477" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.602661663514276" b="0.1483359875383477" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="1.9547456807350656">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.660280014981453" b="0.18195618033529967" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.660280014981453" b="0.18195618033529967" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="2.341083864193539">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.730576635161235" b="0.21597929921637138" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.730576635161235" b="0.21597929921637138" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="2.7249151564124823">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.813476248671996" b="0.2504869601913057" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.813476248671996" b="0.2504869601913057" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="3.105828541230249">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.90889008453118" b="0.28556523236114006" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.90889008453118" b="0.28556523236114006" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="3.4834161270535517">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.016715971213493" b="0.321305547688399" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.016715971213493" b="0.321305547688399" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="3.857273583637941">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.136838446058732" b="0.3578057213145258" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.136838446058732" b="0.3578057213145258" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="4.227000575054802">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.269128878912092" b="0.39517110784130344" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.269128878912092" b="0.39517110784130344" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="4.592201188381079">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.41344560986456" b="0.43351592414677254" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.41344560986456" b="0.43351592414677254" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="4.952484357652736">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.56963410094589" b="0.47296477589131536" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.56963410094589" b="0.47296477589131536" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="5.307464282628015">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.73752710160774" b="0.5136544332981653" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.73752710160774" b="0.5136544332981653" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="5.6567608419119715">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.916944827819739" b="0.5557359126200758" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.916944827819739" b="0.5557359126200758" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="6.0">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.107695154586736" b="0.599376933681922" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.107695154586736" b="0.599376933681922" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="6.336814207804416">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.309573821681052" b="0.6447648420403859" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.309573821681052" b="0.6447648420403859" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="6.66684279623523">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.522364652369458" b="0.6921101080351721" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.522364652369458" b="0.6921101080351721" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="6.989732362413626">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.745839784900618" b="0.7416505462720308" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.745839784900618" b="0.7416505462720308" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="7.305137148104649">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.979759916505177" b="0.7936564406103804" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.979759916505177" b="0.7936564406103804" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="7.612719409963745">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.223874559647157" b="0.8484368153956086" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.223874559647157" b="0.8484368153956086" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="7.912149781200826">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.477922310252271" b="0.9063471690191451" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.477922310252271" b="0.9063471690191451" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="8.203107624274455">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.741631127625972" b="0.9677990889307929" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.741631127625972" b="0.9677990889307929" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="8.485281374238571">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.014718625761429" b="1.033272309756758" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.014718625761429" b="1.033272309756758" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="8.758368872374028">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.296892375725546" b="1.1033299757334714" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.296892375725546" b="1.1033299757334714" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="9.022077689747729">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.587850218799174" b="1.1786381517800046" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.587850218799174" b="1.1786381517800046" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="9.276125440352844">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.887280590036255" b="1.259991034950757" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.887280590036255" b="1.259991034950757" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="9.520240083494823">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.194862851895351" b="1.3483439134867286" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.194862851895351" b="1.3483439134867286" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="9.754160215099382">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.510267637586374" b="1.4448568058612898" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.510267637586374" b="1.4448568058612898" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="9.977635347630542">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.833157203764774" b="1.5509530526438857" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.833157203764774" b="1.5509530526438857" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="10.190426178318948">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.163185792195584" b="1.668399205583512" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.163185792195584" b="1.668399205583512" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="10.392304845413264">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.5" b="1.799415832756595" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.5" b="1.799415832756595" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="10.583055172180261">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.84323915808803" b="1.9468341654894694" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.84323915808803" b="1.9468341654894694" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="10.76247289839226">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.192535717371985" b="2.114322357548661" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.192535717371985" b="2.114322357548661" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="10.93036589905411">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.547515642347264" b="2.306720340130912" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.547515642347264" b="2.306720340130912" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.08655439013544">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.907798811618925" b="2.530549375086348" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.907798811618925" b="2.530549375086348" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.230871121087908">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="18.272999424945198" b="2.7948127724904634" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="18.272999424945198" b="2.7948127724904634" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.363161553941268">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="18.64272641636206" b="3.112302315333211" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="18.64272641636206" b="3.112302315333211" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.483284028786507">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.016583872946452" b="3.50182685662287" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.016583872946452" b="3.50182685662287" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.59110991546882">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.39417145876975" b="3.9922237837701187" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.39417145876975" b="3.9922237837701187" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.686523751328004">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.77508484358752" b="4.630073361790916" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.77508484358752" b="4.630073361790916" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.769423364838765">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.15891613580646" b="5.495828710831644" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.15891613580646" b="5.495828710831644" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.839719985018547">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.545254319264934" b="6.741452405414975" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.545254319264934" b="6.741452405414975" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.897338336485724">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.93368569335938" b="8.692572939596653" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.93368569335938" b="8.692572939596653" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.942216720066362">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="21.323794316045273" b="12.195816683454474" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="21.323794316045273" b="12.195816683454474" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.97430707886324">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="21.715162449238285" b="20.35546762498615" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="21.715162449238285" b="20.35546762498615" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="11.993575049716387">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="22.107371006138685" b="61.11004389601978" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="22.107371006138685" b="61.11004389601978" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="12.0">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="22.5" b="0.0" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="22.5" b="0.0" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.0">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="22.5" b="-61.11004389601978" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="22.5" b="-61.11004389601978" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.006424950283616">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="22.107371006138685" b="-20.35546762498615" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="22.107371006138685" b="-20.35546762498615" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.02569292113676">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="21.715162449238285" b="-12.195816683454474" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="21.715162449238285" b="-12.195816683454474" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.05778327993364">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="21.323794316045273" b="-8.692572939596653" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="21.323794316045273" b="-8.692572939596653" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.102661663514276">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.93368569335938" b="-6.741452405414975" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.93368569335938" b="-6.741452405414975" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.16028001498145">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.545254319264934" b="-5.495828710831644" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.545254319264934" b="-5.495828710831644" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.230576635161235">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="20.15891613580646" b="-4.630073361790916" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="20.15891613580646" b="-4.630073361790916" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.313476248671996">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.77508484358752" b="-3.9922237837701187" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.77508484358752" b="-3.9922237837701187" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.40889008453118">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.39417145876975" b="-3.50182685662287" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.39417145876975" b="-3.50182685662287" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.51671597121349">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="19.016583872946452" b="-3.112302315333211" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="19.016583872946452" b="-3.112302315333211" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.63683844605873">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="18.64272641636206" b="-2.7948127724904634" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="18.64272641636206" b="-2.7948127724904634" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.76912887891209">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="18.272999424945198" b="-2.530549375086348" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="18.272999424945198" b="-2.530549375086348" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="33.91344560986456">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.907798811618925" b="-2.306720340130912" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.907798811618925" b="-2.306720340130912" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="34.06963410094589">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.547515642347264" b="-2.114322357548661" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.547515642347264" b="-2.114322357548661" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="34.23752710160774">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="17.192535717371985" b="-1.9468341654894694" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="17.192535717371985" b="-1.9468341654894694" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="34.41694482781974">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.84323915808803" b="-1.799415832756595" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.84323915808803" b="-1.799415832756595" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="34.607695154586736">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.5" b="-1.668399205583512" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.5" b="-1.668399205583512" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="34.809573821681056">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="16.163185792195584" b="-1.5509530526438857" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="16.163185792195584" b="-1.5509530526438857" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="35.02236465236946">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.833157203764774" b="-1.4448568058612898" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.833157203764774" b="-1.4448568058612898" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="35.24583978490062">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.510267637586374" b="-1.3483439134867286" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.510267637586374" b="-1.3483439134867286" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="35.479759916505174">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="15.194862851895351" b="-1.259991034950757" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="15.194862851895351" b="-1.259991034950757" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="35.72387455964716">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.887280590036255" b="-1.1786381517800046" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.887280590036255" b="-1.1786381517800046" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="35.97792231025227">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.587850218799174" b="-1.1033299757334714" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.587850218799174" b="-1.1033299757334714" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="36.24163112762597">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.296892375725546" b="-1.033272309756758" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.296892375725546" b="-1.033272309756758" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="36.51471862576143">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="14.014718625761429" b="-0.9677990889307929" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="14.014718625761429" b="-0.9677990889307929" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="36.79689237572555">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.741631127625972" b="-0.9063471690191451" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.741631127625972" b="-0.9063471690191451" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="37.087850218799176">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.477922310252271" b="-0.8484368153956086" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.477922310252271" b="-0.8484368153956086" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="37.387280590036255">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="13.223874559647157" b="-0.7936564406103804" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="13.223874559647157" b="-0.7936564406103804" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="37.69486285189535">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.979759916505177" b="-0.7416505462720308" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.979759916505177" b="-0.7416505462720308" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="38.010267637586374">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.745839784900618" b="-0.6921101080351721" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.745839784900618" b="-0.6921101080351721" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="38.33315720376477">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.522364652369458" b="-0.6447648420403859" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.522364652369458" b="-0.6447648420403859" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="38.663185792195584">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.309573821681052" b="-0.599376933681922" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.309573821681052" b="-0.599376933681922" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="39.0">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="12.107695154586736" b="-0.5557359126200758" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="12.107695154586736" b="-0.5557359126200758" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="39.343239158088025">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.916944827819739" b="-0.5136544332981653" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.916944827819739" b="-0.5136544332981653" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="39.69253571737198">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.73752710160774" b="-0.47296477589131536" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.73752710160774" b="-0.47296477589131536" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="40.047515642347264">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.56963410094589" b="-0.43351592414677254" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.56963410094589" b="-0.43351592414677254" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="40.40779881161892">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.41344560986456" b="-0.39517110784130344" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.41344560986456" b="-0.39517110784130344" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="40.7729994249452">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.269128878912092" b="-0.3578057213145258" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.269128878912092" b="-0.3578057213145258" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="41.14272641636206">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.136838446058732" b="-0.321305547688399" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.136838446058732" b="-0.321305547688399" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="41.51658387294645">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="11.016715971213493" b="-0.28556523236114006" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="11.016715971213493" b="-0.28556523236114006" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="41.89417145876975">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.90889008453118" b="-0.2504869601913057" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.90889008453118" b="-0.2504869601913057" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="42.27508484358752">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.813476248671996" b="-0.21597929921637138" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.813476248671996" b="-0.21597929921637138" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="42.658916135806464">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.730576635161235" b="-0.18195618033529967" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.730576635161235" b="-0.18195618033529967" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="43.045254319264934">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.660280014981453" b="-0.1483359875383477" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.660280014981453" b="-0.1483359875383477" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="43.43368569335938">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.602661663514276" b="-0.11504073729939863" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.602661663514276" b="-0.11504073729939863" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="43.82379431604527">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.557783279933638" b="-0.08199532888655706" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.557783279933638" b="-0.08199532888655706" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="44.21516244923828">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.52569292113676" b="-0.04912684976946931" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.52569292113676" b="-0.04912684976946931" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+      <laneSection s="44.607371006138685">
+        <left>
+          <lane id="1" type="shoulder" level="false">
+            <width sOffset="0" a="10.506424950283613" b="-0.016363922135312556" c="0" d="0" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+        <right>
+          <lane id="-1" type="shoulder" level="false">
+            <width sOffset="0" a="10.506424950283613" b="-0.016363922135312556" c="0" d="0" />
+          </lane>
+        </right>
+      </laneSection>
+    </lanes>
+  </road>
+  <road id="910" name="curved_curb_and_sidewalk" junction="-1" length="18.84955592153876">
+    <planView>
+      <geometry s="0" x="10.5" y="22.5" hdg="-1.5707963267948966" length="18.84955592153876">
+        <arc curvature="0.08333333333333333" />
+      </geometry>
+    </planView>
+    <elevationProfile>
+      <elevation s="0" a="0" b="0" c="0" d="0" />
+    </elevationProfile>
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="1" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="2" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+      </laneSection>
+    </lanes>
+  </road>
+  <road id="911" name="curved_curb_and_sidewalk" junction="-1" length="18.84955592153876">
+    <planView>
+      <geometry s="0" x="-22.5" y="10.500000000000002" hdg="0.0" length="18.84955592153876">
+        <arc curvature="0.08333333333333333" />
+      </geometry>
+    </planView>
+    <elevationProfile>
+      <elevation s="0" a="0" b="0" c="0" d="0" />
+    </elevationProfile>
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="1" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="2" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+      </laneSection>
+    </lanes>
+  </road>
+  <road id="912" name="curved_curb_and_sidewalk" junction="-1" length="18.84955592153876">
+    <planView>
+      <geometry s="0" x="-10.5" y="-22.5" hdg="1.5707963267948966" length="18.84955592153876">
+        <arc curvature="0.08333333333333333" />
+      </geometry>
+    </planView>
+    <elevationProfile>
+      <elevation s="0" a="0" b="0" c="0" d="0" />
+    </elevationProfile>
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="1" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="2" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+      </laneSection>
+    </lanes>
+  </road>
+  <road id="913" name="curved_curb_and_sidewalk" junction="-1" length="18.84955592153876">
+    <planView>
+      <geometry s="0" x="22.5" y="-10.500000000000004" hdg="3.141592653589793" length="18.84955592153876">
+        <arc curvature="0.08333333333333333" />
+      </geometry>
+    </planView>
+    <elevationProfile>
+      <elevation s="0" a="0" b="0" c="0" d="0" />
+    </elevationProfile>
+    <lanes>
+      <laneSection s="0">
+        <left>
+          <lane id="1" type="sidewalk" level="false">
+            <width sOffset="0" a="0.2" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+          <lane id="2" type="sidewalk" level="false">
+            <width sOffset="0" a="2.0" b="0" c="0" d="0" />
+            <height sOffset="0" inner="0.15" outer="0.15" />
+          </lane>
+        </left>
+        <center>
+          <lane id="0" type="none" level="false" />
+        </center>
+      </laneSection>
+    </lanes>
+  </road>
+  <controller id="2011" name="Controller_1011" sequence="1">
+    <control signalId="1011" type="0" />
+  </controller>
+  <controller id="2012" name="Controller_1012" sequence="2">
+    <control signalId="1012" type="0" />
+  </controller>
+  <controller id="2013" name="Controller_1013" sequence="3">
+    <control signalId="1013" type="0" />
+  </controller>
+  <controller id="2021" name="Controller_1021" sequence="1">
+    <control signalId="1021" type="0" />
+  </controller>
+  <controller id="2022" name="Controller_1022" sequence="2">
+    <control signalId="1022" type="0" />
+  </controller>
+  <controller id="2023" name="Controller_1023" sequence="3">
+    <control signalId="1023" type="0" />
+  </controller>
+  <controller id="2031" name="Controller_1031" sequence="1">
+    <control signalId="1031" type="0" />
+  </controller>
+  <controller id="2032" name="Controller_1032" sequence="2">
+    <control signalId="1032" type="0" />
+  </controller>
+  <controller id="2033" name="Controller_1033" sequence="3">
+    <control signalId="1033" type="0" />
+  </controller>
+  <controller id="2041" name="Controller_1041" sequence="1">
+    <control signalId="1041" type="0" />
+  </controller>
+  <controller id="2042" name="Controller_1042" sequence="2">
+    <control signalId="1042" type="0" />
+  </controller>
+  <controller id="2043" name="Controller_1043" sequence="3">
+    <control signalId="1043" type="0" />
+  </controller>
+  <junction name="Cross" id="10" type="default">
+    <connection incomingRoad="1" id="0" contactPoint="start" connectingRoad="100">
+      <laneLink from="-1" to="-1" />
+    </connection>
+    <connection incomingRoad="1" id="1" contactPoint="start" connectingRoad="101">
+      <laneLink from="-2" to="-1" />
+    </connection>
+    <connection incomingRoad="1" id="2" contactPoint="start" connectingRoad="102">
+      <laneLink from="-3" to="-1" />
+    </connection>
+    <connection incomingRoad="2" id="3" contactPoint="start" connectingRoad="103">
+      <laneLink from="-1" to="-1" />
+    </connection>
+    <connection incomingRoad="2" id="4" contactPoint="start" connectingRoad="104">
+      <laneLink from="-2" to="-1" />
+    </connection>
+    <connection incomingRoad="2" id="5" contactPoint="start" connectingRoad="105">
+      <laneLink from="-3" to="-1" />
+    </connection>
+    <connection incomingRoad="3" id="6" contactPoint="start" connectingRoad="106">
+      <laneLink from="-1" to="-1" />
+    </connection>
+    <connection incomingRoad="3" id="7" contactPoint="start" connectingRoad="107">
+      <laneLink from="-2" to="-1" />
+    </connection>
+    <connection incomingRoad="3" id="8" contactPoint="start" connectingRoad="108">
+      <laneLink from="-3" to="-1" />
+    </connection>
+    <connection incomingRoad="4" id="9" contactPoint="start" connectingRoad="109">
+      <laneLink from="-1" to="-1" />
+    </connection>
+    <connection incomingRoad="4" id="10" contactPoint="start" connectingRoad="110">
+      <laneLink from="-2" to="-1" />
+    </connection>
+    <connection incomingRoad="4" id="11" contactPoint="start" connectingRoad="111">
+      <laneLink from="-3" to="-1" />
+    </connection>
+    <controller id="2011" type="0" sequence="1" />
+    <controller id="2012" type="0" sequence="2" />
+    <controller id="2013" type="0" sequence="3" />
+    <controller id="2021" type="0" sequence="1" />
+    <controller id="2022" type="0" sequence="2" />
+    <controller id="2023" type="0" sequence="3" />
+    <controller id="2031" type="0" sequence="1" />
+    <controller id="2032" type="0" sequence="2" />
+    <controller id="2033" type="0" sequence="3" />
+    <controller id="2041" type="0" sequence="1" />
+    <controller id="2042" type="0" sequence="2" />
+    <controller id="2043" type="0" sequence="3" />
+  </junction>
+</OpenDRIVE>

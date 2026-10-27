@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "junctions": 1,
+  "movement_checks": [
+    {
+      "road": 1,
+      "lane": -1,
+      "target_road": 4,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "max_gap_m": 1.107308030128479,
+      "passed": true
+    },
+    {
+      "road": 1,
+      "lane": -2,
+      "target_road": 3,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    },
+    {
+      "road": 1,
+      "lane": -3,
+      "target_road": 2,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -1,
+      "target_road": 1,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "max_gap_m": 1.1073079109191895,
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -2,
+      "target_road": 4,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "max_gap_m": 1.0000001192092896,
+      "passed": true
+    },
+    {
+      "road": 2,
+      "lane": -3,
+      "target_road": 3,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -1,
+      "target_road": 2,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "max_gap_m": 1.1073081493377686,
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -2,
+      "target_road": 1,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "max_gap_m": 1.000000238418579,
+      "passed": true
+    },
+    {
+      "road": 3,
+      "lane": -3,
+      "target_road": 4,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -1,
+      "target_road": 3,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10,
+      "max_gap_m": 1.1073079109191895,
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -2,
+      "target_road": 2,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    },
+    {
+      "road": 4,
+      "lane": -3,
+      "target_road": 1,
+      "target_lane": 3,
+      "movement": "right",
+      "junction_id": 10,
+      "max_gap_m": 1.0,
+      "passed": true
+    }
+  ],
+  "seam_checks": [],
+  "errors": [],
+  "standard_geometry": {
+    "passed": true,
+    "errors": [],
+    "lane_edge_samples": 1736,
+    "limits": "Offline geometry only; no vehicle swept-body, renderer, collision or pedestrian navigation certification"
+  },
+  "limits": "Topology only. Does not certify meshes, collisions, signal behavior or agent performance."
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "vehicles": [
+    {
+      "vehicle_id": 382,
+      "row": 0,
+      "target_road": 10003,
+      "visited_junctions": [
+        10,
+        10010
+      ],
+      "min_z": -0.03624485060572624,
+      "completed": true,
+      "completion_frame": 439951
+    },
+    {
+      "vehicle_id": 384,
+      "row": 1,
+      "target_road": 30003,
+      "visited_junctions": [
+        20010,
+        30010
+      ],
+      "min_z": -0.03624485060572624,
+      "completed": true,
+      "completion_frame": 439951
+    }
+  ],
+  "collision_callbacks": [],
+  "signal_policy": "all green, isolated straight-only smoke",
+  "limits": "No conflicting movements, traffic demand, multi-junction controller or complete sensor coverage certification."
+}

@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "package": "urban_cross3_v1",
+  "date": "2026-10-27",
+  "scope": "Standalone toolkit plus two validated examples; no external asset binaries",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 154,
+      "sha256": "56c202d1ceb9ab9be592f8376ca2749f9c28883a62890b046e4b44330bd30712"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 145,
+      "sha256": "5c02c4e81bfe456db14473522bdf39986c086ea7a01ffc71d4918f11c877bd21"
+    },
+    {
+      "path": "BEAUTIFICATION_PIPELINE.md",
+      "bytes": 5123,
+      "sha256": "da794644d82014e57527cb3a58b4d16382945e768e49ce86a4d4b84c6a6da877"
+    },
+    {
+      "path": "examples/cross3/close.png",
+      "bytes": 1248067,
+      "sha256": "67fdce6c1c025bb83dd8a7efd27f3298c73265c3902e4adb72598d45abb9f136"
+    },
+    {
+      "path": "examples/cross3/config.json",
+      "bytes": 590,
+      "sha256": "6f7253391253528de9811f179e69b427269536a27677ffda679094787965fab2"
+    },
+    {
+      "path": "examples/cross3/drive_validation.json",
+      "bytes": 497,
+      "sha256": "93594e9ae19a53d1e47c1b81ac3c0a5e315bd66229fabc1025870b8994787242"
+    },
+    {
+      "path": "examples/cross3/load_report.json",
+      "bytes": 15359,
+      "sha256": "2ec6e513a631b454a9e34233f87c09f6cd3522471454f22f5d40be151350ea4a"
+    },
+    {
+      "path": "examples/cross3/manifest.json",
+      "bytes": 5952,
+      "sha256": "648f79ef2c2e8f272fc1d4068bf172ff8f04ea212d8427b62b406d35b5049d57"
+    },
+    {
+      "path": "examples/cross3/map.xodr",
+      "bytes": 154573,
+      "sha256": "f6efc47f73117c866a4c6c8b08fb327afb4d31279180aa551fbfed3cca3bca77"
+    },
+    {
+      "path": "examples/cross3/movement_validation.json",
+      "bytes": 3436,
+      "sha256": "58bcb3101538f75dacc188f86602b066acdfee982bb751949c83e886375bda9c"
+    },
+    {
+      "path": "examples/cross3/movement_validation_vehicle_carlamotors_carlacola.json",
+      "bytes": 3479,
+      "sha256": "dcc527755b1fd918008358890077acf0bcc5079c41027a32d532e0394d6f4295"
+    },
+    {
+      "path": "examples/cross3/movement_validation_vehicle_mitsubishi_fusorosa.json",
+      "bytes": 3304,
+      "sha256": "d4c59d9dc463e7568129d1a7c5c35c6e13a6218de67d6398796aee827b2fdd51"
+    },
+    {
+      "path": "examples/cross3/overview.png",
+      "bytes": 1479996,
+      "sha256": "dc1ce857092e3bf677cbb676a6988439dabfd967ac7126f82d261e8a190e4ecf"
+    },
+    {
+      "path": "examples/cross3/safety_rules.json",
+      "bytes": 2851,
+      "sha256": "d2ed8841cc352a0c792b808b2ac775722f85caf491ce36ed66356c423297e084"
+    },
+    {
+      "path": "examples/cross3/street.png",
+      "bytes": 1376389,
+      "sha256": "12d5cb6d4393359365ebf80359aeb2af3c81d27305eb6e40fb022ad0943ceed7"
+    },
+    {
+      "path": "examples/cross3/surface_validation.json",
+      "bytes": 2153,
+      "sha256": "7b9dbd5598bce59edba652f5e0e96493ad08e5de9a90822e97cb14def0c81520"
+    },
+    {
+      "path": "examples/cross3/topology_validation.json",
+      "bytes": 2973,
+      "sha256": "a9f6439433cc9273552961322acec063c33bcafa6a79874f62e5763ab79a1347"
+    },
+    {
+      "path": "examples/grid2x2/config.json",
+      "bytes": 590,
+      "sha256": "90480bc1d205f6a033e1968ac8be7bd001341e236a940fc4f8864320d04e1454"
+    },
+    {
+      "path": "examples/grid2x2/drive_validation.json",
+      "bytes": 773,
+      "sha256": "d300c8ac4f33bceb4e54df825bacf8fd3135e641a3b6d9c88e3ef7dce0d1e596"
+    },
+    {
+      "path": "examples/grid2x2/load_report.json",
+      "bytes": 57143,
+      "sha256": "c045d6ffe5a7fdbc4dd8dfde6d04eea97a596a199a24643dc28296b6064378eb"
+    },
+    {
+      "path": "examples/grid2x2/manifest.json",
+      "bytes": 21791,
+      "sha256": "750639895a5665ba3c410c12f285fcae66a38e3768a4c50ef7ea4ce81db34c14"
+    },
+    {
+      "path": "examples/grid2x2/map.xodr",
+      "bytes": 630354,
+      "sha256": "d15c7d4364825d6f87b95365dbada1dff9e0cfe52d258d2f868a3b6c602296aa"
+    },
+    {
+      "path": "examples/grid2x2/overview.png",
+      "bytes": 1154144,
+      "sha256": "d7c9907aaf5fd6302365fea51cbdb1e1f80290d334bcf0ba4a232c35f82503fc"
+    },
+    {
+      "path": "examples/grid2x2/safety_rules.json",
+      "bytes": 9367,
+      "sha256": "66abc1370e1e2ceea2da746ea3bebaccedec7ff8ae17e7468890dedd4760698f"
+    },
+    {
+      "path": "examples/grid2x2/street.png",
+      "bytes": 1373718,
+      "sha256": "f5361377daefad5884cbb41a16cea94baa938c44e2dcfa083ce32e1d5a70717a"
+    },
+    {
+      "path": "examples/grid2x2/surface_validation.json",
+      "bytes": 8089,
+      "sha256": "9c66600137479a2506849111fa3b2b21588dbb6c438cdb1aa5267540aa47bc6e"
+    },
+    {
+      "path": "examples/grid2x2/topology_validation.json",
+      "bytes": 13999,
+      "sha256": "688972dffb789b50c91dd84cb67862864e2f796c833da42c874dc37024dcd3b7"
+    },
+    {
+      "path": "JunctionToolkit/check_lane_control.py",
+      "bytes": 4941,
+      "sha256": "03f0fe0414a1818ee8c6ec7f3a8bdb1ec139c0ce73c814d3be6b06961194cf6c"
+    },
+    {
+      "path": "JunctionToolkit/configs/cross3.json",
+      "bytes": 85,
+      "sha256": "28d5116b67d958a4ddae891fc28ea75e1ea0d4dee389d31cf603c31416a3d17b"
+    },
+    {
+      "path": "JunctionToolkit/configs/grid2x2.json",
+      "bytes": 86,
+      "sha256": "0e13f57c5d3b3f074a29626472c872c6feceaca8446f7e4052735030a76393ed"
+    },
+    {
+      "path": "JunctionToolkit/drive_check.py",
+      "bytes": 4597,
+      "sha256": "682814d91b44805b72d9d86556f055eeda2509a4352b50356e03040d196dba66"
+    },
+    {
+      "path": "JunctionToolkit/experiment.py",
+      "bytes": 5501,
+      "sha256": "68845475522d61f8df93c8200d3c60dad3f26e6106aad7474a1450963f54482e"
+    },
+    {
+      "path": "JunctionToolkit/generate.py",
+      "bytes": 16056,
+      "sha256": "b30b15ee5f74214d47a21abfbf9b371bb8c5766c4173bd7e9ac937e0fdb37e1f"
+    },
+    {
+      "path": "JunctionToolkit/generate_map.cmd",
+      "bytes": 211,
+      "sha256": "31e2bd27065603d1bf5c5105f207b1dbba831445b455f237a786a6a85d4ac227"
+    },
+    {
+      "path": "JunctionToolkit/lane_signals.py",
+      "bytes": 5327,
+      "sha256": "910d2a2add6744e831f1571d99c6d8809924a9fbaa59fe63f54125310ee02f9f"
+    },
+    {
+      "path": "JunctionToolkit/layout.py",
+      "bytes": 2278,
+      "sha256": "ee63ee60c78e2b82b5dbb8888ebb407a0def4d59debf180afe11e3c315bf0366"
+    },
+    {
+      "path": "JunctionToolkit/movement_check.py",
+      "bytes": 4939,
+      "sha256": "3e63650063c59d7a844be920b9450a894744ddac48f41f1d3c02617d25f01cff"
+    },
+    {
+      "path": "JunctionToolkit/project_bridge.py",
+      "bytes": 3403,
+      "sha256": "b7c6427828bdbf9b54554425f44038980aa0ae27b2c7916005392c90ad5e2ce1"
+    },
+    {
+      "path": "JunctionToolkit/README.md",
+      "bytes": 3042,
+      "sha256": "fb43ad162792179a7beec2a1f23aa0e2044f8f3bed15f4cb1a3ea9a518053b0f"
+    },
+    {
+      "path": "JunctionToolkit/requirements-carla.txt",
+      "bytes": 61,
+      "sha256": "f6fb00ddfa102a61d601bf53b6cc399c62a9afe57e65accc9a252e8779a57953"
+    },
+    {
+      "path": "JunctionToolkit/requirements-generator-lock.txt",
+      "bytes": 145,
+      "sha256": "96ed35b0c630f9620154a315a27e39b69ef4ec8c993348b0da1bbbf0d7b7f3f2"
+    },
+    {
+      "path": "JunctionToolkit/ROAD_STANDARD.md",
+      "bytes": 4050,
+      "sha256": "43a777e3261979946098706efab5173077a670e731d48dbfeed9e5dfec22a0e9"
+    },
+    {
+      "path": "JunctionToolkit/road_standard.py",
+      "bytes": 7558,
+      "sha256": "69d1d9b9519b6e5909b3e85e5b55187026bf074c4487b6a0befc00040c76e785"
+    },
+    {
+      "path": "JunctionToolkit/roundabout.py",
+      "bytes": 11626,
+      "sha256": "ceeb704b321faff45f2e8ff735fe0f6625e781b7b3720c32ee328662ade90422"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_conflicts.py",
+      "bytes": 2593,
+      "sha256": "857a894aa3b89cd36942597d221fcbe9721d0d3085841e0cddcd2fbb7f34cd84"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_drive_check.py",
+      "bytes": 7018,
+      "sha256": "5f9e4924d3df21245507561a5063fee4de2ecf28b2a8850be1a7f3314cee6374"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_lane_plan.py",
+      "bytes": 4397,
+      "sha256": "0e1fe1210459f048ff9adcf26ba8b2e05f23cb4b7155cb4eac2b783bf83df9e3"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_marks.py",
+      "bytes": 2387,
+      "sha256": "4cd44d17aa42dfa4e599ead0c74ff6a7d8247eb716b94705d3ee0aca4c653981"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_phases.py",
+      "bytes": 4242,
+      "sha256": "d6e47d8c204a69501eed0629e5cffab1882b614240326e4c24c446c81463573e"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_random_trial.py",
+      "bytes": 5888,
+      "sha256": "f33e0cbca49cd70a293e15bff591e59f200077bb602027a69b71530883fae966"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_signal_check.py",
+      "bytes": 6503,
+      "sha256": "9f89f5f890a9a75b3f11547088b5bc735a0264bd7931c2f0b1c63f860f6aa887"
+    },
+    {
+      "path": "JunctionToolkit/roundabout_view.py",
+      "bytes": 5021,
+      "sha256": "7b0d1587120ee3e8f396e9a6e0bdb81f22e0e8659a9eb9ae099a6a261957a867"
+    },
+    {
+      "path": "JunctionToolkit/runtime_config.py",
+      "bytes": 1597,
+      "sha256": "62c1ec590630fcbe275d90b2e76311b2ec512095a23fbbcfb4f8a0531c5e1df4"
+    },
+    {
+      "path": "JunctionToolkit/safety_rules.py",
+      "bytes": 8840,
+      "sha256": "4a72a710dc5436c12faf63347d8374857d440ec4bb17246f9ecc01de6428a096"
+    },
+    {
+      "path": "JunctionToolkit/scenery.py",
+      "bytes": 5217,
+      "sha256": "6d21bce8f97da55cd7e104147f2ab7d55810eb171125b09b6a307003bff19e5d"
+    },
+    {
+      "path": "JunctionToolkit/settings.json",
+      "bytes": 98,
+      "sha256": "8ad471ad61130e75f43e46e86b9dbcc4b0462e57a66ac4e57b54031c3bb103b9"
+    },
+    {
+      "path": "JunctionToolkit/standard_preview.py",
+      "bytes": 3172,
+      "sha256": "4f1cd1793ee4f2d26a13c99e2f86cae74acaffd952df0d96beb8c810d5c8fd13"
+    },
+    {
+      "path": "JunctionToolkit/standard_surface_check.py",
+      "bytes": 2441,
+      "sha256": "3bf42716b5ce6c83227959c7e04109233b09011a6d958409ed93b34c62b3b13e"
+    },
+    {
+      "path": "JunctionToolkit/STANDARD_VALIDATION.md",
+      "bytes": 2787,
+      "sha256": "9ca13e50044bded67a1404d4931b4b1a22fda7d0a9db1b32f4a372588aa826ac"
+    },
+    {
+      "path": "JunctionToolkit/test_layout.py",
+      "bytes": 1184,
+      "sha256": "5bc9a20b26b47ea1e5551c864b7ddcafc88f584bf35f9c40baca4ea94d69cd77"
+    },
+    {
+      "path": "JunctionToolkit/test_road_standard.py",
+      "bytes": 1513,
+      "sha256": "31e20e5503d2e3de5118457b3a326bdb56ff7d489975b6a22705ee2cadbaaa61"
+    },
+    {
+      "path": "JunctionToolkit/test_runtime_config.py",
+      "bytes": 884,
+      "sha256": "eb4a4d2427b71e58c4e463c705c884c2609f6faf72d2d5058ab7bfdc06a52c02"
+    },
+    {
+      "path": "JunctionToolkit/toolkit.cmd",
+      "bytes": 213,
+      "sha256": "3025f235972b0fe59137219a96afa1cefbb91157ff7711a23621d85ba90f4f28"
+    },
+    {
+      "path": "JunctionToolkit/toolkit.py",
+      "bytes": 4021,
+      "sha256": "f8c3097f85f3d6ed8418e4e6c05b529fce943c49303a8c41badfe702b5a8d5dc"
+    },
+    {
+      "path": "JunctionToolkit/validate.py",
+      "bytes": 7860,
+      "sha256": "136084f5f632d964971ebad690f64768c3d923d741622f563afacca4f79160a1"
+    },
+    {
+      "path": "JunctionToolkit/validate_roundabout.py",
+      "bytes": 6201,
+      "sha256": "4a634907bdeee80a8cebc2e192cebeec6380faea0b27070253167ed04301f7d4"
+    },
+    {
+      "path": "JunctionToolkit/validate_standard.py",
+      "bytes": 4823,
+      "sha256": "650a9605cc8cbdd27ae8d6627a24d7b249e466fa5061adfdc314d1e2a0c9a302"
+    },
+    {
+      "path": "JunctionToolkit/view.py",
+      "bytes": 5055,
+      "sha256": "6e4ba616346b490b9bf2bff92e502dcf6d03b9abbd39f381d7cc993fb864ccc5"
+    },
+    {
+      "path": "JunctionToolkit/WIZARD.md",
+      "bytes": 616,
+      "sha256": "1d74ed1a7514ab03ec88c9c66688c64d29d6d6a67f792d2021d859ff74fdb108"
+    },
+    {
+      "path": "JunctionToolkit/wizard.py",
+      "bytes": 10959,
+      "sha256": "56c35c4296cb29ac56a45af7fd4b913e91207b91a31982133560e911eb573060"
+    },
+    {
+      "path": "README.md",
+      "bytes": 889,
+      "sha256": "6c6cf767a16ac9eeb56826726423dcecbcd6535f4bbf6d8910de945b82bcc6d3"
+    }
+  ]
+}

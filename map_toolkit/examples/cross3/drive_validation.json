@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "vehicles": [
+    {
+      "vehicle_id": 223,
+      "row": 0,
+      "target_road": 3,
+      "visited_junctions": [
+        10
+      ],
+      "min_z": -0.03624485060572624,
+      "completed": true,
+      "completion_frame": 321176
+    }
+  ],
+  "collision_callbacks": [],
+  "signal_policy": "all green, isolated straight-only smoke",
+  "limits": "No conflicting movements, traffic demand, multi-junction controller or complete sensor coverage certification."
+}
