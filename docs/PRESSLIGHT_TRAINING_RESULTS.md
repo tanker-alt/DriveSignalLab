@@ -41,3 +41,15 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 | PressLight 微调后 | 12/12 | 0 | 0 | 未计算 | 未计算 | `/home/zlj/Drive/outputs/cross3/offline80_carla_finetune_180s` |
 
 正式结论必须以完成率、安全检查、平均等待和不同随机种子下的稳定性为依据，不能只比较训练损失或单回合奖励。
+
+
+## 四、保守微调后的独立冻结评估
+
+使用训练阶段未参与的种子 8401–8405、每条车道 2 辆背景车、每回合最多 180 秒，对离线模型和微调模型进行冻结评估。
+
+| 模型 | 完成率 | 碰撞回合 | 平均完成时间 |
+|---|---:|---:|---:|
+| 微调前离线 seed 2028 | 100% (120/120) | 0/5 | 52.95 秒 |
+| 20 回合 CARLA 微调后 | 80% (96/120) | 1/5 | 47.59 秒 |
+
+微调模型在未碰撞回合中的完成时间更短，但整体安全性下降，不能接受为最终模型。当前训练结果说明“只按效率优化”会牺牲安全性；后续模型选择必须把零碰撞和 100% 完成率作为硬门槛，再比较完成时间。训练输出为 `/home/zlj/Drive/outputs/cross3/presslight_safe_training_fresh20`，冻结评估输出为 `/home/zlj/Drive/outputs/cross3/eval_presslight_before5` 和 `/home/zlj/Drive/outputs/cross3/eval_presslight_after5`。
