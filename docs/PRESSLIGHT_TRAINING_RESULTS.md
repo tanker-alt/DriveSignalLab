@@ -36,8 +36,8 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 
 | 控制器 | 完成车辆/计划车辆 | 碰撞 | 信号错误 | 平均等待 | 排队成本 | 输出目录 |
 |---|---:|---:|---:|---:|---:|---|
-| 固定配时 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 |
-| MaxPressure | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 |
+| 固定配时 | 240/240 | 0 | 0 | 52.95 秒 | -2734.33 | `/home/zlj/Drive/outputs/cross3/experiment_fixed_2lane` |
+| MaxPressure | 240/240 | 0 | 0 | 40.96 秒 | -1309.18 | `/home/zlj/Drive/outputs/cross3/experiment_maxpressure_2lane` |
 | PressLight 微调后 | 12/12 | 0 | 0 | 未计算 | 未计算 | `/home/zlj/Drive/outputs/cross3/offline80_carla_finetune_180s` |
 
 正式结论必须以完成率、安全检查、平均等待和不同随机种子下的稳定性为依据，不能只比较训练损失或单回合奖励。
