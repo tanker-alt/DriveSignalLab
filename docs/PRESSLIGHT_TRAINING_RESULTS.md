@@ -31,10 +31,8 @@ the live world: 28-value state (four phase one-hot values, 12 incoming counts,
 pressure reward, next state, and terminal flag. The runner writes signal and
 vehicle JSONL logs plus `summary.json`.
 
-The 80-value offline checkpoint is not loaded directly into the current CARLA
-learner because its state layout and network input dimension differ. CARLA
-fine-tuning must start from a dimension-matched 28-value CARLA checkpoint, or
-the CARLA runner must first be upgraded to the official 80-value collector.
+The CARLA runner now uses the same 80-value collector and accepts the converted
+offline checkpoint.
 
 ## CARLA results
 
@@ -43,10 +41,11 @@ The offline seed 2028 checkpoint was converted to
 `integrations/cross3/convert_offline_checkpoint.py`. The converter records the
 Cross3 OpenDRIVE hash and the 12-lane ordering. The CARLA runner was upgraded
 to the same 80-D state and accepted the checkpoint format without a weight
-shape error. A 30-second CARLA fine-tuning attempt was then made with one
-background vehicle per lane and seed 2026, but the CARLA RPC endpoint at
-`127.0.0.1:31600` timed out before map loading. No CARLA training result is
-reported from that attempt.
+shape error. After restarting CARLA, a 30-second fine-tuning smoke run with one
+background vehicle per lane and seed 2026 completed 4/12 vehicles, with zero
+collisions and zero signal mismatches. Observed phases were `EW_LEFT` and
+`NS_STRAIGHT`. Output: `/home/zlj/Drive/outputs/cross3/offline80_carla_finetune_final`.
+This short run is a smoke check, not a performance comparison.
 
 To be filled after a live training run with identical demand and seed:
 
