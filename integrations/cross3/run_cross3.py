@@ -162,7 +162,9 @@ class Learner:
         state = self.vector(observation,current_action)
         with self.torch.no_grad():
             q = self.net(self.torch.from_numpy(state))
-        epsilon = max(.05,1-self.steps/2000) if self.args.train else 0
+        # Keep exploration conservative after offline pretraining.  A random
+        # phase is expensive in CARLA and can create unsafe queues.
+        epsilon = max(.10, .30 - self.steps/5000) if self.args.train else 0
         action = random.randrange(4) if random.random()<epsilon else int(q.argmax())
         self.steps += 1
         if self.args.train:
@@ -249,7 +251,7 @@ def episode(client, world, design, lights, args, output, learner=None, agent=Non
     output.mkdir(parents=True)
     original = world.get_settings()
     saved = [(l,l.get_state(),l.is_frozen()) for l in lights.values()]
-    actors, records, sensors, collisions, backgrounds = [], [], [], [], []
+    actors, records, sensors, collisions, collision_pairs, backgrounds = [], [], [], [], set(), []
     wrapper = None
     summary = dict(status='starting',controller='plugin' if signal_agent else args.controller,
                    ego_driver=('BasicAgent_expert' if args.teacher else type(agent).__name__) if args.egos else None,
@@ -286,7 +288,12 @@ def episode(client, world, design, lights, args, output, learner=None, agent=Non
             record = dict(m,actor_id=actor.id,role=role,completed=False,route_violation=False)
             records.append(record)
             sensor = world.spawn_actor(world.get_blueprint_library().find('sensor.other.collision'),carla.Transform(),attach_to=actor)
-            sensor.listen(lambda e: collisions.append(dict(frame=e.frame,actor=e.actor.id,other=e.other_actor.id)))
+            def on_collision(e):
+                pair=(min(e.actor.id,e.other_actor.id),max(e.actor.id,e.other_actor.id))
+                if pair not in collision_pairs:
+                    collision_pairs.add(pair)
+                    collisions.append(dict(frame=e.frame,actor=e.actor.id,other=e.other_actor.id))
+            sensor.listen(on_collision)
             sensors.append(sensor)
             if role.startswith('hero'):
                 CarlaDataProvider._carla_actor_pool[actor.id]=actor
@@ -371,6 +378,13 @@ def episode(client, world, design, lights, args, output, learner=None, agent=Non
                         if actors[i].is_alive:
                             actors[i].apply_control(carla.VehicleControl(brake=1) if records[i]['completed'] else controls[i])
                 world.tick()
+                if collisions:
+                    # Collision is a terminal failure for training.  Do not
+                    # continue collecting thousands of duplicate callbacks.
+                    if learner and args.train:
+                        learner.reward -= 100.0
+                        learner.transition(observation(world,design,elapsed,road_map),policy.active,terminal=True)
+                    break
                 snap=world.get_snapshot()
                 actual={sid:str(l.get_state()).split('.')[-1] for sid,l in lights.items()}
                 mismatch=actual!=desired
@@ -424,7 +438,7 @@ def episode(client, world, design, lights, args, output, learner=None, agent=Non
                     write(output/'progress.json',dict(elapsed=elapsed,completed=sum(r['completed'] for r in records),planned=len(records)))
                 if all(r['completed'] for r in records):
                     break
-            if learner and args.train:
+            if learner and args.train and not collisions:
                 learner.transition(observation(world,design,elapsed,road_map),policy.active,terminal=True)
                 learner.save()
             summary.update(status='finished',completed=sum(r['completed'] for r in records),
@@ -443,6 +457,13 @@ def episode(client, world, design, lights, args, output, learner=None, agent=Non
                 s.stop(); s.destroy()
         for a in actors:
             if a.is_alive: a.destroy()
+        # CARLA applies actor destruction asynchronously. Drain a few ticks so
+        # the next episode cannot spawn on top of stale actors.
+        for _ in range(5):
+            try:
+                world.tick()
+            except Exception:
+                break
         for l,state,frozen in saved:
             l.set_state(state); l.freeze(frozen)
         world.apply_settings(original)
