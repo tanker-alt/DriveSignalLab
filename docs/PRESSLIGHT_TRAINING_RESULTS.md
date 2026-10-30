@@ -53,3 +53,17 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 | 20 回合 CARLA 微调后 | 80% (96/120) | 1/5 | 47.59 秒 |
 
 微调模型在未碰撞回合中的完成时间更短，但整体安全性下降，不能接受为最终模型。当前训练结果说明“只按效率优化”会牺牲安全性；后续模型选择必须把零碰撞和 100% 完成率作为硬门槛，再比较完成时间。训练输出为 `/home/zlj/Drive/outputs/cross3/presslight_safe_training_fresh20`，冻结评估输出为 `/home/zlj/Drive/outputs/cross3/eval_presslight_before5` 和 `/home/zlj/Drive/outputs/cross3/eval_presslight_after5`。
+
+## CoTV 风格灯车联合训练（2026-10-30）
+
+参考 `/home/zlj/Drive/repos/CoTV` 的 `CoTV` 多智能体环境、PPO/GAE 配置和分离的 `tl`、`cav` 策略，本仓库新增了可迁移到 CARLA 的联合训练骨架：
+
+- `integrations/cross3/vehicle_intent_policy.py`：车辆智能体输出四类离散意图（无额外引导、平缓接近、准备停车、条件允许时起步），只生成建议，不直接修改车辆控制或信号灯。
+- `integrations/cross3/joint_mappo.py`：灯控 actor、车辆意图 actor、集中式 critic 和 PPO clipped/GAE 更新。灯控动作仍经过现有安全层。
+- `integrations/cross3/train_joint_mappo.py`：在不启动 CARLA 的情况下验证联合 rollout 和更新流程；真实 CARLA 接入时由主循环唯一拥有 `world.tick()`，VLA 保持冻结 `eval()`。
+
+每个决策周期发送给 VLA 的 `notice_text` 应使用真实信号与协商结果拼接的格式，例如：
+
+`真实信号：NS_STRAIGHT，剩余约8.0秒，允许通行。协商结果：灯控智能体建议保持当前相位。车辆建议：若当前信号和前方空间均允许，建议平缓起步。`
+
+本次离线 smoke 训练配置为 seed=20261030、3 回合、每回合 16 个 1 秒决策周期，成功完成联合 actor/critic 更新，产物写入 `/tmp/joint_test.pt`。正式 CARLA 训练建议先用 10--20 回合、每回合 180--300 秒、24--48 辆背景车和 2 辆 VLA 车做意图响应测试，再扩大规模；碰撞回合不保存模型，完成率必须达到 100%。

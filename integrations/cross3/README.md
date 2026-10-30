@@ -182,3 +182,19 @@ python3 DriveSignalLab/integrations/cross3/build_replay.py \
 ```bash
 python3 -m unittest discover -s DriveSignalLab/integrations/cross3 -p 'test_*.py' -v
 ```
+
+## CoTV 风格联合训练
+
+`joint_mappo.py` 提供分离的灯控 actor、车辆意图 actor 和集中式 critic；
+`vehicle_intent_policy.py` 将车辆策略限制为建议，不改变 CARLA 控制；
+`notice_adapter.py` 生成可传给 MDrive `notice_text` 的中文消息；
+`train_joint_mappo.py` 可先在离线接口中验证 PPO/GAE：
+
+```bash
+PYTHONPATH=. /home/zlj/lmdrive_runtime/env/bin/python \
+  -m integrations.cross3.train_joint_mappo \
+  --output outputs/cross3_joint_mappo/joint_seed20261030 \
+  --episodes 20 --horizon 180
+```
+
+接入 CARLA 时保持 VLA 冻结并由主循环唯一调用 `world.tick()`；每个决策周期记录真实信号、车辆意图、notice_text、全局奖励和碰撞标志。
