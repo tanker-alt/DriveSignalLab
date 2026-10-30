@@ -134,7 +134,7 @@ class Learner:
         # Do not update on a handful of transitions.  CARLA episodes are
         # short, so the replay buffer is deliberately retained across
         # episodes and warm-up is measured in decision transitions.
-        if len(self.memory) >= 300:
+        if len(self.memory) >= 100:
             torch = self.torch
             for _ in range(10):
                 b = random.sample(self.memory,64)
@@ -164,7 +164,7 @@ class Learner:
             q = self.net(self.torch.from_numpy(state))
         # Keep exploration conservative after offline pretraining.  A random
         # phase is expensive in CARLA and can create unsafe queues.
-        epsilon = max(.10, .30 - self.steps/5000) if self.args.train else 0
+        epsilon = max(.05, .10 - self.steps/10000) if self.args.train else 0
         action = random.randrange(4) if random.random()<epsilon else int(q.argmax())
         self.steps += 1
         if self.args.train:
