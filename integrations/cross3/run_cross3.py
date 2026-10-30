@@ -94,14 +94,14 @@ class Learner:
         self.np, self.torch, self.args = np, torch, args
         torch.set_num_threads(1)
         torch.manual_seed(args.seed)
-        self.net = torch.nn.Sequential(torch.nn.Linear(28,64), torch.nn.ReLU(),
-                                       torch.nn.Linear(64,64), torch.nn.ReLU(), torch.nn.Linear(64,4))
+        self.net = torch.nn.Sequential(torch.nn.Linear(80,20), torch.nn.ReLU(),
+                                       torch.nn.Linear(20,20), torch.nn.ReLU(), torch.nn.Linear(20,4))
         self.target = copy.deepcopy(self.net)
-        self.optimizer = torch.optim.Adam(self.net.parameters(), lr=.0003)
+        self.optimizer = torch.optim.RMSprop(self.net.parameters(), lr=.001)
         self.memory = deque(maxlen=20000)
         self.steps, self.updates, self.pending, self.last_loss = 0, 0, None, None
         self.fingerprint = design['opendrive_sha256']
-        self.metadata = dict(schema='cross3_presslight_carla_v1', state_dim=28, action_dim=4,
+        self.metadata = dict(schema='cross3_presslight_carla_v2_official_80d', state_dim=80, action_dim=4,
             phase_order=['NS_STRAIGHT','NS_LEFT','EW_STRAIGHT','EW_LEFT'],
             lane_order=[(m['road'],m['lane']) for m in design['movements']],
             map_sha256=self.fingerprint, training_environment='CARLA',
@@ -114,13 +114,15 @@ class Learner:
                     raise ValueError('Incompatible Cross3 checkpoint: '+key)
             self.net.load_state_dict(data['model'])
             self.target.load_state_dict(data['target'])
-            self.optimizer.load_state_dict(data['optimizer'])
+            if data.get('optimizer'):
+                self.optimizer.load_state_dict(data['optimizer'])
             self.steps, self.updates = data['steps'], data['updates']
         elif not args.train:
             raise ValueError('Inference requires a trained Cross3 checkpoint')
 
     def vector(self, obs, phase):
-        return self.np.asarray([float(i==phase) for i in range(4)] + obs['lane_incoming'] + obs['lane_outgoing'], dtype='float32')
+        bits = [[0,0,0,0,0,1,0,1],[0,0,0,0,1,0,1,0],[0,1,0,1,0,0,0,0],[1,0,1,0,0,0,0,0]][phase if phase is not None else 0]
+        return self.np.asarray(bits + obs['incoming_bins'] + obs['outgoing_bins'], dtype='float32')
 
     def transition(self, obs, phase, terminal=False):
         if self.pending is None:
@@ -140,7 +142,7 @@ class Learner:
                 d = torch.tensor([r[4] for r in b])
                 done = torch.tensor([r[5] for r in b],dtype=torch.float32)
                 with torch.no_grad():
-                    y = r + .95**d * self.target(ns).max(1).values*(1-done)
+                    y = r + torch.pow(torch.tensor(.8),d/10.) * self.target(ns).max(1).values*(1-done)
                 loss = torch.nn.functional.smooth_l1_loss(self.net(s).gather(1,a[:,None]).squeeze(1),y)
                 self.optimizer.zero_grad()
                 loss.backward()
@@ -168,7 +170,7 @@ class Learner:
     def accumulate(self, obs):
         if self.pending is not None:
             age = obs['elapsed']-self.pending[2]
-            self.reward -= .95**age * sum(abs(a-b) for a,b in zip(obs['lane_incoming'],obs['lane_outgoing']))*.05
+            self.reward += -.25 * abs(float(obs['stopped_incoming'] - obs['stopped_outgoing']))
 
     def save(self):
         if not self.args.train:
@@ -186,6 +188,8 @@ class Learner:
 def observation(world, design, elapsed, road_map=None):
     road_map = road_map or world.get_map()
     incoming, outgoing, queued = [0]*12, [0]*12, [0]*12
+    incoming_bins, outgoing_bins = [[0]*3 for _ in range(12)], [[0]*3 for _ in range(12)]
+    stopped_incoming = stopped_outgoing = 0
     for actor in world.get_actors().filter('vehicle.*'):
         wp = road_map.get_waypoint(actor.get_location())
         if wp is None:
@@ -193,11 +197,15 @@ def observation(world, design, elapsed, road_map=None):
         v = actor.get_velocity()
         speed = (v.x*v.x+v.y*v.y+v.z*v.z)**.5
         for i,m in enumerate(design['movements']):
-            if (wp.road_id,wp.lane_id)==(m['road'],m['lane']) and 64<=wp.s<=150:
+            if (wp.road_id,wp.lane_id)==(m['road'],m['lane']) and 0<=150-wp.s<150:
                 incoming[i] += 1
                 queued[i] += int(speed<.3)
-            if (wp.road_id,wp.lane_id)==(m['target_road'],m['target_lane']) and 70<=wp.s<=150:
+                incoming_bins[i][min(2,int((150-wp.s)//50))] += 1
+                stopped_incoming += int(speed < .1)
+            if (wp.road_id,wp.lane_id)==(m['target_road'],m['target_lane']) and 0<=wp.s-70<150:
                 outgoing[i] += 1
+                outgoing_bins[i][min(2,int((wp.s-70)//50))] += 1
+                stopped_outgoing += int(speed < .1)
     from control_four_phases import active_ids, PHASES
     groups = [active_ids(design,p,'red') for p in PHASES]
     keys = [(m['road'],m['lane']) for m in design['movements']]
@@ -206,7 +214,10 @@ def observation(world, design, elapsed, road_map=None):
     inc = [sum(incoming[i] for i in g) for g in indices]
     out = [sum(outgoing[i] for i in g) for g in indices]
     return dict(incoming=inc,outgoing=out,pressure=[a-b for a,b in zip(inc,out)],
-                lane_incoming=incoming,lane_outgoing=outgoing,lane_queued=queued,elapsed=elapsed)
+                lane_incoming=incoming,lane_outgoing=outgoing,lane_queued=queued,
+                incoming_bins=[x for row in incoming_bins for x in row],
+                outgoing_bins=[x for row in outgoing_bins for x in row],
+                stopped_incoming=stopped_incoming,stopped_outgoing=stopped_outgoing,elapsed=elapsed)
 
 
 def episode(client, world, design, lights, args, output, learner=None, agent=None, signal_agent=None):

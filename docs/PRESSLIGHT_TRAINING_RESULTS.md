@@ -38,6 +38,16 @@ the CARLA runner must first be upgraded to the official 80-value collector.
 
 ## CARLA results
 
+The offline seed 2028 checkpoint was converted to
+`outputs/cross3_offline_official/offline_seed2028_carla80.pt` with
+`integrations/cross3/convert_offline_checkpoint.py`. The converter records the
+Cross3 OpenDRIVE hash and the 12-lane ordering. The CARLA runner was upgraded
+to the same 80-D state and accepted the checkpoint format without a weight
+shape error. A 30-second CARLA fine-tuning attempt was then made with one
+background vehicle per lane and seed 2026, but the CARLA RPC endpoint at
+`127.0.0.1:31600` timed out before map loading. No CARLA training result is
+reported from that attempt.
+
 To be filled after a live training run with identical demand and seed:
 
 | Controller | Completed/planned | Collisions | Mean wait | Queue cost | Output |
