@@ -131,10 +131,13 @@ class Learner:
         duration = max(.05, obs['elapsed']-origin)
         self.memory.append((state, action, self.reward, self.vector(obs,phase), duration, terminal))
         self.pending = None
-        if len(self.memory) >= 32:
+        # Do not update on a handful of transitions.  CARLA episodes are
+        # short, so the replay buffer is deliberately retained across
+        # episodes and warm-up is measured in decision transitions.
+        if len(self.memory) >= 300:
             torch = self.torch
-            for _ in range(4):
-                b = random.sample(self.memory,32)
+            for _ in range(10):
+                b = random.sample(self.memory,64)
                 s = torch.tensor(self.np.stack([r[0] for r in b]))
                 a = torch.tensor([r[1] for r in b])
                 r = torch.tensor([r[2] for r in b],dtype=torch.float32)
@@ -524,6 +527,9 @@ def main():
             agent=Agent(str(DRIVE/'configs/lmdrive_four_arm_config.py'),2)
         summaries=[]
         for i in range(args.episodes):
+            # Each episode gets an independent demand/spawn perturbation while
+            # sharing the learner replay buffer and weights.
+            random.seed(args.seed + i)
             summaries.append(episode(client,world,design,lights,args,args.output/('episode_%03d'%i),learner,agent,signal_agent))
             write(args.output/'summary.json',summaries)
     finally:
