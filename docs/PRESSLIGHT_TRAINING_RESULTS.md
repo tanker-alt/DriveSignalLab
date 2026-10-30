@@ -1,56 +1,43 @@
-# PressLight training record
+# PressLight 训练结果记录
 
-## Offline pretraining
+## 一、离线预训练
 
-The current pretrainer is `integrations/cross3/offline_train.py`. It uses the
-official Cross3 state layout (80 values: 8 phase bits, 36 incoming and 36
-outgoing position bins), four actions (`NS_STRAIGHT`, `NS_LEFT`,
-`EW_STRAIGHT`, `EW_LEFT`), RMSprop, a 20-20 MLP, replay capacity 20,000 and
-semi-Markov discount `0.8 ** (duration_seconds / 10)`. Its synthetic queue
-simulator is not CARLA: arrivals, service and downstream departures are random.
-The reward follows the official PressLight default, `-0.25` times the number
-of incoming vehicles stopped for more than one second.
+训练脚本为 `integrations/cross3/offline_train.py`。状态采用官方 Cross3 PressLight 的 80 维布局：8 位相位灯态、12 条入口车道的 36 个位置分箱、12 条出口车道的 36 个位置分箱。动作共 4 个：南北直行、南北左转、东西直行、东西左转。
 
-The 100,000-step seed results were:
+离线环境是随机队列仿真器，不是 CARLA 或 CityFlow。车辆到达率、初始排队、放行能力和下游离开过程均由随机模型生成。奖励采用官方默认的停止车辆奖励：每个时间步对停止超过 1 秒的入口车辆数乘以 -0.25。折扣为 `0.8 ** (实际决策时长 / 10)`。
 
-| Seed | Fixed cost | MaxPressure cost | PressLight cost | PressLight remaining |
+100,000 步训练结果：
+
+| 随机种子 | 固定配时成本 | MaxPressure 成本 | PressLight 成本 | PressLight 剩余车辆 |
 |---:|---:|---:|---:|---:|
 | 2026 | 10191.96 | 10330.75 | 9386.30 | 358.8 |
 | 2027 | 10702.54 | 10833.99 | 9570.71 | 355.5 |
 | 2028 | 10134.29 | 10229.19 | 9333.39 | 351.6 |
 
-These are simulator-only comparisons and are not CARLA results.
+这些结果只反映离线随机队列环境，不能直接当作 CARLA 性能结论。
 
-## CARLA fine-tuning protocol
+## 二、CARLA 微调配置
 
-CARLA uses the Cross3 runner with the real map, 12 lane movements, the same
-four actions, yellow/all-red safety stages, and ground-truth vehicle counts.
-CARLA training data consists of per-decision state transitions collected from
-the live world: 28-value state (four phase one-hot values, 12 incoming counts,
-12 outgoing counts), selected action, elapsed transition duration, accumulated
-pressure reward, next state, and terminal flag. The runner writes signal and
-vehicle JSONL logs plus `summary.json`.
+CARLA 版本为 0.9.12，RPC 端口为 31600，地图为 Cross3 OpenDRIVE。运行器使用与离线模型一致的 80 维状态和 4 个动作，并执行黄灯、全红、最小绿灯、最大绿灯和车辆清空安全逻辑。
 
-The CARLA runner now uses the same 80-value collector and accepts the converted
-offline checkpoint.
+CARLA 训练样本包含：当前 80 维状态、动作、实际决策持续时间、停止车辆奖励、下一状态和终止标记，同时保存 `signals.jsonl`、`vehicles.jsonl` 和 `summary.json`。
 
-## CARLA results
+离线 seed 2028 权重已转换为：
 
-The offline seed 2028 checkpoint was converted to
-`outputs/cross3_offline_official/offline_seed2028_carla80.pt` with
-`integrations/cross3/convert_offline_checkpoint.py`. The converter records the
-Cross3 OpenDRIVE hash and the 12-lane ordering. The CARLA runner was upgraded
-to the same 80-D state and accepted the checkpoint format without a weight
-shape error. After restarting CARLA, a 30-second fine-tuning smoke run with one
-background vehicle per lane and seed 2026 completed 4/12 vehicles, with zero
-collisions and zero signal mismatches. Observed phases were `EW_LEFT` and
-`NS_STRAIGHT`. Output: `/home/zlj/Drive/outputs/cross3/offline80_carla_finetune_final`.
-This short run is a smoke check, not a performance comparison.
+```text
+outputs/cross3_offline_official/offline_seed2028_carla80.pt
+```
 
-To be filled after a live training run with identical demand and seed:
+首次 30 秒烟雾微调完成 4/12 辆车，碰撞 0，信号错误 0；该结果只验证模型加载和运行链路，不用于性能结论。
 
-| Controller | Completed/planned | Collisions | Mean wait | Queue cost | Output |
-|---|---:|---:|---:|---:|---|
-| Fixed | pending | pending | pending | pending | pending |
-| MaxPressure | pending | pending | pending | pending | pending |
-| PressLight fine-tuned | pending | pending | pending | pending | pending |
+## 三、正式 CARLA 微调结果
+
+本节记录至少 180 秒完整回合的结果。固定配时、MaxPressure 和 PressLight 必须使用相同车流、相同随机种子和相同安全约束。
+
+| 控制器 | 完成车辆/计划车辆 | 碰撞 | 信号错误 | 平均等待 | 排队成本 | 输出目录 |
+|---|---:|---:|---:|---:|---:|---|
+| 固定配时 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 |
+| MaxPressure | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 | 待运行 |
+| PressLight 微调后 | 12/12 | 0 | 0 | 未计算 | 未计算 | `/home/zlj/Drive/outputs/cross3/offline80_carla_finetune_180s` |
+
+正式结论必须以完成率、安全检查、平均等待和不同随机种子下的稳定性为依据，不能只比较训练损失或单回合奖励。
