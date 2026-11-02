@@ -71,3 +71,5 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 ## SUMO 第一阶段连续加速度训练（2026-11-02）
 
 新增 `integrations/cross3/sumo_joint/`，参考 CoTV 的 `CoTV_grid.py` 和 PPO 设置。灯控 actor 输出离散相位动作，车辆 actor 输出连续加速度 `[-3, 2] m/s²`；使用 `target_velocity=15 m/s`、`sim_step=1 s`、`gamma=.999`、GAE `lambda=.97`、10 次 PPO epoch。`env.py` 支持真实 TraCI，也提供无 SUMO 时的合成接口回归模式。合成 3 回合 smoke 训练已通过，产物仅用于代码验证；正式结果必须使用真实 SUMO 随机交通流评估后再迁移 CARLA。
+
+本次补充了 CoTV 1x1 四岔路口参数清单 `outputs/cross3_sumo_joint/cotv_grid_1x1.json`：四个进口道各 1 条车道，边长 300 m，70 辆车，流量为右 120、下 240、左 288、上 192 veh/h，horizon=720 秒，完全对应 `CoTV_grid.py`。当前服务器未安装 `sumo` 和 Python `traci`，因此暂时只能完成配置生成和合成回归，尚未声称真实 SUMO 训练结果。

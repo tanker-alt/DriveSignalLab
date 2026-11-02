@@ -3,6 +3,14 @@
 本目录是 CoTV 风格的第一阶段训练实现，和 CARLA 运行代码分开。设计对应
 `/home/zlj/Drive/repos/CoTV/flow/examples/exp_configs/rl/multiagent/CoTV_grid.py`：
 
+四岔路口参数完整保存在 `cotv_grid_1x1.py`。它对应 CoTV 的 1x1 `TrafficLightGridNetwork`：四个进口道各 1 条车道，边长 300 m，70 辆车，四个方向流量分别为 120/240/288/192 veh/h，训练 horizon 为 720 秒。
+
+生成参数清单：
+
+```bash
+PYTHONPATH=. /home/zlj/lmdrive_runtime/env/bin/python -m integrations.cross3.sumo_joint.prepare_cotv_grid
+```
+
 * `sim_step=1s`、`target_velocity=15m/s`、最大加/减速度 `3m/s²`；
 * 灯控 actor 输出 4 个相位动作；车辆 actor 输出连续加速度 `[-3, 2]m/s²`；
 * PPO 使用 `gamma=.999`、GAE `lambda=.97`、10 次 SGD epoch；
