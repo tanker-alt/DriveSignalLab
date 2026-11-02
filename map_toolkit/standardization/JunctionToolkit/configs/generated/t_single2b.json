@@ -1,0 +1,41 @@
+{
+  "name": "t_single2b",
+  "rows": 1,
+  "columns": 1,
+  "type": "t",
+  "missing_arm": "north",
+  "incoming_lanes": 2,
+  "arm_length_m": 150.0,
+  "lane_width_m": 3.5,
+  "junction_radius_m": 22.0,
+  "spacing_m": 344.0,
+  "sidewalk_width_m": 2,
+  "roadside_props": true,
+  "seed": 42,
+  "arm_turns": {
+    "west": [
+      [
+        "straight"
+      ],
+      [
+        "right"
+      ]
+    ],
+    "south": [
+      [
+        "left"
+      ],
+      [
+        "right"
+      ]
+    ],
+    "east": [
+      [
+        "left"
+      ],
+      [
+        "straight"
+      ]
+    ]
+  }
+}

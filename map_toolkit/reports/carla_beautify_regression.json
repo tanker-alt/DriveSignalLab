@@ -1,0 +1,79 @@
+[
+  {
+    "map": "network",
+    "mode": "auto",
+    "entry": "toolkit.py",
+    "passed": true,
+    "actors": 252
+  },
+  {
+    "map": "network",
+    "mode": "complete",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 17720
+  },
+  {
+    "map": "network",
+    "mode": "off",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 0
+  },
+  {
+    "map": "cross",
+    "mode": "auto",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 17238
+  },
+  {
+    "map": "t",
+    "mode": "auto",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 10415
+  },
+  {
+    "map": "t",
+    "mode": "simple",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 42
+  },
+  {
+    "map": "t",
+    "mode": "off",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 0
+  },
+  {
+    "map": "ring",
+    "mode": "auto",
+    "entry": "roundabout_view.py",
+    "passed": true,
+    "actors": 9200
+  },
+  {
+    "map": "ring",
+    "mode": "simple",
+    "entry": "roundabout_view.py",
+    "passed": true,
+    "actors": 112
+  },
+  {
+    "map": "ring",
+    "mode": "off",
+    "entry": "roundabout_view.py",
+    "passed": true,
+    "actors": 0
+  },
+  {
+    "map": "ring",
+    "mode": "simple",
+    "entry": "view.py",
+    "passed": true,
+    "actors": 112
+  }
+]

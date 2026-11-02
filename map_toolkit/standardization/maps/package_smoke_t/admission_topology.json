@@ -1,0 +1,406 @@
+{
+  "passed": true,
+  "opendrive_sha256": "0a3b64c0a35b2ae1e7454f731f5a8dd854b7a523b1881e4f96e2a431fd943415",
+  "errors": [],
+  "signal_lane_paths": [
+    {
+      "signal": "1011",
+      "road": 1,
+      "lane": -1,
+      "targets": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1012",
+      "road": 1,
+      "lane": -2,
+      "targets": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1031",
+      "road": 3,
+      "lane": -1,
+      "targets": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1032",
+      "road": 3,
+      "lane": -2,
+      "targets": [
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1041",
+      "road": 4,
+      "lane": -1,
+      "targets": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1042",
+      "road": 4,
+      "lane": -2,
+      "targets": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "11011",
+      "road": 10001,
+      "lane": -1,
+      "targets": [
+        [
+          10004,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "11012",
+      "road": 10001,
+      "lane": -2,
+      "targets": [
+        [
+          10003,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "11031",
+      "road": 10003,
+      "lane": -1,
+      "targets": [
+        [
+          10001,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "11032",
+      "road": 10003,
+      "lane": -2,
+      "targets": [
+        [
+          10004,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "11041",
+      "road": 10004,
+      "lane": -1,
+      "targets": [
+        [
+          10003,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "11042",
+      "road": 10004,
+      "lane": -2,
+      "targets": [
+        [
+          10001,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "21011",
+      "road": 20001,
+      "lane": -1,
+      "targets": [
+        [
+          20004,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "21012",
+      "road": 20001,
+      "lane": -2,
+      "targets": [
+        [
+          20003,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "21031",
+      "road": 20003,
+      "lane": -1,
+      "targets": [
+        [
+          20001,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "21032",
+      "road": 20003,
+      "lane": -2,
+      "targets": [
+        [
+          20004,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "21041",
+      "road": 20004,
+      "lane": -1,
+      "targets": [
+        [
+          20003,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "21042",
+      "road": 20004,
+      "lane": -2,
+      "targets": [
+        [
+          20001,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "31011",
+      "road": 30001,
+      "lane": -1,
+      "targets": [
+        [
+          30003,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "31012",
+      "road": 30001,
+      "lane": -2,
+      "targets": [
+        [
+          30002,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "31021",
+      "road": 30002,
+      "lane": -1,
+      "targets": [
+        [
+          30001,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "31022",
+      "road": 30002,
+      "lane": -2,
+      "targets": [
+        [
+          30003,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "31031",
+      "road": 30003,
+      "lane": -1,
+      "targets": [
+        [
+          30002,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "31032",
+      "road": 30003,
+      "lane": -2,
+      "targets": [
+        [
+          30001,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "41011",
+      "road": 40001,
+      "lane": -1,
+      "targets": [
+        [
+          40003,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "41012",
+      "road": 40001,
+      "lane": -2,
+      "targets": [
+        [
+          40002,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "41021",
+      "road": 40002,
+      "lane": -1,
+      "targets": [
+        [
+          40001,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "41022",
+      "road": 40002,
+      "lane": -2,
+      "targets": [
+        [
+          40003,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "41031",
+      "road": 40003,
+      "lane": -1,
+      "targets": [
+        [
+          40002,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "41032",
+      "road": 40003,
+      "lane": -2,
+      "targets": [
+        [
+          40001,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "51011",
+      "road": 50001,
+      "lane": -1,
+      "targets": [
+        [
+          50004,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "51012",
+      "road": 50001,
+      "lane": -2,
+      "targets": [
+        [
+          50002,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "51021",
+      "road": 50002,
+      "lane": -1,
+      "targets": [
+        [
+          50001,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "51022",
+      "road": 50002,
+      "lane": -2,
+      "targets": [
+        [
+          50004,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "51041",
+      "road": 50004,
+      "lane": -1,
+      "targets": [
+        [
+          50002,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "51042",
+      "road": 50004,
+      "lane": -2,
+      "targets": [
+        [
+          50001,
+          2
+        ]
+      ]
+    }
+  ],
+  "seams_checked": 5,
+  "topology_edges": 108,
+  "scope": "Every controlled incoming lane must reach an outgoing non-junction lane; all seam lanes checked bidirectionally; seam junction graph connected. Offline validation only."
+}

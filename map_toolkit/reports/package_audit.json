@@ -1,0 +1,13 @@
+{
+  "python_syntax_files": 43,
+  "unit_tests_passed": true,
+  "help_and_removed_alias_passed": true,
+  "json_files_parsed": 38,
+  "readme_links_passed": true,
+  "forbidden_files": [],
+  "personal_paths": [],
+  "carla_runtime_cases_passed": 11,
+  "runtime_report_scope": "Existing source-toolkit CARLA 0.9.15 regression; package CLI and unit tests rerun separately.",
+  "external_integration_note": "release_drive_check.py requires external project modules; pass --project explicitly. Its historical D:/CoDriveSignal default is not a bundled dependency.",
+  "passed": true
+}

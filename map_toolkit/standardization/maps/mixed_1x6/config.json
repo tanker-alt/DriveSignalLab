@@ -1,0 +1,50 @@
+{
+  "name": "mixed_1x6",
+  "rows": 1,
+  "columns": 6,
+  "spacing_m": 344,
+  "arm_length_m": 150,
+  "seed": 42,
+  "roadside_props": false,
+  "type": "random_grid",
+  "incoming_lanes": 3,
+  "standard_profile": "urban_cross3_v1",
+  "lane_width_m": 3.5,
+  "allowed_turns": [
+    [
+      "left"
+    ],
+    [
+      "straight"
+    ],
+    [
+      "right"
+    ]
+  ],
+  "sidewalk_width_m": 2.0,
+  "curb_width_m": 0.2,
+  "curb_height_m": 0.15,
+  "corner_radius_m": 12.0,
+  "road_class": "urban_uniform",
+  "shoulder_enabled": false,
+  "shoulder_width_m": 0.0,
+  "junction_radius_m": 22.5,
+  "junction_types": {
+    "0,0": "cross",
+    "0,1": "t",
+    "0,2": "t",
+    "0,3": "t",
+    "0,4": "cross",
+    "0,5": "cross"
+  },
+  "missing_arms": {
+    "0,1": "north",
+    "0,2": "south",
+    "0,3": "north"
+  },
+  "t_probability": 0.5,
+  "appearance_mode": "network",
+  "trees": false,
+  "grass_mesh": false,
+  "debug_overlays": false
+}

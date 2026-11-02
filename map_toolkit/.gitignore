@@ -1,0 +1,7 @@
+generator-env/
+carla-env/
+__pycache__/
+*.py[cod]
+settings.local.json
+.env
+*.log

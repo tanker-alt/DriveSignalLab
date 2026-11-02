@@ -1,0 +1,17 @@
+{
+  "name": "t_1x6",
+  "rows": 1,
+  "columns": 6,
+  "spacing_m": 344,
+  "arm_length_m": 150,
+  "seed": 42,
+  "roadside_props": false,
+  "junction_types": {
+    "0,0": "t",
+    "0,1": "t",
+    "0,2": "t",
+    "0,3": "t",
+    "0,4": "t",
+    "0,5": "t"
+  }
+}
