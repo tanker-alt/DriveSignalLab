@@ -67,3 +67,7 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 `真实信号：NS_STRAIGHT，剩余约8.0秒，允许通行。协商结果：灯控智能体建议保持当前相位。车辆建议：若当前信号和前方空间均允许，建议平缓起步。`
 
 本次离线 smoke 训练配置为 seed=20261030、3 回合、每回合 16 个 1 秒决策周期，成功完成联合 actor/critic 更新，产物写入 `/tmp/joint_test.pt`。正式 CARLA 训练建议先用 10--20 回合、每回合 180--300 秒、24--48 辆背景车和 2 辆 VLA 车做意图响应测试，再扩大规模；碰撞回合不保存模型，完成率必须达到 100%。
+
+## SUMO 第一阶段连续加速度训练（2026-11-02）
+
+新增 `integrations/cross3/sumo_joint/`，参考 CoTV 的 `CoTV_grid.py` 和 PPO 设置。灯控 actor 输出离散相位动作，车辆 actor 输出连续加速度 `[-3, 2] m/s²`；使用 `target_velocity=15 m/s`、`sim_step=1 s`、`gamma=.999`、GAE `lambda=.97`、10 次 PPO epoch。`env.py` 支持真实 TraCI，也提供无 SUMO 时的合成接口回归模式。合成 3 回合 smoke 训练已通过，产物仅用于代码验证；正式结果必须使用真实 SUMO 随机交通流评估后再迁移 CARLA。

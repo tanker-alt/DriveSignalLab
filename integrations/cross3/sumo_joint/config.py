@@ -1,0 +1,10 @@
+"""Defaults based on CoTV_grid.py and CoTV's PPO setup."""
+TARGET_SPEED = 15.0
+MAX_ACCEL = 3.0
+MAX_DECEL = 3.0
+SIM_STEP = 1.0
+HORIZON = 720
+GAMMA = 0.999
+GAE_LAMBDA = 0.97
+PPO_EPOCHS = 10
+CLIP = 0.2
