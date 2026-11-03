@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f",
+  "appearance_mode": "simple",
+  "concrete_overlay_count": 0,
+  "native_sidewalk_samples": [
+    {
+      "road": 40102,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40102,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40104,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40104,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40112,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40112,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40114,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40114,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40122,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40122,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40124,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40124,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40132,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40132,
+      "lane": -3,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40134,
+      "lane": -2,
+      "type": "Sidewalk"
+    },
+    {
+      "road": 40134,
+      "lane": -3,
+      "type": "Sidewalk"
+    }
+  ],
+  "screenshot": "street.png",
+  "scope": "Native sidewalk presence and absence of partial concrete overlays; screenshot visually reviewed"
+}

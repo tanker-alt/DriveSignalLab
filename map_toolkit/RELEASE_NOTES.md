@@ -7,3 +7,5 @@ CARLA 0.9.15 simple appearance: 3x3 ring network 4406.53m / 12 physical junction
 Publication branch prepared locally; no push performed.
 
 Default simple appearance correction: ring concrete overlays are now complete-only; simple/off retain native sidewalk material across the network. Four static appearance tests pass. Earlier CARLA simple reports/screenshots predate this material-only correction; no new runtime acceptance is claimed.
+
+CARLA retest completed for native simple sidewalk material: no ring concrete overlays; 16 native sidewalk connector samples present. Full 4406.53m route passed all 12 physical junctions, zero collisions/respawns/teleports. Updated overview/street images and simple_native_material_20261103 reports supersede the earlier pending runtime note.

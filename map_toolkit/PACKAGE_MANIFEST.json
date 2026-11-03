@@ -17,8 +17,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 870,
-      "sha256": "e38fcc8cd0c87a675d2dca518379179f98e2a7e65d45ada63c39112c79ce0440"
+      "bytes": 1215,
+      "sha256": "7c7595314424341c46656d0dc2eaf88b846fb08948966e6fcca04fb567a7c65f"
     },
     {
       "path": "reports/carla_beautify_regression.json",
@@ -762,8 +762,8 @@
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/appearance_preview_report.json",
-      "bytes": 257335,
-      "sha256": "687ed14fee59f9302dadef1806bcc507b7740e709e354d3b576794d72f2fbc29"
+      "bytes": 79079,
+      "sha256": "260cdcbbeb2109025937ae8b8e5b6599c7b59c7a48aa62539fc14b6f5522eaea"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/config.json",
@@ -772,8 +772,8 @@
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/load_report.json",
-      "bytes": 257335,
-      "sha256": "687ed14fee59f9302dadef1806bcc507b7740e709e354d3b576794d72f2fbc29"
+      "bytes": 79079,
+      "sha256": "260cdcbbeb2109025937ae8b8e5b6599c7b59c7a48aa62539fc14b6f5522eaea"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/manifest.json",
@@ -787,8 +787,8 @@
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/overview.png",
-      "bytes": 1090156,
-      "sha256": "e32b12113df0b6eea40d942948486ece3e08ebcee04ec3ecc59b1c917f95e684"
+      "bytes": 1090791,
+      "sha256": "ad7c20f2656a34e08e3d9c8020644c10b4bbc12c456b8e39c58f089820f08dea"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/safety_rules.json",
@@ -906,14 +906,124 @@
       "sha256": "1fde22637405e77a182084ee73c935bb1f482882474df9888d4f7db7fd8854b1"
     },
     {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/continuous_drive_validation.json",
+      "bytes": 10729,
+      "sha256": "f673ba28412eb81e1a0f79fa40a83183a6b8781e0e57fbe4320add218eec7d45"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/continuous_route.json",
+      "bytes": 298916,
+      "sha256": "e589477780c55ec448a83c63f742db721437b33a84d307a98475891909af2e2f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/continuous_trajectory.json",
+      "bytes": 225237,
+      "sha256": "c0804105e1baadbf0634dd938f73fb11a0482985e778a96012a7744fd32b591b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/drive_progress.json",
+      "bytes": 9384,
+      "sha256": "89c8c0a4526d95f2ddd8575167b8fa33b43817240d489b80ebfbc8ee5bcd2f94"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/finish.png",
+      "bytes": 459296,
+      "sha256": "f3e45dd4580adfbb0bfc7559f51926458b26538a3c22b6a46a6277d3bb21862e"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/start.png",
+      "bytes": 460155,
+      "sha256": "cd619b97233f8a9bcde9d6623f3450163bfe42cbe575d9639ca8716624fdb908"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_01_junction_60010.png",
+      "bytes": 510270,
+      "sha256": "3e7b5ae9c4ace11c4ff3aa5ecb7ee16e461aab99a746c60e5708647ef89a835a"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_02_junction_70010.png",
+      "bytes": 517431,
+      "sha256": "8b045acd9239ab5a6935fc2d608f3b73ad9d03ce7c4dab64f4f56445582e5087"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_03_junction_40013.png",
+      "bytes": 531013,
+      "sha256": "ec68642e6bdfd5920cdb1739cf0b2eb8d53158872513fe96b0cd078b1aae5dbe"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_04_junction_40010.png",
+      "bytes": 525714,
+      "sha256": "64d0b00b32a72fe9dcef22d1129eed4f699f11aeca5b777c72270bcee28291f9"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_05_junction_40011.png",
+      "bytes": 529185,
+      "sha256": "9f42cc225f79fa30f1956371d1ef907d4944173926a7555f9f2538ac326e10a3"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_06_junction_40012.png",
+      "bytes": 521941,
+      "sha256": "93c66e1926a85191f947c88e46a2b3509b6e081fd501fa9f602d8daa4b348669"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_07_junction_40013.png",
+      "bytes": 517804,
+      "sha256": "977a6ea52226a468596ec4843d5f2b0d122f0c7428dc9713bea4790e378981b9"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_08_junction_40010.png",
+      "bytes": 523779,
+      "sha256": "29ef8654bbd4095d66582c68ee792841caf500c14c7fcdd67cab6b81359cd26b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_09_junction_30010.png",
+      "bytes": 487021,
+      "sha256": "78b53d0c97dfbbf406b344eb12e1d40793c2f7b3726b8777fc6d62f92a807454"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_10_junction_10.png",
+      "bytes": 505184,
+      "sha256": "c1e85bf363d6ac4dc6ceb73aaeda2b4905308700b1d4e95a90355850d4ae8ac8"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_11_junction_10010.png",
+      "bytes": 494739,
+      "sha256": "96ac0ea255b1105630428170adf7054d679b603fbbe6a2c449abf5d3f276643d"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_12_junction_20010.png",
+      "bytes": 495464,
+      "sha256": "b070a624f9983a1257e037b7abdb032a33786c9da9ce262c5b43826e85d02386"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_13_junction_50010.png",
+      "bytes": 506713,
+      "sha256": "d799e852f19abb1e97f6b245b45145bac4bf28992d8807f2907180d1505c4f78"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/follow_camera/visit_14_junction_80010.png",
+      "bytes": 505733,
+      "sha256": "0e29742866bb0f5edcbde11a09df9ff14e4e7d3504490b630f53f9eb771786cb"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/material_validation.json",
+      "bytes": 1668,
+      "sha256": "2545c8c43ef65de29f5174b40e26a80bad1d522984d4e14016be5c230d91939b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_native_material_20261103/simple_appearance.json",
+      "bytes": 61866,
+      "sha256": "e991d41b1b5a2d372dd8ad93856a84cc003771db3ed0ec6408a5ead2f9da9a8a"
+    },
+    {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/static_validation.json",
       "bytes": 420,
       "sha256": "d26aa164f0229db339b2883870b3f71bf2b43ef86aac586121abfabd30a1d173"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/street.png",
-      "bytes": 1235560,
-      "sha256": "400bab2b166dc06c55a48518cdfc0e0bf7d39c1b00ad7cf017f5593ca5a8c850"
+      "bytes": 1183133,
+      "sha256": "fee93db8028793af2ae55b00279553d06516a329aecf116b28da4f2f63c9fc48"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/topology_validation.json",
