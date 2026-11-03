@@ -11,7 +11,7 @@
     "arm_length_m": 150,
     "roadside_props": false,
     "incoming_lanes": 2,
-    "random_missing_arms": true,
+    "random_missing_arms": false,
     "standard_profile": "urban_cross3_v1",
     "lane_width_m": 3.5,
     "sidewalk_width_m": 2.0,
@@ -23,6 +23,14 @@
     "shoulder_width_m": 0.0,
     "junction_radius_m": 19.0,
     "missing_arm": "north",
+    "missing_arms": {
+      "0,0": "south",
+      "0,1": "south",
+      "0,2": "south",
+      "0,3": "north",
+      "0,4": "north",
+      "0,5": "east"
+    },
     "arm_turns": {
       "west": [
         [
@@ -902,5 +910,6 @@
   },
   "status": "generated_requires_validation",
   "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
+  "seam_policy": "start-to-start, reciprocal road/lane predecessors, inverted lane IDs",
   "opendrive_sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2"
 }

@@ -3,15 +3,15 @@
   "signal_policy": "one_signal_per_incoming_lane",
   "config": {
     "name": "t_1x6",
+    "type": "t",
     "rows": 1,
     "columns": 6,
-    "spacing_m": 344,
-    "arm_length_m": 150,
     "seed": 42,
+    "spacing_m": 300,
+    "arm_length_m": 150,
     "roadside_props": false,
-    "type": "t",
     "incoming_lanes": 2,
-    "random_missing_arms": true,
+    "random_missing_arms": false,
     "standard_profile": "urban_cross3_v1",
     "lane_width_m": 3.5,
     "sidewalk_width_m": 2.0,
@@ -23,6 +23,14 @@
     "shoulder_width_m": 0.0,
     "junction_radius_m": 19.0,
     "missing_arm": "north",
+    "missing_arms": {
+      "0,0": "south",
+      "0,1": "south",
+      "0,2": "south",
+      "0,3": "north",
+      "0,4": "north",
+      "0,5": "east"
+    },
     "arm_turns": {
       "west": [
         [
@@ -65,7 +73,7 @@
       ],
       "lengths": [
         150,
-        153.0,
+        131.0,
         150
       ],
       "arms": {
@@ -77,7 +85,7 @@
     {
       "id": 10010,
       "center": [
-        344,
+        300,
         0
       ],
       "missing_arm": "south",
@@ -87,8 +95,8 @@
         10004
       ],
       "lengths": [
-        153.0,
-        153.0,
+        131.0,
+        131.0,
         150
       ],
       "arms": {
@@ -100,7 +108,7 @@
     {
       "id": 20010,
       "center": [
-        688,
+        600,
         0
       ],
       "missing_arm": "south",
@@ -110,8 +118,8 @@
         20004
       ],
       "lengths": [
-        153.0,
-        153.0,
+        131.0,
+        131.0,
         150
       ],
       "arms": {
@@ -123,7 +131,7 @@
     {
       "id": 30010,
       "center": [
-        1032,
+        900,
         0
       ],
       "missing_arm": "north",
@@ -133,9 +141,9 @@
         30003
       ],
       "lengths": [
-        153.0,
+        131.0,
         150,
-        153.0
+        131.0
       ],
       "arms": {
         "west": 30001,
@@ -146,7 +154,7 @@
     {
       "id": 40010,
       "center": [
-        1376,
+        1200,
         0
       ],
       "missing_arm": "north",
@@ -156,9 +164,9 @@
         40003
       ],
       "lengths": [
-        153.0,
+        131.0,
         150,
-        153.0
+        131.0
       ],
       "arms": {
         "west": 40001,
@@ -169,7 +177,7 @@
     {
       "id": 50010,
       "center": [
-        1720,
+        1500,
         0
       ],
       "missing_arm": "east",
@@ -179,7 +187,7 @@
         50004
       ],
       "lengths": [
-        153.0,
+        131.0,
         150,
         150
       ],
@@ -530,8 +538,8 @@
       "junction_id": 10,
       "phase_slot": 2,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -541,8 +549,8 @@
       "junction_id": 10,
       "phase_slot": 3,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -574,8 +582,8 @@
       "junction_id": 10010,
       "phase_slot": 0,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -585,8 +593,8 @@
       "junction_id": 10010,
       "phase_slot": 1,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -596,8 +604,8 @@
       "junction_id": 10010,
       "phase_slot": 2,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -607,8 +615,8 @@
       "junction_id": 10010,
       "phase_slot": 3,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -640,8 +648,8 @@
       "junction_id": 20010,
       "phase_slot": 0,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -651,8 +659,8 @@
       "junction_id": 20010,
       "phase_slot": 1,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -662,8 +670,8 @@
       "junction_id": 20010,
       "phase_slot": 2,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -673,8 +681,8 @@
       "junction_id": 20010,
       "phase_slot": 3,
       "approach_slot": 1,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -706,8 +714,8 @@
       "junction_id": 30010,
       "phase_slot": 0,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -717,8 +725,8 @@
       "junction_id": 30010,
       "phase_slot": 1,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -750,8 +758,8 @@
       "junction_id": 30010,
       "phase_slot": 4,
       "approach_slot": 2,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -761,8 +769,8 @@
       "junction_id": 30010,
       "phase_slot": 5,
       "approach_slot": 2,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -772,8 +780,8 @@
       "junction_id": 40010,
       "phase_slot": 0,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -783,8 +791,8 @@
       "junction_id": 40010,
       "phase_slot": 1,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -816,8 +824,8 @@
       "junction_id": 40010,
       "phase_slot": 4,
       "approach_slot": 2,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -827,8 +835,8 @@
       "junction_id": 40010,
       "phase_slot": 5,
       "approach_slot": 2,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -838,8 +846,8 @@
       "junction_id": 50010,
       "phase_slot": 0,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -1
       ]
@@ -849,8 +857,8 @@
       "junction_id": 50010,
       "phase_slot": 1,
       "approach_slot": 0,
-      "reference_s": 145.85,
-      "signal_s": 150.0,
+      "reference_s": 123.85,
+      "signal_s": 128.0,
       "incoming_lanes": [
         -2
       ]
@@ -902,5 +910,6 @@
   },
   "status": "generated_requires_validation",
   "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
-  "opendrive_sha256": "0a3b64c0a35b2ae1e7454f731f5a8dd854b7a523b1881e4f96e2a431fd943415"
+  "seam_policy": "start-to-start, reciprocal road/lane predecessors, inverted lane IDs",
+  "opendrive_sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2"
 }

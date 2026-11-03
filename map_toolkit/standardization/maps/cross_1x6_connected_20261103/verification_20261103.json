@@ -1,0 +1,18 @@
+{
+  "directory": "cross_1x6_connected_20261103",
+  "source": "cross_1x6_connected_20261103",
+  "opendrive_sha256": "4dba037e822ba5ef58853d984438f4b1c7781d0aa243e8345d863c794ea740bf",
+  "previous_sha256": null,
+  "map_bytes_changed": true,
+  "drive_passed": true,
+  "visited_junctions": [
+    10,
+    10010,
+    20010,
+    30010,
+    40010,
+    50010
+  ],
+  "verification_date": "2026-11-03",
+  "limits": "All-green single-vehicle connectivity; Git directory date is last content commit, not last simulation test"
+}

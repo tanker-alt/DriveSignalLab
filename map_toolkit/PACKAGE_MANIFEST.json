@@ -17,8 +17,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 1215,
-      "sha256": "7c7595314424341c46656d0dc2eaf88b846fb08948966e6fcca04fb567a7c65f"
+      "bytes": 1625,
+      "sha256": "acb44448f4bd69bbc1603406330d8dc45b20b2be946d4ce15eb6f8108f6787d3"
     },
     {
       "path": "reports/carla_beautify_regression.json",
@@ -34,6 +34,11 @@
       "path": "reports/heterogeneous_package_audit.json",
       "bytes": 422,
       "sha256": "b64a67173ae5a7d3b4ca35d3b6e20c46b74e2df14c0731a4798e082ce8884d9a"
+    },
+    {
+      "path": "reports/map_inventory_20261103.json",
+      "bytes": 4483,
+      "sha256": "a1eed06cbed7442a1782d494939446c38b135b0151a34a2d97d38b72c297079f"
     },
     {
       "path": "reports/package_audit.json",
@@ -611,9 +616,69 @@
       "sha256": "81420b7cfc210ead087f999eed38b0691edc1814d023d984983c3626fc4bdaa4"
     },
     {
+      "path": "standardization/maps/cross_1x6_connected_20261103/config.json",
+      "bytes": 915,
+      "sha256": "8945a91b0b1632519727434fcb2718ede73d59731c519a06d175c39bdeee2779"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/continuous_drive_validation.json",
+      "bytes": 3435,
+      "sha256": "44444a93fb48667954b91cc2c1dbc65ad9b8802dfa3ee22f6a19cb99b340a203"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/continuous_route.json",
+      "bytes": 107236,
+      "sha256": "d80ec2880a83e31f472d9513375870dfbd850b9594ee1e63474c0f344687f39f"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/continuous_trajectory.json",
+      "bytes": 93927,
+      "sha256": "667789cd43693ca6c6f8036b2d4daa826c4fb81b80ef47c752d8ddc28e65fcdd"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/manifest.json",
+      "bytes": 33428,
+      "sha256": "d684841e655dbac91dfdb54ec827f6a374604d731e30d0410b2309dfe3deacfb"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/map.xodr",
+      "bytes": 928852,
+      "sha256": "4dba037e822ba5ef58853d984438f4b1c7781d0aa243e8345d863c794ea740bf"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/safety_rules.json",
+      "bytes": 13715,
+      "sha256": "e946475a1861d2ce35735f2c9df2f83f88499be2077e697e7ffaac23d4bb111c"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/topology_validation.json",
+      "bytes": 20136,
+      "sha256": "7ed66dd7ceabfd100ccb25c91f59ece9d01be7413d47019d2befec84ff2a6342"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/verification_20261103.json",
+      "bytes": 531,
+      "sha256": "118d235ae78619e66ae43fe740565d4e99dd52a2f2ec12305f6fbb61ebda1bcd"
+    },
+    {
       "path": "standardization/maps/cross_3x3_connected_20261103/config.json",
       "bytes": 585,
       "sha256": "2c0c6d6018cf3050ea96cea5633ddf6d4fa821e761690528f6465992e91b759f"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/continuous_drive_validation.json",
+      "bytes": 7284,
+      "sha256": "5e5be0e8b903a1654f7ae4773195b6270a3006cef7e17f989a9cf04fba1e45ce"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/continuous_route.json",
+      "bytes": 194948,
+      "sha256": "22ec19fe9adc3263d3f3e5f98aecf232f756dd2af6c62bc5f6093c7ae1c51993"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/continuous_trajectory.json",
+      "bytes": 150885,
+      "sha256": "af6fd4c927d7f6229a558fe8e305f1c5ab49c1daaef3d5745d9de25d3ff4de14"
     },
     {
       "path": "standardization/maps/cross_3x3_connected_20261103/manifest.json",
@@ -634,6 +699,11 @@
       "path": "standardization/maps/cross_3x3_connected_20261103/topology_validation.json",
       "bytes": 33379,
       "sha256": "7081edea38d429d48d19a8dbc68d66ca92139603ff0a65052a277c24336ca15f"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/verification_20261103.json",
+      "bytes": 630,
+      "sha256": "eb6d753c661a7ecd812f55addb37c3a2554ee2f17e768fe58e2043ed8dca6549"
     },
     {
       "path": "standardization/maps/heterogeneous_1x6_20261103/appearance_compatibility_static.json",
@@ -1071,9 +1141,24 @@
       "sha256": "f9ed0701c57595e152fc0cc6a701e5729bfb442d047f0beb34cc3845eb781681"
     },
     {
+      "path": "standardization/maps/mixed_1x6/continuous_drive_validation.json",
+      "bytes": 3440,
+      "sha256": "90247007cf97b30d1dcce546fc7c032c69b8e251f074f4b3a303995bba3b8091"
+    },
+    {
+      "path": "standardization/maps/mixed_1x6/continuous_route.json",
+      "bytes": 108545,
+      "sha256": "9b767f650529ff9136fb08529061769ae7e0f8981dac5db0f0f3a8c76a3dd370"
+    },
+    {
+      "path": "standardization/maps/mixed_1x6/continuous_trajectory.json",
+      "bytes": 99384,
+      "sha256": "0da7a6a80bc4fd2d436d07eda636a270bcef8cf7c76d51a92b50dd69c4ff2749"
+    },
+    {
       "path": "standardization/maps/mixed_1x6/manifest.json",
-      "bytes": 31578,
-      "sha256": "670a12a2602d3fc3927d805087fb13dab11c299e5ee249102c722c8cfe673183"
+      "bytes": 31668,
+      "sha256": "19732bfea6e395b88953ce4a8f45bfd9bee666d007f40dc834baa7e27e18921b"
     },
     {
       "path": "standardization/maps/mixed_1x6/map.xodr",
@@ -1102,13 +1187,33 @@
     },
     {
       "path": "standardization/maps/mixed_1x6/topology_validation.json",
-      "bytes": 10618,
-      "sha256": "95c99472a7bb6b23b90499f15b369318f8256b743e7fdb070b13b1e7ec4eaaf5"
+      "bytes": 18157,
+      "sha256": "0a78f5a031a0eef5a9938b272651cc3574d1a08c6de31c8d54aee6c5804bae6c"
+    },
+    {
+      "path": "standardization/maps/mixed_1x6/verification_20261103.json",
+      "bytes": 575,
+      "sha256": "3c3f46e308fa53d727f9bcbe37666c00fbd9e521bf2177433f8f0fccc567fbb7"
     },
     {
       "path": "standardization/maps/mixed_3x3_connected_20261103/config.json",
       "bytes": 1065,
       "sha256": "a3ec2a99882e72de4beff42824b5c0059116d72daadbef106b05516f32610b35"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/continuous_drive_validation.json",
+      "bytes": 9165,
+      "sha256": "1b17b436f41c1769c8c80b5ca61cecb2ac2382c8385e0fe3a8d02608509e855e"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/continuous_route.json",
+      "bytes": 247397,
+      "sha256": "c906641f73ac464c637ed1e994c94c5a67f66f9fb2db8196b0ad2fedf08cacdc"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/continuous_trajectory.json",
+      "bytes": 182033,
+      "sha256": "6f110adda6c437c586415ef2aea94e38c0dca5dd9e0df1dc55bdf7e2ade1ebf9"
     },
     {
       "path": "standardization/maps/mixed_3x3_connected_20261103/manifest.json",
@@ -1131,34 +1236,59 @@
       "sha256": "fc0f27df99150eae6543bf84b909ff7cc904d3587c7e139a12c66b052dd84785"
     },
     {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/verification_20261103.json",
+      "bytes": 654,
+      "sha256": "63c61bd84531e4c2a68f7283a2578fa989f0fc9a861c18df4ef29f7963ff9112"
+    },
+    {
       "path": "standardization/maps/package_smoke_t/admission_topology.json",
       "bytes": 6244,
       "sha256": "3610ae11bd466dce6dae235c86bf224d82dc26fdca5e8408331312126e0bc953"
     },
     {
       "path": "standardization/maps/package_smoke_t/config.json",
-      "bytes": 845,
-      "sha256": "507fdd3159ce922707763d18ced57662a8e8c254bdbc69b78bd860f63179f552"
+      "bytes": 997,
+      "sha256": "f4eba1832f640d6858072a5f18dfd1af58680656075681e0127b8b338d07f6f4"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/continuous_drive_validation.json",
+      "bytes": 3331,
+      "sha256": "22433d3da66ed2f5ffa4dac8c31b3be03aca75fe6500d8d1a3d64b37fb6198af"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/continuous_route.json",
+      "bytes": 97786,
+      "sha256": "5ad96e1141c1d3f4275ed4a96006846ff10b8489f8a5d02d9817511a1c454cce"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/continuous_trajectory.json",
+      "bytes": 85377,
+      "sha256": "e742b62f18b3740777a3f9b801f23238bd44b66e50e157595381148fd8000240"
     },
     {
       "path": "standardization/maps/package_smoke_t/manifest.json",
-      "bytes": 18039,
-      "sha256": "155acd3d55eed058bb1950caa846c406ec4bb969464fc2684406ef6f25251a40"
+      "bytes": 18296,
+      "sha256": "264db02777c38ce5a6f147b2639c1a9ff99b307050c421f7fd58e32f2d615239"
     },
     {
       "path": "standardization/maps/package_smoke_t/map.xodr",
-      "bytes": 634008,
-      "sha256": "0a3b64c0a35b2ae1e7454f731f5a8dd854b7a523b1881e4f96e2a431fd943415"
+      "bytes": 634239,
+      "sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2"
     },
     {
       "path": "standardization/maps/package_smoke_t/safety_rules.json",
       "bytes": 7271,
-      "sha256": "e99086721de302b9849a65666740f63ffcddebf1335dced496ddf20f5cab7bd0"
+      "sha256": "3585b9dbd99f1a48ec539676fa0b5ad8526f6635f44782a3031bf03f79998cff"
     },
     {
       "path": "standardization/maps/package_smoke_t/topology_validation.json",
-      "bytes": 6244,
-      "sha256": "3610ae11bd466dce6dae235c86bf224d82dc26fdca5e8408331312126e0bc953"
+      "bytes": 10978,
+      "sha256": "ec6c23607fb0ad496fb72d9864260b6b683b216cda267ef9d055dafe7e86ad87"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/verification_20261103.json",
+      "bytes": 576,
+      "sha256": "03f49325e28e336c0578aa81d1d8e8b99c024ed1c30b7f1307b72e3946136310"
     },
     {
       "path": "standardization/maps/roundabout_continuous_20261103/config.json",
@@ -1197,13 +1327,28 @@
     },
     {
       "path": "standardization/maps/t_1x6/config.json",
-      "bytes": 845,
-      "sha256": "8c4c8b3f4515d0ebbff3427fa9af9bc3e29602260b87c29fd76c62398b365502"
+      "bytes": 997,
+      "sha256": "f4eba1832f640d6858072a5f18dfd1af58680656075681e0127b8b338d07f6f4"
+    },
+    {
+      "path": "standardization/maps/t_1x6/continuous_drive_validation.json",
+      "bytes": 3331,
+      "sha256": "22433d3da66ed2f5ffa4dac8c31b3be03aca75fe6500d8d1a3d64b37fb6198af"
+    },
+    {
+      "path": "standardization/maps/t_1x6/continuous_route.json",
+      "bytes": 97786,
+      "sha256": "5ad96e1141c1d3f4275ed4a96006846ff10b8489f8a5d02d9817511a1c454cce"
+    },
+    {
+      "path": "standardization/maps/t_1x6/continuous_trajectory.json",
+      "bytes": 85377,
+      "sha256": "e742b62f18b3740777a3f9b801f23238bd44b66e50e157595381148fd8000240"
     },
     {
       "path": "standardization/maps/t_1x6/manifest.json",
-      "bytes": 18038,
-      "sha256": "06af2fa972a08a5c6f37f9f9b5a30731ca71da6f0271c4a43257fec467fa5752"
+      "bytes": 18296,
+      "sha256": "264db02777c38ce5a6f147b2639c1a9ff99b307050c421f7fd58e32f2d615239"
     },
     {
       "path": "standardization/maps/t_1x6/map.xodr",
@@ -1232,13 +1377,33 @@
     },
     {
       "path": "standardization/maps/t_1x6/topology_validation.json",
-      "bytes": 6244,
-      "sha256": "e6ce4a1e7674923680c077ef6e0b8325a36f1af57cde0426f888536e4d40495c"
+      "bytes": 10978,
+      "sha256": "ec6c23607fb0ad496fb72d9864260b6b683b216cda267ef9d055dafe7e86ad87"
+    },
+    {
+      "path": "standardization/maps/t_1x6/verification_20261103.json",
+      "bytes": 567,
+      "sha256": "f14d0a891f1a86b4f3d3ed9916e36c666a4a4df1ca7e30a43b114facfe3bb667"
     },
     {
       "path": "standardization/maps/t_network_random_3x3_connected_20261103/config.json",
       "bytes": 1077,
       "sha256": "ec75f1e96bedcc8865532c70ddbe87ecb624f4c8212c0089f1d81aba066d60b7"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/continuous_drive_validation.json",
+      "bytes": 6829,
+      "sha256": "51ae8349cf89e8e31a3665b05e533fc0bfe204e334e50552d5e7eccb6d429f9e"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/continuous_route.json",
+      "bytes": 172531,
+      "sha256": "a94ca500796d6638e9230a9266e3d876c4efeac56012064c1722bbdd91115178"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/continuous_trajectory.json",
+      "bytes": 133711,
+      "sha256": "9ef3d0c692ebbbe262bb74fb621d458014949c161784dc722c3cb6a35e8a2e57"
     },
     {
       "path": "standardization/maps/t_network_random_3x3_connected_20261103/manifest.json",
@@ -1259,6 +1424,11 @@
       "path": "standardization/maps/t_network_random_3x3_connected_20261103/topology_validation.json",
       "bytes": 16990,
       "sha256": "3c4ea776ef7511f0e8bfe2d64893df3a4b3a4aa0ac2045460194fb16139a312f"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/verification_20261103.json",
+      "bytes": 652,
+      "sha256": "b0c59290b4434f87ad9fc9285b87ceac911812b56188d7c5b2ed84f979cb315f"
     }
   ]
 }

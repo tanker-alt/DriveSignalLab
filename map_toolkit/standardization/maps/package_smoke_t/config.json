@@ -1,14 +1,14 @@
 {
   "name": "t_1x6",
+  "type": "t",
   "rows": 1,
   "columns": 6,
-  "spacing_m": 344,
-  "arm_length_m": 150,
   "seed": 42,
+  "spacing_m": 300,
+  "arm_length_m": 150,
   "roadside_props": false,
-  "type": "t",
   "incoming_lanes": 2,
-  "random_missing_arms": true,
+  "random_missing_arms": false,
   "standard_profile": "urban_cross3_v1",
   "lane_width_m": 3.5,
   "sidewalk_width_m": 2.0,
@@ -20,6 +20,14 @@
   "shoulder_width_m": 0.0,
   "junction_radius_m": 19.0,
   "missing_arm": "north",
+  "missing_arms": {
+    "0,0": "south",
+    "0,1": "south",
+    "0,2": "south",
+    "0,3": "north",
+    "0,4": "north",
+    "0,5": "east"
+  },
   "arm_turns": {
     "west": [
       [
