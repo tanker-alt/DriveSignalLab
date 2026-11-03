@@ -5,3 +5,5 @@ Two-lane T and three-lane cross templates joined by tapered roads; optional sing
 CARLA 0.9.15 simple appearance: 3x3 ring network 4406.53m / 12 physical junctions; 1x6 network 2746.97m / 6 junctions. Both zero collisions, respawns and teleports. Single vehicle, all-green connectivity only.
 
 Publication branch prepared locally; no push performed.
+
+Default simple appearance correction: ring concrete overlays are now complete-only; simple/off retain native sidewalk material across the network. Four static appearance tests pass. Earlier CARLA simple reports/screenshots predate this material-only correction; no new runtime acceptance is claimed.

@@ -146,11 +146,8 @@ def run(args):
         from network_simple_finish import build as finish_simple
         appearance=dict(mode='simple',signals=finish_signals(world,d),surface=finish_simple(world,d),opendrive_sha256=digest)
         (output/'simple_appearance.json').write_text(json.dumps(appearance,indent=2))
-    if any(r.get('sidewalk_connections') for r in d.get('roundabouts',[])):
-        from ring_sidewalk_finish import build as finish_ring_sidewalks
-        appearance=finish_ring_sidewalks(client,world,d)
-        appearance['opendrive_sha256']=digest
-        (output/'ring_sidewalk_appearance.json').write_text(json.dumps(appearance,indent=2))
+    # Simple/off match the network preview: native sidewalk material throughout.
+    # Ring concrete overlays belong exclusively to complete appearance.
     original = world.get_settings(); original.no_rendering_mode = False
     vehicle = None; collision = None; camera = None
     lights = [(l, l.get_state(), l.is_frozen()) for l in world.get_actors().filter('traffic.traffic_light')]

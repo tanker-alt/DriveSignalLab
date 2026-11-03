@@ -42,5 +42,5 @@ def plan(design,raw,mode='simple'):
                             circulating=circulating,crosswalk=not circulating,centerline=not circulating,
                             shoulder_width_m=design['config'].get('shoulder_width_m',0)))
     return dict(mode=mode,roads=records,style=settings(design['config']),grass=False,trees=False,
-                roadside_props=False,ring_perimeter=mode!='off' and any(r.get('sidewalk_connections') for r in design.get('roundabouts',[])),
+                roadside_props=False,ring_perimeter=mode=='complete' and any(r.get('sidewalk_connections') for r in design.get('roundabouts',[])),
                 native_transition_markings=True,carla_validation_performed=False)

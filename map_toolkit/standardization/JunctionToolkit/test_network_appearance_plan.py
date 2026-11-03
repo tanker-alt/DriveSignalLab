@@ -25,6 +25,7 @@ class AppearancePlanTests(unittest.TestCase):
         self.assertEqual(sum(bool(r['signal_ids']) for r in circular),4)
         self.assertTrue(all(not r['crosswalk'] and not r['centerline'] for r in circular))
         self.assertTrue(result['ring_perimeter'])
+        self.assertFalse(plan(self.design,self.raw,'simple')['ring_perimeter'])
         self.assertFalse(plan(self.design,self.raw,'off')['ring_perimeter'])
 
     def test_metadata_not_changed_and_bad_ownership_rejected(self):

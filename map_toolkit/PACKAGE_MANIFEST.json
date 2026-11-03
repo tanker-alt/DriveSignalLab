@@ -17,8 +17,8 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 567,
-      "sha256": "f80cb96ebb0ded0c60564482a532a61d2073dc23cc273c1782d78ac4b99c3c92"
+      "bytes": 870,
+      "sha256": "e38fcc8cd0c87a675d2dca518379179f98e2a7e65d45ada63c39112c79ce0440"
     },
     {
       "path": "reports/carla_beautify_regression.json",
@@ -212,8 +212,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/HETEROGENEOUS.md",
-      "bytes": 5277,
-      "sha256": "272b21002ad0271aa4d8ec57ac2ee972cfaca88798a7b9871dc2c6ac013437e5"
+      "bytes": 5283,
+      "sha256": "c7d96f8891c6770219a66cf720ba589f46260069f0d7b37fb2f4fe1c93c782d4"
     },
     {
       "path": "standardization/JunctionToolkit/heterogeneous.py",
@@ -257,8 +257,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/network_appearance_plan.py",
-      "bytes": 3225,
-      "sha256": "fdf25c8804345c5ea30e599cb8f14de5677971131196594fd4bf005d8e4fbc45"
+      "bytes": 3230,
+      "sha256": "3b84d821da8018093bb71b590b19bc0cc0dfcd109fbf138ba2ccb301045d1cc4"
     },
     {
       "path": "standardization/JunctionToolkit/NETWORK_APPEARANCE_REPAIR.md",
@@ -287,8 +287,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/network_route_check.py",
-      "bytes": 16214,
-      "sha256": "bd7844e074017f3e877b1755aacb1218aefa806772c4d7ea98d09150f6fc8ce8"
+      "bytes": 16023,
+      "sha256": "9f1213337534c9f568e86207863c29be98e920d94038a53bdb64a1ff728cf819"
     },
     {
       "path": "standardization/JunctionToolkit/network_seams.py",
@@ -512,8 +512,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/test_network_appearance_plan.py",
-      "bytes": 2729,
-      "sha256": "7086db111387ede0ff2713c67fef83a86025801e80f7a1559b1078e566f51516"
+      "bytes": 2809,
+      "sha256": "c3f3198df2cb14494466801c8271b95bb0f3df84da1bd8b64b8932feee4835cc"
     },
     {
       "path": "standardization/JunctionToolkit/test_network_connectivity.py",
