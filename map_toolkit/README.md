@@ -132,6 +132,7 @@ CARLA 启动后加载、应用默认简化美化并截图：
 |规则四叉网格|`generate`，配置 `type=cross` 和 rows/columns|每方向3车道|
 |纯三叉随机路网|`random-t`|沿用两车道三叉模板|
 |三叉/四叉混合随机路网|`random-grid`|所有入口统一每方向3车道|
+|异构随机路网（可含一个环岛）|`heterogeneous`|三叉2车道、四叉3车道、环岛2车道|
 
 混合路网配置示例：
 
@@ -169,7 +170,43 @@ CARLA 启动后加载、应用默认简化美化并截图：
 
 入口 -1/-2/-3 显式连接目标出口 +1/+2/+3，不依赖 CARLA 自动推断。两车道纯三叉使用前面的双车道规则，不使用双左转/双直行编码。
 
-`random-grid` 遇到 `type=t`、`t_probability=1` 或所有路口显式指定为 t 时，会转入两车道纯三叉生成器。普通混合配置偶然抽到全三叉时，仍按混合路网的三车道模式生成。随机路网目前不提供“中心环岛混入网格”的已验证统一入口；单环岛使用独立生成器。
+`random-grid` 遇到 `type=t`、`t_probability=1` 或所有路口显式指定为 t 时，会转入两车道纯三叉生成器。普通混合配置偶然抽到全三叉时，仍按混合路网的三车道模式生成。需要保留不同车道数或混入中心环岛时，使用下面的 `heterogeneous` 入口。
+
+### 异构随机路网
+
+现有两车道三叉、三车道四叉模板通过真实渐变道路拼接。第三车道逐渐增宽或收窄，两条内侧车道贯通；收窄前需要主动并线。连接段和环岛外围具有路缘及人行道。
+
+```json
+{"name":"heterogeneous_3x3","rows":3,"columns":3,"spacing_m":500,"seed":42,"include_roundabout":true}
+```
+
+- 三叉/四叉提议概率各 50%，三叉四个缺失方向各 25%；连通性和全路口路线筛选会影响最终分布。
+- `include_roundabout` 默认 false；开启时恰好一个环岛，默认 `[rows//2, columns//2]`，可用零起始 `roundabout_position: [行,列]` 指定。
+- 尺寸各为 1～6，至少两个格子；无环岛最小间距 445m，有环岛 450m。推荐 500m。
+- 输出 `config.json/layout` 保存实际布局，可复现。修改固定布局时，环岛位置须与配置一致。
+- 默认路网美化为 `simple`，按每条道路的车道数生成灯杆与停止线；环岛内部四组灯也会处理。单环岛默认 `complete`。环行道路不画双向中心线或人行横道，不套用单环岛的原点草地、树木布置。
+
+```powershell
+& ./generator-env/Scripts/python.exe -B standardization/JunctionToolkit/toolkit.py heterogeneous --config standardization/JunctionToolkit/configs/heterogeneous_3x3_roundabout.json --out standardization/maps/my_heterogeneous
+& ./carla-env/Scripts/python.exe -B standardization/JunctionToolkit/validate_heterogeneous.py standardization/maps/my_heterogeneous
+& ./carla-env/Scripts/python.exe -B standardization/JunctionToolkit/view.py standardization/maps/my_heterogeneous --beautify simple
+& ./carla-env/Scripts/python.exe -B standardization/JunctionToolkit/network_route_check.py standardization/maps/my_heterogeneous --beautify simple --report-subdir simple_trial --realtime
+```
+
+生成命令只执行生成与静态检查，不调用 CARLA；后面三条命令需要 CARLA 环境，展示及行驶需要空闲服务。行驶验收默认简单美化，跟车视角，环岛先完整绕行一圈再驶出；验收使用全绿灯单车，不代表红绿灯策略验证。
+
+1×6 配置见 `standardization/JunctionToolkit/configs/heterogeneous_1x6.json`：默认不含环岛，可按需开启，默认位置为 `[0,3]`。本次示例为 3 个三叉和 3 个四叉，简单美化下实车行驶约 2.75km，通过全部 6 个路口及 5 段连接道路，零碰撞、零重生、零传送。
+
+```powershell
+& ./generator-env/Scripts/python.exe -B standardization/JunctionToolkit/toolkit.py heterogeneous --config standardization/JunctionToolkit/configs/heterogeneous_1x6.json --out standardization/maps/my_heterogeneous_1x6
+```
+
+已验证 3×3 中心环岛示例在简单美化下行驶约 4.41km，覆盖 12/12 实际路口、完整环行及 8 处连接段，零碰撞、零重生、零传送。详细规则见 [异构生成说明](standardization/JunctionToolkit/HETEROGENEOUS.md)。
+
+![异构路网简单美化](standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/overview.png)
+![中心环岛细节](standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/street.png)
+![单环岛完整美化](standardization/maps/roundabout_continuous_20261103/overview.png)
+![1×6 异构路网](standardization/maps/heterogeneous_1x6_20261103/overview.png)
 
 美化以外的配置变化通常需要重新生成地图。更新脚本不会自动改写已有 `.xodr`，应生成到新目录、验证后再替换。详见 [混合路网规则](standardization/JunctionToolkit/RANDOM_NETWORK.md)和[纯三叉规则](standardization/JunctionToolkit/PURE_T_NETWORK.md)。
 

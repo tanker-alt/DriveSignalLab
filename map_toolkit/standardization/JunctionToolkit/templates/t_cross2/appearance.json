@@ -1,6 +1,6 @@
 {
   "template": "TCross2Clean_runtime_v1",
-  "source_scene": "reference-only/TCross2Clean.udatasmith",
+  "source_scene": "D:\\Maps\\MapDataset\\FourLeggedIntersection\\Exports\\TCross2Clean.udatasmith",
   "source_sha256": "1d753704f322b65ff9fb8f9f965cd091debf1eeb5c678ffc5ccf2571f997820c",
   "supported_runtime_geometry": "flat two-lane T junctions and connected road networks",
   "material_mapping": {

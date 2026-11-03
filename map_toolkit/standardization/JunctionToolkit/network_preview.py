@@ -32,20 +32,9 @@ def main(folder,host='localhost',port=2000,photos=True,mode='simple'):
     validation=json.loads(validation_path.read_text()) if validation_path.exists() else {}
     if not validation.get('passed') or validation.get('opendrive_sha256',design['opendrive_sha256'])!=design['opendrive_sha256']:
         raise RuntimeError('Map requires a current passed topology report')
-    root=ET.fromstring(raw)
-    roads={int(r.get('id')):r for r in root.findall('road')}
-    counts=set()
-    widths=set()
-    for j in design['junctions']:
-        for rid in j['roads']:
-            lanes=roads[rid].findall('./lanes/laneSection/right/lane')
-            driving=[l for l in lanes if l.get('type')=='driving']
-            counts.add(len(driving))
-            widths.update(float(l.find('width').get('a')) for l in driving)
-    if len(counts)!=1 or len(widths)!=1:
-        raise ValueError('Preview requires uniform approach lane widths/counts')
+    from network_appearance_plan import plan
+    appearance_plan=plan(design,raw,mode)
     cfg=design['config']
-    cfg.update(incoming_lanes=counts.pop(),lane_width_m=widths.pop())
     client=carla.Client(host,port);client.set_timeout(120)
     world=client.get_world()
     if world.get_settings().synchronous_mode or any(world.get_actors().filter(p) for p in ('vehicle.*','walker.*','sensor.*')):
@@ -79,6 +68,10 @@ def main(folder,host='localhost',port=2000,photos=True,mode='simple'):
         else:
             print('Loaded; applying simple stop-line finish',flush=True)
             finish=build_simple(world,design)
+        if appearance_plan['ring_perimeter']:
+            from ring_sidewalk_finish import build as finish_perimeter
+            finish['ring_sidewalks']=finish_perimeter(client,world,design)
+            finish['actor_ids'].extend(finish['ring_sidewalks']['actor_ids'])
     actor_ids=finish['actor_ids']
     batches=[(actor_ids[i:i+500],host,port) for i in range(0,len(actor_ids),500)]
     done=0
@@ -105,7 +98,7 @@ def main(folder,host='localhost',port=2000,photos=True,mode='simple'):
     validation_path=folder/'topology_validation.json'
     validation=json.loads(validation_path.read_text()) if validation_path.exists() else {}
     checked=validation.get('passed',False) and validation.get('opendrive_sha256')==design['opendrive_sha256']
-    report=dict(beautify=mode != 'off',appearance_mode=mode,scope='appearance_preview',topology_validated=checked,map_hash=design['opendrive_sha256'],scenery=finish,lane_signals=signal_report,trees=False,grass_mesh=False,roadside_props=False,debug_overlays=False)
+    report=dict(beautify=mode != 'off',appearance_mode=mode,scope='appearance_preview',topology_validated=checked,map_hash=design['opendrive_sha256'],scenery=finish,lane_signals=signal_report,trees=False,grass_mesh=False,roadside_props=False,debug_overlays=False,appearance_plan=appearance_plan)
     (folder/'appearance_preview_report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     (folder/'load_report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print('Saved overview.png and street.png' if photos else 'Loaded network: '+mode,flush=True)

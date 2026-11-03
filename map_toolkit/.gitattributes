@@ -1,0 +1,2 @@
+# Preserve map and report hashes across Windows/Linux checkouts.
+* -text whitespace=cr-at-eol

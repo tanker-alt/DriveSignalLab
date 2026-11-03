@@ -3,7 +3,7 @@
   "scope": "Shared appearance policy for future junction and network generators",
   "supported_runtime_geometry": "flat urban_cross3_v1 cross and regular grid",
   "sidewalk": {
-    "diffuse_reference": "reference-only/Concrete1_Diff.png",
+    "diffuse_reference": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Concrete1_Diff.png",
     "runtime_status": "pending: procedural sidewalk is not exposed as a texture-addressable object"
   },
   "grass": {

@@ -51,11 +51,14 @@ def audit(tree, design, road_map):
                 expected += [('sidewalk', .2), ('sidewalk', 2.)]
                 if widths != expected:
                     errors.append('Approach curb/shoulder dimensions differ: %s/%s' % (rid, side))
-        if is_t(c) and c.get('random_missing_arms'):
-            continue
-        rotation = (ARM_NAMES.index(c.get('missing_arm', 'north'))-3)*math.pi/2 if is_t(c) else 0
-        for i in ((2, 3) if is_t(c) else range(4)):
-            corner = roads[junction['id']-10+910+i]
+        local_t = bool(junction.get('missing_arm')) or is_t(c)
+        missing = junction.get('missing_arm') or c.get('missing_arm','north')
+        rotation = (ARM_NAMES.index(missing)-3)*math.pi/2 if local_t else 0
+        for i in ((2, 3) if local_t else range(4)):
+            corner = roads.get(junction['id']-10+910+i)
+            if corner is None:
+                errors.append('Missing curved curb at junction %s corner %s' % (junction['id'],i))
+                continue
             g = corner.find('./planView/geometry')
             heading = float(g.get('hdg'))
             x, y = float(g.get('x')), float(g.get('y'))
@@ -69,7 +72,7 @@ def audit(tree, design, road_map):
             expected_end = (cx+extent*math.cos(angle)-half*math.sin(angle), cy+extent*math.sin(angle)+half*math.cos(angle))
             if max(math.hypot(x-expected_start[0], y-expected_start[1]), math.hypot(ex-expected_end[0], ey-expected_end[1])) > 1e-5:
                 errors.append('Curved curb does not meet straight boundaries: %s' % corner.get('id'))
-        if is_t(c):
+        if local_t:
             closed = roads.get(junction['id']-10+914)
             if closed is None or abs(float(closed.get('length'))-2*extent)>1e-6:
                 errors.append('Missing continuous sidewalk across absent arm')

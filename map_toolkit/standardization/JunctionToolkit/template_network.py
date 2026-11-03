@@ -11,6 +11,7 @@ from safety_rules import write_default_rules
 from road_standard import junction_surface
 from network_plan import plan
 from layout import ARM_NAMES, arm_turns
+from network_seams import stitch_manifest
 
 
 def build(c, out):
@@ -127,6 +128,7 @@ def build(c, out):
     m['signals'] = {sid:v for sid,v in m['signals'].items() if sid in live_signals}
     m['movements'] = [v for v in m['movements'] if v['road'] not in removed and v['target_road'] not in removed]
     m['seams'] = [s for s in m['seams'] if s['road_a'] not in removed and s['road_b'] not in removed]
+    stitch_manifest(root,m)
     m['config'].update(type='random_grid',junction_types=types,missing_arms=missing,t_probability=c['t_probability'])
     m['generation'] = 'full_cross_grid_then_prune_planned_arms'
     m['removal_sampling'] = dict(attempts=attempts,proposal='uniform four directions',acceptance='connected junction graph',type_probability=c['t_probability'])

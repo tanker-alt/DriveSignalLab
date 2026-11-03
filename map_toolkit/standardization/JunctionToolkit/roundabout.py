@@ -6,6 +6,7 @@ import argparse,hashlib,json,math
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from runtime_config import map_output
+from roundabout_links import verify as verify_links
 
 
 def node(parent,tag,**attrs):
@@ -108,6 +109,7 @@ def generate(out,radius=30.,arm_length=120.,width=3.5):
             length,g=curve(p0,theta-delta+math.pi/2,p1,theta);connect(100+i*10+lane+2,length,g,incoming,-lane,arm,lane,'end')
         for sid,cfg in signalmap.items():
             if cfg['junction_id']==jid:node(j,'controller',id=2000+int(sid),type=0,sequence=cfg['phase_slot'])
+    link_check=verify_links(root,paths)
     root[:]=[h]+root.findall('road')+root.findall('controller')+root.findall('junction')
     out.mkdir(parents=True,exist_ok=True)
     ET.indent(root);ET.ElementTree(root).write(str(out/'map.xodr'),encoding='utf-8',xml_declaration=True)
@@ -122,6 +124,7 @@ def generate(out,radius=30.,arm_length=120.,width=3.5):
                         'Inner-lane entry/exit trajectories cross the outer circulating stream; signal conflict design is required.',
                         'Four CARLA junction IDs form one logical roundabout; existing single-junction evaluator is not yet integrated.',
                         'No signal phase assignment or live driving certification.'])
+    design['generation_link_check']=link_check
     road_groups={1:3,2:2,3:1,4:4,20:7,21:6,22:5,23:8}
     names={1:'east_entry',2:'south_entry',3:'west_entry',4:'north_entry',5:'northeast_internal',6:'southeast_internal',7:'southwest_internal',8:'northwest_internal'}
     groups={str(g):dict(name=name,signal_ids=[]) for g,name in names.items()}

@@ -15,8 +15,8 @@
 在主工程根目录运行，例如：
 
 ```powershell
-& ./carla-env/Scripts/python.exe -B standardization/JunctionToolkit/view.py standardization/maps/mixed_1x6
-& ./carla-env/Scripts/python.exe -B standardization/JunctionToolkit/view.py standardization/maps/mixed_1x6 --beautify complete
+& D:/CarlaMapTools/carla-env/Scripts/python.exe -B Toolkits/JunctionToolkit/view.py Maps/MapDataset/mixed_1x6
+& D:/CarlaMapTools/carla-env/Scripts/python.exe -B Toolkits/JunctionToolkit/view.py Maps/MapDataset/mixed_1x6 --beautify complete
 ```
 
 简化模式使用 manifest 中的停止线参考位置，绘制无碰撞的白色停止线，保留原生信号头并使用现有标准信号杆。不添加运行时斑马线、整路标线、草地、树木或家具。地图本身的道路、人行道、原生标线及拓扑仍由 OpenDRIVE 加载。单个环岛虽包含多个 CARLA junction 控制节点，仍按单个路口默认完整美化。

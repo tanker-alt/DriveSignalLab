@@ -77,7 +77,7 @@ def validate(folder):
             item=dict(road=arm,lane=lane,reachable_exits=sorted(exits),ring_cycle_reachable=loop,max_step_gap_m=maxgap,passed=exits==wanted and loop and maxgap<1.3 and not todo)
             routes.append(item)
             if not item['passed']:errors.append(item)
-    result=dict(passed=not errors,signal_count=len(d['signals']),connections=connections,entry_routes=routes,geometry=geometry,errors=errors,
+    result=dict(passed=not errors,opendrive_sha256=d['opendrive_sha256'],signal_count=len(d['signals']),connections=connections,entry_routes=routes,geometry=geometry,errors=errors,
                 limits='Offline waypoint checks only. No live mesh, collision, signal stopping or traffic-flow validation.')
     (folder/'topology_validation.json').write_text(json.dumps(result,indent=2))
     print('Roundabout topology:',result['passed'],'signals:',len(d['signals']),'connections:',len(connections),'entry lanes:',len(routes),'errors:',len(errors))

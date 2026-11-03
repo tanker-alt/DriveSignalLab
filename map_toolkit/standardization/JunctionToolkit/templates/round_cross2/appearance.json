@@ -1,5 +1,5 @@
 {
-  "source": "reference-only/Round-Cross2",
+  "source": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Round-Cross2",
   "runtime_mode": "cooked_CARLA_equivalents",
   "road": "native OpenDRIVE asphalt",
   "markings": "native OpenDRIVE roadMark",

@@ -16,6 +16,7 @@ from layout import ARM_NAMES, TURN_OFFSETS, active_arms, arm_turns, is_t
 from safety_rules import write_default_rules
 import road_standard as standard
 from runtime_config import map_output
+from network_seams import stitch
 
 
 def child(parent, tag, **attrs):
@@ -190,6 +191,10 @@ def generate(config, out):
         from network_plan import connected
         if not connected(c['rows'],c['columns'],{'%d,%d'%key:value for key,value in assignments.items()}):
             raise ValueError('T-junction missing directions disconnect the network')
+        # Persist the realized layout so regenerating an experiment does not
+        # resample missing arms when the sampling implementation changes.
+        c['missing_arms']={'%d,%d'%key:value for key,value in assignments.items()}
+        c['random_missing_arms']=False
     out = map_output(out)
     if out.exists() and any(out.iterdir()): raise ValueError('Output must be empty (existing experiments are never overwritten)')
     root = ET.Element('OpenDRIVE')
@@ -282,16 +287,9 @@ def generate(config, out):
             if col+1<c['columns'] and 2 in left_active and 0 in right_active: pairs.append((base+3,base+10000+1))
             if row+1<c['rows'] and 3 in active and 1 in south_active: pairs.append((base+4,base+c['columns']*10000+2))
             for a,b in pairs:
-                for src,dst in [(a,b),(b,a)]:
-                    road=road_nodes[src]
-                    link=road.find('link'); pre=ET.Element('predecessor',dict(elementType='road',elementId=str(dst),contactPoint='start'));link.insert(0,pre)
-                    for lane in road.findall('./lanes/laneSection/*/lane'):
-                        lid=int(lane.get('id'))
-                        if not lid: continue
-                        ln=lane.find('link')
-                        if ln is None: ln=ET.Element('link');lane.insert(0,ln)
-                        child(ln,'predecessor',id=-lid)
+                stitch(road_nodes[a],road_nodes[b])
                 manifest['seams'].append(dict(road_a=a,road_b=b))
+    manifest['seam_policy']='start-to-start, reciprocal road/lane predecessors, inverted lane IDs'
     # Keep the OpenDRIVE element order compatible with its schema.
     root[:] = [h]+root.findall('road')+root.findall('controller')+root.findall('junction')
     out.mkdir(parents=True,exist_ok=True)

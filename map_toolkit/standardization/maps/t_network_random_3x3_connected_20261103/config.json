@@ -1,0 +1,60 @@
+{
+  "name": "t_network_random_3x3",
+  "rows": 3,
+  "columns": 3,
+  "type": "t",
+  "missing_arm": "north",
+  "incoming_lanes": 2,
+  "arm_length_m": 150.0,
+  "lane_width_m": 3.5,
+  "junction_radius_m": 19.0,
+  "spacing_m": 300,
+  "sidewalk_width_m": 2.0,
+  "roadside_props": false,
+  "seed": 20261030,
+  "standard_profile": "urban_cross3_v1",
+  "curb_width_m": 0.2,
+  "curb_height_m": 0.15,
+  "corner_radius_m": 12.0,
+  "road_class": "urban_uniform",
+  "shoulder_enabled": false,
+  "shoulder_width_m": 0.0,
+  "random_missing_arms": false,
+  "missing_arms": {
+    "0,0": "west",
+    "0,1": "east",
+    "0,2": "west",
+    "1,0": "east",
+    "1,1": "north",
+    "1,2": "east",
+    "2,0": "west",
+    "2,1": "south",
+    "2,2": "east"
+  },
+  "arm_turns": {
+    "west": [
+      [
+        "straight"
+      ],
+      [
+        "right"
+      ]
+    ],
+    "south": [
+      [
+        "left"
+      ],
+      [
+        "right"
+      ]
+    ],
+    "east": [
+      [
+        "left"
+      ],
+      [
+        "straight"
+      ]
+    ]
+  }
+}

@@ -11,6 +11,9 @@ from layout import ARM_NAMES, active_arms, arm_turns, is_t
 
 def validate(folder):
     folder=Path(folder);d=json.loads((folder/'manifest.json').read_text())
+    if d['config'].get('type')=='heterogeneous':
+        from validate_heterogeneous import validate as validate_mixed
+        return validate_mixed(folder)
     if d['config'].get('type')=='roundabout':
         from validate_roundabout import validate as validate_ring
         return validate_ring(folder)
@@ -28,7 +31,9 @@ def validate(folder):
     expected={(v['road'],v['lane'],v['target_road'],v['target_lane'],v['movement']) for v in d['movements']}
     from_config=set()
     for j in d['junctions']:
-        base=j['id']-10; local=dict(d['config'], missing_arm=j.get('missing_arm', d['config'].get('missing_arm','north'))); local.pop('arm_turns',None); active=active_arms(local); resolved=arm_turns(local)
+        base=j['id']-10; local=dict(d['config'], missing_arm=j.get('missing_arm', d['config'].get('missing_arm','north')))
+        local['type']='t' if j.get('missing_arm') else 'cross'
+        local.pop('arm_turns',None); active=active_arms(local); resolved=arm_turns(local)
         if set(j['roads']) != {base+i+1 for i in active}:
             errors.append(dict(error='Active arm list differs from config',junction=j['id']))
         for i in active:
@@ -114,7 +119,7 @@ def validate(folder):
         from validate_standard import audit
         standard_result = audit(tree, d, m)
         errors.extend(dict(error=e) for e in standard_result['errors'])
-    result=dict(passed=not errors,junctions=len(d['junctions']),movement_checks=checks,seam_checks=seams,errors=errors,
+    result=dict(passed=not errors,opendrive_sha256=d['opendrive_sha256'],junctions=len(d['junctions']),movement_checks=checks,seam_checks=seams,errors=errors,
                 standard_geometry=standard_result,
                 limits='Topology only. Does not certify meshes, collisions, signal behavior or agent performance.')
     (folder/'topology_validation.json').write_text(json.dumps(result,indent=2))

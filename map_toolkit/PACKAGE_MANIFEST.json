@@ -1,24 +1,39 @@
 {
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 94,
+      "sha256": "74c38f44e7c535098830a6400cad5ebf6d62ac40c81d991929571b500dc26aed"
+    },
+    {
       "path": ".gitignore",
       "bytes": 87,
       "sha256": "bcf8d92aa2cc1e84350ba9e6637d009c66bae2afb7e3c1a97e32b0ca57e4fbe8"
     },
     {
       "path": "README.md",
-      "bytes": 12446,
-      "sha256": "2ee9284d66e599000eea3cbbb6929e9ed72687645c28d2955e398aec0c4ce873"
+      "bytes": 15890,
+      "sha256": "bfc60cd69455fc779b2433073b6134b05304f03b97d733da27e4c1b289940991"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 468,
-      "sha256": "334d063f1c8136617c1ce6dfdacdaca24a49f7175fd9727fdd98eac323b9bfca"
+      "bytes": 567,
+      "sha256": "f80cb96ebb0ded0c60564482a532a61d2073dc23cc273c1782d78ac4b99c3c92"
     },
     {
       "path": "reports/carla_beautify_regression.json",
       "bytes": 1336,
       "sha256": "1aa41e9f369d720e7055b9cd9aa9ec6e194c07924912f0224bcfdaecbe6f2126"
+    },
+    {
+      "path": "reports/heterogeneous_acceptance_20261103.json",
+      "bytes": 816,
+      "sha256": "fbfe3f0f4be8639ce08b4756f82a38225cf7c00c13638b01544a911391ab8bce"
+    },
+    {
+      "path": "reports/heterogeneous_package_audit.json",
+      "bytes": 422,
+      "sha256": "b64a67173ae5a7d3b4ca35d3b6e20c46b74e2df14c0731a4798e082ce8884d9a"
     },
     {
       "path": "reports/package_audit.json",
@@ -32,8 +47,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/APPEARANCE.md",
-      "bytes": 1497,
-      "sha256": "51fa1b5b29b50bd0b72ab86635760f5106e273ab857a0ae9399de285e04f9346"
+      "bytes": 1503,
+      "sha256": "645e40fc5ed599efbe8af12f89ba535390c57c20281d8f1883a3443b456ae68e"
+    },
+    {
+      "path": "standardization/JunctionToolkit/appearance_sample.py",
+      "bytes": 2614,
+      "sha256": "54d1e95c62e3835f6c97a2163b33bd7400f9abc67a753fda8a782270edd66c4e"
     },
     {
       "path": "standardization/JunctionToolkit/appearance_standard.py",
@@ -46,14 +66,29 @@
       "sha256": "cee87d329571b07b835205ce9a92383e24da2b50991b750ff80513da1c61c1fe"
     },
     {
+      "path": "standardization/JunctionToolkit/audit_network_appearance.py",
+      "bytes": 2730,
+      "sha256": "0fc641f23e014c23999426b87356ca05b4ab025b4c7f507f2d9bfd7ecaed041e"
+    },
+    {
+      "path": "standardization/JunctionToolkit/check_appearance.py",
+      "bytes": 2705,
+      "sha256": "ab34daf8a21c09418f8aae8889f49753f777448ccf879775006e62465611af2d"
+    },
+    {
+      "path": "standardization/JunctionToolkit/check_lane_control.py",
+      "bytes": 4941,
+      "sha256": "03f0fe0414a1818ee8c6ec7f3a8bdb1ec139c0ce73c814d3be6b06961194cf6c"
+    },
+    {
       "path": "standardization/JunctionToolkit/configs/all_cross_then_delete.json",
       "bytes": 166,
       "sha256": "cc4526d0e8010ac408b22041464a44b463067b70ed0fe4373d5f88114bb4df5d"
     },
     {
       "path": "standardization/JunctionToolkit/configs/appearance_standard.json",
-      "bytes": 1006,
-      "sha256": "1819119f371ae953f581d33bd42ea56fc26e98035ea8dbecb0d303992cdac443"
+      "bytes": 1016,
+      "sha256": "70e1edf2bab2d71b0a79b1f37389364950fa0cc0851332641a907c0865818e77"
     },
     {
       "path": "standardization/JunctionToolkit/configs/cross3.json",
@@ -106,6 +141,36 @@
       "sha256": "0e13f57c5d3b3f074a29626472c872c6feceaca8446f7e4052735030a76393ed"
     },
     {
+      "path": "standardization/JunctionToolkit/configs/heterogeneous_1x6.json",
+      "bytes": 107,
+      "sha256": "07d99282e073d56affa07766d81d01d06ac356664e7bf57ab4d89cdb978c7c89"
+    },
+    {
+      "path": "standardization/JunctionToolkit/configs/heterogeneous_3x3.json",
+      "bytes": 76,
+      "sha256": "2dd54ed68f3c2c068a8f31ff3d2febc48bec0372995931680429d68a4c4d763c"
+    },
+    {
+      "path": "standardization/JunctionToolkit/configs/heterogeneous_3x3_roundabout.json",
+      "bytes": 114,
+      "sha256": "bd7776774ef768eee92b623004534de10ae99aac5ad12d38db65191dbbf60104"
+    },
+    {
+      "path": "standardization/JunctionToolkit/configs/hybrid_1x2_transition.json",
+      "bytes": 149,
+      "sha256": "fb4a05cb2430f1183458186c66cc81612f91f4f6e1e7bcf6b93a355cc9f8173e"
+    },
+    {
+      "path": "standardization/JunctionToolkit/configs/hybrid_3x3_no_ring.json",
+      "bytes": 269,
+      "sha256": "1e4cddd3f3d4b61d096d3443222b8412d019485a1f997fb0ba199eb3191a0d07"
+    },
+    {
+      "path": "standardization/JunctionToolkit/configs/hybrid_3x3_ring.json",
+      "bytes": 265,
+      "sha256": "f7535421fbe035231e57c38a4717be571bcf2f69d066b4dbf6f079554597c7b6"
+    },
+    {
       "path": "standardization/JunctionToolkit/configs/mixed_1x6.json",
       "bytes": 288,
       "sha256": "2dd44f0d9b9acf43f55962d48456c055191e6a2ab2bc2039c24356e7375d0fee"
@@ -137,18 +202,73 @@
     },
     {
       "path": "standardization/JunctionToolkit/generate.py",
-      "bytes": 19105,
-      "sha256": "2a4aa0dee65af6e666092a83588855796042b1d8c2b3178f8afbff12c7de996c"
+      "bytes": 18966,
+      "sha256": "699c8a14e7498c4d2d7d5c2bfc1b82292fa575cd8315bff7a60858baf984d055"
+    },
+    {
+      "path": "standardization/JunctionToolkit/generate_map.cmd",
+      "bytes": 211,
+      "sha256": "31e2bd27065603d1bf5c5105f207b1dbba831445b455f237a786a6a85d4ac227"
+    },
+    {
+      "path": "standardization/JunctionToolkit/HETEROGENEOUS.md",
+      "bytes": 5277,
+      "sha256": "272b21002ad0271aa4d8ec57ac2ee972cfaca88798a7b9871dc2c6ac013437e5"
+    },
+    {
+      "path": "standardization/JunctionToolkit/heterogeneous.py",
+      "bytes": 15455,
+      "sha256": "cdffa9152b00076425280b5380bc8368620ab83c129d0b5f4c865d6c90abd1d2"
+    },
+    {
+      "path": "standardization/JunctionToolkit/heterogeneous_route.py",
+      "bytes": 5972,
+      "sha256": "653df7bfbf1c078e82edb981915a06a0d67901f95dcc3322e3b267dcaf46a251"
+    },
+    {
+      "path": "standardization/JunctionToolkit/hybrid.py",
+      "bytes": 10694,
+      "sha256": "a80f6272d1b1f31f8aaf16c27f92e73452b5963e02eae7448216c36d9eedf416"
     },
     {
       "path": "standardization/JunctionToolkit/lane_signals.py",
-      "bytes": 5327,
-      "sha256": "910d2a2add6744e831f1571d99c6d8809924a9fbaa59fe63f54125310ee02f9f"
+      "bytes": 5424,
+      "sha256": "b1ab55c169b7745e4e29ca999ed4c8a4c74dbdd38c1b5374d88da39d42415c7c"
+    },
+    {
+      "path": "standardization/JunctionToolkit/lane_transition.py",
+      "bytes": 1486,
+      "sha256": "7bac55ca7a86dde703bad3209d28f8666de4524de124c7d84f5b19519b813cdd"
     },
     {
       "path": "standardization/JunctionToolkit/layout.py",
       "bytes": 2508,
       "sha256": "4386fc84e273e488cf00ad33e8e78022435fdfbac1b00dda14b8a5e1226c51c2"
+    },
+    {
+      "path": "standardization/JunctionToolkit/movement_check.py",
+      "bytes": 4939,
+      "sha256": "3e63650063c59d7a844be920b9450a894744ddac48f41f1d3c02617d25f01cff"
+    },
+    {
+      "path": "standardization/JunctionToolkit/NETWORK_APPEARANCE.md",
+      "bytes": 317,
+      "sha256": "170ead2e111091f02db6f9b738d813418a58d7d4b68beadc439634f59187fac5"
+    },
+    {
+      "path": "standardization/JunctionToolkit/network_appearance_plan.py",
+      "bytes": 3225,
+      "sha256": "fdf25c8804345c5ea30e599cb8f14de5677971131196594fd4bf005d8e4fbc45"
+    },
+    {
+      "path": "standardization/JunctionToolkit/NETWORK_APPEARANCE_REPAIR.md",
+      "bytes": 2063,
+      "sha256": "e119732dcd9da4e8d9861c98609f0aafb6be5669858c2ca09ebe6b32c11de8b7"
+    },
+    {
+      "path": "standardization/JunctionToolkit/network_itinerary.py",
+      "bytes": 1719,
+      "sha256": "297c097c801a027c026e7be2fc186096f5c81089d20741400731f08159b3e7d7"
     },
     {
       "path": "standardization/JunctionToolkit/network_plan.py",
@@ -157,13 +277,28 @@
     },
     {
       "path": "standardization/JunctionToolkit/network_preview.py",
-      "bytes": 6701,
-      "sha256": "64ab981c373c5921b402c688072d69aa66f199d82c49106c3049cc01a9d5fb9e"
+      "bytes": 6459,
+      "sha256": "5f67aaa6953c977cec211d2fc0521f7974dcb9a3bebd1b7f14e890e76a26ac94"
+    },
+    {
+      "path": "standardization/JunctionToolkit/NETWORK_ROUTE_ACCEPTANCE.md",
+      "bytes": 4777,
+      "sha256": "3f6e25a0dc5dcceddb4cac6f6ac5c3c7d4ac90d18a3e43f8a677314544d9664a"
+    },
+    {
+      "path": "standardization/JunctionToolkit/network_route_check.py",
+      "bytes": 16214,
+      "sha256": "bd7844e074017f3e877b1755aacb1218aefa806772c4d7ea98d09150f6fc8ce8"
+    },
+    {
+      "path": "standardization/JunctionToolkit/network_seams.py",
+      "bytes": 1870,
+      "sha256": "a956f3c01fc43450a6715123851eed4f4ce90076fa45adcda2b3246351989579"
     },
     {
       "path": "standardization/JunctionToolkit/network_simple_finish.py",
-      "bytes": 3548,
-      "sha256": "28377ff559961129f551b1d5f32dbfb3bdb6655c252f608963e4c2535e31449f"
+      "bytes": 3578,
+      "sha256": "acf6df5632d693172d01502427a157cb47f679dc9cbda9941eda96189e32f62c"
     },
     {
       "path": "standardization/JunctionToolkit/project_bridge.py",
@@ -172,8 +307,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/PURE_T_NETWORK.md",
-      "bytes": 1630,
-      "sha256": "2a0d664ba3d426e0db586bf7544fe2033e6406aca7814cbff318270c5b39afe9"
+      "bytes": 1602,
+      "sha256": "247db8ceb3826e519aef2107dea6c21b4bf7e8da2a4260ead82544125f1a7bf9"
     },
     {
       "path": "standardization/JunctionToolkit/random_grid.py",
@@ -182,8 +317,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/RANDOM_NETWORK.md",
-      "bytes": 2595,
-      "sha256": "c19de25f19fe670a537d147f79f447edcc0e351e01b9bed4c20b3a10cdeba071"
+      "bytes": 2560,
+      "sha256": "a066f64e39574134627cbe3b6adea8fdffbf4b81d1a48e1922afc84c05799723"
     },
     {
       "path": "standardization/JunctionToolkit/random_t_network.py",
@@ -196,6 +331,11 @@
       "sha256": "e24a3be973ff97dcddbe981ddb6fe7b02da8b772254082138e1d1b3a13774eed"
     },
     {
+      "path": "standardization/JunctionToolkit/render_networks.py",
+      "bytes": 565,
+      "sha256": "1af3f6a9b5583b59016169c58f84edee78af9ceac1edd03d55927aa53085af72"
+    },
+    {
       "path": "standardization/JunctionToolkit/requirements-carla.txt",
       "bytes": 61,
       "sha256": "f6fb00ddfa102a61d601bf53b6cc399c62a9afe57e65accc9a252e8779a57953"
@@ -204,6 +344,11 @@
       "path": "standardization/JunctionToolkit/requirements-generator-lock.txt",
       "bytes": 145,
       "sha256": "96ed35b0c630f9620154a315a27e39b69ef4ec8c993348b0da1bbbf0d7b7f3f2"
+    },
+    {
+      "path": "standardization/JunctionToolkit/ring_sidewalk_finish.py",
+      "bytes": 2892,
+      "sha256": "fa187d8c51e5005c92d93c82a92ba11a05fa22eb803228bd30fe24728fd3edbb"
     },
     {
       "path": "standardization/JunctionToolkit/road_standard.py",
@@ -217,8 +362,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/roundabout.py",
-      "bytes": 11626,
-      "sha256": "ceeb704b321faff45f2e8ff735fe0f6625e781b7b3720c32ee328662ade90422"
+      "bytes": 11765,
+      "sha256": "c9e01fb698916b0eeef2adf5074622d82717b9ca1c13636792b03d642d4dabdf"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_conflicts.py",
@@ -241,9 +386,34 @@
       "sha256": "0e1fe1210459f048ff9adcf26ba8b2e05f23cb4b7155cb4eac2b783bf83df9e3"
     },
     {
+      "path": "standardization/JunctionToolkit/roundabout_links.py",
+      "bytes": 1893,
+      "sha256": "35a2ba5f93e8a9123a5435bcd01341dcf7567c43d2e12f917f62337b76b11ed8"
+    },
+    {
+      "path": "standardization/JunctionToolkit/roundabout_marks.py",
+      "bytes": 2387,
+      "sha256": "4cd44d17aa42dfa4e599ead0c74ff6a7d8247eb716b94705d3ee0aca4c653981"
+    },
+    {
       "path": "standardization/JunctionToolkit/roundabout_phases.py",
       "bytes": 4242,
       "sha256": "d6e47d8c204a69501eed0629e5cffab1882b614240326e4c24c446c81463573e"
+    },
+    {
+      "path": "standardization/JunctionToolkit/roundabout_random_trial.py",
+      "bytes": 5888,
+      "sha256": "f33e0cbca49cd70a293e15bff591e59f200077bb602027a69b71530883fae966"
+    },
+    {
+      "path": "standardization/JunctionToolkit/roundabout_route.py",
+      "bytes": 2026,
+      "sha256": "7cb62f47b05204ee4ea4307501c3a00e0e427be60b226d24fa5603ec4684798c"
+    },
+    {
+      "path": "standardization/JunctionToolkit/roundabout_sidewalks.py",
+      "bytes": 2112,
+      "sha256": "4602388d5fafdd80f0227f7bed469e7c1d9d1348fb500595549de23d88e39556"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_signal_check.py",
@@ -262,8 +432,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/runtime_finish.py",
-      "bytes": 5532,
-      "sha256": "84383f828eb3c33b30bf2cae461da94480ce1e50702c4c5f222d298b9bd95460"
+      "bytes": 5811,
+      "sha256": "999e564dada883b237add8f2832c58cd80505f58f62fc7f842bc340481527b51"
     },
     {
       "path": "standardization/JunctionToolkit/runtime_sidewalks.py",
@@ -282,8 +452,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/settings.json",
-      "bytes": 101,
-      "sha256": "5993c33fd872c3e09a2c33e47cf9571cfeb6b68f3979e0e52727a762a26a78b1"
+      "bytes": 98,
+      "sha256": "8ad471ad61130e75f43e46e86b9dbcc4b0462e57a66ac4e57b54031c3bb103b9"
     },
     {
       "path": "standardization/JunctionToolkit/standard_preview.py",
@@ -291,29 +461,69 @@
       "sha256": "3804ecdc86cc4fdd4aba36957481547e7292515a2ed99747051e39e05960623b"
     },
     {
+      "path": "standardization/JunctionToolkit/standard_surface_check.py",
+      "bytes": 2441,
+      "sha256": "3bf42716b5ce6c83227959c7e04109233b09011a6d958409ed93b34c62b3b13e"
+    },
+    {
+      "path": "standardization/JunctionToolkit/static_transition.py",
+      "bytes": 5679,
+      "sha256": "6373040b49d094257e784809b8f1ceb50a36f9ae35613033987bdb5b78410e52"
+    },
+    {
       "path": "standardization/JunctionToolkit/template_network.py",
-      "bytes": 7838,
-      "sha256": "1e17975230e4f862ed5e24f83b4a7447d5c757e3040595ad8858cb01a584496f"
+      "bytes": 7910,
+      "sha256": "fc8fb73c2c9d93b264dd2f9e327a7099d937409c80d71bf614da22e0b3b0e2f0"
     },
     {
       "path": "standardization/JunctionToolkit/templates/round_cross2/appearance.json",
-      "bytes": 649,
-      "sha256": "da0ad503703fdb6e38697e5c837305291ec240af0ef7f6f8fb836c2b357d13ce"
+      "bytes": 684,
+      "sha256": "f25ed42ef4f6817170fa500c816cda63f86bf016f364c910324bfc424d1680b1"
     },
     {
       "path": "standardization/JunctionToolkit/templates/t_cross2/appearance.json",
-      "bytes": 1118,
-      "sha256": "386aa434be5ec9e53e6a5339a90a81309d417f043fa37d43a3827d042fb36fff"
+      "bytes": 1158,
+      "sha256": "96dd40ba41fce58e1328e7b0ac618193727b0ffe3cf05dc5f1dadbfbe4cc9f80"
     },
     {
       "path": "standardization/JunctionToolkit/templates/t_cross2/profile.json",
-      "bytes": 470,
-      "sha256": "b2941643e9c339a43a0c411d8382f6b2f68d5c7457b3d1ef9c163b64eb5caf97"
+      "bytes": 550,
+      "sha256": "592747d0081388d55c46ebd2edba0524ed150527d0cdd683a08c3aff6938c745"
+    },
+    {
+      "path": "standardization/JunctionToolkit/templates/t_cross2/README.md",
+      "bytes": 1643,
+      "sha256": "72446da055a830fb7277d6e7c3416a3573ebb2a0f06efde8e31dfcbbe90047ba"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_heterogeneous.py",
+      "bytes": 4953,
+      "sha256": "c1c9e83672aa1005c9fcee41adfbdc5c07b14de98e33df2ac1676fbebc535954"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_heterogeneous_route_audit.py",
+      "bytes": 1181,
+      "sha256": "a532be71cfd5c90fbd44c704e69419461d5479a0ba75632c8a776831bebdea97"
     },
     {
       "path": "standardization/JunctionToolkit/test_layout.py",
       "bytes": 1184,
       "sha256": "5bc9a20b26b47ea1e5551c864b7ddcafc88f584bf35f9c40baca4ea94d69cd77"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_network_appearance_plan.py",
+      "bytes": 2729,
+      "sha256": "7086db111387ede0ff2713c67fef83a86025801e80f7a1559b1078e566f51516"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_network_connectivity.py",
+      "bytes": 2352,
+      "sha256": "eace6393736c3bd7c23c535be1c78639fd5017f864820b53c3ca49683788d525"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_network_display.py",
+      "bytes": 1524,
+      "sha256": "ba7374ad0e9b98498b4b034e7be9e0b7c76be2a11b15765b0c8334907741aa41"
     },
     {
       "path": "standardization/JunctionToolkit/test_network_plan.py",
@@ -341,9 +551,24 @@
       "sha256": "7777572411ae8ed00032e3d998f7a1548e14031ddd988b3ab3352545bd2bbcd6"
     },
     {
+      "path": "standardization/JunctionToolkit/toolkit.cmd",
+      "bytes": 213,
+      "sha256": "3025f235972b0fe59137219a96afa1cefbb91157ff7711a23621d85ba90f4f28"
+    },
+    {
       "path": "standardization/JunctionToolkit/toolkit.py",
-      "bytes": 5069,
-      "sha256": "bf50f162f9218ef4ff4127a1ac692e6e5a6629983c0ca41a28fd336a07292b7c"
+      "bytes": 5636,
+      "sha256": "7fb31bac50a7e25df584751d4af8ac528903a214e78a9215f289dc4e1bcf3015"
+    },
+    {
+      "path": "standardization/JunctionToolkit/transition_connector.py",
+      "bytes": 1828,
+      "sha256": "17a7915825c35fb58d5942249c05421e926acdf1c2d2ea9bac7734642067138a"
+    },
+    {
+      "path": "standardization/JunctionToolkit/transition_sidewalks.py",
+      "bytes": 2332,
+      "sha256": "ec8f97e8b34a843a0257da30338ec0ec13f3a6f2e9521d3ec1fe28c45ad33211"
     },
     {
       "path": "standardization/JunctionToolkit/tree_scenery.py",
@@ -352,23 +577,378 @@
     },
     {
       "path": "standardization/JunctionToolkit/validate.py",
-      "bytes": 8114,
-      "sha256": "4b4543af4a39974e69da6d273dd089a82c4f1ad00f050db57316ad8b17e7336c"
+      "bytes": 8385,
+      "sha256": "16a6c479f4c1ca6d4b09ab5b99ea2d514ecac3803d48cee9d62ba4ec12b88d37"
+    },
+    {
+      "path": "standardization/JunctionToolkit/validate_heterogeneous.py",
+      "bytes": 6532,
+      "sha256": "0d5ce6c03244e6e754c2e5da209d700e35c61f42320e6c1552b51beb62d0fc9b"
+    },
+    {
+      "path": "standardization/JunctionToolkit/validate_heterogeneous_static.py",
+      "bytes": 5761,
+      "sha256": "e4057c520952d3ede01a6344ae1f1911dfdccd50ccba5ad110ca4ef640efb2ff"
+    },
+    {
+      "path": "standardization/JunctionToolkit/validate_network.py",
+      "bytes": 2433,
+      "sha256": "fc41ee7b9b7f45c95dc760af7c92261248866d97829223a2042f829ef275c523"
     },
     {
       "path": "standardization/JunctionToolkit/validate_roundabout.py",
-      "bytes": 6201,
-      "sha256": "4a634907bdeee80a8cebc2e192cebeec6380faea0b27070253167ed04301f7d4"
+      "bytes": 6240,
+      "sha256": "0e95b24a85166006fface8266bb12a5bfa98c01030d53afdd984379263486ce2"
     },
     {
       "path": "standardization/JunctionToolkit/validate_standard.py",
-      "bytes": 5918,
-      "sha256": "b464d5aba499fb205d9bc81132360ef3690c50f4cbc3cfa6ef4a3affbd81e0b8"
+      "bytes": 6125,
+      "sha256": "709d1ea378e42ff0c77bdff3bbac79afa4c40ea55f37ffae96d831be1cb60a55"
     },
     {
       "path": "standardization/JunctionToolkit/view.py",
       "bytes": 8855,
       "sha256": "81420b7cfc210ead087f999eed38b0691edc1814d023d984983c3626fc4bdaa4"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/config.json",
+      "bytes": 585,
+      "sha256": "2c0c6d6018cf3050ea96cea5633ddf6d4fa821e761690528f6465992e91b759f"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/manifest.json",
+      "bytes": 48524,
+      "sha256": "0c80a16aaf701bcbb6aa5e84d336b1345a76c9f47473b7d594be3e17f3e55ee8"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/map.xodr",
+      "bytes": 1399313,
+      "sha256": "9486cd1b265e703cfde8eddc56573de35971902f97dc09c2121a20085cebe2eb"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/safety_rules.json",
+      "bytes": 20231,
+      "sha256": "1ba81de0a0b1581e7ce6108f1e804d2c09b071de129f602c713f3b519585d46e"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/topology_validation.json",
+      "bytes": 33379,
+      "sha256": "7081edea38d429d48d19a8dbc68d66ca92139603ff0a65052a277c24336ca15f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/appearance_compatibility_static.json",
+      "bytes": 32885,
+      "sha256": "efb4e03022cc440297fdecdb1ebedbf3640f97a3dadb1cf464b45ca5b8a3b6d7"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/appearance_preview_report.json",
+      "bytes": 47651,
+      "sha256": "27d6008003a6e7b08cd7e9c924de4dd7a5612b60f0208d234c3920d053d9bb53"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/config.json",
+      "bytes": 595,
+      "sha256": "6a5b22e8be6b6511f87c387ffd8a102914c17143ac6d51c05668335c83e9b30b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/load_report.json",
+      "bytes": 47651,
+      "sha256": "27d6008003a6e7b08cd7e9c924de4dd7a5612b60f0208d234c3920d053d9bb53"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/manifest.json",
+      "bytes": 33633,
+      "sha256": "f8f2cda51ab39a84f2a43608f0d0153b1645a3d590ce1fc4ce1b38632f8ca53a"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/map.xodr",
+      "bytes": 822724,
+      "sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/overview.png",
+      "bytes": 1079373,
+      "sha256": "4608281a9cdc0c2c1a8a0b5330a15e7473a2776948aa494079290c943f0b256b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/safety_rules.json",
+      "bytes": 10569,
+      "sha256": "dd0c89c954ba8604feba9002d6bded31b24e6c5c24df1aefa7a68cf11092e13b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/continuous_drive_validation.json",
+      "bytes": 4304,
+      "sha256": "2975139d6b76a5dc33f44e5b3e39fc210a5a1a76d0c3804989c2f66dc6937c9b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/continuous_route.json",
+      "bytes": 149577,
+      "sha256": "9eb8545f9495837368e2650145ef30219618da3f0d68d51eb7aa19ff304128dd"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/continuous_trajectory.json",
+      "bytes": 128021,
+      "sha256": "08cdcc68bb21a4a9cf45d901c2d96243e0389a55966a1adfdc7a848d7d8551cf"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/drive_progress.json",
+      "bytes": 3561,
+      "sha256": "cf7b825d26a85d67ee1c39c24d6102cb170d60dc54369ca898823aade4ebd266"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/finish.png",
+      "bytes": 454012,
+      "sha256": "b9f385efb208385b0946d4329bb027d5478b6559257da0f428760c08426e0740"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/start.png",
+      "bytes": 456552,
+      "sha256": "517b8eca575b27d175e2e75bb769ffdb567633f3e8e54e264e7df052a0557e71"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_01_junction_10.png",
+      "bytes": 510020,
+      "sha256": "42137d98743f6ff09868f55b4a8494937992d0ddb2fc1be133443933a5440b3e"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_02_junction_10010.png",
+      "bytes": 518527,
+      "sha256": "2252dd4f8e5d1acbe2e351c75c846baf1096952ff93b42292e32353fd3898d5d"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_03_junction_20010.png",
+      "bytes": 504287,
+      "sha256": "003748d7e425fd74d495cafd10f2b60830946e959c02b4386fb3720e29b76076"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_04_junction_30010.png",
+      "bytes": 509419,
+      "sha256": "680333045b9235cc3a03613a88cf2640c2db5edaa3ca523e084e2734be6fedf1"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_05_junction_40010.png",
+      "bytes": 508778,
+      "sha256": "983bee70e67078a5c2a08da5f5dc69d4436e043c13a0de88cf3bc34319931a84"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/follow_camera/visit_06_junction_50010.png",
+      "bytes": 513226,
+      "sha256": "38f1a3bf4d8c5c33603468cf6eeab83ffc1f9c34ade65fb71504c926c3e0b5a4"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/simple_appearance.json",
+      "bytes": 37764,
+      "sha256": "a47bc0de97afd25a5cd235037c7a2cbd9f6f13728b601f530113bccc100aa3da"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/static_validation.json",
+      "bytes": 382,
+      "sha256": "c758cbc5cfdfe83467d3fcf96d93e0f1ffb8e31c0d03e5a5d94950c3660cce9f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/street.png",
+      "bytes": 1141680,
+      "sha256": "9236261aa570d348cec7d77613cb3b39435f8365fa16b7204f233b42fe2ac5c0"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/topology_validation.json",
+      "bytes": 26589,
+      "sha256": "db344de284c9722441f71745d262bda656a44f191006085c09848876dddd0ad3"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/appearance_compatibility_static.json",
+      "bytes": 56661,
+      "sha256": "99c4d11c059ed10b78f58d7eaf34b6d0ef2705cf7057a5501595562c979fcaaf"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/appearance_preview_report.json",
+      "bytes": 257335,
+      "sha256": "687ed14fee59f9302dadef1806bcc507b7740e709e354d3b576794d72f2fbc29"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/config.json",
+      "bytes": 798,
+      "sha256": "e76e336342fa3eb321337c17ca238ee68c28038e47f08b7df35030cde51530c2"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/load_report.json",
+      "bytes": 257335,
+      "sha256": "687ed14fee59f9302dadef1806bcc507b7740e709e354d3b576794d72f2fbc29"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/manifest.json",
+      "bytes": 64362,
+      "sha256": "15620d4fd3579da6c529abb34102e2e657ad3607f135481a7f0b61a2d0cd2a48"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/map.xodr",
+      "bytes": 1211163,
+      "sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/overview.png",
+      "bytes": 1090156,
+      "sha256": "e32b12113df0b6eea40d942948486ece3e08ebcee04ec3ecc59b1c917f95e684"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/safety_rules.json",
+      "bytes": 16803,
+      "sha256": "3b17a189d5bbbbdb522302068cff74a2848f4b9b638f3a505595b3d4cb90cedc"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/continuous_drive_validation.json",
+      "bytes": 10656,
+      "sha256": "f2a8599787ab70c2b1e44e844dcef0d3516dbb0b680ce0dade567fe20373ffe7"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/continuous_route.json",
+      "bytes": 298916,
+      "sha256": "e589477780c55ec448a83c63f742db721437b33a84d307a98475891909af2e2f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/continuous_trajectory.json",
+      "bytes": 225237,
+      "sha256": "c0804105e1baadbf0634dd938f73fb11a0482985e778a96012a7744fd32b591b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/drive_progress.json",
+      "bytes": 9311,
+      "sha256": "65e5968647d76fd9b8676db80e9ad41eb92fdf59317e356c55f9069b9e22a7d4"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/finish.png",
+      "bytes": 459238,
+      "sha256": "0bd329db4d53574183eb4f94e48e1bf5b52b5460e6c93018ca81e87a326726a3"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/start.png",
+      "bytes": 460692,
+      "sha256": "b275e4b761f8f42790771a0f86159d2f3f2ff7da727dbfb691bbc0d448df8800"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_01_junction_60010.png",
+      "bytes": 495146,
+      "sha256": "8ad3fcea0221ada0cb4abf7f2f65ba7d720238ff94c132f740ebaa76efb5e2c6"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_02_junction_70010.png",
+      "bytes": 517239,
+      "sha256": "c67f756693ecd90f6638a5d65619bf0b8901c9c252920177aeb34cecf9f5d292"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_03_junction_40013.png",
+      "bytes": 557514,
+      "sha256": "e1719f63eec82858ba6aa18b05da8a9b187716f0e8c439e393197558b9ba3f0f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_04_junction_40010.png",
+      "bytes": 550012,
+      "sha256": "490089a175bf5b5aa64d0d3835ce8507878640cf3f6626eb6bc3e8528b0789a5"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_05_junction_40011.png",
+      "bytes": 562840,
+      "sha256": "62487c029cae1eba613c3c5189ce7aa3c47043f8fa4a54896dd79983ce9ce573"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_06_junction_40012.png",
+      "bytes": 547084,
+      "sha256": "835bc26aa81d326f65bf78a7ae2b228704e91d1ec81e7a89a99700227a12c37f"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_07_junction_40013.png",
+      "bytes": 542607,
+      "sha256": "b2005c3d7794901e1c9857b05adf86733cb4477b1eee2d6430aca75bf5fd17d2"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_08_junction_40010.png",
+      "bytes": 552940,
+      "sha256": "6a5e80f7d403654686d10e2554921d2169bda247c496ea6a0913e080192e04e3"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_09_junction_30010.png",
+      "bytes": 471046,
+      "sha256": "4d7991d18c3fd2667bf24619646b4e1177d7244c0d140e58e296d0c4cd2e1607"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_10_junction_10.png",
+      "bytes": 481813,
+      "sha256": "36529d8eb1f0fe847cd0e7671868c9c9ae6bd5a2a1403f817215bcef7500de2d"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_11_junction_10010.png",
+      "bytes": 494728,
+      "sha256": "3a284bf3ca18866822c744d3d92fa4330eaff2dac202c1c4ce1e6eb5acc70bb0"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_12_junction_20010.png",
+      "bytes": 495577,
+      "sha256": "e1fa86d243e66707fc07539e4dfa7db54b03d048fc796b2eaf5357abfb364efc"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_13_junction_50010.png",
+      "bytes": 506448,
+      "sha256": "273e262d92f82aa9306ab89e22fd5e43c2a7eea52df5ceda63adeb143eb927cd"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/follow_camera/visit_14_junction_80010.png",
+      "bytes": 505182,
+      "sha256": "14f5c6f8988b56613422f9c27078401c743fa8debe0ef8378ca3a89708c5f236"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/ring_sidewalk_appearance.json",
+      "bytes": 79753,
+      "sha256": "44a90a592aa859c4edd934d8144c033288f4d833233f8ee1c3f2b1cfb1ff36a7"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/simple_appearance.json",
+      "bytes": 61861,
+      "sha256": "1fde22637405e77a182084ee73c935bb1f482882474df9888d4f7db7fd8854b1"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/static_validation.json",
+      "bytes": 420,
+      "sha256": "d26aa164f0229db339b2883870b3f71bf2b43ef86aac586121abfabd30a1d173"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/street.png",
+      "bytes": 1235560,
+      "sha256": "400bab2b166dc06c55a48518cdfc0e0bf7d39c1b00ad7cf017f5593ca5a8c850"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/topology_validation.json",
+      "bytes": 63240,
+      "sha256": "d12f614c3b93cbbc47b3e88116c6317dd31bf975b197fb84a81b5ef5262ede22"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/config.json",
+      "bytes": 707,
+      "sha256": "efc7caeaf230febde72074a5ca5dd27baaf4eb85799acb5217ebb2c3e7e82361"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/manifest.json",
+      "bytes": 53793,
+      "sha256": "234dff1a603ba36a95eecf8f1bb9785098eaaa1ad0ab447062dc92709c9adb77"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/map.xodr",
+      "bytes": 1337895,
+      "sha256": "45b934325e0da8e00723b20453a6196bf41d2f303484a2f96e2c013bcfa083a6"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/safety_rules.json",
+      "bytes": 17013,
+      "sha256": "61a45d544d4a9a0be42626f97759946017310ed3efdf195e2365648b845a5b2e"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/static_validation.json",
+      "bytes": 419,
+      "sha256": "0ec02e0d4a9e6e8fe27683e99b01fef6cfc2d2e3ec7212997b442b2bf3a369eb"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/topology_validation.json",
+      "bytes": 51330,
+      "sha256": "746471069b54bd244f85a643cb441dc2fa082af453a8c32ebb9e6b839215904e"
     },
     {
       "path": "standardization/maps/mixed_1x6/admission_topology.json",
@@ -416,6 +996,31 @@
       "sha256": "95c99472a7bb6b23b90499f15b369318f8256b743e7fdb070b13b1e7ec4eaaf5"
     },
     {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/config.json",
+      "bytes": 1065,
+      "sha256": "a3ec2a99882e72de4beff42824b5c0059116d72daadbef106b05516f32610b35"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/manifest.json",
+      "bytes": 46614,
+      "sha256": "65aa58cb798aea7e64827362f16d4bc9c4a58a959f8de7f4037bf4135204c663"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/map.xodr",
+      "bytes": 1257887,
+      "sha256": "ceb0cc0691e2ca520cfb6392c1ef3531aeb5ec0d7b9679def3ed870a69daa117"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/safety_rules.json",
+      "bytes": 17516,
+      "sha256": "51467cd8f67f89f8026bd5534b97b22e0b0ee3d8890c45f5320e0a205098eb8e"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/topology_validation.json",
+      "bytes": 28623,
+      "sha256": "fc0f27df99150eae6543bf84b909ff7cc904d3587c7e139a12c66b052dd84785"
+    },
+    {
       "path": "standardization/maps/package_smoke_t/admission_topology.json",
       "bytes": 6244,
       "sha256": "3610ae11bd466dce6dae235c86bf224d82dc26fdca5e8408331312126e0bc953"
@@ -444,6 +1049,36 @@
       "path": "standardization/maps/package_smoke_t/topology_validation.json",
       "bytes": 6244,
       "sha256": "3610ae11bd466dce6dae235c86bf224d82dc26fdca5e8408331312126e0bc953"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/config.json",
+      "bytes": 463,
+      "sha256": "602a842f4fd677556d9b1d09fcf3d16b087c51f7fecd21573854f950475cacb5"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/load_report.json",
+      "bytes": 264458,
+      "sha256": "cdba1f50bcedf8b9372f0676d610bd66dfc534f2edb42bb4483e8075ad69f62d"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/manifest.json",
+      "bytes": 22622,
+      "sha256": "b4165f1eeea86614b31c70dd18e51ff752f58f39c45db559f38dd5e60a936288"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/map.xodr",
+      "bytes": 57379,
+      "sha256": "e1af4b19d6eac1f4d706ecb5d0213e4977c259159125309b6e662410a469e214"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/overview.png",
+      "bytes": 2324139,
+      "sha256": "111aa8986fac1e41b4dbf468d63db909d3af059c0dc6a3e19e58a612c93ec99d"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/topology_validation.json",
+      "bytes": 12225,
+      "sha256": "8bbda5d6de79bae66c8a2953ceeb8a3192a2314e7a9fbc28cb99cce585b7c48a"
     },
     {
       "path": "standardization/maps/t_1x6/admission_topology.json",
@@ -489,6 +1124,31 @@
       "path": "standardization/maps/t_1x6/topology_validation.json",
       "bytes": 6244,
       "sha256": "e6ce4a1e7674923680c077ef6e0b8325a36f1af57cde0426f888536e4d40495c"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/config.json",
+      "bytes": 1077,
+      "sha256": "ec75f1e96bedcc8865532c70ddbe87ecb624f4c8212c0089f1d81aba066d60b7"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/manifest.json",
+      "bytes": 26984,
+      "sha256": "17c4e13a62ca3aa9b86a70ffa819620b51faceccbc1aeed4e34120fd6a81e32f"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/map.xodr",
+      "bytes": 953611,
+      "sha256": "69d99009b87b35d640de5731096d4681448abb82797d64a4d8310e83a004cb34"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/safety_rules.json",
+      "bytes": 10529,
+      "sha256": "0094439ef933231052f900d0e5fc4460ccc44ad23ddc2620367f9b0fb8e2b013"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/topology_validation.json",
+      "bytes": 16990,
+      "sha256": "3c4ea776ef7511f0e8bfe2d64893df3a4b3a4aa0ac2045460194fb16139a312f"
     }
   ]
 }

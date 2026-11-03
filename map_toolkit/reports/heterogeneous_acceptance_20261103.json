@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "map": "heterogeneous_3x3_roundabout_sidewalks_20261103",
+      "passed": true,
+      "appearance_mode": "simple",
+      "distance_m": 4406.527302205563,
+      "junctions": 12,
+      "collisions": 0,
+      "max_tracking_error_m": 0.6887705326080322,
+      "sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f"
+    },
+    {
+      "map": "heterogeneous_1x6_20261103",
+      "passed": true,
+      "appearance_mode": "simple",
+      "distance_m": 2747.0,
+      "junctions": 6,
+      "collisions": 0,
+      "max_tracking_error_m": 0.5000033974647522,
+      "sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481"
+    }
+  ],
+  "limits": "Single vehicle all-green connectivity, not signal policy validation"
+}

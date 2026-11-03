@@ -6,7 +6,9 @@ import carla
 def build(world, design):
     if design.get('signal_policy') != 'one_signal_per_incoming_lane':
         return None
-    road_map=world.get_map();n=design['config']['incoming_lanes'];width=design['config']['lane_width_m']
+    road_map=world.get_map()
+    from network_appearance_plan import plan
+    approaches=plan(design,road_map.to_opendrive())['roads']
     lights={l.get_opendrive_id():l for l in world.get_actors().filter('traffic.traffic_light')}
     poses=[]
     for sid,cfg in design['signals'].items():
@@ -43,9 +45,10 @@ def build(world, design):
             raise RuntimeError('Gantry beam rotation mismatch')
         origin=carla.Location(start.x-unit.x*bottom*scale,start.y-unit.y*bottom*scale,start.z-unit.z*bottom*scale)
         mesh(asset,origin,rotation,scale)
-    for j in design['junctions']:
-        for rid,length_m in zip(j['roads'],j['lengths']):
-            wp=road_map.get_waypoint_xodr(rid,-1,length_m-3)
+    for approach in approaches:
+        if approach['signal_ids']:
+            rid=approach['road_id'];n=approach['incoming_lanes'];width=approach['lane_width_m']
+            wp=road_map.get_waypoint_xodr(rid,-1,approach['signal_s'])
             right=wp.transform.get_right_vector();forward=wp.transform.get_forward_vector()
             # Official complete mast/curved arm/street-lamp mesh; local +X
             # points from the roadside pole into the road.
@@ -53,7 +56,7 @@ def build(world, design):
                 p=wp.transform.location
                 return carla.Location(p.x+right.x*(lateral-width/2)-forward.x*.42,
                                       p.y+right.y*(lateral-width/2)-forward.y*.42,z)
-            curb=n*width+design['config'].get('shoulder_width_m',0)+.8
+            curb=n*width+approach['shoulder_width_m']+.8
             model='SM_TrafficLight01' if n>=3 else 'SM_TrafficLight02'
             span=11.879336 if n>=3 else 7.31334
             scale=max(1.,(curb-.35)/span)

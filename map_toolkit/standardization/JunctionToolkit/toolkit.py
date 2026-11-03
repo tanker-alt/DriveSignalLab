@@ -15,12 +15,13 @@ def main():
     g=commands.add_parser('generate');g.add_argument('--config',required=True);g.add_argument('--out',required=True)
     hy=commands.add_parser('random-grid',help='Connected heterogeneous junction network');hy.add_argument('--config',required=True);hy.add_argument('--out',required=True)
     tn=commands.add_parser('random-t',help='Connected two-lane pure T network');tn.add_argument('--config',required=True);tn.add_argument('--out',required=True)
+    ht=commands.add_parser('heterogeneous',help='Two-lane T and three-lane cross with physical taper roads');ht.add_argument('--config',required=True);ht.add_argument('--out',required=True)
     rr=commands.add_parser('roadrunner-base',help='Undecorated driving network for RoadRunner')
     rr.add_argument('--source',required=True);rr.add_argument('--out',required=True)
     ring=commands.add_parser('roundabout',help='Experimental two-lane ring with four two-in/two-out arms and internal signals')
     ring.add_argument('--out',required=True);ring.add_argument('--radius',type=float,default=30)
     ring.add_argument('--arm-length',type=float,default=120);ring.add_argument('--lane-width',type=float,default=3.5)
-    for cmd in ['validate','view','drive-check','experiment']:
+    for cmd in ['validate','view','drive-check','network-drive-check','experiment']:
         sub=commands.add_parser(cmd);sub.add_argument('map_dir')
     commands.add_parser('doctor')
     a,rest=p.parse_known_args()
@@ -67,13 +68,18 @@ def main():
         if rest:p.error('Unknown generation options: '+' '.join(rest))
         call('generator','generate.py',['--config',a.config,'--out',a.out])
         call('carla','validate.py',[a.out])
+    elif a.command=='heterogeneous':
+        if rest:p.error('Unknown generation options: '+' '.join(rest))
+        call('generator','heterogeneous.py',['--config',a.config,'--out',a.out])
+        call('generator','validate_heterogeneous_static.py',[a.out])
     elif a.command in ('random-grid','random-t'):
         map_output(a.out)
         if rest:p.error('Unknown generation options: '+' '.join(rest))
         call('generator','random_t_network.py' if a.command=='random-t' else 'random_grid.py',['--config',a.config,'--out',a.out])
+        call('carla','validate.py',[a.out])
         call('carla','audit_experiment_map.py',[a.out])
     else:
-        script={'validate':'validate.py','view':'view.py','drive-check':'drive_check.py','experiment':'experiment.py'}[a.command]
+        script={'validate':'validate.py','view':'view.py','drive-check':'drive_check.py','network-drive-check':'network_route_check.py','experiment':'experiment.py'}[a.command]
         if a.command=='experiment' and not settings.get('project'):
             raise ValueError('External evaluation integration is disabled; explicitly configure project in settings.local.json to use it')
         extra=['--project',str((root/settings['project']).resolve())] if a.command=='experiment' else []

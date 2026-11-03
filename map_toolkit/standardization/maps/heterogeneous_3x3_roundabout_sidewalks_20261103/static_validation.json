@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f",
+  "logical_cells": 9,
+  "physical_junctions": 12,
+  "transitions": 10,
+  "roundabouts": 1,
+  "logical_itinerary": [
+    60010,
+    70010,
+    40010,
+    30010,
+    10,
+    10010,
+    20010,
+    50010,
+    80010
+  ],
+  "carla_validation_performed": false,
+  "driving_acceptance": "not_run"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "syntax_files": 75,
+  "json_files": 95,
+  "readme_links_passed": true,
+  "forbidden_files": [],
+  "focused_tests_passed": 12,
+  "carla_simple_drive_cases_passed": 2,
+  "preview_cases_passed": 3,
+  "excluded_legacy_source": [
+    "wizard.py: corrupted encoding, unused by supported CLI"
+  ],
+  "scope": "Publication copy tests and source CARLA runs; hashes bind curated maps to reports"
+}

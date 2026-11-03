@@ -1,0 +1,45 @@
+{
+  "name": "heterogeneous_3x3",
+  "rows": 3,
+  "columns": 3,
+  "spacing_m": 500,
+  "seed": 42,
+  "include_roundabout": false,
+  "type": "heterogeneous",
+  "layout": [
+    {
+      "type": "cross"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "t",
+      "missing_arm": "east"
+    },
+    {
+      "type": "t",
+      "missing_arm": "south"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "t",
+      "missing_arm": "east"
+    }
+  ],
+  "lane_width_m": 3.5,
+  "arm_length_m": 150.0,
+  "t_probability": 0.5,
+  "cross_probability": 0.5
+}

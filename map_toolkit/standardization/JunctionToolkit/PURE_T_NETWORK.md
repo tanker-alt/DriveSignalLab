@@ -1,7 +1,7 @@
 # 两车道纯三叉随机路网
 
 ```powershell
-python standardization/JunctionToolkit/toolkit.py random-t --config CONFIG.json --out NEW_MAP_DIRECTORY
+python Toolkits/JunctionToolkit/toolkit.py random-t --config CONFIG.json --out NEW_MAP_DIRECTORY
 ```
 
 配置示例：

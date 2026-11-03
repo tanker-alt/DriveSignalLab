@@ -13,8 +13,7 @@ ASSET = '/Game/Carla/Static/RoadLine/SM_BassicTrafficLineCube_trafficlineCube.SM
 def build(world, design):
     library = world.get_blueprint_library()
     ids = []
-    width = float(design['config']['lane_width_m'])
-    lanes = int(design['config']['incoming_lanes'])
+    from network_appearance_plan import plan
 
     def bar(location, yaw, length):
         bp = library.find('static.prop.mesh')
@@ -28,8 +27,9 @@ def build(world, design):
 
     reports = []
     road_map = world.get_map()
-    for junction in design['junctions']:
-        for rid, length in zip(junction['roads'], junction['lengths']):
+    for approach in plan(design,road_map.to_opendrive())['roads']:
+        if approach['signal_ids']:
+            rid=approach['road_id'];width=approach['lane_width_m'];lanes=approach['incoming_lanes']
             stations = {float(signal['reference_s']) for signal in design['signals'].values()
                         if signal['road_id'] == rid}
             if len(stations) != 1:

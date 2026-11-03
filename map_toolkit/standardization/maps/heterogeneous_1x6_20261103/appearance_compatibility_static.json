@@ -1,0 +1,1197 @@
+{
+  "passed": true,
+  "scope": "static appearance compatibility only",
+  "opendrive_sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481",
+  "source_sha256": {
+    "network_appearance_plan.py": "fdf25c8804345c5ea30e599cb8f14de5677971131196594fd4bf005d8e4fbc45",
+    "network_preview.py": "5f67aaa6953c977cec211d2fc0521f7974dcb9a3bebd1b7f14e890e76a26ac94",
+    "network_simple_finish.py": "acf6df5632d693172d01502427a157cb47f679dc9cbda9941eda96189e32f62c",
+    "runtime_finish.py": "999e564dada883b237add8f2832c58cd80505f58f62fc7f842bc340481527b51",
+    "lane_signals.py": "b1ab55c169b7745e4e29ca999ed4c8a4c74dbdd38c1b5374d88da39d42415c7c",
+    "ring_sidewalk_finish.py": "fa187d8c51e5005c92d93c82a92ba11a05fa22eb803228bd30fe24728fd3edbb",
+    "configs/appearance_standard.json": "70e1edf2bab2d71b0a79b1f37389364950fa0cc0851332641a907c0865818e77"
+  },
+  "modes": {
+    "simple": {
+      "mode": "simple",
+      "roads": [
+        {
+          "road_id": 1,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1011",
+            "1012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 3,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1031",
+            "1032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 4,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1041",
+            "1042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11011",
+            "11012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11031",
+            "11032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11041",
+            "11042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21011",
+            "21012",
+            "21013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21021",
+            "21022",
+            "21023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21031",
+            "21032",
+            "21033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21041",
+            "21042",
+            "21043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31011",
+            "31012",
+            "31013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31021",
+            "31022",
+            "31023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31031",
+            "31032",
+            "31033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31041",
+            "31042",
+            "31043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41011",
+            "41012",
+            "41013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41021",
+            "41022",
+            "41023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41031",
+            "41032",
+            "41033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41041",
+            "41042",
+            "41043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51011",
+            "51012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51031",
+            "51032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51041",
+            "51042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        }
+      ],
+      "style": {
+        "version": 2,
+        "scope": "Shared appearance policy for future junction and network generators",
+        "supported_runtime_geometry": "flat urban_cross3_v1 cross and regular grid",
+        "sidewalk": {
+          "diffuse_reference": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Concrete1_Diff.png",
+          "runtime_status": "pending: procedural sidewalk is not exposed as a texture-addressable object"
+        },
+        "grass": {
+          "mesh": "Ground/Town10HD/Town10HD_Terrain_Ground_26Node",
+          "material": "Grass1_Ground",
+          "surface_z_m": -0.2
+        },
+        "markings": {
+          "approach_solid_length_m": 0,
+          "dash_length_m": 3,
+          "dash_gap_m": 6,
+          "paint_top_m": 0.001,
+          "stop_line_lanes": "incoming_only",
+          "stop_line_position": "upstream_of_crosswalk",
+          "center": "double_yellow_solid",
+          "same_direction": "white_broken",
+          "debug_lines": false
+        },
+        "signals": "CARLA curved mast and independent controllable native heads",
+        "trees": "CARLA SM_Acer_02, SM_Beech, SM_Cypress; exclude road and sidewalk buffers"
+      },
+      "grass": false,
+      "trees": false,
+      "roadside_props": false,
+      "ring_perimeter": false,
+      "native_transition_markings": true,
+      "carla_validation_performed": false,
+      "enabled": true,
+      "mast_count": 21,
+      "stop_line_count": 21,
+      "circulating_signal_road_count": 0,
+      "paint_road_count": 0
+    },
+    "complete": {
+      "mode": "complete",
+      "roads": [
+        {
+          "road_id": 1,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1011",
+            "1012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 3,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1031",
+            "1032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 4,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1041",
+            "1042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11011",
+            "11012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11031",
+            "11032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11041",
+            "11042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21011",
+            "21012",
+            "21013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21021",
+            "21022",
+            "21023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21031",
+            "21032",
+            "21033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21041",
+            "21042",
+            "21043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31011",
+            "31012",
+            "31013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31021",
+            "31022",
+            "31023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31031",
+            "31032",
+            "31033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31041",
+            "31042",
+            "31043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41011",
+            "41012",
+            "41013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41021",
+            "41022",
+            "41023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41031",
+            "41032",
+            "41033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41041",
+            "41042",
+            "41043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51011",
+            "51012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51031",
+            "51032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51041",
+            "51042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        }
+      ],
+      "style": {
+        "version": 2,
+        "scope": "Shared appearance policy for future junction and network generators",
+        "supported_runtime_geometry": "flat urban_cross3_v1 cross and regular grid",
+        "sidewalk": {
+          "diffuse_reference": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Concrete1_Diff.png",
+          "runtime_status": "pending: procedural sidewalk is not exposed as a texture-addressable object"
+        },
+        "grass": {
+          "mesh": "Ground/Town10HD/Town10HD_Terrain_Ground_26Node",
+          "material": "Grass1_Ground",
+          "surface_z_m": -0.2
+        },
+        "markings": {
+          "approach_solid_length_m": 0,
+          "dash_length_m": 3,
+          "dash_gap_m": 6,
+          "paint_top_m": 0.001,
+          "stop_line_lanes": "incoming_only",
+          "stop_line_position": "upstream_of_crosswalk",
+          "center": "double_yellow_solid",
+          "same_direction": "white_broken",
+          "debug_lines": false
+        },
+        "signals": "CARLA curved mast and independent controllable native heads",
+        "trees": "CARLA SM_Acer_02, SM_Beech, SM_Cypress; exclude road and sidewalk buffers"
+      },
+      "grass": false,
+      "trees": false,
+      "roadside_props": false,
+      "ring_perimeter": false,
+      "native_transition_markings": true,
+      "carla_validation_performed": false,
+      "enabled": true,
+      "mast_count": 21,
+      "stop_line_count": 21,
+      "circulating_signal_road_count": 0,
+      "paint_road_count": 21
+    },
+    "off": {
+      "mode": "off",
+      "roads": [
+        {
+          "road_id": 1,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1011",
+            "1012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 3,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1031",
+            "1032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 4,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "1041",
+            "1042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11011",
+            "11012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11031",
+            "11032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 10004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "11041",
+            "11042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21011",
+            "21012",
+            "21013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21021",
+            "21022",
+            "21023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21031",
+            "21032",
+            "21033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 20004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "21041",
+            "21042",
+            "21043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31011",
+            "31012",
+            "31013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31021",
+            "31022",
+            "31023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31031",
+            "31032",
+            "31033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 30004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "31041",
+            "31042",
+            "31043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40001,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41011",
+            "41012",
+            "41013"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40002,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41021",
+            "41022",
+            "41023"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40003,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41031",
+            "41032",
+            "41033"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 40004,
+          "length": 150.0,
+          "incoming_lanes": 3,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "41041",
+            "41042",
+            "41043"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50001,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51011",
+            "51012"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50003,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51031",
+            "51032"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        },
+        {
+          "road_id": 50004,
+          "length": 150.0,
+          "incoming_lanes": 2,
+          "lane_width_m": 3.5,
+          "stop_s": 142.85,
+          "signal_s": 147.0,
+          "signal_ids": [
+            "51041",
+            "51042"
+          ],
+          "circulating": false,
+          "crosswalk": true,
+          "centerline": true,
+          "shoulder_width_m": 0
+        }
+      ],
+      "style": {
+        "version": 2,
+        "scope": "Shared appearance policy for future junction and network generators",
+        "supported_runtime_geometry": "flat urban_cross3_v1 cross and regular grid",
+        "sidewalk": {
+          "diffuse_reference": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Concrete1_Diff.png",
+          "runtime_status": "pending: procedural sidewalk is not exposed as a texture-addressable object"
+        },
+        "grass": {
+          "mesh": "Ground/Town10HD/Town10HD_Terrain_Ground_26Node",
+          "material": "Grass1_Ground",
+          "surface_z_m": -0.2
+        },
+        "markings": {
+          "approach_solid_length_m": 0,
+          "dash_length_m": 3,
+          "dash_gap_m": 6,
+          "paint_top_m": 0.001,
+          "stop_line_lanes": "incoming_only",
+          "stop_line_position": "upstream_of_crosswalk",
+          "center": "double_yellow_solid",
+          "same_direction": "white_broken",
+          "debug_lines": false
+        },
+        "signals": "CARLA curved mast and independent controllable native heads",
+        "trees": "CARLA SM_Acer_02, SM_Beech, SM_Cypress; exclude road and sidewalk buffers"
+      },
+      "grass": false,
+      "trees": false,
+      "roadside_props": false,
+      "ring_perimeter": false,
+      "native_transition_markings": true,
+      "carla_validation_performed": false,
+      "enabled": false,
+      "mast_count": 0,
+      "stop_line_count": 0,
+      "circulating_signal_road_count": 0,
+      "paint_road_count": 0
+    }
+  },
+  "carla_imported": false,
+  "carla_validation_performed": false,
+  "runtime_checks_pending": [
+    "native signal head alignment",
+    "asset loading and visual placement",
+    "collision finalization",
+    "render performance"
+  ]
+}
