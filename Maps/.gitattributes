@@ -1,0 +1,4 @@
+# Preserve the bytes used by map, route and release SHA256 fingerprints.
+*.xodr -text whitespace=cr-at-eol
+*.json -text whitespace=cr-at-eol
+*.py text eol=lf

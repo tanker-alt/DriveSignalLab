@@ -1,0 +1,890 @@
+{
+  "schema_version": "safety_rules.1",
+  "opendrive_sha256": "9486cd1b265e703cfde8eddc56573de35971902f97dc09c2121a20085cebe2eb",
+  "coordinate_system": "OpenDRIVE road_id/lane_id/s_m; resolved world coordinates use CARLA XY",
+  "geometry_status": "designed_stop_line_not_tm_calibrated",
+  "position_source": "Map-designed stop line, 1m upstream of crosswalk paint",
+  "line_convention": "Transverse lane-width segment centered at s_m; paint is centered on this segment",
+  "visualization": {
+    "color_rgb": [
+      90,
+      90,
+      90
+    ],
+    "thickness_m": 0.01,
+    "height_above_road_m": 0.01
+  },
+  "stop_lines": [
+    {
+      "id": "stop_1_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_1_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_1_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1013",
+      "road_id": 1,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1021",
+      "road_id": 2,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1022",
+      "road_id": 2,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_2_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1023",
+      "road_id": 2,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_3_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_3_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_3_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1033",
+      "road_id": 3,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_4_-1",
+      "junction_id": 10,
+      "signal_opendrive_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_4_-2",
+      "junction_id": 10,
+      "signal_opendrive_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_4_-3",
+      "junction_id": 10,
+      "signal_opendrive_id": "1043",
+      "road_id": 4,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10001_-1",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11011",
+      "road_id": 10001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10001_-2",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11012",
+      "road_id": 10001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10001_-3",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11013",
+      "road_id": 10001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10002_-1",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11021",
+      "road_id": 10002,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_10002_-2",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11022",
+      "road_id": 10002,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_10002_-3",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11023",
+      "road_id": 10002,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_10003_-1",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11031",
+      "road_id": 10003,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10003_-2",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11032",
+      "road_id": 10003,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10003_-3",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11033",
+      "road_id": 10003,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10004_-1",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11041",
+      "road_id": 10004,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10004_-2",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11042",
+      "road_id": 10004,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_10004_-3",
+      "junction_id": 10010,
+      "signal_opendrive_id": "11043",
+      "road_id": 10004,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20001_-1",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21011",
+      "road_id": 20001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20001_-2",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21012",
+      "road_id": 20001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20001_-3",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21013",
+      "road_id": 20001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20002_-1",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21021",
+      "road_id": 20002,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20002_-2",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21022",
+      "road_id": 20002,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20002_-3",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21023",
+      "road_id": 20002,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20003_-1",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21031",
+      "road_id": 20003,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20003_-2",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21032",
+      "road_id": 20003,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20003_-3",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21033",
+      "road_id": 20003,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_20004_-1",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21041",
+      "road_id": 20004,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20004_-2",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21042",
+      "road_id": 20004,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_20004_-3",
+      "junction_id": 20010,
+      "signal_opendrive_id": "21043",
+      "road_id": 20004,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30001_-1",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31011",
+      "road_id": 30001,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_30001_-2",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31012",
+      "road_id": 30001,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_30001_-3",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31013",
+      "road_id": 30001,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_30002_-1",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31021",
+      "road_id": 30002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30002_-2",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31022",
+      "road_id": 30002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30002_-3",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31023",
+      "road_id": 30002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30003_-1",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31031",
+      "road_id": 30003,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30003_-2",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31032",
+      "road_id": 30003,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30003_-3",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31033",
+      "road_id": 30003,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30004_-1",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31041",
+      "road_id": 30004,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30004_-2",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31042",
+      "road_id": 30004,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_30004_-3",
+      "junction_id": 30010,
+      "signal_opendrive_id": "31043",
+      "road_id": 30004,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40001_-1",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41011",
+      "road_id": 40001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40001_-2",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41012",
+      "road_id": 40001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40001_-3",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41013",
+      "road_id": 40001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40002_-1",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41021",
+      "road_id": 40002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40002_-2",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41022",
+      "road_id": 40002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40002_-3",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41023",
+      "road_id": 40002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40003_-1",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41031",
+      "road_id": 40003,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40003_-2",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41032",
+      "road_id": 40003,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40003_-3",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41033",
+      "road_id": 40003,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40004_-1",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41041",
+      "road_id": 40004,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40004_-2",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41042",
+      "road_id": 40004,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_40004_-3",
+      "junction_id": 40010,
+      "signal_opendrive_id": "41043",
+      "road_id": 40004,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50001_-1",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51011",
+      "road_id": 50001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50001_-2",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51012",
+      "road_id": 50001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50001_-3",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51013",
+      "road_id": 50001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50002_-1",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51021",
+      "road_id": 50002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50002_-2",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51022",
+      "road_id": 50002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50002_-3",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51023",
+      "road_id": 50002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50003_-1",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51031",
+      "road_id": 50003,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_50003_-2",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51032",
+      "road_id": 50003,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_50003_-3",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51033",
+      "road_id": 50003,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_50004_-1",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51041",
+      "road_id": 50004,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50004_-2",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51042",
+      "road_id": 50004,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_50004_-3",
+      "junction_id": 50010,
+      "signal_opendrive_id": "51043",
+      "road_id": 50004,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60001_-1",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61011",
+      "road_id": 60001,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_60001_-2",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61012",
+      "road_id": 60001,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_60001_-3",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61013",
+      "road_id": 60001,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_60002_-1",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61021",
+      "road_id": 60002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60002_-2",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61022",
+      "road_id": 60002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60002_-3",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61023",
+      "road_id": 60002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60003_-1",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61031",
+      "road_id": 60003,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60003_-2",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61032",
+      "road_id": 60003,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60003_-3",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61033",
+      "road_id": 60003,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_60004_-1",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61041",
+      "road_id": 60004,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_60004_-2",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61042",
+      "road_id": 60004,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_60004_-3",
+      "junction_id": 60010,
+      "signal_opendrive_id": "61043",
+      "road_id": 60004,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_70001_-1",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71011",
+      "road_id": 70001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70001_-2",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71012",
+      "road_id": 70001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70001_-3",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71013",
+      "road_id": 70001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70002_-1",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71021",
+      "road_id": 70002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70002_-2",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71022",
+      "road_id": 70002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70002_-3",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71023",
+      "road_id": 70002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70003_-1",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71031",
+      "road_id": 70003,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70003_-2",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71032",
+      "road_id": 70003,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70003_-3",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71033",
+      "road_id": 70003,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_70004_-1",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71041",
+      "road_id": 70004,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_70004_-2",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71042",
+      "road_id": 70004,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_70004_-3",
+      "junction_id": 70010,
+      "signal_opendrive_id": "71043",
+      "road_id": 70004,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80001_-1",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81011",
+      "road_id": 80001,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80001_-2",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81012",
+      "road_id": 80001,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80001_-3",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81013",
+      "road_id": 80001,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80002_-1",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81021",
+      "road_id": 80002,
+      "lane_id": -1,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80002_-2",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81022",
+      "road_id": 80002,
+      "lane_id": -2,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80002_-3",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81023",
+      "road_id": 80002,
+      "lane_id": -3,
+      "s_m": 145.35
+    },
+    {
+      "id": "stop_80003_-1",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81031",
+      "road_id": 80003,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80003_-2",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81032",
+      "road_id": 80003,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80003_-3",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81033",
+      "road_id": 80003,
+      "lane_id": -3,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80004_-1",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81041",
+      "road_id": 80004,
+      "lane_id": -1,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80004_-2",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81042",
+      "road_id": 80004,
+      "lane_id": -2,
+      "s_m": 142.85
+    },
+    {
+      "id": "stop_80004_-3",
+      "junction_id": 80010,
+      "signal_opendrive_id": "81043",
+      "road_id": 80004,
+      "lane_id": -3,
+      "s_m": 142.85
+    }
+  ],
+  "assessment": {
+    "status": "pending_user_definition",
+    "red_light_violation": null,
+    "speeding": null,
+    "out_of_bounds": null,
+    "wrong_way": null
+  }
+}

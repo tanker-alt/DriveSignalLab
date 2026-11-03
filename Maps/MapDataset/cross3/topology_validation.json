@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "opendrive_sha256": "56f1faeb477cd14a0a858b49c7bdc7a56368e189a2abe313b1dae92e8fb588cd",
+  "errors": [],
+  "signal_lane_paths": [
+    {
+      "signal": "1011",
+      "road": 1,
+      "lane": -1,
+      "targets": [
+        [
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1012",
+      "road": 1,
+      "lane": -2,
+      "targets": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1013",
+      "road": 1,
+      "lane": -3,
+      "targets": [
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "signal": "1021",
+      "road": 2,
+      "lane": -1,
+      "targets": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1022",
+      "road": 2,
+      "lane": -2,
+      "targets": [
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1023",
+      "road": 2,
+      "lane": -3,
+      "targets": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "signal": "1031",
+      "road": 3,
+      "lane": -1,
+      "targets": [
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1032",
+      "road": 3,
+      "lane": -2,
+      "targets": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1033",
+      "road": 3,
+      "lane": -3,
+      "targets": [
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "signal": "1041",
+      "road": 4,
+      "lane": -1,
+      "targets": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "signal": "1042",
+      "road": 4,
+      "lane": -2,
+      "targets": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "signal": "1043",
+      "road": 4,
+      "lane": -3,
+      "targets": [
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "seams_checked": 0,
+  "topology_edges": 36,
+  "scope": "Every controlled incoming lane must reach an outgoing non-junction lane; all seam lanes checked bidirectionally; seam junction graph connected. Offline validation only."
+}

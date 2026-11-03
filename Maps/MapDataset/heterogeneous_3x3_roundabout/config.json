@@ -1,0 +1,50 @@
+{
+  "name": "heterogeneous_3x3_roundabout",
+  "rows": 3,
+  "columns": 3,
+  "spacing_m": 500,
+  "seed": 42,
+  "include_roundabout": true,
+  "roundabout_position": [
+    1,
+    1
+  ],
+  "type": "heterogeneous",
+  "layout": [
+    {
+      "type": "t",
+      "missing_arm": "west"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "t",
+      "missing_arm": "south"
+    },
+    {
+      "type": "t",
+      "missing_arm": "north"
+    },
+    {
+      "type": "roundabout"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "cross"
+    },
+    {
+      "type": "t",
+      "missing_arm": "east"
+    },
+    {
+      "type": "cross"
+    }
+  ],
+  "lane_width_m": 3.5,
+  "arm_length_m": 150.0,
+  "t_probability": 0.5,
+  "cross_probability": 0.5
+}
