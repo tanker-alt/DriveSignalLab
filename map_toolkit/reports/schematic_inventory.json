@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "map": "cross_1x6_connected_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "4dba037e822ba5ef58853d984438f4b1c7781d0aa243e8345d863c794ea740bf",
+      "image": "schematic.png",
+      "image_sha256": "0a3ebac7a8cfb04a40dff6bf974b974d59bf5762d1affa31dcd9d34a7d2da4e6",
+      "width": 1800,
+      "height": 650
+    },
+    {
+      "map": "cross_3x3_connected_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "9486cd1b265e703cfde8eddc56573de35971902f97dc09c2121a20085cebe2eb",
+      "image": "schematic.png",
+      "image_sha256": "d2baf1f73552c67d87f211569b6c31b4eb4769a85d47791ea6e0ea80ab1aad2d",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "map": "heterogeneous_1x6_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481",
+      "image": "schematic.png",
+      "image_sha256": "ca2ba826ae951be208483ec6a14c867dd25f4ce8f99dc40e5f3eecee438446b7",
+      "width": 1800,
+      "height": 650
+    },
+    {
+      "map": "heterogeneous_3x3_roundabout_sidewalks_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f",
+      "image": "schematic.png",
+      "image_sha256": "a15cb80b6f7e6dcf644c2674d1a45ae2b1657e1aa1a97a51e82cd4f98259c78d",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "map": "heterogeneous_3x3_sidewalks_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "45b934325e0da8e00723b20453a6196bf41d2f303484a2f96e2c013bcfa083a6",
+      "image": "schematic.png",
+      "image_sha256": "9431a6f62da9954f2b5a81509d9db04909930e55d191ca381f8f60ec3aac8807",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "map": "mixed_1x6",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "f177340c1bff1482c110a57db67946c7d0a7205f03f9c8d3b7924a8f3ab4c116",
+      "image": "schematic.png",
+      "image_sha256": "973bcdeab3ff98e54dc3d74e8ab2963de6a571cec56dfa61aef0094613a174cb",
+      "width": 1800,
+      "height": 650
+    },
+    {
+      "map": "mixed_3x3_connected_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "ceb0cc0691e2ca520cfb6392c1ef3531aeb5ec0d7b9679def3ed870a69daa117",
+      "image": "schematic.png",
+      "image_sha256": "1bb13fa4d6aeade1b2b33ee1c0b11b2eaf2a5b257f4073aa5541872326f1fc03",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "map": "package_smoke_t",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2",
+      "image": "schematic.png",
+      "image_sha256": "8c540b86604afed03a8a91f760a54222eaba769d61ae1a70f199fc6d5d43dd04",
+      "width": 1800,
+      "height": 650
+    },
+    {
+      "map": "roundabout_continuous_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "e1af4b19d6eac1f4d706ecb5d0213e4977c259159125309b6e662410a469e214",
+      "image": "schematic.png",
+      "image_sha256": "5341243ea3fd9d25a8b0b455d5ff77f9ecda3f6ffa8f2bb895d3e41f90af6559",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "map": "t_1x6",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2",
+      "image": "schematic.png",
+      "image_sha256": "f334578bb85b299217813775b0736fdff548f871f18500338ca22b286ea2ad36",
+      "width": 1800,
+      "height": 650
+    },
+    {
+      "map": "t_network_random_3x3_connected_20261103",
+      "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+      "opendrive_sha256": "69d99009b87b35d640de5731096d4681448abb82797d64a4d8310e83a004cb34",
+      "image": "schematic.png",
+      "image_sha256": "5c6f964d7336d535d620cce845d21d9c45b38e751c0b08a51daa0d77c7910ed2",
+      "width": 1800,
+      "height": 1200
+    }
+  ]
+}

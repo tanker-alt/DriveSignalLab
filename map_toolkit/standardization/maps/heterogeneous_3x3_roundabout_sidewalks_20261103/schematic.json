@@ -1,0 +1,8 @@
+{
+  "type": "OpenDRIVE geometry schematic; not a CARLA screenshot",
+  "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f",
+  "image": "schematic.png",
+  "image_sha256": "a15cb80b6f7e6dcf644c2674d1a45ae2b1657e1aa1a97a51e82cd4f98259c78d",
+  "width": 1800,
+  "height": 1200
+}

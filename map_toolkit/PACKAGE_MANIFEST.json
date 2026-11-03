@@ -46,6 +46,11 @@
       "sha256": "ac668d3a34be0951e572d00b3e036ad3e355f7b328307d75f6af1330d4fdbf66"
     },
     {
+      "path": "reports/schematic_inventory.json",
+      "bytes": 4363,
+      "sha256": "5a7ba28351afe9a54a12e49cb92a08b95fc543d6bb40a329404d519d04375b30"
+    },
+    {
       "path": "reports/unit_tests.txt",
       "bytes": 120,
       "sha256": "be404217f33b2cb73a3155955e03de1077b4f9618dfb4a6502e9d74ee7649cfa"
@@ -249,6 +254,11 @@
       "path": "standardization/JunctionToolkit/layout.py",
       "bytes": 2508,
       "sha256": "4386fc84e273e488cf00ad33e8e78022435fdfbac1b00dda14b8a5e1226c51c2"
+    },
+    {
+      "path": "standardization/JunctionToolkit/map_schematic.py",
+      "bytes": 3965,
+      "sha256": "1639fd1b3fd80bf6c9197f338d4d032be86a53fbdc82505ee5b71ed8707a9cdd"
     },
     {
       "path": "standardization/JunctionToolkit/movement_check.py",
@@ -651,6 +661,21 @@
       "sha256": "e946475a1861d2ce35735f2c9df2f83f88499be2077e697e7ffaac23d4bb111c"
     },
     {
+      "path": "standardization/maps/cross_1x6_connected_20261103/schematic.json",
+      "bytes": 313,
+      "sha256": "3e985a023fc7259a1fb298e9ac0f0b9156aa4ee7bd340b4e863884017a56c831"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/cross_1x6_connected_20261103/schematic.png",
+      "bytes": 28882,
+      "sha256": "0a3ebac7a8cfb04a40dff6bf974b974d59bf5762d1affa31dcd9d34a7d2da4e6"
+    },
+    {
       "path": "standardization/maps/cross_1x6_connected_20261103/topology_validation.json",
       "bytes": 20136,
       "sha256": "7ed66dd7ceabfd100ccb25c91f59ece9d01be7413d47019d2befec84ff2a6342"
@@ -694,6 +719,21 @@
       "path": "standardization/maps/cross_3x3_connected_20261103/safety_rules.json",
       "bytes": 20231,
       "sha256": "1ba81de0a0b1581e7ce6108f1e804d2c09b071de129f602c713f3b519585d46e"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "c9936096facc0be8882b0b0dd8d6081fc7f2013e4a7897fa18d28c2cb85e16f1"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/cross_3x3_connected_20261103/schematic.png",
+      "bytes": 44475,
+      "sha256": "d2baf1f73552c67d87f211569b6c31b4eb4769a85d47791ea6e0ea80ab1aad2d"
     },
     {
       "path": "standardization/maps/cross_3x3_connected_20261103/topology_validation.json",
@@ -744,6 +784,21 @@
       "path": "standardization/maps/heterogeneous_1x6_20261103/safety_rules.json",
       "bytes": 10569,
       "sha256": "dd0c89c954ba8604feba9002d6bded31b24e6c5c24df1aefa7a68cf11092e13b"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/schematic.json",
+      "bytes": 313,
+      "sha256": "ba1fb5c54ff1dd973c73c5d4054e7448fbd361a9fa0c31fdca5ca3614d92bfd8"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_1x6_20261103/schematic.png",
+      "bytes": 23748,
+      "sha256": "ca2ba826ae951be208483ec6a14c867dd25f4ce8f99dc40e5f3eecee438446b7"
     },
     {
       "path": "standardization/maps/heterogeneous_1x6_20261103/simple_acceptance_20261103/continuous_drive_validation.json",
@@ -864,6 +919,21 @@
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/safety_rules.json",
       "bytes": 16803,
       "sha256": "3b17a189d5bbbbdb522302068cff74a2848f4b9b638f3a505595b3d4cb90cedc"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "8aa8ba0f2c255498f9484a039a2d59387a3017acb24f6689bf57c4cae24fa713"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/schematic.png",
+      "bytes": 52530,
+      "sha256": "a15cb80b6f7e6dcf644c2674d1a45ae2b1657e1aa1a97a51e82cd4f98259c78d"
     },
     {
       "path": "standardization/maps/heterogeneous_3x3_roundabout_sidewalks_20261103/simple_acceptance_20261103/continuous_drive_validation.json",
@@ -1121,6 +1191,21 @@
       "sha256": "61a45d544d4a9a0be42626f97759946017310ed3efdf195e2365648b845a5b2e"
     },
     {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "8aab7722be7320f740aca1b6cb598d9259cd6ac4c804e48a2d14ef11dbb206f1"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/schematic.png",
+      "bytes": 45133,
+      "sha256": "9431a6f62da9954f2b5a81509d9db04909930e55d191ca381f8f60ec3aac8807"
+    },
+    {
       "path": "standardization/maps/heterogeneous_3x3_sidewalks_20261103/static_validation.json",
       "bytes": 419,
       "sha256": "0ec02e0d4a9e6e8fe27683e99b01fef6cfc2d2e3ec7212997b442b2bf3a369eb"
@@ -1181,6 +1266,21 @@
       "sha256": "600ae10b54b21e26bb9706d29c3218a062cebd47c32484d5bfd58ba546880e39"
     },
     {
+      "path": "standardization/maps/mixed_1x6/schematic.json",
+      "bytes": 313,
+      "sha256": "e2207f8c018695dfcd02cc442d61cac78e97a9ee325399bf4deffbb40cee6583"
+    },
+    {
+      "path": "standardization/maps/mixed_1x6/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/mixed_1x6/schematic.png",
+      "bytes": 25647,
+      "sha256": "973bcdeab3ff98e54dc3d74e8ab2963de6a571cec56dfa61aef0094613a174cb"
+    },
+    {
       "path": "standardization/maps/mixed_1x6/street.png",
       "bytes": 1124786,
       "sha256": "375e97bf71b1fbbac2b1694fd97d5618111320975102b46b06781cfd3da4424f"
@@ -1229,6 +1329,21 @@
       "path": "standardization/maps/mixed_3x3_connected_20261103/safety_rules.json",
       "bytes": 17516,
       "sha256": "51467cd8f67f89f8026bd5534b97b22e0b0ee3d8890c45f5320e0a205098eb8e"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "4b6ac31f37e63a00c80d150ee960625f8a5eea481e73a90ac73382493fe01b99"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/mixed_3x3_connected_20261103/schematic.png",
+      "bytes": 42502,
+      "sha256": "1bb13fa4d6aeade1b2b33ee1c0b11b2eaf2a5b257f4073aa5541872326f1fc03"
     },
     {
       "path": "standardization/maps/mixed_3x3_connected_20261103/topology_validation.json",
@@ -1281,6 +1396,21 @@
       "sha256": "3585b9dbd99f1a48ec539676fa0b5ad8526f6635f44782a3031bf03f79998cff"
     },
     {
+      "path": "standardization/maps/package_smoke_t/schematic.json",
+      "bytes": 313,
+      "sha256": "52f546e718f21f4c5a284c3958e126208f777d14b21560816e6c20fe212f98f8"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/package_smoke_t/schematic.png",
+      "bytes": 24743,
+      "sha256": "8c540b86604afed03a8a91f760a54222eaba769d61ae1a70f199fc6d5d43dd04"
+    },
+    {
       "path": "standardization/maps/package_smoke_t/topology_validation.json",
       "bytes": 10978,
       "sha256": "ec6c23607fb0ad496fb72d9864260b6b683b216cda267ef9d055dafe7e86ad87"
@@ -1314,6 +1444,21 @@
       "path": "standardization/maps/roundabout_continuous_20261103/overview.png",
       "bytes": 2324139,
       "sha256": "111aa8986fac1e41b4dbf468d63db909d3af059c0dc6a3e19e58a612c93ec99d"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "762bfa2533c35f1fe77c48441b2f5766b32901f803df252b75ccaeb720db2d3a"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/roundabout_continuous_20261103/schematic.png",
+      "bytes": 50883,
+      "sha256": "5341243ea3fd9d25a8b0b455d5ff77f9ecda3f6ffa8f2bb895d3e41f90af6559"
     },
     {
       "path": "standardization/maps/roundabout_continuous_20261103/topology_validation.json",
@@ -1371,6 +1516,21 @@
       "sha256": "3585b9dbd99f1a48ec539676fa0b5ad8526f6635f44782a3031bf03f79998cff"
     },
     {
+      "path": "standardization/maps/t_1x6/schematic.json",
+      "bytes": 313,
+      "sha256": "7ef30646e637655ebc0eb0f8e54236320c51cc0cba35b8b83324f824ecb44eea"
+    },
+    {
+      "path": "standardization/maps/t_1x6/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/t_1x6/schematic.png",
+      "bytes": 23956,
+      "sha256": "f334578bb85b299217813775b0736fdff548f871f18500338ca22b286ea2ad36"
+    },
+    {
       "path": "standardization/maps/t_1x6/street.png",
       "bytes": 1121870,
       "sha256": "5e43694dc1e12456e50d849c78313f11e4d8addbadd6065fd44b028459ced16c"
@@ -1421,6 +1581,21 @@
       "sha256": "0094439ef933231052f900d0e5fc4460ccc44ad23ddc2620367f9b0fb8e2b013"
     },
     {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/schematic.json",
+      "bytes": 314,
+      "sha256": "14d07dbfd626f99bcabf6ffded426d9e731f16c26420f3fea39d82b7e50b5b74"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/SCHEMATIC.md",
+      "bytes": 383,
+      "sha256": "17bc84bfb711144ba70f85fe8c4f71cb063c8cb0a5f5e4d561756da0ebc262d2"
+    },
+    {
+      "path": "standardization/maps/t_network_random_3x3_connected_20261103/schematic.png",
+      "bytes": 40524,
+      "sha256": "5c6f964d7336d535d620cce845d21d9c45b38e751c0b08a51daa0d77c7910ed2"
+    },
+    {
       "path": "standardization/maps/t_network_random_3x3_connected_20261103/topology_validation.json",
       "bytes": 16990,
       "sha256": "3c4ea776ef7511f0e8bfe2d64893df3a4b3a4aa0ac2045460194fb16139a312f"
@@ -1429,6 +1604,11 @@
       "path": "standardization/maps/t_network_random_3x3_connected_20261103/verification_20261103.json",
       "bytes": 652,
       "sha256": "b0c59290b4434f87ad9fc9285b87ceac911812b56188d7c5b2ed84f979cb315f"
+    },
+    {
+      "path": "standardization/render_schematic.ps1",
+      "bytes": 2737,
+      "sha256": "118b0adc4c995b438a7f6c6733a3d340ac9c99331ba4f257058df961db3cbb61"
     }
   ]
 }
