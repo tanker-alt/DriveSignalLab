@@ -1,0 +1,204 @@
+{
+  "map": "mixed_3x3",
+  "seed": 923712,
+  "candidates": [
+    10010,
+    20010,
+    30010,
+    70010,
+    80010
+  ],
+  "junction": {
+    "id": 80010,
+    "center": [
+      688,
+      688
+    ],
+    "missing_arm": "east",
+    "roads": [
+      80001,
+      80002,
+      80004
+    ],
+    "lengths": [
+      149.5,
+      149.5,
+      150
+    ],
+    "arms": {
+      "west": 80001,
+      "south": 80002,
+      "north": 80004
+    },
+    "arm_turns": {
+      "west": [
+        [
+          "left"
+        ],
+        [
+          "left"
+        ],
+        [
+          "right"
+        ]
+      ],
+      "south": [
+        [
+          "left"
+        ],
+        [
+          "left"
+        ],
+        [
+          "straight"
+        ]
+      ],
+      "north": [
+        [
+          "straight"
+        ],
+        [
+          "straight"
+        ],
+        [
+          "right"
+        ]
+      ]
+    },
+    "type": "t"
+  },
+  "plan": {
+    "junction_id": 80010,
+    "missing_arm": "east",
+    "phases": [
+      {
+        "arm": "north",
+        "controlled_signal_ids": [
+          "81041",
+          "81042"
+        ]
+      },
+      {
+        "arm": "west",
+        "controlled_signal_ids": [
+          "81011",
+          "81012"
+        ]
+      },
+      {
+        "arm": "south",
+        "controlled_signal_ids": [
+          "81021",
+          "81022"
+        ]
+      }
+    ],
+    "always_green_signal_ids": [
+      "81043",
+      "81013",
+      "81023"
+    ],
+    "signals": {
+      "81011": {
+        "road_id": 80001,
+        "junction_id": 80010,
+        "phase_slot": 0,
+        "approach_slot": 0,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -1
+        ]
+      },
+      "81012": {
+        "road_id": 80001,
+        "junction_id": 80010,
+        "phase_slot": 1,
+        "approach_slot": 0,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -2
+        ]
+      },
+      "81013": {
+        "road_id": 80001,
+        "junction_id": 80010,
+        "phase_slot": 2,
+        "approach_slot": 0,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -3
+        ]
+      },
+      "81021": {
+        "road_id": 80002,
+        "junction_id": 80010,
+        "phase_slot": 3,
+        "approach_slot": 1,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -1
+        ]
+      },
+      "81022": {
+        "road_id": 80002,
+        "junction_id": 80010,
+        "phase_slot": 4,
+        "approach_slot": 1,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -2
+        ]
+      },
+      "81023": {
+        "road_id": 80002,
+        "junction_id": 80010,
+        "phase_slot": 5,
+        "approach_slot": 1,
+        "reference_s": 142.35,
+        "signal_s": 146.5,
+        "incoming_lanes": [
+          -3
+        ]
+      },
+      "81041": {
+        "road_id": 80004,
+        "junction_id": 80010,
+        "phase_slot": 9,
+        "approach_slot": 3,
+        "reference_s": 142.85,
+        "signal_s": 147,
+        "incoming_lanes": [
+          -1
+        ]
+      },
+      "81042": {
+        "road_id": 80004,
+        "junction_id": 80010,
+        "phase_slot": 10,
+        "approach_slot": 3,
+        "reference_s": 142.85,
+        "signal_s": 147,
+        "incoming_lanes": [
+          -2
+        ]
+      },
+      "81043": {
+        "road_id": 80004,
+        "junction_id": 80010,
+        "phase_slot": 11,
+        "approach_slot": 3,
+        "reference_s": 142.85,
+        "signal_s": 147,
+        "incoming_lanes": [
+          -3
+        ]
+      }
+    },
+    "opendrive_sha256": "ceb0cc0691e2ca520cfb6392c1ef3531aeb5ec0d7b9679def3ed870a69daa117"
+  }
+}

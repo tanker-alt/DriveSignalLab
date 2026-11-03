@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "cases": 1,
+  "audited_passed_cases": 1,
+  "failed_cases": [],
+  "vehicles": 27,
+  "frames": 2202,
+  "collision_callbacks": 0,
+  "green_releases": 6,
+  "clearance_extensions_before_green": 3,
+  "max_clearance_before_green_seconds": 6.600000098347664,
+  "red_signal_crossings": 0,
+  "red_junction_entries_after_legal_crossing": 0,
+  "wrong_exits": 0,
+  "directions": {
+    "east": 1
+  },
+  "flows": {
+    "medium": 27
+  },
+  "fleet": {
+    "vehicle.carlamotors.carlacola": 4,
+    "vehicle.mitsubishi.fusorosa": 8,
+    "vehicle.audi.a2": 4,
+    "vehicle.mercedes.sprinter": 5,
+    "vehicle.tesla.model3": 5,
+    "vehicle.nissan.patrol": 1
+  },
+  "metric_scope": "Detailed totals cover audited passing cases; failed cases are listed separately."
+}

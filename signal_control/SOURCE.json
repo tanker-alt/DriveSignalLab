@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "file": "control_t_phases.py",
+      "source": "InformationCollector/control_t_phases.py",
+      "source_sha256": "73950f6c5914f0391227cd7fdb9c3d8b1a4e27e38bdee2f5a8fe1ae5b15e92ec"
+    },
+    {
+      "file": "control_four_phases.py",
+      "source": "InformationCollector/control_four_phases.py",
+      "source_sha256": "38fdbaf11cbde1f5c3c31e6cc2dae9edd7d01ed4d6948c152bf8221c99d165e6"
+    },
+    {
+      "file": "control_roundabout_phases.py",
+      "source": "InformationCollector/control_roundabout_phases.py",
+      "source_sha256": "7238a98ab1c9fe988f442003f6e68003abbe6187844cd3ccab99b7becafa3ac3"
+    },
+    {
+      "file": "validate_t_phases_live.py",
+      "source": "InformationCollector/validate_t_phases_live.py",
+      "source_sha256": "84f5874b25ca62248402df40c752900d94625fedc62b1ee981726e560e9bc3d6"
+    },
+    {
+      "file": "validate_t_network_live.py",
+      "source": "InformationCollector/validate_t_network_live.py",
+      "source_sha256": "7de2bb4aa7957d0aa30664a15121e0783de20a38ffdbfbc0467807c65cbd0551"
+    },
+    {
+      "file": "audit_t_network_validation.py",
+      "source": "InformationCollector/audit_t_network_validation.py",
+      "source_sha256": "30e915a2f3066f9a4959ed785119484c401d6d951efdf8350d73313e040e58ca"
+    },
+    {
+      "file": "test_t_phases.py",
+      "source": "InformationCollector/test_t_phases.py",
+      "source_sha256": "d0c62184f7a48850a275c8e87938f5284d3d52294d2bc1a9ef666b9824506159"
+    }
+  ],
+  "packaging_changes": [
+    "Extract two unchanged signal ownership helpers to remove collector dependencies.",
+    "Redirect helper imports; tests use bundled manifest-only fixtures.",
+    "Documentation uses portable python commands; runtime controller logic unchanged."
+  ]
+}

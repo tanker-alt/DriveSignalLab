@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "map": "t3_north",
+  "phases": [
+    {
+      "arm": "west",
+      "controlled_signal_ids": [
+        "1011"
+      ]
+    },
+    {
+      "arm": "south",
+      "controlled_signal_ids": [
+        "1021"
+      ]
+    },
+    {
+      "arm": "east",
+      "controlled_signal_ids": [
+        "1031"
+      ]
+    }
+  ],
+  "vehicles": [
+    {
+      "signal": "1011",
+      "vehicle": 10808,
+      "movement": {
+        "road": 1,
+        "lane": -1,
+        "target_road": 3,
+        "target_lane": 1,
+        "movement": "straight",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": false,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 204560
+    },
+    {
+      "signal": "1012",
+      "vehicle": 10810,
+      "movement": {
+        "road": 1,
+        "lane": -2,
+        "target_road": 2,
+        "target_lane": 2,
+        "movement": "right",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": false,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 204466
+    },
+    {
+      "signal": "1021",
+      "vehicle": 10812,
+      "movement": {
+        "road": 2,
+        "lane": -1,
+        "target_road": 1,
+        "target_lane": 1,
+        "movement": "left",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": true,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 204848
+    },
+    {
+      "signal": "1022",
+      "vehicle": 10814,
+      "movement": {
+        "road": 2,
+        "lane": -2,
+        "target_road": 3,
+        "target_lane": 2,
+        "movement": "right",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": false,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 204466
+    },
+    {
+      "signal": "1031",
+      "vehicle": 10816,
+      "movement": {
+        "road": 3,
+        "lane": -1,
+        "target_road": 2,
+        "target_lane": 1,
+        "movement": "left",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": true,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 205191
+    },
+    {
+      "signal": "1032",
+      "vehicle": 10818,
+      "movement": {
+        "road": 3,
+        "lane": -2,
+        "target_road": 1,
+        "target_lane": 2,
+        "movement": "straight",
+        "junction_id": 10
+      },
+      "completed": true,
+      "stopped_on_red": false,
+      "crossed_on_red": false,
+      "wrong_exit": false,
+      "entered": true,
+      "completion_frame": 204560
+    }
+  ],
+  "collision_callbacks": [],
+  "remaining_vehicles": 0,
+  "remaining_sensors": 0
+}
