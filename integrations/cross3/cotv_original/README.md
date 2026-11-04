@@ -54,3 +54,11 @@ python3 integrations/cross3/cotv_original/run.py --check \
 - Docker 查询与下载 Python 3.7 安装器的提权请求均被自动审批后端故障阻断：404 / gpt-5.6-luna 不受支持。没有执行这些受限操作。
 - **尚未完成原版依赖安装、SUMO rollout 或训练。** 脚本只完成预检查，不能据此宣称复现成功。
 - 原 `sumo_joint` 的历史结果存在实现错误，不作为 CoTV 复现或优于 MaxPressure 的证据。
+
+## 原版 smoke/小规模训练结果（2026-11-04）
+
+已在独立 Micromamba 环境 `/home/zlj/micromamba/root/envs/cotv` 跑通原版入口。为适应当前主机，将 CoTV 原配置中的 18 workers/18 rollouts 降为 1 worker/1 rollout，并使用 Ray local mode；CoTV 环境、tl/cav 策略、奖励和 PPO 代码保持原版。SUMO 使用已安装的 1.18.0，并在私有运行副本中做了 TraCI `setColor` 关键字兼容。
+
+1 次迭代成功：720 秒 episode、800 环境步、reward=-2112.77。随后 20 次迭代成功完成，共 16000 环境步，最终 `episode_reward_mean=-757.04`，训练日志为 `outputs/cotv_original/train20/train.log`，Ray 状态为 `outputs/cotv_original/train20/ray_results/CoTV_1x1grid/`。日志中的 reward 从约 -2308（第 1 次）下降到 -757（第 20 次），说明原版 PPO 在该小规模设置下确实在学习。
+
+这不是论文精确复现：主机使用 SUMO 1.18 而非 CoTV 论文的 1.10，且并行度降低；结果只用于验证原版代码链路和训练趋势。

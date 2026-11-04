@@ -73,3 +73,23 @@ outputs/cross3_offline_official/offline_seed2028_carla80.pt
 新增 `integrations/cross3/sumo_joint/`，参考 CoTV 的 `CoTV_grid.py` 和 PPO 设置。灯控 actor 输出离散相位动作，车辆 actor 输出连续加速度 `[-3, 2] m/s²`；使用 `target_velocity=15 m/s`、`sim_step=1 s`、`gamma=.999`、GAE `lambda=.97`、10 次 PPO epoch。`env.py` 支持真实 TraCI，也提供无 SUMO 时的合成接口回归模式。合成 3 回合 smoke 训练已通过，产物仅用于代码验证；正式结果必须使用真实 SUMO 随机交通流评估后再迁移 CARLA。
 
 本次补充了 CoTV 1x1 四岔路口参数清单 `outputs/cross3_sumo_joint/cotv_grid_1x1.json`：四个进口道各 1 条车道，边长 300 m，70 辆车，流量为右 120、下 240、左 288、上 192 veh/h，horizon=720 秒，完全对应 `CoTV_grid.py`。当前服务器未安装 `sumo` 和 Python `traci`，因此暂时只能完成配置生成和合成回归，尚未声称真实 SUMO 训练结果。
+
+## SUMO 安装与真实训练状态（2026-11-02）
+
+已在 `/home/zlj/lmdrive_runtime/env` 安装 `traci==1.18.0`、`sumolib==1.18.0` 和 `eclipse-sumo==1.18.0` 的 Python 组件，并生成真实四岔路口文件：
+
+```text
+scenarios/cotv_grid_1x1/cotv.net.xml
+scenarios/cotv_grid_1x1/cotv.rou.xml
+scenarios/cotv_grid_1x1/cotv.sumocfg
+```
+
+但受当前服务器网络策略限制，TraCI 进程监听 8813 端口返回 `Operation not permitted`；`libsumo` 二进制包下载也因代理超时未完成。因此本次没有伪造真实 SUMO 训练结果，真实训练命令和配置已经准备好，待端口权限或 `libsumo` 安装可用后直接运行。
+
+## 2000 回合结果与训练策略调整（2026-11-03）
+
+真实 SUMO 2000 回合已完成且碰撞回合为 0，但 reward 从前 100--200 回合的约 -71 至 -86 退化到最后 100 回合约 -105，说明后期训练出现策略退化。loss/value loss 下降只能说明优化数值稳定，不能替代交通效果指标。训练器现已改为默认 500 回合，支持每 10 回合独立 checkpoint、滑动平均奖励最佳模型和 early stopping；新增 `sumo_joint/evaluate.py` 用相同随机种子比较 fixed、MaxPressure 和 learned。
+
+## CoTV 原版链路验证（2026-11-04）
+
+已建立 Micromamba Python 3.7.3 环境并安装 Ray 0.8.0、TensorFlow 1.15.2、Gym 0.14.0、Flow 原版依赖。通过 `integrations/cross3/cotv_original/run.py` 调用上游 CoTV 原始 `train_ppo.py`；1 次 smoke 迭代成功，随后 20 次原版 PPO 迭代成功，共 16000 环境步，episode reward 从约 -2308 降到 -757。运行目录为 `outputs/cotv_original/train20`。为适配当前机器仅降低 workers/rollouts 到 1 并启用 Ray local mode，环境、tl/cav 策略、动作、奖励和 PPO 更新均来自 CoTV 原版；SUMO 版本为 1.18，不是论文使用的 1.10，因此这是原版链路验证而非精确论文复现。

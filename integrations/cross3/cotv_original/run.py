@@ -23,8 +23,11 @@ def main():
     p.add_argument('--python', default=str(ROOT / 'outputs/cotv_original/env/bin/python'))
     p.add_argument('--sumo-home', type=Path)
     p.add_argument('--iterations', type=int, default=1)
+    p.add_argument('--cpus', type=int, default=None, help='Smoke override for upstream N_CPUS')
+    p.add_argument('--rollouts', type=int, default=None, help='Smoke override for upstream N_ROLLOUTS')
     p.add_argument('--run-dir', type=Path, default=ROOT / 'outputs/cotv_original/smoke')
     p.add_argument('--check', action='store_true')
+    p.add_argument('--allow-sumo-mismatch', action='store_true', help='Run with installed SUMO when exact 1.10 is unavailable')
     a = p.parse_args()
     source = a.source.resolve()
     missing = [f for f in FILES if not (source / f).is_file()]
@@ -56,7 +59,7 @@ def main():
     else:
         v = subprocess.check_output([str(a.sumo_home / 'bin/sumo'), '--version'], text=True)
         manifest['sumo_version'] = v
-        if 'Version 1.10.0' not in v:
+        if 'Version 1.10.0' not in v and not a.allow_sumo_mismatch:
             manifest['runtime_errors'].append('Exact reproduction requires SUMO 1.10.0')
     a.run_dir.mkdir(parents=True, exist_ok=True)
     (a.run_dir / 'manifest.json').write_text(json.dumps(manifest, indent=2))
@@ -70,6 +73,28 @@ def main():
     if snapshot.exists():
         p.error('Run directory already contains a snapshot; choose a new run directory')
     shutil.copytree(source, snapshot, ignore=shutil.ignore_patterns('.git', '__pycache__'))
+    if a.cpus is not None or a.rollouts is not None:
+        cfg = snapshot / 'flow/examples/exp_configs/rl/multiagent/CoTV_grid.py'
+        text = cfg.read_text()
+        if a.cpus is not None: text = text.replace('N_CPUS = 18', f'N_CPUS = {a.cpus}')
+        if a.rollouts is not None: text = text.replace('N_ROLLOUTS = 18', f'N_ROLLOUTS = {a.rollouts}')
+        cfg.write_text(text)
+    # SUMO 1.18 renamed TraCI keyword arguments; keep upstream source intact
+    # and apply the compatibility shim only to the private run snapshot.
+    if a.allow_sumo_mismatch:
+        tr = snapshot / 'flow/flow/core/kernel/vehicle/traci.py'
+        text = tr.read_text().replace('self.kernel_api.vehicle.setColor(\n            vehID=veh_id, color=(r, g, b, 255))', 'self.kernel_api.vehicle.setColor(veh_id, (r, g, b, 255))')
+        tr.write_text(text)
+        reg = snapshot / 'flow/flow/utils/registry.py'
+        text = reg.read_text().replace('register(\n            id=env_name,', 'if env_name not in gym.envs.registry.env_specs:\n            register(\n                id=env_name,').replace('                "simulator": params[\'simulator\']\n            })', '                "simulator": params[\'simulator\']\n                })')
+        reg.write_text(text)
+    # Ray 0.8's raylet is incompatible with some modern host kernels. For a
+    # smoke run, use Ray's local execution mode while keeping RLlib/PPO and
+    # the CoTV environment unchanged.
+    if a.cpus is not None and a.cpus <= 1:
+        train = snapshot / 'flow/examples/train_ppo.py'
+        text = train.read_text().replace('ray.init(num_cpus=n_cpus + 1)', 'ray.init(num_cpus=n_cpus + 1, local_mode=True)')
+        train.write_text(text)
     env = os.environ.copy()
     env['PYTHONPATH'] = str(snapshot / 'flow')
     env['SUMO_HOME'] = str(a.sumo_home.resolve())
