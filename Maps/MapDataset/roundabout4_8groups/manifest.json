@@ -106,7 +106,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 3
+      "signal_group": 3,
+      "signal_s": 114.6
     },
     "1012": {
       "road_id": 1,
@@ -118,7 +119,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 3
+      "signal_group": 3,
+      "signal_s": 114.6
     },
     "20201": {
       "road_id": 20,
@@ -130,7 +132,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 7
+      "signal_group": 7,
+      "signal_s": 9.391665410651944
     },
     "20202": {
       "road_id": 20,
@@ -142,7 +145,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 7
+      "signal_group": 7,
+      "signal_s": 9.391665410651944
     },
     "1021": {
       "road_id": 2,
@@ -154,7 +158,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 2
+      "signal_group": 2,
+      "signal_s": 114.6
     },
     "1022": {
       "road_id": 2,
@@ -166,7 +171,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 2
+      "signal_group": 2,
+      "signal_s": 114.6
     },
     "20211": {
       "road_id": 21,
@@ -178,7 +184,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 6
+      "signal_group": 6,
+      "signal_s": 9.391665410651944
     },
     "20212": {
       "road_id": 21,
@@ -190,7 +197,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 6
+      "signal_group": 6,
+      "signal_s": 9.391665410651944
     },
     "1031": {
       "road_id": 3,
@@ -202,7 +210,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 1
+      "signal_group": 1,
+      "signal_s": 114.6
     },
     "1032": {
       "road_id": 3,
@@ -214,7 +223,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 1
+      "signal_group": 1,
+      "signal_s": 114.6
     },
     "20221": {
       "road_id": 22,
@@ -226,7 +236,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 5
+      "signal_group": 5,
+      "signal_s": 9.391665410651944
     },
     "20222": {
       "road_id": 22,
@@ -238,7 +249,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 5
+      "signal_group": 5,
+      "signal_s": 9.391665410651944
     },
     "1041": {
       "road_id": 4,
@@ -250,7 +262,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 4
+      "signal_group": 4,
+      "signal_s": 114.6
     },
     "1042": {
       "road_id": 4,
@@ -262,7 +275,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 4
+      "signal_group": 4,
+      "signal_s": 114.6
     },
     "20231": {
       "road_id": 23,
@@ -274,7 +288,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 8
+      "signal_group": 8,
+      "signal_s": 9.391665410651944
     },
     "20232": {
       "road_id": 23,
@@ -286,7 +301,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 8
+      "signal_group": 8,
+      "signal_s": 9.391665410651944
     }
   },
   "connections": [
@@ -498,7 +514,7 @@
   "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
   "circulation": "counterclockwise",
   "phase_plan": null,
-  "opendrive_sha256": "e1af4b19d6eac1f4d706ecb5d0213e4977c259159125309b6e662410a469e214",
+  "opendrive_sha256": "d979299995927ac80f72b0fff160669d2454eedf1d00575e2840a8c1bebea687",
   "road_geometry": {
     "1": {
       "length": 120,
@@ -1052,5 +1068,10 @@
   "generation_link_check": {
     "passed": true,
     "connection_lanes": 24
+  },
+  "stop_compensation": {
+    "clearance_m": 2.4,
+    "assumed_trigger_offset_m": 3.0,
+    "all_vehicle_compliance_certified": false
   }
 }

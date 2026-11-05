@@ -13,7 +13,7 @@ except ImportError:
 
 class AdapterTests(unittest.TestCase):
     def setUp(self):
-        self.folder = DEFAULT_DATASET / 't3_north'
+        self.folder = DEFAULT_DATASET / 't_north'
         self.raw, self.design, self.digest = read_map(self.folder)
         self.route = load_route(self.folder)
 

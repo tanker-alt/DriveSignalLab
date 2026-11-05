@@ -1,0 +1,603 @@
+{
+  "map": "heterogeneous_1x6",
+  "source_sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481",
+  "opendrive_sha256": "8f382bf847c59c7c1dabf519401fb2d4461984850254f6c4ee3d38020450017f",
+  "changes": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11011",
+      "road_id": 10001,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11012",
+      "road_id": 10001,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11031",
+      "road_id": 10003,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11032",
+      "road_id": 10003,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11041",
+      "road_id": 10004,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "11042",
+      "road_id": 10004,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21011",
+      "road_id": 20001,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21012",
+      "road_id": 20001,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21013",
+      "road_id": 20001,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21021",
+      "road_id": 20002,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21022",
+      "road_id": 20002,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21023",
+      "road_id": 20002,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21031",
+      "road_id": 20003,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21032",
+      "road_id": 20003,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21033",
+      "road_id": 20003,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21041",
+      "road_id": 20004,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21042",
+      "road_id": 20004,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "21043",
+      "road_id": 20004,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31011",
+      "road_id": 30001,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31012",
+      "road_id": 30001,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31013",
+      "road_id": 30001,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31021",
+      "road_id": 30002,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31022",
+      "road_id": 30002,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31023",
+      "road_id": 30002,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31031",
+      "road_id": 30003,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31032",
+      "road_id": 30003,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31033",
+      "road_id": 30003,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31041",
+      "road_id": 30004,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31042",
+      "road_id": 30004,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "31043",
+      "road_id": 30004,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41011",
+      "road_id": 40001,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41012",
+      "road_id": 40001,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41013",
+      "road_id": 40001,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41021",
+      "road_id": 40002,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41022",
+      "road_id": 40002,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41023",
+      "road_id": 40002,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41031",
+      "road_id": 40003,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41032",
+      "road_id": 40003,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41033",
+      "road_id": 40003,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41041",
+      "road_id": 40004,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41042",
+      "road_id": 40004,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "41043",
+      "road_id": 40004,
+      "lanes": [
+        -3
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51011",
+      "road_id": 50001,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51012",
+      "road_id": 50001,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51031",
+      "road_id": 50003,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51032",
+      "road_id": 50003,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51041",
+      "road_id": 50004,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "51042",
+      "road_id": 50004,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    }
+  ],
+  "geometry_unchanged": true,
+  "all_vehicle_compliance_certified": false
+}

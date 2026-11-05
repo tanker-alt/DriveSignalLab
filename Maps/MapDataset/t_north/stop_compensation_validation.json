@@ -1,0 +1,80 @@
+{
+  "map": "t_north",
+  "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
+  "passed": true,
+  "scope": "Native signal/lane/stop-waypoint alignment only; not vehicle stopping certification",
+  "signals": [
+    {
+      "signal": "1011",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 1,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1012",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 1,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1021",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1022",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1031",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1032",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

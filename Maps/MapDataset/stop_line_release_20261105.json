@@ -1,0 +1,56 @@
+{
+  "maps": [
+    {
+      "map": "cross3",
+      "opendrive_sha256": "d8faf3551c0d6ee4f1b829b1d2dc2f28b9e2a464b9b8a8a4e112308c35129e80",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "cross_1x6",
+      "opendrive_sha256": "ebd71e0a163ab21e8acbac3c881ecb3e256b637fcea8b5fed443ad9b2c4d3971",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "cross_3x3",
+      "opendrive_sha256": "d04e95a2cc0c5c2816c0a4245c03ad6d5f96dbf5cebe58f5925b0c771cfda81e",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "heterogeneous_1x6",
+      "opendrive_sha256": "8f382bf847c59c7c1dabf519401fb2d4461984850254f6c4ee3d38020450017f",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "heterogeneous_3x3",
+      "opendrive_sha256": "cd75ecab0618c0ccb945bed58968024300cea7aa61e0fc7e52ac07a959a4dd37",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "heterogeneous_3x3_roundabout",
+      "opendrive_sha256": "24b9c772ad4471268a1ccb0b808fa19d952c1a9efe5a737cff4308a83c2f4c97",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "roundabout4_8groups",
+      "opendrive_sha256": "d979299995927ac80f72b0fff160669d2454eedf1d00575e2840a8c1bebea687",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "t_1x6",
+      "opendrive_sha256": "761485e38abad7b069ae9b261047f1f54c8d4eb233d173cde554e87e5cdef070",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "t_3x3",
+      "opendrive_sha256": "ea809abe84c5954467863743e76e4ab6a04b3a611ff3e51bfdbd6aed489caf4a",
+      "stop_alignment_passed": true
+    },
+    {
+      "map": "t_north",
+      "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
+      "stop_alignment_passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "Imported map-bound native stop-waypoint alignment evidence; routes rebuilt separately; no new live traffic test"
+}

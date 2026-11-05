@@ -1,0 +1,11 @@
+{
+  "opendrive_sha256": "8f382bf847c59c7c1dabf519401fb2d4461984850254f6c4ee3d38020450017f",
+  "clearance_m": 2.4,
+  "invalidated_reports": [
+    "appearance_preview_report.json",
+    "load_report.json",
+    "static_validation.json"
+  ],
+  "profiles_require_regeneration": true,
+  "note": "Existing experiment_profiles retain their old map hashes and must be regenerated before use. Existing preview images are historical. No all-vehicle stopping certification."
+}

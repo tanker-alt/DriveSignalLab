@@ -2,7 +2,7 @@
   "schema_version": 1,
   "signal_policy": "one_signal_per_incoming_lane",
   "config": {
-    "name": "t_single2c",
+    "name": "t_north",
     "rows": 1,
     "columns": 1,
     "type": "t",
@@ -131,7 +131,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -142,7 +142,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -153,7 +153,7 @@
       "phase_slot": 2,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -164,7 +164,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -175,7 +175,7 @@
       "phase_slot": 4,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -186,7 +186,7 @@
       "phase_slot": 5,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -194,5 +194,10 @@
   },
   "status": "generated_requires_validation",
   "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
-  "opendrive_sha256": "e254400d678113bb9fc00687725d742c75d88b0411d3d324dbd097af302c4fb3"
+  "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
+  "stop_compensation": {
+    "clearance_m": 2.4,
+    "assumed_trigger_offset_m": 3.0,
+    "all_vehicle_compliance_certified": false
+  }
 }

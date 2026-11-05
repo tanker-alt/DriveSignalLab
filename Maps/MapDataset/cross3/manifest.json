@@ -165,7 +165,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -176,7 +176,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -187,7 +187,7 @@
       "phase_slot": 2,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -198,7 +198,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -209,7 +209,7 @@
       "phase_slot": 4,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -220,7 +220,7 @@
       "phase_slot": 5,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -231,7 +231,7 @@
       "phase_slot": 6,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -242,7 +242,7 @@
       "phase_slot": 7,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -253,7 +253,7 @@
       "phase_slot": 8,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -264,7 +264,7 @@
       "phase_slot": 9,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -275,7 +275,7 @@
       "phase_slot": 10,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -286,7 +286,7 @@
       "phase_slot": 11,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -294,5 +294,10 @@
   },
   "status": "generated_requires_validation",
   "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
-  "opendrive_sha256": "56f1faeb477cd14a0a858b49c7bdc7a56368e189a2abe313b1dae92e8fb588cd"
+  "opendrive_sha256": "d8faf3551c0d6ee4f1b829b1d2dc2f28b9e2a464b9b8a8a4e112308c35129e80",
+  "stop_compensation": {
+    "clearance_m": 2.4,
+    "assumed_trigger_offset_m": 3.0,
+    "all_vehicle_compliance_certified": false
+  }
 }

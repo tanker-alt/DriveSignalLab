@@ -1,6 +1,6 @@
 {
   "schema_version": "safety_rules.1",
-  "opendrive_sha256": "77eecc05133cef960e5c1296160204c25506689138bdf7bf1a7312a637cae481",
+  "opendrive_sha256": "8f382bf847c59c7c1dabf519401fb2d4461984850254f6c4ee3d38020450017f",
   "coordinate_system": "OpenDRIVE road_id/lane_id/s_m; resolved world coordinates use CARLA XY",
   "geometry_status": "provisional_signal_reference",
   "position_source": "Initial positions copied from manifest reference_s; not a calibrated traffic-manager stopping boundary",

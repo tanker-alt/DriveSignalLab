@@ -162,7 +162,7 @@
   "length_m": 4406.527304118293,
   "max_sample_gap_m": 1.1858589368111052,
   "schema_version": "continuous_route.4",
-  "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f",
+  "opendrive_sha256": "24b9c772ad4471268a1ccb0b808fa19d952c1a9efe5a737cff4308a83c2f4c97",
   "planner_sha256": "ede5bfc54ffe69e1369480adf38c9042013c03ca3dfa53ae4d38494ef6f03376",
   "planner": "heterogeneous_route",
   "carla_version": "0.9.15",

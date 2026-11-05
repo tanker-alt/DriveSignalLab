@@ -1,0 +1,75 @@
+{
+  "map": "t_north",
+  "source_sha256": "e254400d678113bb9fc00687725d742c75d88b0411d3d324dbd097af302c4fb3",
+  "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
+  "changes": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1021",
+      "road_id": 2,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1022",
+      "road_id": 2,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lanes": [
+        -1
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lanes": [
+        -2
+      ],
+      "stop_s": 142.85,
+      "old_signal_s": 147.0,
+      "signal_s": 143.45,
+      "expected_stop_waypoint_s": 140.45
+    }
+  ],
+  "geometry_unchanged": true,
+  "all_vehicle_compliance_certified": false
+}

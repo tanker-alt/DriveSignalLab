@@ -146,7 +146,7 @@
   ],
   "length_m": 2997.2183721079664,
   "schema_version": "continuous_route.4",
-  "opendrive_sha256": "9486cd1b265e703cfde8eddc56573de35971902f97dc09c2121a20085cebe2eb",
+  "opendrive_sha256": "d04e95a2cc0c5c2816c0a4245c03ad6d5f96dbf5cebe58f5925b0c771cfda81e",
   "planner_sha256": "ede5bfc54ffe69e1369480adf38c9042013c03ca3dfa53ae4d38494ef6f03376",
   "planner": "continuous_route_planner",
   "carla_version": "0.9.15",

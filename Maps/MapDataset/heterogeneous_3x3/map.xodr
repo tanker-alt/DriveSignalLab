@@ -288,17 +288,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="1011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="1011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-25.5" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="1012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="1012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-25.5" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="1013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="1013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="-25.5" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -587,17 +587,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="1021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="1021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="7.750000000000017" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="7.750000000000015" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="1022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="1022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="11.250000000000016" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="11.250000000000016" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="1023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="1023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="14.750000000000016" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="14.750000000000016" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -911,17 +911,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="1031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="1031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="25.5" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.05000000000001" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="1032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="1032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="25.5" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.05000000000001" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="1033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="1033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="25.500000000000004" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.050000000000015" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -1235,17 +1235,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="1041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="1041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-7.7500000000000835" y="25.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-7.7500000000000835" y="29.05000000000001" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="1042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="1042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-11.250000000000083" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-11.250000000000083" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="1043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="1043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="-14.750000000000083" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-14.750000000000083" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -3566,17 +3566,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="11011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="11011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="474.5" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="11012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="11012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="474.5" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="11013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="11013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="474.5" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -3865,17 +3865,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="11021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="11021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="507.75" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="507.75" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="11022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="11022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="511.25" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="511.25" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="11023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="11023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="514.75" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="514.75" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -4189,17 +4189,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="11031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="11031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="525.5" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="11032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="11032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="525.5" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="11033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="11033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="525.5" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -4513,17 +4513,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="11041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="11041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="492.24999999999994" y="25.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="492.24999999999994" y="29.05000000000001" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="11042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="11042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="488.74999999999994" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="488.74999999999994" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="11043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="11043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="485.24999999999994" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="485.24999999999994" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -6844,17 +6844,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="21011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="21011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="974.5" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="970.95" y="-7.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="21012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="21012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="974.5" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="970.95" y="-11.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="21013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="21013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="974.5" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="970.95" y="-14.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -7143,17 +7143,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="21021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="21021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="1007.75" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1007.75" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="21022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="21022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="1011.25" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1011.25" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="21023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="21023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="1014.75" y="-25.500000000000004" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1014.75" y="-29.050000000000015" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -7442,17 +7442,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="21031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="21031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="1025.5" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="1029.05" y="7.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="21032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="21032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="1025.5" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="1029.05" y="11.250000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="21033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="21033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="1025.5" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="1029.05" y="14.750000000000018" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -7766,17 +7766,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="21041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="21041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="992.2499999999999" y="25.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="992.2499999999999" y="29.05000000000001" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="21042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="21042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="988.7499999999999" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="988.7499999999999" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="21043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="21043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="985.2499999999999" y="25.500000000000004" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="985.2499999999999" y="29.050000000000015" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -10072,17 +10072,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="31011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="31011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-25.5" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="31012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="31012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-25.5" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="31013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="31013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="-25.5" y="485.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-29.05000000000001" y="485.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -10396,17 +10396,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="31021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="31021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="7.750000000000017" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="7.750000000000015" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="31022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="31022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="11.250000000000016" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="11.250000000000016" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="31023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="31023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="14.750000000000016" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="14.750000000000016" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -10720,17 +10720,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="31031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="31031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="25.5" y="507.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.05000000000001" y="507.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="31032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="31032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="25.5" y="511.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.05000000000001" y="511.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="31033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="31033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="25.500000000000004" y="514.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="29.050000000000015" y="514.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -11019,17 +11019,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="31041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="31041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-7.7500000000000835" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-7.7500000000000835" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="31042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="31042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-11.250000000000083" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-11.250000000000083" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="31043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="31043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="-14.750000000000083" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-14.750000000000083" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -13350,17 +13350,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="41011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="41011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="474.5" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="41012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="41012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="474.5" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="41013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="41013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="474.5" y="485.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="485.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -13674,17 +13674,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="41021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="41021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="507.75" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="507.75" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="41022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="41022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="511.25" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="511.25" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="41023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="41023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="514.75" y="474.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="514.75" y="470.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -13998,17 +13998,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="41031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="41031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="525.5" y="507.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="507.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="41032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="41032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="525.5" y="511.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="511.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="41033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="41033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="525.5" y="514.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="514.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -14322,17 +14322,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="41041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="41041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="492.24999999999994" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="492.24999999999994" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="41042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="41042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="488.74999999999994" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="488.74999999999994" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="41043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="41043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="485.24999999999994" y="525.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="485.24999999999994" y="529.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -16573,13 +16573,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="51011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="51011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="978.0" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="974.45" y="492.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="51012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="51012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="978.0" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="974.45" y="488.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -16813,13 +16813,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="51021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="51021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="1007.75" y="478.0" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1007.75" y="474.45" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="51022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="51022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="1011.25" y="478.0" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1011.25" y="474.45" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -17053,13 +17053,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="51041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="51041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="992.25" y="522.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="992.25" y="525.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="51042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="51042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="988.75" y="522.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="988.75" y="525.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -19036,13 +19036,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="61011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="61011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-22.0" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-25.55000000000001" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="61012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="61012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-22.0" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="-25.55000000000001" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -19276,13 +19276,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="61031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="61031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="22.0" y="1007.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="25.55000000000001" y="1007.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="61032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="61032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="22.0" y="1011.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="25.55000000000001" y="1011.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -19495,13 +19495,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="61041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="61041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="-7.750000000000055" y="1022.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-7.750000000000055" y="1025.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="61042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="61042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="-11.250000000000055" y="1022.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="-11.250000000000055" y="1025.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -21579,17 +21579,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="71011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="71011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="474.5" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="71012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="71012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="474.5" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="71013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="71013" name="LaneSignal_1_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="474.5" y="985.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="470.95" y="985.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -21903,17 +21903,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="71021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="71021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="507.75" y="974.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="507.75" y="970.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="71022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="71022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="511.25" y="974.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="511.25" y="970.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="71023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="71023" name="LaneSignal_2_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="514.75" y="974.5" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="514.75" y="970.95" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -22227,17 +22227,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="71031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="71031" name="LaneSignal_3_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="525.5" y="1007.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="1007.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="71032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="71032" name="LaneSignal_3_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="525.5" y="1011.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="1011.25" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="71033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="71033" name="LaneSignal_3_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="525.5" y="1014.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
+        <positionInertial x="529.05" y="1014.75" z="0" hdg="3.141592653589793" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -22526,17 +22526,17 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="71041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="71041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="492.24999999999994" y="1025.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="492.24999999999994" y="1029.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="71042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="71042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="488.74999999999994" y="1025.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="488.74999999999994" y="1029.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-14.75" id="71043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-14.75" id="71043" name="LaneSignal_4_3" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-3" toLane="-3" />
-        <positionInertial x="485.24999999999994" y="1025.5" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="485.24999999999994" y="1029.05" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -24777,13 +24777,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="81011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="81011" name="LaneSignal_1_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="978.0" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="974.45" y="992.25" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="81012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="81012" name="LaneSignal_1_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="978.0" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
+        <positionInertial x="974.45" y="988.75" z="0" hdg="0.0" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -25017,13 +25017,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="81021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="81021" name="LaneSignal_2_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="1007.75" y="978.0" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1007.75" y="974.45" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="81022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="81022" name="LaneSignal_2_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="1011.25" y="978.0" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
+        <positionInertial x="1011.25" y="974.45" z="0" hdg="7.853981633974483" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>
@@ -25236,13 +25236,13 @@
       </object>
     </objects>
     <signals>
-      <signal s="147.0" t="-7.75" id="81041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-7.75" id="81041" name="LaneSignal_4_1" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-1" toLane="-1" />
-        <positionInertial x="992.25" y="1022.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="992.25" y="1025.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
-      <signal s="147.0" t="-11.25" id="81042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
+      <signal s="143.45" t="-11.25" id="81042" name="LaneSignal_4_2" dynamic="yes" orientation="+" zOffset="5.5" country="OpenDRIVE" type="1000001" subtype="-1" value="-1" height="3" width="0.3" hOffset="0">
         <validity fromLane="-2" toLane="-2" />
-        <positionInertial x="988.75" y="1022.0" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
+        <positionInertial x="988.75" y="1025.55" z="0" hdg="4.71238898038469" pitch="0" roll="0" />
       </signal>
     </signals>
   </road>

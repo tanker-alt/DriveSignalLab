@@ -1,6 +1,6 @@
 {
   "schema_version": "safety_rules.1",
-  "opendrive_sha256": "2251cfa79b65beca540d7dab07b5cd5a3c19ffd6f7ce65937ff1e09b2cf310d2",
+  "opendrive_sha256": "761485e38abad7b069ae9b261047f1f54c8d4eb233d173cde554e87e5cdef070",
   "coordinate_system": "OpenDRIVE road_id/lane_id/s_m; resolved world coordinates use CARLA XY",
   "geometry_status": "designed_stop_line_not_tm_calibrated",
   "position_source": "Map-designed stop line, 1m upstream of crosswalk paint",

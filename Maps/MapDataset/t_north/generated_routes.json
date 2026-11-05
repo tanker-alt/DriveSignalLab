@@ -31,7 +31,7 @@
   "lane_changes": [],
   "length_m": 247.0,
   "schema_version": "continuous_route.4",
-  "opendrive_sha256": "e254400d678113bb9fc00687725d742c75d88b0411d3d324dbd097af302c4fb3",
+  "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
   "planner_sha256": "ede5bfc54ffe69e1369480adf38c9042013c03ca3dfa53ae4d38494ef6f03376",
   "planner": "continuous_route_planner",
   "carla_version": "0.9.15",

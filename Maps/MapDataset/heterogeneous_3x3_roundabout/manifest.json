@@ -1620,7 +1620,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1631,7 +1631,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1642,7 +1642,7 @@
       "phase_slot": 2,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1653,7 +1653,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1664,7 +1664,7 @@
       "phase_slot": 4,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1675,7 +1675,7 @@
       "phase_slot": 5,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1686,7 +1686,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1697,7 +1697,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1708,7 +1708,7 @@
       "phase_slot": 2,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -1719,7 +1719,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1730,7 +1730,7 @@
       "phase_slot": 4,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1741,7 +1741,7 @@
       "phase_slot": 5,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -1752,7 +1752,7 @@
       "phase_slot": 6,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1763,7 +1763,7 @@
       "phase_slot": 7,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1774,7 +1774,7 @@
       "phase_slot": 8,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -1785,7 +1785,7 @@
       "phase_slot": 9,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1796,7 +1796,7 @@
       "phase_slot": 10,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1807,7 +1807,7 @@
       "phase_slot": 11,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -1818,7 +1818,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1829,7 +1829,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1840,7 +1840,7 @@
       "phase_slot": 2,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1851,7 +1851,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1862,7 +1862,7 @@
       "phase_slot": 4,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1873,7 +1873,7 @@
       "phase_slot": 5,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1884,7 +1884,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1895,7 +1895,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1906,7 +1906,7 @@
       "phase_slot": 2,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1917,7 +1917,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1928,7 +1928,7 @@
       "phase_slot": 4,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -1939,7 +1939,7 @@
       "phase_slot": 5,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -1954,7 +1954,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 3
+      "signal_group": 3,
+      "signal_s": 114.6
     },
     "41012": {
       "road_id": 40001,
@@ -1966,7 +1967,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 3
+      "signal_group": 3,
+      "signal_s": 114.6
     },
     "60201": {
       "road_id": 40020,
@@ -1978,7 +1980,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 7
+      "signal_group": 7,
+      "signal_s": 9.391665410651944
     },
     "60202": {
       "road_id": 40020,
@@ -1990,7 +1993,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 7
+      "signal_group": 7,
+      "signal_s": 9.391665410651944
     },
     "41021": {
       "road_id": 40002,
@@ -2002,7 +2006,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 2
+      "signal_group": 2,
+      "signal_s": 114.6
     },
     "41022": {
       "road_id": 40002,
@@ -2014,7 +2019,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 2
+      "signal_group": 2,
+      "signal_s": 114.6
     },
     "60211": {
       "road_id": 40021,
@@ -2026,7 +2032,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 6
+      "signal_group": 6,
+      "signal_s": 9.391665410651944
     },
     "60212": {
       "road_id": 40021,
@@ -2038,7 +2045,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 6
+      "signal_group": 6,
+      "signal_s": 9.391665410651944
     },
     "41031": {
       "road_id": 40003,
@@ -2050,7 +2058,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 1
+      "signal_group": 1,
+      "signal_s": 114.6
     },
     "41032": {
       "road_id": 40003,
@@ -2062,7 +2071,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 1
+      "signal_group": 1,
+      "signal_s": 114.6
     },
     "60221": {
       "road_id": 40022,
@@ -2074,7 +2084,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 5
+      "signal_group": 5,
+      "signal_s": 9.391665410651944
     },
     "60222": {
       "road_id": 40022,
@@ -2086,7 +2097,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 5
+      "signal_group": 5,
+      "signal_s": 9.391665410651944
     },
     "41041": {
       "road_id": 40004,
@@ -2098,7 +2110,8 @@
         -1
       ],
       "role": "entry",
-      "signal_group": 4
+      "signal_group": 4,
+      "signal_s": 114.6
     },
     "41042": {
       "road_id": 40004,
@@ -2110,7 +2123,8 @@
         -2
       ],
       "role": "entry",
-      "signal_group": 4
+      "signal_group": 4,
+      "signal_s": 114.6
     },
     "60231": {
       "road_id": 40023,
@@ -2122,7 +2136,8 @@
         -1
       ],
       "role": "circulating",
-      "signal_group": 8
+      "signal_group": 8,
+      "signal_s": 9.391665410651944
     },
     "60232": {
       "road_id": 40023,
@@ -2134,7 +2149,8 @@
         -2
       ],
       "role": "circulating",
-      "signal_group": 8
+      "signal_group": 8,
+      "signal_s": 9.391665410651944
     },
     "51011": {
       "road_id": 50001,
@@ -2142,7 +2158,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2153,7 +2169,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2164,7 +2180,7 @@
       "phase_slot": 2,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2175,7 +2191,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2186,7 +2202,7 @@
       "phase_slot": 4,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2197,7 +2213,7 @@
       "phase_slot": 5,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2208,7 +2224,7 @@
       "phase_slot": 6,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2219,7 +2235,7 @@
       "phase_slot": 7,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2230,7 +2246,7 @@
       "phase_slot": 8,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2241,7 +2257,7 @@
       "phase_slot": 9,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2252,7 +2268,7 @@
       "phase_slot": 10,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2263,7 +2279,7 @@
       "phase_slot": 11,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2274,7 +2290,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2285,7 +2301,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2296,7 +2312,7 @@
       "phase_slot": 2,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2307,7 +2323,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2318,7 +2334,7 @@
       "phase_slot": 4,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2329,7 +2345,7 @@
       "phase_slot": 5,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2340,7 +2356,7 @@
       "phase_slot": 6,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2351,7 +2367,7 @@
       "phase_slot": 7,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2362,7 +2378,7 @@
       "phase_slot": 8,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2373,7 +2389,7 @@
       "phase_slot": 9,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2384,7 +2400,7 @@
       "phase_slot": 10,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2395,7 +2411,7 @@
       "phase_slot": 11,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2406,7 +2422,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2417,7 +2433,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2428,7 +2444,7 @@
       "phase_slot": 2,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2439,7 +2455,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2450,7 +2466,7 @@
       "phase_slot": 4,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2461,7 +2477,7 @@
       "phase_slot": 5,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2472,7 +2488,7 @@
       "phase_slot": 0,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2483,7 +2499,7 @@
       "phase_slot": 1,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2494,7 +2510,7 @@
       "phase_slot": 2,
       "approach_slot": 0,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2505,7 +2521,7 @@
       "phase_slot": 3,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2516,7 +2532,7 @@
       "phase_slot": 4,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2527,7 +2543,7 @@
       "phase_slot": 5,
       "approach_slot": 1,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2538,7 +2554,7 @@
       "phase_slot": 6,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2549,7 +2565,7 @@
       "phase_slot": 7,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2560,7 +2576,7 @@
       "phase_slot": 8,
       "approach_slot": 2,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2571,7 +2587,7 @@
       "phase_slot": 9,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -1
       ]
@@ -2582,7 +2598,7 @@
       "phase_slot": 10,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -2
       ]
@@ -2593,7 +2609,7 @@
       "phase_slot": 11,
       "approach_slot": 3,
       "reference_s": 142.85,
-      "signal_s": 147.0,
+      "signal_s": 143.45,
       "incoming_lanes": [
         -3
       ]
@@ -2983,5 +2999,10 @@
     50010,
     80010
   ],
-  "opendrive_sha256": "9c52dfabbc56af7c93a2124b6f8ccd38881ebfa97df226a990ce3bb94b07b02f"
+  "opendrive_sha256": "24b9c772ad4471268a1ccb0b808fa19d952c1a9efe5a737cff4308a83c2f4c97",
+  "stop_compensation": {
+    "clearance_m": 2.4,
+    "assumed_trigger_offset_m": 3.0,
+    "all_vehicle_compliance_certified": false
+  }
 }
