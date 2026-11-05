@@ -32,7 +32,7 @@
   "length_m": 254.0,
   "schema_version": "continuous_route.4",
   "opendrive_sha256": "d8faf3551c0d6ee4f1b829b1d2dc2f28b9e2a464b9b8a8a4e112308c35129e80",
-  "planner_sha256": "ede5bfc54ffe69e1369480adf38c9042013c03ca3dfa53ae4d38494ef6f03376",
+  "planner_sha256": "2c852c506f4285e33e3f439350e2c81d5e71dde844b35b818fc5158d77097966",
   "planner": "continuous_route_planner",
   "carla_version": "0.9.15",
   "coordinates": "CARLA world meters (not OpenDRIVE XY)",

@@ -163,7 +163,7 @@
   "max_sample_gap_m": 1.1858589368111052,
   "schema_version": "continuous_route.4",
   "opendrive_sha256": "24b9c772ad4471268a1ccb0b808fa19d952c1a9efe5a737cff4308a83c2f4c97",
-  "planner_sha256": "ede5bfc54ffe69e1369480adf38c9042013c03ca3dfa53ae4d38494ef6f03376",
+  "planner_sha256": "2c852c506f4285e33e3f439350e2c81d5e71dde844b35b818fc5158d77097966",
   "planner": "heterogeneous_route",
   "carla_version": "0.9.15",
   "coordinates": "CARLA world meters (not OpenDRIVE XY)",

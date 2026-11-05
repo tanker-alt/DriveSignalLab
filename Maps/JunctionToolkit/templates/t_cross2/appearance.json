@@ -1,0 +1,29 @@
+{
+  "template": "TCross2Clean_runtime_v1",
+  "source_scene": "D:\\Maps\\MapDataset\\FourLeggedIntersection\\Exports\\TCross2Clean.udatasmith",
+  "source_sha256": "1d753704f322b65ff9fb8f9f965cd091debf1eeb5c678ffc5ccf2571f997820c",
+  "supported_runtime_geometry": "flat two-lane T junctions and connected road networks",
+  "material_mapping": {
+    "Asphalt1_Road": "native CARLA generated asphalt",
+    "LaneMarking1_Marking": "CARLA flat white mesh, 6 mm above road",
+    "LaneMarkingYellow1_Marking": "CARLA double-yellow mesh",
+    "Grass1_Ground": "CARLA cooked Grass1 ground",
+    "Eucalyptus foliage": "CARLA cooked roadside tree equivalents"
+  },
+  "sidewalk": {
+    "runtime_status": "native collision plus SideWalkCube concrete caps at 0.16 m",
+    "width_m": 2
+  },
+  "markings": {
+    "paint_top_m": 0.006
+  },
+  "vegetation": {
+    "corridor_width_m": 40.0,
+    "grid_spacing_m": 14.0,
+    "lane_edge_buffer_m": 7.0,
+    "junction_buffer_m": 18.0,
+    "tree_spacing_m": 10.0,
+    "tree_rows_per_side": 4
+  },
+  "runtime_mode": "decorate after OpenDRIVE load; RoadRunner visual reference with cooked CARLA equivalents"
+}

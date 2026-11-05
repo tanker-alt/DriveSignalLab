@@ -52,7 +52,7 @@ python Maps/route_adapter/adapter.py build --map-dir Maps/MapDataset/heterogeneo
 python Maps/route_adapter/adapter.py load --map-dir Maps/MapDataset/heterogeneous_3x3 --host localhost --port 2000
 ```
 
-此命令会切换世界；有同步实验或车辆、行人、传感器时拒绝加载。只加载原生道路，不添加美化标线；原生信号暂保持红灯，随后由控制器接管。
+此命令会切换世界；有同步实验或车辆、行人、传感器时拒绝加载。默认执行内置美化：单路口 complete、路网 simple；加载后原生信号保持红灯，随后由控制器接管。美化失败直接报错，不回退到裸地图。
 `load` 的服务器操作本次未重新实机验证；离线测试覆盖匹配地图下的路线读取、CARLA Location 和起点 Transform 转换。
 
 供车辆路线跟踪器使用：
@@ -80,7 +80,7 @@ git restore --source=origin/feat/single-junction-signal-controller -- signal_con
 2026-11-05 已同步原生信号停止位置补偿修复。10 张图的 stop_compensation_validation.json 均绑定当前地图哈希并通过原生信号/车道/停止 waypoint 对齐检查；这不等于所有车型停车或正式红灯违规指标验收。
 
 旧地图分支 `toolkit/urban-cross3-v1-20261027` 已弃用；地图生成、美化源码继续在 `toolkit/map-toolkit-2026-11-02` 维护。
-本分支只负责选定地图版本、预处理路线及运行时读取适配。
+本分支包含选定地图版本、预处理路线、运行时适配，以及生成和美化工具。
 
 
 ## 2026-11-05 停止线修复发布
@@ -89,5 +89,25 @@ git restore --source=origin/feat/single-junction-signal-controller -- signal_con
 每图附停止补偿 patch、validation 和 publication 报告。旧 admission/project-preflight/实车报告已失效的，不作为当前版本证据发布；experiment_profiles 必须重新生成。
 所有路线均基于新 XODR 重新生成并绑定新哈希。单路口控制器旧默认路径为 t3_north，运行时请显式传 `--map-dir Maps/MapDataset/t_north`。
 
-美化源码已经发布在 [地图工具分支](https://github.com/tanker-alt/DriveSignalLab/tree/toolkit/map-toolkit-2026-11-02/map_toolkit/standardization/JunctionToolkit)。
-本分支的 `adapter.py load` 只加载原生地图，不调用美化。需美化时，在已获取工具分支源码的环境下使用 `view.py`，并将 MAP_DIR 指向本分支的最新地图；不要使用工具包中旧哈希的示例图替代这次修复地图。
+美化和生成源码现已随本分支发布于 `Maps/JunctionToolkit/`，来源为 D:/CarlaMapTools 的当前 standardization/JunctionToolkit，包括本次停止位置补偿版 generate.py、模板与配置。无需另外检出地图工具分支。
+
+## 默认美化启动与地图生成
+
+```bash
+# 默认美化，单路口 complete，路网 simple；使用当前 CARLA Python 环境。
+python Maps/route_adapter/adapter.py load --map-dir Maps/MapDataset/t_north
+python Maps/route_adapter/adapter.py load --map-dir Maps/MapDataset/heterogeneous_3x3
+# 直接美化入口，默认还拍摄预览；--no-photos 只跳过拍照，不关闭美化。
+python Maps/JunctionToolkit/view.py Maps/MapDataset/cross3 --no-photos
+```
+
+运行环境：Python 3.7、CARLA Python 包/服务端 0.9.15。完整美化使用 CARLA 自带资产，不需要安装 RoadRunner。
+地图生成使用独立 Python 3.12 环境，安装 `Maps/JunctionToolkit/requirements-generator-lock.txt`，然后执行：
+
+```bash
+python Maps/JunctionToolkit/generate.py --config Maps/JunctionToolkit/configs/cross3.json --out Maps/MapDataset/new_cross3
+```
+
+生成与 CARLA 环境分开安装。可在 `Maps/JunctionToolkit/settings.local.json` 指定 generator_python 和 carla_python，勿提交机器专属设置。
+工具随附历史说明中的 `standardization/JunctionToolkit` 路径，在本分支对应 `Maps/JunctionToolkit`；地图输出使用 `Maps/MapDataset`。
+本次新增入口已验证默认美化分派和失败传播；未接管用户当前 CARLA 世界进行新一轮实机外观验收。

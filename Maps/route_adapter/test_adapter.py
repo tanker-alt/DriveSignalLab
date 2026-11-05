@@ -3,6 +3,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 try:
@@ -46,7 +47,7 @@ class AdapterTests(unittest.TestCase):
 
     def test_rejects_wrong_live_world(self):
         class WrongMap:
-            def to_opendrive(self): return 'another map'
+            def to_opendrive(self): return '<OpenDRIVE name="another map" />'
         class WrongWorld:
             def get_map(self): return WrongMap()
         with self.assertRaises(ValueError): load_route(self.folder,WrongWorld())
@@ -60,6 +61,30 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(len(points),len(self.route['points']))
         transform=spawn_transform(self.folder,World())
         self.assertLess(abs(transform.location.z-points[0].z-0.3),1e-4)
+
+    def test_load_executes_bundled_beautifier_and_propagates_failure(self):
+        try:
+            from . import adapter
+        except ImportError:
+            import adapter
+        import carla
+        world=mock.MagicMock()
+        world.get_settings.return_value.synchronous_mode=False
+        world.get_actors.return_value.filter.return_value=[]
+        client=mock.MagicMock()
+        client.get_world.return_value=world
+        with mock.patch.object(carla,'Client',return_value=client), \
+             mock.patch.object(adapter,'load_route'), \
+             mock.patch.object(adapter.subprocess,'run') as run:
+            adapter.load_world(self.folder,'localhost',2000)
+            command=run.call_args[0][0]
+            self.assertTrue(Path(command[2]).is_file())
+            self.assertEqual(command[command.index('--beautify')+1],'auto')
+            self.assertTrue(run.call_args[1]['check'])
+            client.generate_opendrive_world.assert_not_called()
+            run.side_effect=adapter.subprocess.CalledProcessError(1,command)
+            with self.assertRaises(adapter.subprocess.CalledProcessError):
+                adapter.load_world(self.folder,'localhost',2000)
 
 
 if __name__=='__main__': unittest.main()

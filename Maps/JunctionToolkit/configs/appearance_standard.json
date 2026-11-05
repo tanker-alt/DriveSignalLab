@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "scope": "Shared appearance policy for future junction and network generators",
+  "supported_runtime_geometry": "flat urban_cross3_v1 cross and regular grid",
+  "sidewalk": {
+    "diffuse_reference": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Concrete1_Diff.png",
+    "runtime_status": "pending: procedural sidewalk is not exposed as a texture-addressable object"
+  },
+  "grass": {
+    "mesh": "Ground/Town10HD/Town10HD_Terrain_Ground_26Node",
+    "material": "Grass1_Ground",
+    "surface_z_m": -0.2
+  },
+  "markings": {
+    "approach_solid_length_m": 0,
+    "dash_length_m": 3,
+    "dash_gap_m": 6,
+    "paint_top_m": 0.001,
+    "stop_line_lanes": "incoming_only",
+    "stop_line_position": "upstream_of_crosswalk",
+    "center": "double_yellow_solid",
+    "same_direction": "white_broken",
+    "debug_lines": false
+  },
+  "signals": "CARLA curved mast and independent controllable native heads",
+  "trees": "CARLA SM_Acer_02, SM_Beech, SM_Cypress; exclude road and sidewalk buffers"
+}

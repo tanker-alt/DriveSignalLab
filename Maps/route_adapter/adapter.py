@@ -3,6 +3,9 @@ import argparse
 import hashlib
 import json
 import math
+import subprocess
+import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -79,8 +82,12 @@ def load_route(folder, world=None):
     report = read_json(Path(folder) / 'generated_routes.json')
     validate_route(report, design, digest)
     if world is not None:
-        actual = hashlib.sha256(world.get_map().to_opendrive().encode('utf-8')).hexdigest()
-        if actual != digest:
+        def node(element):
+            return (element.tag, sorted(element.attrib.items()), (element.text or '').strip(),
+                    [node(child) for child in element])
+        actual = ET.fromstring(world.get_map().to_opendrive())
+        expected = ET.fromstring((Path(folder) / 'map.xodr').read_bytes())
+        if node(actual) != node(expected):
             raise ValueError('Loaded CARLA world differs from route map')
     return report
 
@@ -115,9 +122,11 @@ def load_world(folder, host, port):
     world.wait_for_tick(15)
     if any(world.get_actors().filter(pattern) for pattern in ('vehicle.*','sensor.*','walker.*')):
         raise RuntimeError('Finish the current actors/experiment before loading')
-    world = client.generate_opendrive_world(raw.decode('utf-8-sig'), carla.OpendriveGenerationParameters(
-        vertex_distance=2., max_road_length=50., wall_height=0., additional_width=0.,
-        smooth_junctions=False, enable_mesh_visibility=True, enable_pedestrian_navigation=False))
+    # Run in a separate interpreter to isolate the toolkit's legacy module names.
+    subprocess.run([sys.executable, '-B', str(HERE.parent / 'JunctionToolkit' / 'view.py'),
+                    str(Path(folder).resolve()), '--host', host, '--port', str(port),
+                    '--beautify', 'auto', '--no-photos'], check=True)
+    world = client.get_world()
     world.wait_for_tick(15)
     # Prevent uncontrolled native phase cycling until a controller takes ownership.
     for light in world.get_actors().filter('traffic.traffic_light'):
@@ -127,7 +136,7 @@ def load_world(folder, host, port):
         light.set_state(carla.TrafficLightState.Red)
     client.apply_batch_sync([], False)
     load_route(folder, world)
-    print('Loaded matched map; native signals held red without global freeze.')
+    print('Loaded matched map with automatic beautification; native signals held red.')
 
 
 def batch(dataset, rebuild):
