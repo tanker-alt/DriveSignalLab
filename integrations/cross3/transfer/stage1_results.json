@@ -2,7 +2,7 @@
   "stage": 1,
   "passed": true,
   "tests": 23,
-  "frames": 11870,
+  "frames": 11871,
   "completed": 112,
   "intentionally_censored": 26,
   "cases": [
@@ -54,7 +54,7 @@
     {
       "name": "carla_fixed_12001_150",
       "audit_passed": true,
-      "frames": 2153,
+      "frames": 2156,
       "completed": 15,
       "unfinished": 0,
       "red_light_violations": 0,
@@ -81,7 +81,7 @@
     {
       "name": "carla_maxpressure_12002_150",
       "audit_passed": true,
-      "frames": 1728,
+      "frames": 1726,
       "completed": 13,
       "unfinished": 0,
       "red_light_violations": 0,
@@ -101,7 +101,7 @@
     "core.py": "d7062e95aa07a8389515b3e05b3cdd7ab7f092d7562b2acae56c8118336988a5",
     "safety.py": "04098a69811e2b2cc6947816b2b242abaf2c13253466ce0ab5632832b32f2705",
     "measurements.py": "f74dd1d0db893a1cecb630d6efa9e6e29714d5bfc37bac36c3f41954fa0b026d",
-    "sumo_env.py": "b5325da33195e75b9c6f6ceb6937361964c679aa8f0e1508071a72694cccf532",
+    "sumo_env.py": "7c60af70aa4263428335dc6a91f754e3569e4219805b4b302cb7a85693db5a64",
     "carla_env.py": "57d9bc38af4021122f0e5bd52b3e10c093ec4af9debd26e510f9308cca1ff0f4",
     "audit_metrics.py": "d56723d4eec6af937d1550307b6d7915c77f7aee80bc37c18c5681303f0cd4ba",
     "test_metrics_stage1.py": "3a659ab010b273f8849764ea0c858a2b691449d00cdfa7135ff789a36bcd6884",
@@ -109,5 +109,5 @@
     "stage1.py": "1c4acf26df50bfc838fc278dea1117c6fd26be1ae4698764e85528b34eee7320",
     "test_stages.py": "3519c9a29b6beb7672d2e18d0eea5b6a680000b2db33878165f08380e261a0ce"
   },
-  "receipt": "outputs/staged/stage1_acceptance_v2b/acceptance.json"
+  "receipt": "outputs/staged/stage1_acceptance_native/acceptance.json"
 }

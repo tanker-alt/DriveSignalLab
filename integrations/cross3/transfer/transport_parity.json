@@ -1,0 +1,14 @@
+{
+  "sumo_version": "1.18.0",
+  "tcp": {
+    "path": "outputs/staged/stage1_acceptance_v2b/sumo_fixed_12001_150/episode_000/measurements.jsonl.gz",
+    "raw_sha256": "963568a838026aeb4d4b65c13ccd5b429d1c4cdfed0005c79b30a6ad45843d98",
+    "frames": 1083
+  },
+  "libsumo": {
+    "path": "outputs/staged/native_parity_probe/episode_000/measurements.jsonl.gz",
+    "raw_sha256": "963568a838026aeb4d4b65c13ccd5b429d1c4cdfed0005c79b30a6ad45843d98",
+    "frames": 1083
+  },
+  "byte_identical": true
+}

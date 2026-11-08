@@ -84,7 +84,7 @@ def run(args):
                     raise RuntimeError('No actual VLA head samples; refusing to claim joint training')
                 policy.save(args.output/('checkpoint_%03d.pt'%ep),dict(provenance,episode=ep))
             report=dict(env.metrics.report(),seed=seed,reward=total_reward,terminated=terminated,truncated=truncated,
-                        controller=args.controller,backend=args.backend,demand_profile=profile,signal_switches=env.signals.switches,training=update)
+                        controller=args.controller,backend=args.backend,transport=getattr(env,'transport','carla_rpc'),demand_profile=profile,signal_switches=env.signals.switches,training=update)
             write(folder/'metrics.json',report)
             write(folder/'vehicles.json',list(env.metrics.rows.values()))
             write(folder/'crossings.json',env.metrics.safety.events)

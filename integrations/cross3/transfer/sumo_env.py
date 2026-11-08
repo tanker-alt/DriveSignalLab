@@ -80,7 +80,8 @@ class SumoEnv:
                      '--step-length',str(self.dt),'--seed',str(seed),'--time-to-teleport','-1',
                      '--no-step-log','true','--collision.action','warn','--collision.check-junctions','true'],
                     label=label,stdout=(folder/'sumo.log').open('w'))
-        self.connection=traci.getConnection(label)
+        self.transport='libsumo' if getattr(traci,'isLibsumo',lambda:False)() else 'tcp'
+        self.connection=traci if self.transport=='libsumo' else traci.getConnection(label)
         self.trace=(folder/'decisions.jsonl').open('w')
         self.recorder=Recorder(folder,'sumo')
     def vehicles(self):

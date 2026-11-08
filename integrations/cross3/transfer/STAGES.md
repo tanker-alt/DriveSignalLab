@@ -25,8 +25,8 @@
 有 3 次红灯越线。仅在背景驾驶器中用车道—信号绑定和车头停止距离修复；不覆盖 VLA 控制。
 原始失败证据保留在 `outputs/staged/stage1_carla_probe/`。
 
-正式验收目录：`outputs/staged/stage1_acceptance_v2b/`。
-23 项测试、10 个真实场景、11,870 帧，112 辆完成、26 辆在刻意截断场景中保留未完成。
+正式验收目录：`outputs/staged/stage1_acceptance_native/`。
+23 项测试、10 个真实场景、11,871 帧，112 辆完成、26 辆在刻意截断场景中保留未完成。
 补充验证了 SUMO 毫秒精度向上取整，保证实际发车不早于计划到达。
 所有独立复算通过，正式基线观测到的红灯越线与碰撞均为 0。完整场景覆盖两个种子、
 固定配时/MaxPressure、SUMO/CARLA；截断场景验证“只统计成功车辆”的偏差不会发生。
@@ -83,8 +83,11 @@ CARLA 使用独立微调种子 25001 起，验证 26001 起，最终测试 27001
 ```bash
 cd /home/zlj/DriveSignalLab
 export PATH=/home/zlj/lmdrive_runtime/env/bin:$PATH
-export PYTHONPATH=.
+export PYTHONPATH=/home/zlj/DriveSignalLab/outputs/staged/runtime:.
+export LIBSUMO_AS_TRACI=quiet
 PY=/home/zlj/lmdrive_runtime/env/bin/python
+# 若尚未安装，可隔离安装匹配当前 SUMO 1.18.0 的库：
+# $PY -m pip install --target outputs/staged/runtime --no-deps libsumo==1.18.0
 
 # 需要一个空闲的 CARLA 31600 实例；入口拒绝接管已有活动世界。
 $PY -m integrations.cross3.transfer.stage1 \
@@ -106,3 +109,6 @@ $PY -m integrations.cross3.transfer.run --backend carla --port 31600 --train --v
 
 所有输出目录必须全新。指标/仿真代码变化会令旧验收失效；证据被修改、丢失或模型不在
 已验收继承链中也会被拒绝。这是自动证据检查，不是再次请求用户批准。
+
+进程内 libsumo 与 TCP 接口的同场景 1,083 帧原始测量逐字节一致，见
+[transport_parity.json](transport_parity.json)。启用 libsumo 只改变调用方式，不替换真实 SUMO。
