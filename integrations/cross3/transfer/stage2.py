@@ -23,7 +23,9 @@ def execute(args,folder,backend,controller='learned',checkpoint=None,train=False
          '--duration',str(args.duration),'--port',str(args.port)]
     if checkpoint: cmd+=['--checkpoint',str(checkpoint)]
     if sumo_gate: cmd+=['--sumo-acceptance',str(sumo_gate)]
-    if train: cmd+=['--train']
+    if train:
+        cmd+=['--train']
+        if checkpoint is None: cmd+=['--signal-prior',args.signal_prior]
     print('Stage 2:',folder.name,flush=True)
     with folder.with_suffix('.log').open('w') as stream:
         result=subprocess.run(cmd,stdout=stream,stderr=subprocess.STDOUT)
@@ -60,6 +62,7 @@ def main():
     p.add_argument('--metrics-acceptance',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--port',type=int,default=31600);p.add_argument('--sumo-episodes',type=int,default=100)
     p.add_argument('--carla-episodes',type=int,default=20);p.add_argument('--arrival-seconds',type=float,default=40)
+    p.add_argument('--signal-prior',choices=['none','maxpressure'],default='none')
     p.add_argument('--duration',type=float,default=200);p.add_argument('--eval-episodes',type=int,default=8)
     a=p.parse_args(); load_receipt(a.metrics_acceptance,1)
     if a.sumo_episodes<4 or a.carla_episodes<4 or a.eval_episodes<4: p.error('Cover all four demand families')
@@ -75,6 +78,10 @@ def main():
     execute(a,training,'sumo',train=True,episodes=a.sumo_episodes,seed=20001)
     fixed=execute(a,a.output/'sumo_fixed_validation','sumo','fixed',episodes=a.eval_episodes)
     pressure=execute(a,a.output/'sumo_pressure_validation','sumo','maxpressure',episodes=a.eval_episodes)
+    initial_prior=None
+    if a.signal_prior=='maxpressure':
+        initial_prior=score(execute(a,a.output/'sumo_initial_prior_validation','sumo',
+            checkpoint=training/'initial.pt',episodes=a.eval_episodes))
     candidates=[]
     rounds=sorted({a.sumo_episodes//4-1,a.sumo_episodes//2-1,3*a.sumo_episodes//4-1,a.sumo_episodes-1})
     for ep in rounds:
@@ -83,7 +90,7 @@ def main():
         candidates.append(dict(checkpoint=str(checkpoint),score=score(rows)))
     best=min(candidates,key=lambda c:(c['score']['collisions']+c['score']['red_violations'],c['score']['unfinished'],c['score']['mean_wait']))
     summary=dict(stage=2,milestone='sumo_validation',passed=acceptable(best['score'],score(fixed)),
-                 fixed=score(fixed),maxpressure=score(pressure),candidates=candidates,selected=best)
+                 fixed=score(fixed),maxpressure=score(pressure),initial_prior=initial_prior,candidates=candidates,selected=best)
     write(a.output/'sumo_validation.json',summary)
     if not summary['passed']:
         print('SUMO validation did not pass; CARLA adaptation and VLA training remain gated.',flush=True);return

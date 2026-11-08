@@ -12,9 +12,13 @@ from torch.distributions import Categorical, Normal
 from .core import CONTRACT
 
 class Policy:
-    def __init__(self, seed=0, lr=3e-4):
+    def __init__(self, seed=0, lr=3e-4, signal_prior='none'):
         torch.manual_seed(seed)
         self.light = nn.Sequential(nn.Linear(20,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,4))
+        if signal_prior not in ('none','maxpressure'): raise ValueError('Unknown signal prior')
+        self.signal_prior=signal_prior
+        if signal_prior=='maxpressure':
+            nn.init.zeros_(self.light[-1].weight); nn.init.zeros_(self.light[-1].bias)
         self.critic = nn.Sequential(nn.Linear(27,128),nn.Tanh(),nn.Linear(128,1))
         self.optimizer = torch.optim.Adam(list(self.light.parameters())+list(self.critic.parameters()),lr=lr)
         self.head = self.reference_head = self.head_optimizer = None
@@ -38,8 +42,16 @@ class Policy:
                     self.head_optimizer.load_state_dict(self.loaded_head['head_optimizer'])
         layer.load_state_dict(self.head.state_dict())
         self.live_layer = layer
+    def light_logits(self, features):
+        residual=self.light(features)
+        if self.signal_prior=='maxpressure':
+            # Explicit fixed inductive bias, not a post-sampling action override.
+            # Counts were normalized by 20; 3 logits per vehicle retain exploration.
+            return residual+60*(features[...,4:8]-features[...,8:12])+.001*features[...,12:16]
+        return residual
+
     def distribution(self, obs):
-        logits = self.light(torch.as_tensor(obs['light'],dtype=torch.float32))
+        logits = self.light_logits(torch.as_tensor(obs['light'],dtype=torch.float32))
         return Categorical(logits=logits.masked_fill(~torch.as_tensor(obs['light_mask']),-1e9))
     @torch.no_grad()
     def act(self, obs, deterministic=False):
@@ -71,7 +83,7 @@ class Policy:
         light_before = copy.deepcopy(self.light.state_dict())
         before = copy.deepcopy(self.head.state_dict()) if self.head is not None else None
         for epoch in range(epochs):
-            d=Categorical(logits=self.light(obs).masked_fill(~masks,-1e9))
+            d=Categorical(logits=self.light_logits(obs).masked_fill(~masks,-1e9))
             logratio=d.log_prob(acts)-old
             ratio=logratio.exp()
             loss=-torch.minimum(ratio*advantage,ratio.clamp(.8,1.2)*advantage).mean()
@@ -109,7 +121,8 @@ class Policy:
                     head_parameter_change_l1=head_change, head_samples=len(head_events), transitions=len(rows))
     def save(self, path, provenance):
         payload=dict(contract=CONTRACT,light=self.light.state_dict(),critic=self.critic.state_dict(),
-                     optimizer=self.optimizer.state_dict(),updates=self.updates,provenance=provenance,std=self.std)
+                     optimizer=self.optimizer.state_dict(),updates=self.updates,provenance=provenance,std=self.std,
+                     policy_spec=dict(schema='signal_residual_logits_v1',prior=self.signal_prior))
         if self.head is not None:
             payload.update(head=self.head.state_dict(),reference_head=self.reference_head.state_dict(),
                            head_optimizer=self.head_optimizer.state_dict())
@@ -118,6 +131,10 @@ class Policy:
         data=torch.load(str(path),map_location='cpu')
         if data.get('contract') != CONTRACT:
             raise ValueError('Incompatible/missing transfer contract; legacy hash-lane checkpoints cannot be migrated faithfully')
+        spec=data.get('policy_spec',dict(schema='signal_residual_logits_v1',prior='none'))
+        if spec.get('schema')!='signal_residual_logits_v1' or spec.get('prior') not in ('none','maxpressure'):
+            raise ValueError('Unknown signal policy semantics')
+        self.signal_prior=spec['prior']
         self.light.load_state_dict(data['light']); self.critic.load_state_dict(data['critic'])
         self.optimizer.load_state_dict(data['optimizer']); self.updates=data['updates']; self.std=data['std']
         if 'head' in data: self.loaded_head=data

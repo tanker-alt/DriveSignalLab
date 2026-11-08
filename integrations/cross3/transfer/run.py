@@ -22,8 +22,10 @@ def run(args):
     if args.waypoint_head: args.waypoint_head=args.waypoint_head.resolve()
     args.output.mkdir(parents=True,exist_ok=False)
     torch.set_num_threads(2); random.seed(args.seed); np.random.seed(args.seed)
-    policy=Policy(args.seed, args.lr)
+    policy=Policy(args.seed, args.lr,signal_prior='none' if args.signal_prior=='auto' else args.signal_prior)
     source=policy.load(args.checkpoint) if args.checkpoint else None
+    if args.signal_prior!='auto' and policy.signal_prior!=args.signal_prior:
+        raise ValueError('Requested signal prior differs from checkpoint')
     validate_progress(args,source)
     if source and source.get('map_sha256') != hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest():
         raise ValueError('Checkpoint map fingerprint mismatch')
@@ -36,7 +38,7 @@ def run(args):
         source_checkpoint_sha256=sha(args.checkpoint) if args.checkpoint else None,
         map_sha256=hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest(),
         training_scope='signal_and_internal_waypoint_final_layer' if args.vla and args.train else 'signal_only' if args.train else 'frozen_evaluation',
-        vla_base='LMDrive local config', initial_waypoint_head=str(args.waypoint_head),
+        signal_prior=policy.signal_prior, vla_base='LMDrive local config', initial_waypoint_head=str(args.waypoint_head),
         contract=CONTRACT)
     write(args.output/'protocol.json',dict(provenance,arguments={k:str(v) if isinstance(v,Path) else v for k,v in vars(args).items()}))
     snapshot=args.output/'source'; snapshot.mkdir()
@@ -44,6 +46,7 @@ def run(args):
     git=subprocess.run(['git','rev-parse','HEAD'],capture_output=True,text=True)
     write(args.output/'source_hashes.json',dict(git_head=git.stdout.strip(),files={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in snapshot.glob('*.py')}))
     reports=[]
+    if args.train and not args.vla: policy.save(args.output/'initial.pt',dict(provenance,episode=-1))
     for ep in range(args.episodes):
         folder=args.output/('episode_%03d'%ep); seed=args.seed+ep
         profile=PROFILES[ep%len(PROFILES)] if args.demand_profile=='cycle' else args.demand_profile
@@ -120,6 +123,7 @@ def main():
     p.add_argument('--fixed-green',type=float,default=15)
     p.add_argument('--port',type=int,default=31610)
     p.add_argument('--lr',type=float,default=3e-4)
+    p.add_argument('--signal-prior',choices=['auto','none','maxpressure'],default='auto')
     p.add_argument('--epochs',type=int,default=4)
     a=p.parse_args()
     if a.episodes<1 or a.epochs<1 or a.rate<=0 or not 0<a.arrival_seconds<=a.duration: p.error('Invalid episode, demand or horizon settings')
