@@ -35,11 +35,12 @@ def sumo_departure(when):
 
 class SumoEnv:
     dt=.1
-    def __init__(self, folder, rows, seed, limit, policy=None, joint=False, train=False, **kwargs):
+    def __init__(self, folder, rows, seed, limit, policy=None, joint=False, train=False, fairness_weight=0., max_wait_weight=0., **kwargs):
         if joint: raise ValueError('VLA joint training requires CARLA sensors, not SUMO')
         import traci
         self.folder=folder; folder.mkdir(parents=True,exist_ok=False)
         self.rows=rows; self.by_id={r['id']:r for r in rows}; self.limit=limit
+        self.fairness_weight=fairness_weight; self.max_wait_weight=max_wait_weight
         self.signals=Signals(); self.metrics=Metrics(rows); self.metrics.safety=SafetyMetrics(); self.time=0.; self.ego_ids=[]
         self.connection=None
         net=folder/'cross3.net.xml'
@@ -144,6 +145,11 @@ class SumoEnv:
         terminated=bool(collisions) or all(r['finish'] is not None for r in self.metrics.rows.values())
         truncated=self.time>=self.limit-1e-7 and not terminated
         reward=-(self.metrics.vehicle_time-before)/20-100*bool(collisions)
+        if self.fairness_weight or self.max_wait_weight:
+            waits=[r['waiting'] for r in self.metrics.rows.values() if r['time']<=self.time and r['finish'] is None]
+            by=[sum(r['waiting'] for r in self.metrics.rows.values() if r['road']==road and r['time']<=self.time and r['finish'] is None) for road in (1,2,3,4)]
+            reward-=self.fairness_weight*(max(by)-min(by))/20.
+            reward-=self.max_wait_weight*(max(waits,default=0.)/20.)
         self.trace.write(json.dumps(dict(time=self.time,action=action,phase=self.signals.active,stage=self.signals.stage,reward=reward))+'\n')
         return self.observe(),reward,terminated,truncated,dict(duration=elapsed,head_events=[])
     def close(self):

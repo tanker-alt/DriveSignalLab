@@ -12,7 +12,7 @@ from .measurements import Recorder
 class CarlaEnv:
     dt=.05
     def __init__(self, folder, rows, seed, limit, policy, joint=False, train=False,
-                 port=31610, waypoint_head=None, **kwargs):
+                 port=31610, waypoint_head=None, fairness_weight=0., max_wait_weight=0., **kwargs):
         import fcntl
         # Hold a process lock before touching the world. Existing active actors are
         # additionally rejected by load_map, including experiments without this lock.
@@ -42,7 +42,7 @@ class CarlaEnv:
         self.Driver=LaneSignalDriver
         self.world=self.base.world; self.client=self.base.client
         self.folder=folder; self.rows=rows; self.limit=limit; self.policy=policy
-        self.joint=joint; self.train=train; self.time=0.; self.signals=Signals(); self.metrics=Metrics(rows); self.metrics.safety=SafetyMetrics()
+        self.joint=joint; self.train=train; self.fairness_weight=fairness_weight; self.max_wait_weight=max_wait_weight; self.time=0.; self.signals=Signals(); self.metrics=Metrics(rows); self.metrics.safety=SafetyMetrics()
         self.fleet={}; self.completed=set(); self.events=[]; self.collisions=[]; self.seen_collisions=set()
         self.agent=self.wrapper=self.hook=None
         self.ego_ids=[r['id'] for r in rows if r['ego']]
@@ -233,6 +233,11 @@ class CarlaEnv:
         terminated=bool(self.collisions) or len(self.completed)==len(self.rows)
         truncated=self.time>=self.limit-1e-6 and not terminated
         reward=-(self.metrics.vehicle_time-before)/20-100*bool(self.collisions)
+        if self.fairness_weight or self.max_wait_weight:
+            waits=[r['waiting'] for r in self.metrics.rows.values() if r['time']<=self.time and r['finish'] is None]
+            by=[sum(r['waiting'] for r in self.metrics.rows.values() if r['road']==road and r['time']<=self.time and r['finish'] is None) for road in (1,2,3,4)]
+            reward-=self.fairness_weight*(max(by)-min(by))/20.
+            reward-=self.max_wait_weight*(max(waits,default=0.)/20.)
         self.positions.write(json.dumps(dict(time=self.time,vehicles={vid:{k:x for k,x in v.items() if k!='wp'} for vid,v in self.vehicles().items()}))+'\n')
         self.trace.write(json.dumps(dict(time=self.time,action=action,phase=self.signals.active,stage=self.signals.stage,
                                         reward=reward,vla_samples=len(self.events)))+'\n'); self.trace.flush()

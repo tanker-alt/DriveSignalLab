@@ -22,6 +22,8 @@ def execute(args,folder,backend,controller='learned',checkpoint=None,train=False
          '--seed',str(seed),'--demand-profile',profile,'--arrival-seconds',str(args.arrival_seconds),
          '--duration',str(args.duration),'--port',str(args.port)]
     if getattr(args,'lr',None) is not None: cmd+=['--lr',str(args.lr)]
+    for key in ('fairness_weight','max_wait_weight'):
+        if getattr(args,key,None) is not None: cmd+=['--'+key.replace('_','-'),str(getattr(args,key))]
     if checkpoint: cmd+=['--checkpoint',str(checkpoint)]
     if sumo_gate: cmd+=['--sumo-acceptance',str(sumo_gate)]
     if train:

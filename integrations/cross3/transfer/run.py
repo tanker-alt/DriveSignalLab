@@ -59,7 +59,8 @@ def run(args):
                 from .carla_env import CarlaEnv
                 cls=CarlaEnv
             env=cls(folder,rows,seed,args.duration,policy=policy,joint=args.vla,train=args.train,
-                    port=args.port,waypoint_head=args.waypoint_head)
+                    port=args.port,waypoint_head=args.waypoint_head, fairness_weight=args.fairness_weight,
+                    max_wait_weight=args.max_wait_weight)
             write(folder/'demand.json',rows)
             obs=env.observe(); rollout=[]; total_reward=0.
             while True:
@@ -125,6 +126,8 @@ def main():
     p.add_argument('--lr',type=float,default=3e-4)
     p.add_argument('--signal-prior',choices=['auto','none','maxpressure'],default='auto')
     p.add_argument('--epochs',type=int,default=4)
+    p.add_argument('--fairness-weight',type=float,default=0.)
+    p.add_argument('--max-wait-weight',type=float,default=0.)
     a=p.parse_args()
     if a.episodes<1 or a.epochs<1 or a.rate<=0 or not 0<a.arrival_seconds<=a.duration: p.error('Invalid episode, demand or horizon settings')
     if a.lr<=0: p.error('--lr must be positive')
