@@ -17,7 +17,10 @@ def main():
     p.add_argument('--study',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--port',type=int,default=31600)
-    a=p.parse_args(); a.study=a.study.resolve(); a.output=a.output.resolve()
+    p.add_argument('--lr',type=float,default=3e-4)
+    a=p.parse_args()
+    if a.lr<=0: p.error('--lr must be positive')
+    a.study=a.study.resolve(); a.output=a.output.resolve()
     protocol=json.loads((a.study/'protocol.json').read_text())
     args=protocol['arguments']
     a.metrics_acceptance=Path(args['metrics_acceptance'])
@@ -47,6 +50,7 @@ def main():
     if sha(Path(before_args['checkpoint']))!=sha(checkpoint): raise ValueError('Wrong direct-transfer baseline')
     a.output.mkdir(parents=True,exist_ok=False)
     write(a.output/'protocol.json',dict(original_protocol=protocol,source_study=str(a.study),
+        learning_rate=a.lr,
         restart='fresh training from selected SUMO model; original seeds and budget; failed run retained'))
     training=a.output/'carla_train'
     execute(a,training,'carla',checkpoint=checkpoint,train=True,episodes=episodes,seed=25001,sumo_gate=sumo_gate)

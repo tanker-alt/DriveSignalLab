@@ -21,6 +21,7 @@ def execute(args,folder,backend,controller='learned',checkpoint=None,train=False
          '--metrics-acceptance',str(args.metrics_acceptance),'--output',str(folder),'--episodes',str(episodes),
          '--seed',str(seed),'--demand-profile',profile,'--arrival-seconds',str(args.arrival_seconds),
          '--duration',str(args.duration),'--port',str(args.port)]
+    if getattr(args,'lr',None) is not None: cmd+=['--lr',str(args.lr)]
     if checkpoint: cmd+=['--checkpoint',str(checkpoint)]
     if sumo_gate: cmd+=['--sumo-acceptance',str(sumo_gate)]
     if train:
