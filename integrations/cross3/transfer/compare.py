@@ -31,7 +31,7 @@ def compare(paths):
             collision_pairs=sum(r['collision_pairs'] for r in rows.values()),unfinished=sum(r['unfinished'] for r in rows.values()),metrics=stats))
     return dict(runs=output,limitations=['Small pilot samples do not establish improvement.',
         'Completed-trip means exclude censored trips; compare completion and observed vehicle time together.',
-        'Red-light and crossing-conflict metrics are unavailable, not zero.',
+        'Crossing TTC is a constant-velocity oriented-rectangle proxy, not observed future collision time.',
         'SUMO/CARLA share topology and demand; driving dynamics and stop-line geometry remain domain differences.'])
 
 if __name__=='__main__':

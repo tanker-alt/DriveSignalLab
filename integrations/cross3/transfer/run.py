@@ -9,8 +9,10 @@ import subprocess
 import numpy as np
 import torch
 from .core import CONTRACT
+from .stages import validate_progress,sha
 from .learning import Policy
-from .sumo_env import SumoEnv, demand, MAP
+from .sumo_env import SumoEnv, MAP
+from .traffic_cases import demand,PROFILES
 
 def write(path,data): path.write_text(json.dumps(data,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
 
@@ -22,6 +24,7 @@ def run(args):
     torch.set_num_threads(2); random.seed(args.seed); np.random.seed(args.seed)
     policy=Policy(args.seed, args.lr)
     source=policy.load(args.checkpoint) if args.checkpoint else None
+    validate_progress(args,source)
     if source and source.get('map_sha256') != hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest():
         raise ValueError('Checkpoint map fingerprint mismatch')
     if policy.loaded_head and not args.vla:
@@ -30,6 +33,7 @@ def run(args):
         raise ValueError('Resume/evaluate VLA with the same --waypoint-head initialization as training')
     for group in policy.optimizer.param_groups: group['lr']=args.lr
     provenance=dict(backend=args.backend,seed=args.seed,source_checkpoint=str(args.checkpoint),source=source,
+        source_checkpoint_sha256=sha(args.checkpoint) if args.checkpoint else None,
         map_sha256=hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest(),
         training_scope='signal_and_internal_waypoint_final_layer' if args.vla and args.train else 'signal_only' if args.train else 'frozen_evaluation',
         vla_base='LMDrive local config', initial_waypoint_head=str(args.waypoint_head),
@@ -42,7 +46,8 @@ def run(args):
     reports=[]
     for ep in range(args.episodes):
         folder=args.output/('episode_%03d'%ep); seed=args.seed+ep
-        rows=demand(seed,args.arrival_seconds,args.rate,args.vla)
+        profile=PROFILES[ep%len(PROFILES)] if args.demand_profile=='cycle' else args.demand_profile
+        rows=demand(seed,args.arrival_seconds,args.rate,args.vla,profile)
         env=None
         if not rows: raise ValueError('No generated demand; increase --arrival-seconds')
         try:
@@ -79,9 +84,10 @@ def run(args):
                     raise RuntimeError('No actual VLA head samples; refusing to claim joint training')
                 policy.save(args.output/('checkpoint_%03d.pt'%ep),dict(provenance,episode=ep))
             report=dict(env.metrics.report(),seed=seed,reward=total_reward,terminated=terminated,truncated=truncated,
-                        controller=args.controller,backend=args.backend,signal_switches=env.signals.switches,training=update)
+                        controller=args.controller,backend=args.backend,demand_profile=profile,signal_switches=env.signals.switches,training=update)
             write(folder/'metrics.json',report)
             write(folder/'vehicles.json',list(env.metrics.rows.values()))
+            write(folder/'crossings.json',env.metrics.safety.events)
             reports.append(report); write(args.output/'results.json',reports)
             print(json.dumps(report,ensure_ascii=False),flush=True)
         except BaseException as exc:
@@ -98,6 +104,9 @@ def main():
     p.add_argument('--backend',choices=['sumo','carla'],required=True)
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--checkpoint',type=Path)
+    p.add_argument('--metrics-acceptance',type=Path)
+    p.add_argument('--sumo-acceptance',type=Path)
+    p.add_argument('--carla-acceptance',type=Path)
     p.add_argument('--controller',choices=['learned','fixed','maxpressure'],default='learned')
     p.add_argument('--train',action='store_true')
     p.add_argument('--vla',action='store_true',help='Use two real LMDrive egos; --train updates its internal final waypoint layer and signal actor')
@@ -107,6 +116,7 @@ def main():
     p.add_argument('--arrival-seconds',type=float,default=120)
     p.add_argument('--duration',type=float,default=420)
     p.add_argument('--rate',type=float,default=.035)
+    p.add_argument('--demand-profile',choices=list(PROFILES)+['cycle'],default='balanced')
     p.add_argument('--fixed-green',type=float,default=15)
     p.add_argument('--port',type=int,default=31610)
     p.add_argument('--lr',type=float,default=3e-4)

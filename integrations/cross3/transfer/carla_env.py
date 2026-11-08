@@ -1,10 +1,13 @@
 """One-owner CARLA rollout with continuous arrivals and internal VLA head PPO."""
 import json
+import math
 import os
 import sys
 from pathlib import Path
 import torch
 from .core import Metrics, Signals, observation
+from .safety import SafetyMetrics
+from .measurements import Recorder
 
 class CarlaEnv:
     dt=.05
@@ -24,14 +27,28 @@ class CarlaEnv:
         from srunner.scenariomanager.timer import GameTime
         self.carla=carla; self.provider=CarlaDataProvider; self.game_time=GameTime
         self.base=Environment(port,folder)
+        base=self.base
+        class LaneSignalDriver(base.Driver):
+            def _affected_by_traffic_light(driver,lights_list=None,max_distance=None):
+                actor=driver._vehicle; wp=base.map.get_waypoint(actor.get_location())
+                light=base.lane_lights.get((wp.road_id,wp.lane_id)) if wp else None
+                if light is None: return False,None
+                color=str(light.get_state()).split('.')[-1]
+                if color not in ('Red','Yellow'): return False,None
+                velocity=actor.get_velocity(); speed=(velocity.x**2+velocity.y**2)**.5
+                distance=base.stop_lines[wp.road_id]-wp.s-actor.bounding_box.extent.x
+                braking=speed*speed/6.+speed*.5+3.
+                return (True,light) if 0<distance<=max(braking,max_distance or 0) else (False,None)
+        self.Driver=LaneSignalDriver
         self.world=self.base.world; self.client=self.base.client
         self.folder=folder; self.rows=rows; self.limit=limit; self.policy=policy
-        self.joint=joint; self.train=train; self.time=0.; self.signals=Signals(); self.metrics=Metrics(rows)
+        self.joint=joint; self.train=train; self.time=0.; self.signals=Signals(); self.metrics=Metrics(rows); self.metrics.safety=SafetyMetrics()
         self.fleet={}; self.completed=set(); self.events=[]; self.collisions=[]; self.seen_collisions=set()
         self.agent=self.wrapper=self.hook=None
         self.ego_ids=[r['id'] for r in rows if r['ego']]
         self.saved_settings=self.world.get_settings()
         self.saved_lights=[(l,l.get_state(),l.is_frozen()) for l in self.base.lights.values()]
+        self.recorder=Recorder(folder,'carla')
         self.positions=(folder/'positions.jsonl').open('w')
         self.trace=(folder/'decisions.jsonl').open('w'); self.head_trace=(folder/'head_actions.jsonl').open('w')
         self.closed=False
@@ -66,10 +83,10 @@ class CarlaEnv:
             self.provider._carla_actor_pool[actor.id]=actor; self.provider.register_actor(actor)
             actor.apply_control(c.VehicleControl(brake=1))
         else:
-            driver=self.base.Driver(actor,target_speed=20,opt_dict={})
+            driver=self.Driver(actor,target_speed=20,opt_dict={})
             driver.set_global_plan([(w,RoadOption.LANEFOLLOW) for w in route])
         self.fleet[row['id']]=dict(actor=actor,sensor=sensor,driver=driver,row=row)
-        self.metrics.rows[row['id']]['spawn']=self.time
+        self.metrics.spawned(row['id'],self.time)
         return True
     def setup_vla(self,waypoint_head):
         from environment import harness
@@ -118,12 +135,24 @@ class CarlaEnv:
         for vid,item in self.fleet.items():
             a=item['actor']; wp=self.base.map.get_waypoint(a.get_location()); vel=a.get_velocity()
             row=item['row']; speed=(vel.x**2+vel.y**2+vel.z**2)**.5
+            transform=a.get_transform(); half=a.bounding_box.extent.x
+            yaw=math.radians(transform.rotation.yaw); loc=transform.transform(a.bounding_box.location)
+            # Project the oriented front onto the lane tangent at the stop line.
+            stop_wp=self.base.map.get_waypoint_xodr(row['road'],row['lane'],144.)
+            tangent=stop_wp.transform.get_forward_vector(); delta=loc-stop_wp.transform.location
+            projection=half*abs(math.cos(yaw)*tangent.x+math.sin(yaw)*tangent.y)+a.bounding_box.extent.y*abs(-math.sin(yaw)*tangent.x+math.cos(yaw)*tangent.y)
+            front_distance=-(delta.x*tangent.x+delta.y*tangent.y)-projection
             approach=bool(wp and (wp.road_id,wp.lane_id)==(row['road'],row['lane']))
             outgoing=bool(wp and (wp.road_id,wp.lane_id)==(row['target_road'],row['target_lane']))
             boundary=min(self.base.stop_lines.get(wp.road_id,144),150-a.bounding_box.extent.x-1) if wp else 144
             vs[vid]=dict(road=row['road'],lane=row['lane'],speed=speed,approach=approach,outgoing=outgoing,
-                distance=self.base.stop_lines[row['road']]-wp.s if approach else 0.,gap=None,leader_speed=speed,
-                occupied=bool(wp and (wp.is_junction or wp.s>boundary)),wp=wp)
+                distance=front_distance if approach else 0.,gap=None,leader_speed=speed,leader_id=None,
+                front_stop_distance=front_distance,exit_front_distance=wp.s-half-88 if outgoing else None,
+                x=loc.x,y=loc.y,yaw=yaw,vx=vel.x,vy=vel.y,vz=vel.z,half_length=half,half_width=a.bounding_box.extent.y,
+                lane_key='%d/%d'%(wp.road_id,wp.lane_id) if wp else None,raw_position=wp.s if wp else None,
+                raw_edge=wp.road_id if wp else None,raw_lane=wp.lane_id if wp else None,spawn_time=self.metrics.rows[vid]['spawn'],
+                stop_x=stop_wp.transform.location.x,stop_y=stop_wp.transform.location.y,stop_dx=tangent.x,stop_dy=tangent.y,
+                occupied=bool(wp and (wp.is_junction or (approach and front_distance<=0) or (outgoing and wp.s>150-half-1))),wp=wp)
             locations[vid]=(a.get_transform(),a.bounding_box.extent.x)
         for vid,v in vs.items():
             wp=v['wp']; transform,length=locations[vid]; forward=transform.get_forward_vector()
@@ -131,10 +160,10 @@ class CarlaEnv:
                 owp=other['wp']
                 if oid==vid or not wp or not owp or (wp.road_id,wp.lane_id)!=(owp.road_id,owp.lane_id): continue
                 delta=locations[oid][0].location-transform.location
-                along=delta.x*forward.x+delta.y*forward.y
+                along=(owp.s-wp.s)*(1 if wp.lane_id<0 else -1)
                 if along>0:
                     gap=max(0.,along-length-locations[oid][1])
-                    if v['gap'] is None or gap<v['gap']: v.update(gap=gap,leader_speed=other['speed'])
+                    if v['gap'] is None or gap<v['gap']: v.update(gap=gap,leader_speed=other['speed'],leader_id=oid)
         return vs
     def observe(self):
         vs=self.vehicles()
@@ -172,7 +201,9 @@ class CarlaEnv:
                 controls=validate_controls(self.wrapper(),2)
                 for i,vid in enumerate(self.ego_ids):
                     if vid in self.fleet: self.fleet[vid]['actor'].apply_control(controls[i])
-            self.world.tick(); self.time=self.world.get_snapshot().timestamp.elapsed_seconds-self.origin; duration+=self.dt
+            previous=self.time
+            self.world.tick(); self.time=self.world.get_snapshot().timestamp.elapsed_seconds-self.origin
+            dt=self.time-previous; duration+=dt
             actual={sid:str(light.get_state()).split('.')[-1] for sid,light in self.base.lights.items()}
             if actual!=desired: raise RuntimeError('Signal application mismatch; refuse to train on incorrect physical actions')
             post=self.vehicles(); complete=[]
@@ -180,9 +211,13 @@ class CarlaEnv:
                 wp=v['wp']; row=self.fleet[vid]['row']
                 if wp and wp.road_id in (1,2,3,4) and wp.lane_id>0:
                     if not v['outgoing']: raise RuntimeError('Wrong exit for '+vid)
-                    if wp.s<=88: complete.append(vid)
-            self.metrics.sample(self.time,self.dt,vs,complete,self.collisions)
-            self.signals.tick(self.dt,any(v['occupied'] for v in post.values()))
+                    if v['exit_front_distance']<=0: complete.append(vid)
+            physical={'%d/%d'%(cfg['road_id'],cfg['incoming_lanes'][0]):actual[sid].upper() for sid,cfg in self.base.design['signals'].items()}
+            colors={vid:physical['%d/%d'%(v['road'],v['lane'])] for vid,v in vs.items()}
+            self.metrics.sample(self.time,dt,vs,complete,self.collisions,after=post)
+            self.metrics.safety.sample(self.time,dt,vs,post,colors)
+            self.recorder.write(self.time,dt,vs,post,complete,colors,physical,self.collisions)
+            self.signals.tick(dt,any(v['occupied'] for v in post.values()))
             for vid in complete: self.retire(vid)
             if self.time>=self.limit-1e-6 or self.collisions or len(self.completed)==len(self.rows): break
         terminated=bool(self.collisions) or len(self.completed)==len(self.rows)
@@ -207,4 +242,4 @@ class CarlaEnv:
             self.world.apply_settings(self.saved_settings)
             self.provider._carla_actor_pool.clear()
         finally:
-            self.trace.close(); self.head_trace.close(); self.positions.close(); self.lock.close()
+            self.trace.close(); self.head_trace.close(); self.positions.close(); self.recorder.close(); self.lock.close()
