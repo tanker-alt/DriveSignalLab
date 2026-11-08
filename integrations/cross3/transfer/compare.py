@@ -17,7 +17,7 @@ def compare(paths):
     for path,protocol,rows,demands in runs:
         if protocol['contract']!=reference[1]['contract']: raise ValueError('Contract mismatch')
         if demands!=reference[3]: raise ValueError('Demand/seed mismatch: '+str(path))
-        for key in ('duration','arrival_seconds','rate','vla'):
+        for key in ('duration','arrival_seconds','rate','vla','waypoint_head'):
             if protocol['arguments'][key]!=reference[1]['arguments'][key]: raise ValueError('Evaluation protocol mismatch: '+key)
         stats={}
         for key in ('completion_rate','mean_observed_wait_s','observed_time_per_due_vehicle_s','throughput_veh_per_hour'):

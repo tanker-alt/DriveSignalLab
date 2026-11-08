@@ -1,5 +1,4 @@
 """Simulator-independent measurement and signal contracts (SI units)."""
-import math
 import numpy as np
 
 PHASES = ('NS_STRAIGHT', 'NS_LEFT', 'EW_STRAIGHT', 'EW_LEFT')

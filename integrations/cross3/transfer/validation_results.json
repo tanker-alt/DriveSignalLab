@@ -1,0 +1,167 @@
+{
+  "date": "2026-11-08",
+  "unit_tests_passed": 8,
+  "scope": "Functional pilot, not convergence/performance certification",
+  "runs": {
+    "sumo_fixed_eval": {
+      "duration_s": 106.59999999999822,
+      "planned": 21,
+      "due": 21,
+      "completed": 21,
+      "unfinished": 0,
+      "completion_rate": 1.0,
+      "observed_time_per_due_vehicle_s": 74.6722757567568,
+      "mean_observed_wait_s": 37.18656147105822,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "sumo_maxpressure_eval": {
+      "duration_s": 98.49999999999868,
+      "planned": 21,
+      "due": 21,
+      "completed": 21,
+      "unfinished": 0,
+      "completion_rate": 1.0,
+      "observed_time_per_due_vehicle_s": 56.32465670915444,
+      "mean_observed_wait_s": 19.48656147105845,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "sumo_transfer_eval": {
+      "duration_s": 139.99999999999633,
+      "planned": 21,
+      "due": 21,
+      "completed": 9,
+      "unfinished": 12,
+      "completion_rate": 0.42857142857142855,
+      "observed_time_per_due_vehicle_s": 94.17703766150096,
+      "mean_observed_wait_s": 68.69132337581803,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "carla_fixed_eval": {
+      "duration_s": 108.8500016219914,
+      "planned": 21,
+      "due": 21,
+      "completed": 21,
+      "unfinished": 0,
+      "completion_rate": 1.0,
+      "observed_time_per_due_vehicle_s": 59.47703773416735,
+      "mean_observed_wait_s": 23.491323448480347,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "carla_maxpressure_eval": {
+      "duration_s": 102.45000152662396,
+      "planned": 21,
+      "due": 21,
+      "completed": 21,
+      "unfinished": 0,
+      "completion_rate": 1.0,
+      "observed_time_per_due_vehicle_s": 58.49370440083491,
+      "mean_observed_wait_s": 22.334180591337624,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "carla_transfer_before": {
+      "duration_s": 140.00000208616257,
+      "planned": 21,
+      "due": 21,
+      "completed": 14,
+      "unfinished": 7,
+      "completion_rate": 0.6666666666666666,
+      "observed_time_per_due_vehicle_s": 75.515132972248,
+      "mean_observed_wait_s": 47.53656154371825,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "carla_transfer_after": {
+      "duration_s": 140.00000208616257,
+      "planned": 21,
+      "due": 21,
+      "completed": 14,
+      "unfinished": 7,
+      "completion_rate": 0.6666666666666666,
+      "observed_time_per_due_vehicle_s": 75.515132972248,
+      "mean_observed_wait_s": 47.538942496099196,
+      "collision_pairs": 0,
+      "seed": 8401,
+      "training": {}
+    },
+    "carla_joint_smoke_01": {
+      "duration_s": 8.00000011920929,
+      "planned": 11,
+      "due": 11,
+      "completed": 0,
+      "unfinished": 11,
+      "completion_rate": 0.0,
+      "observed_time_per_due_vehicle_s": 6.527768566890125,
+      "mean_observed_wait_s": 4.56867765779938,
+      "collision_pairs": 0,
+      "seed": 9101,
+      "training": {
+        "signal_parameter_change_l1": 1.8930168841034174,
+        "loss": 2.4185023307800293,
+        "head_loss": -0.15621626377105713,
+        "head_parameter_change_l1": 0.041117368986306246,
+        "head_samples": 140,
+        "transitions": 8
+      }
+    },
+    "carla_joint_restore_eval": {
+      "duration_s": 30.000000447034836,
+      "planned": 11,
+      "due": 11,
+      "completed": 0,
+      "unfinished": 11,
+      "completion_rate": 0.0,
+      "observed_time_per_due_vehicle_s": 28.411178306475108,
+      "mean_observed_wait_s": 7.988451033744536,
+      "collision_pairs": 0,
+      "seed": 9401,
+      "training": {}
+    },
+    "carla_joint_resume_train": {
+      "duration_s": 12.000000178813934,
+      "planned": 7,
+      "due": 7,
+      "completed": 0,
+      "unfinished": 7,
+      "completion_rate": 0.0,
+      "observed_time_per_due_vehicle_s": 11.300644950708781,
+      "mean_observed_wait_s": 4.279216379280543,
+      "collision_pairs": 0,
+      "seed": 9102,
+      "training": {
+        "signal_parameter_change_l1": 2.075618600472808,
+        "loss": 1.8307732343673706,
+        "head_loss": -0.12114311009645462,
+        "head_parameter_change_l1": 0.03311063523142366,
+        "head_samples": 220,
+        "transitions": 12
+      }
+    }
+  },
+  "rollout_audit": {
+    "internal_head_samples": 220,
+    "max_behavior_logp_reconstruction_error": 0.0,
+    "all_signal_actions_allowed_by_sampling_mask": true
+  },
+  "cleanup": {
+    "synchronous_mode": false,
+    "vehicles": 0,
+    "sensors": 0
+  },
+  "checkpoint_sha256": {
+    "outputs/transfer/sumo_pretrain_pilot/checkpoint_002.pt": "71b9229a80a876afad0cdfa2179598330f6d1ebdabda1a13f2a71bd21fd3d26a",
+    "outputs/transfer/carla_finetune_pilot/checkpoint_001.pt": "58664a8df8a7fc7a45892ea59c6600035a1a1da692b609155874441608c08dfb",
+    "outputs/transfer/carla_joint_smoke_01/checkpoint_000.pt": "877fb76c523a541652cbc98b9ff3302d8c5843a83a59fabc63074388fa8e68a7",
+    "outputs/transfer/carla_joint_resume_train/checkpoint_000.pt": "412713815548d1fb26f6f8999e0f1c5f9b8782506060897490ceeb21029ba3d8"
+  }
+}

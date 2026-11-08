@@ -2,7 +2,6 @@
 import argparse
 import hashlib
 import json
-import os
 from pathlib import Path
 import random
 import shutil
@@ -16,12 +15,17 @@ from .sumo_env import SumoEnv, demand, MAP
 def write(path,data): path.write_text(json.dumps(data,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
 
 def run(args):
-    args.output=args.output.resolve(); args.output.mkdir(parents=True,exist_ok=False)
+    args.output=args.output.resolve()
+    if args.checkpoint: args.checkpoint=args.checkpoint.resolve()
+    if args.waypoint_head: args.waypoint_head=args.waypoint_head.resolve()
+    args.output.mkdir(parents=True,exist_ok=False)
     torch.set_num_threads(2); random.seed(args.seed); np.random.seed(args.seed)
     policy=Policy(args.seed, args.lr)
     source=policy.load(args.checkpoint) if args.checkpoint else None
     if source and source.get('map_sha256') != hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest():
         raise ValueError('Checkpoint map fingerprint mismatch')
+    if policy.loaded_head and not args.vla:
+        raise ValueError('A joint checkpoint requires --vla; do not silently discard its trained internal head')
     if policy.loaded_head and source.get('initial_waypoint_head') != str(args.waypoint_head):
         raise ValueError('Resume/evaluate VLA with the same --waypoint-head initialization as training')
     for group in policy.optimizer.param_groups: group['lr']=args.lr
@@ -40,6 +44,7 @@ def run(args):
         folder=args.output/('episode_%03d'%ep); seed=args.seed+ep
         rows=demand(seed,args.arrival_seconds,args.rate,args.vla)
         env=None
+        if not rows: raise ValueError('No generated demand; increase --arrival-seconds')
         try:
             if args.backend=='sumo': cls=SumoEnv
             else:
@@ -68,6 +73,7 @@ def run(args):
             update={}
             if args.train:
                 bootstrap=0. if terminated else policy.act(obs,True)[2]
+                torch.save(dict(transitions=rollout,bootstrap=bootstrap),str(folder/'rollout.pt'))
                 update=policy.update(rollout,bootstrap,args.epochs)
                 if args.vla and not update['head_samples']:
                     raise RuntimeError('No actual VLA head samples; refusing to claim joint training')
@@ -107,6 +113,8 @@ def main():
     p.add_argument('--epochs',type=int,default=4)
     a=p.parse_args()
     if a.episodes<1 or a.epochs<1 or a.rate<=0 or not 0<a.arrival_seconds<=a.duration: p.error('Invalid episode, demand or horizon settings')
+    if a.lr<=0: p.error('--lr must be positive')
+    if a.waypoint_head and not a.vla: p.error('--waypoint-head requires --vla')
     if a.vla and a.backend!='carla': p.error('--vla requires real CARLA')
     if a.train and a.controller!='learned': p.error('Only learned controller can train')
     if a.controller=='learned' and not a.checkpoint and (not a.train or a.backend=='carla'):

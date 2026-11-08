@@ -1,5 +1,7 @@
 # SUMO → CARLA 迁移与 VLA 内部联合微调
 
+实测结果与已知问题见 [验收报告](VALIDATION.md)。
+
 此入口使用真实 SUMO/CARLA，不会自动退回合成环境。它与旧的
 `sumo_joint/`、`official/`、CoTV 原版权重及车辆残差控制器隔离。
 

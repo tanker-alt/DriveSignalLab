@@ -3,7 +3,6 @@ import json
 import os
 import sys
 from pathlib import Path
-import numpy as np
 import torch
 from .core import Metrics, Signals, observation
 
@@ -101,7 +100,8 @@ class CarlaEnv:
                 action=dist.sample() if self.train else mean
             result=output.clone(); result.reshape(-1,10)[-1]=action.to(output)
             if self.train:
-                self.events.append(dict(features=features,action=action,mean=mean,logp=float(dist.log_prob(action).sum())))
+                self.events.append(dict(features=features,action=action,mean=mean,logp=float(dist.log_prob(action).sum()),
+                                        ego=self.agent.active_ego,time=self.time,camera_frame=self.agent.active_camera_frame))
             self.head_trace.write(json.dumps(dict(time=self.time,ego=self.agent.active_ego,
                 internal_layer='waypoints_predictor.2',mean=mean.tolist(),action=action.tolist()))+'\n')
             return result
