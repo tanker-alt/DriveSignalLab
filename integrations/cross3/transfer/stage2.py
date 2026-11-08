@@ -66,6 +66,8 @@ def main():
     p.add_argument('--port',type=int,default=31600);p.add_argument('--sumo-episodes',type=int,default=100)
     p.add_argument('--carla-episodes',type=int,default=20);p.add_argument('--arrival-seconds',type=float,default=40)
     p.add_argument('--signal-prior',choices=['none','maxpressure'],default='none')
+    p.add_argument('--fairness-weight',type=float,default=0.)
+    p.add_argument('--max-wait-weight',type=float,default=0.)
     p.add_argument('--duration',type=float,default=200);p.add_argument('--eval-episodes',type=int,default=8)
     a=p.parse_args(); load_receipt(a.metrics_acceptance,1)
     if a.sumo_episodes<4 or a.carla_episodes<4 or a.eval_episodes<4: p.error('Cover all four demand families')
