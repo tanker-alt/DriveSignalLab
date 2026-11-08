@@ -27,7 +27,7 @@ def audit(folder):
         check((a is None and b is None) or (a is not None and b is not None and abs(a-b)<=tolerance),label)
     check(bool(frames),'Empty evidence')
     if not frames: return dict(passed=False,errors=errors)
-    spawns={}; first_seen={}; finishes={}; crossed={}; collisions=set(); previous=0.; geometry_checks=0
+    spawns={}; finishes={}; crossed={}; collisions=set(); previous=0.; geometry_checks=0
     for frame in frames:
         now,dt=frame['time'],frame['dt']
         check(dt>0 and abs(now-dt-previous)<1e-6,'Noncontiguous timestamp')
@@ -35,7 +35,6 @@ def audit(folder):
         for vid,v in {**before,**after}.items():
             check(vid in schedule,'Unknown vehicle '+vid)
             if vid not in schedule: continue
-            first_seen.setdefault(vid,now-dt if vid in before else now)
             spawn=v['spawn_time']
             if vid in spawns: equal(spawns[vid],spawn,'Changing spawn '+vid)
             spawns[vid]=spawn
@@ -71,6 +70,7 @@ def audit(folder):
         previous=now
     end=frames[-1]['time']; rows=[]; rear_min=None; rear_exposure=0.; physical_max=external_max=0
     waits={vid:0. for vid in schedule}
+    seen=set()
     for frame in frames:
         a,b=frame['time']-frame['dt'],frame['time']
         for vid,v in frame['before'].items():
@@ -85,7 +85,10 @@ def audit(folder):
             if a-1e-9<=t<b and vid not in frame['before']:
                 waits[vid]+=max(0.,min(b,finishes.get(vid,end))-t)
         physical_max=max(physical_max,sum(v['speed']<.1 and finishes.get(vid,float('inf'))>b for vid,v in frame['after'].items()))
-        external_max=max(external_max,sum(r['time']<=b and first_seen.get(vid,float('inf'))>b for vid,r in schedule.items()))
+        # Spawn visibility is causal: a vehicle in the next frame's `before`
+        # did not exist in this frame's `after`, even at the same timestamp.
+        seen.update(frame['before']); seen.update(frame['after'])
+        external_max=max(external_max,sum(r['time']<=b and vid not in seen for vid,r in schedule.items()))
     due=[r for r in demand if r['time']<=end]
     for item in due:
         vid=item['id']; finish=finishes.get(vid); spawn=spawns.get(vid)

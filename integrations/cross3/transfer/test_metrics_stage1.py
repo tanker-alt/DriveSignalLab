@@ -33,6 +33,37 @@ def polygons_overlap(a,b,t):
 
 
 class MeasurementAcceptance(unittest.TestCase):
+    def test_audit_spawn_at_next_interval_is_not_visible_retroactively(self):
+        import gzip
+        import json
+        import tempfile
+        from pathlib import Path
+        from .audit_metrics import audit
+        demand=[dict(id='a',time=.5,road=1,lane=-1)]
+        m=Metrics(demand)
+        m.sample(1,1,{},after={})
+        m.spawned('a',1)
+        v=dict(speed=0.,vx=0.,vy=0.,spawn_time=1.,approach=True,
+               front_stop_distance=44.,raw_position=100.,road=1,lane=-1,
+               leader_speed=0.,gap=None)
+        m.sample(2,1,{'a':v},after={'a':v})
+        m.safety=SafetyMetrics()
+        frames=[dict(time=1.,dt=1.,before={},after={}),
+                dict(time=2.,dt=1.,before={'a':v},after={'a':v})]
+        for f in frames:
+            f.update(backend='sumo',completed=[],collisions=[],
+                     colors={'a':'RED'},physical_signals={'1/-1':'RED'})
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp)
+            (folder/'demand.json').write_text(json.dumps(demand))
+            (folder/'metrics.json').write_text(json.dumps(m.report()))
+            (folder/'vehicles.json').write_text(json.dumps(list(m.rows.values())))
+            with gzip.open(folder/'measurements.jsonl.gz','wt') as stream:
+                for frame in frames: stream.write(json.dumps(frame)+'\n')
+            result=audit(folder)
+            self.assertTrue(result['passed'],result['errors'])
+            self.assertEqual(result['independently_recomputed']['max_external_queue_vehicles'],1)
+
     def test_sumo_millisecond_rounding_never_precedes_demand(self):
         self.assertEqual(sumo_departure(21.90031143183404),21.901)
         for when in (0.,.0001,.1,21.90031143183404,200.9999):
