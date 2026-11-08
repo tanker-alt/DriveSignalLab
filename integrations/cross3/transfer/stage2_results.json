@@ -1,0 +1,269 @@
+{
+  "stage1_passed": true,
+  "sumo": {
+    "stage": 2,
+    "milestone": "sumo_validation",
+    "passed": true,
+    "fixed": {
+      "unfinished": 0,
+      "due": 221,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 31.0713663443715,
+      "scenario_wait_std": 5.527409013911526
+    },
+    "maxpressure": {
+      "unfinished": 0,
+      "due": 221,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 20.700114403875958,
+      "scenario_wait_std": 2.8924995361921466
+    },
+    "initial_prior": {
+      "unfinished": 0,
+      "due": 221,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 20.700114403875958,
+      "scenario_wait_std": 2.8924995361921466
+    },
+    "candidates": [
+      {
+        "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/stage2_snapshot/sumo_train/checkpoint_024.pt",
+        "score": {
+          "unfinished": 0,
+          "due": 221,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 20.747261366109132,
+          "scenario_wait_std": 2.81446924597387
+        }
+      },
+      {
+        "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/stage2_snapshot/sumo_train/checkpoint_049.pt",
+        "score": {
+          "unfinished": 0,
+          "due": 221,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 20.56023345149501,
+          "scenario_wait_std": 3.129375691554275
+        }
+      },
+      {
+        "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/stage2_snapshot/sumo_train/checkpoint_074.pt",
+        "score": {
+          "unfinished": 0,
+          "due": 221,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 20.569312984309246,
+          "scenario_wait_std": 3.7456534321223502
+        }
+      },
+      {
+        "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/stage2_snapshot/sumo_train/checkpoint_099.pt",
+        "score": {
+          "unfinished": 0,
+          "due": 221,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 20.877516874875482,
+          "scenario_wait_std": 2.972126181195447
+        }
+      }
+    ],
+    "selected": {
+      "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/stage2_snapshot/sumo_train/checkpoint_049.pt",
+      "score": {
+        "unfinished": 0,
+        "due": 221,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 20.56023345149501,
+        "scenario_wait_std": 3.129375691554275
+      }
+    },
+    "heldout": {
+      "fixed": {
+        "unfinished": 0,
+        "due": 229,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 31.13627445612557,
+        "scenario_wait_std": 5.610093457557433
+      },
+      "learned": {
+        "unfinished": 0,
+        "due": 229,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 20.83318668893984,
+        "scenario_wait_std": 2.8894367550566704
+      }
+    }
+  },
+  "carla_default": {
+    "stage": 2,
+    "milestone": "carla_adaptation",
+    "passed": false,
+    "before": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 27.8026815041638,
+      "scenario_wait_std": 2.643383860736856
+    },
+    "after": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 27.831901137785707,
+      "scenario_wait_std": 2.5731822562548845
+    },
+    "fixed": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 34.64728029191336,
+      "scenario_wait_std": 5.338029189394223
+    },
+    "maxpressure": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 27.630139259402043,
+      "scenario_wait_std": 2.764538106145924
+    }
+  },
+  "carla_lr003": {
+    "stage": 2,
+    "milestone": "carla_adaptation",
+    "passed": false,
+    "before": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 27.8026815041638,
+      "scenario_wait_std": 2.643383860736856
+    },
+    "after": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 29.62132745450557,
+      "scenario_wait_std": 2.983519350189566
+    },
+    "fixed": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 34.64728029191336,
+      "scenario_wait_std": 5.338029189394223
+    },
+    "maxpressure": {
+      "unfinished": 0,
+      "due": 225,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 27.630139259402043,
+      "scenario_wait_std": 2.764538106145924
+    }
+  },
+  "movements": {
+    "direct": {
+      "NS_STRAIGHT": {
+        "due": 71,
+        "completed": 71,
+        "mean_wait": 22.52606258598023
+      },
+      "NS_LEFT": {
+        "due": 41,
+        "completed": 41,
+        "mean_wait": 32.27205937957227
+      },
+      "EW_STRAIGHT": {
+        "due": 73,
+        "completed": 73,
+        "mean_wait": 19.658131486696522
+      },
+      "EW_LEFT": {
+        "due": 40,
+        "completed": 40,
+        "mean_wait": 47.07967558133154
+      }
+    },
+    "lr_0003": {
+      "NS_STRAIGHT": {
+        "due": 71,
+        "completed": 71,
+        "mean_wait": 22.564794980923587
+      },
+      "NS_LEFT": {
+        "due": 41,
+        "completed": 41,
+        "mean_wait": 32.397669137541556
+      },
+      "EW_STRAIGHT": {
+        "due": 73,
+        "completed": 73,
+        "mean_wait": 19.674569843105857
+      },
+      "EW_LEFT": {
+        "due": 40,
+        "completed": 40,
+        "mean_wait": 47.033425580642366
+      }
+    },
+    "lr_003": {
+      "NS_STRAIGHT": {
+        "due": 71,
+        "completed": 71,
+        "mean_wait": 30.066907768770115
+      },
+      "NS_LEFT": {
+        "due": 41,
+        "completed": 41,
+        "mean_wait": 45.16718152294407
+      },
+      "EW_STRAIGHT": {
+        "due": 73,
+        "completed": 73,
+        "mean_wait": 21.060186302109315
+      },
+      "EW_LEFT": {
+        "due": 40,
+        "completed": 40,
+        "mean_wait": 28.06342529796733
+      }
+    }
+  },
+  "tests": 35,
+  "carla_heldout_used": false,
+  "stage2_passed": false,
+  "stage3_started": false,
+  "evidence": {
+    "outputs/staged/stage2_snapshot/sumo_validation.json": "1c2b35271cdef205475e34a805384eb2c5e188ee9cfc2828360bdc870ad2e44d",
+    "outputs/staged/stage2_snapshot/sumo_acceptance.json": "b99ab40b86c03a420c42eb96a1e6777153de2e364b8cc6b077835fc408bbb27c",
+    "outputs/staged/stage2_snapshot/carla_adaptation.json": "5b588af8c3ef21fda132af9b059efb43534cbab90239ea3877d9e5ec6aaa699c",
+    "outputs/staged/stage2_snapshot/extended_audit.json": "4e68a4c629847a2b38b57d963a2bbd339e2277d0054f960183a5e1f35cc35816",
+    "outputs/staged/stage2_snapshot/policy_change.json": "a40ab0a7295e6f889607d25ad83637ed16202b2445aeda30ac2f857869c1bb0b",
+    "outputs/staged/stage2_lr003/carla_adaptation.json": "9e488021c51af16874ae6bd0b8d6f732d9ed06f9cb0ed5d6421e2f1870de777f",
+    "outputs/staged/stage2_lr003/extended_audit.json": "5ef8b98c497883ca300ae077bc09bd9e0113f074d617af0f548cb975add204ce",
+    "outputs/staged/stage2_lr003/movement_diagnosis.json": "f83e153f675cddec28bff49493595189e00de4778562cd31507bf1507fa5336f",
+    "outputs/staged/stage2_lr003/paired_comparison.json": "597b6751fb6d9fcb7aee50faffb89a4d947e9f0a393d18444de5c9376e15e7f2"
+  },
+  "limitations": [
+    "One training seed; validation results are not a statistical generalization claim.",
+    "CARLA fine-tuning did not meet the 5% improvement gate; no CARLA acceptance receipt.",
+    "VLA internal layer implementation exists but formal stage 3 is not accepted."
+  ]
+}
