@@ -1,8 +1,8 @@
 {
   "stage": 1,
   "passed": true,
-  "tests": 24,
-  "frames": 11871,
+  "tests": 25,
+  "frames": 11869,
   "completed": 112,
   "intentionally_censored": 26,
   "cases": [
@@ -54,7 +54,7 @@
     {
       "name": "carla_fixed_12001_150",
       "audit_passed": true,
-      "frames": 2156,
+      "frames": 2154,
       "completed": 15,
       "unfinished": 0,
       "red_light_violations": 0,
@@ -72,7 +72,7 @@
     {
       "name": "carla_maxpressure_12001_150",
       "audit_passed": true,
-      "frames": 1896,
+      "frames": 1894,
       "completed": 15,
       "unfinished": 0,
       "red_light_violations": 0,
@@ -81,7 +81,7 @@
     {
       "name": "carla_maxpressure_12002_150",
       "audit_passed": true,
-      "frames": 1727,
+      "frames": 1729,
       "completed": 13,
       "unfinished": 0,
       "red_light_violations": 0,
@@ -97,17 +97,24 @@
       "collision_pairs": 0
     }
   ],
-  "receipt": "outputs/staged/stage1_acceptance_causal/acceptance.json",
+  "receipt": "outputs/staged/stage1_acceptance_snapshot/acceptance.json",
   "metric_sources": {
     "core.py": "d7062e95aa07a8389515b3e05b3cdd7ab7f092d7562b2acae56c8118336988a5",
     "safety.py": "04098a69811e2b2cc6947816b2b242abaf2c13253466ce0ab5632832b32f2705",
     "measurements.py": "f74dd1d0db893a1cecb630d6efa9e6e29714d5bfc37bac36c3f41954fa0b026d",
     "sumo_env.py": "7c60af70aa4263428335dc6a91f754e3569e4219805b4b302cb7a85693db5a64",
-    "carla_env.py": "57d9bc38af4021122f0e5bd52b3e10c093ec4af9debd26e510f9308cca1ff0f4",
+    "carla_env.py": "e8dcf9df08e362752dd5a606590358020a2d8116c08578295fdff9dffae6d4f3",
     "audit_metrics.py": "becc269b16fd47306e6e4bb7ede722f0e2f628edbeae9a5ff23a50e4e9bc1779",
-    "test_metrics_stage1.py": "c382cea80c5e2584268821dd17269b320b52180056c4039ce6f3dc500b54e3f5",
+    "test_metrics_stage1.py": "c19834bafcdc0579349539433709992c8432dcff394568937a4a1377b515ba93",
     "stages.py": "80ce620904cbd43e4d01578fd64880752f65265a03c8bebbc16521acf89f01f9",
     "stage1.py": "1c4acf26df50bfc838fc278dea1117c6fd26be1ae4698764e85528b34eee7320",
     "test_stages.py": "3519c9a29b6beb7672d2e18d0eea5b6a680000b2db33878165f08380e261a0ce"
+  },
+  "snapshot_regression": {
+    "physical_position_pairs": 72232,
+    "unphysical_jumps": 0,
+    "old_training_pairs": 236361,
+    "old_training_unphysical_jumps": 175,
+    "criterion": "planar displacement > max(endpoint speed)*dt + 0.5 m"
   }
 }
