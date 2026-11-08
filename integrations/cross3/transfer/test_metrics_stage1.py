@@ -33,6 +33,20 @@ def polygons_overlap(a,b,t):
 
 
 class MeasurementAcceptance(unittest.TestCase):
+    def test_new_carla_actor_without_physics_snapshot_is_not_measured(self):
+        from unittest.mock import Mock
+        from .carla_env import CarlaEnv
+        env=CarlaEnv.__new__(CarlaEnv)
+        snapshot=Mock(); snapshot.find.return_value=None
+        env.world=Mock(); env.world.get_snapshot.return_value=snapshot
+        actor=Mock(); actor.id=123
+        env.fleet={'new':dict(actor=actor)}
+        self.assertEqual(env.vehicles(),{})
+        snapshot.find.assert_called_once_with(123)
+        actor.get_location.assert_not_called()
+        actor.get_transform.assert_not_called()
+        actor.get_velocity.assert_not_called()
+
     def test_audit_spawn_at_next_interval_is_not_visible_retroactively(self):
         import gzip
         import json

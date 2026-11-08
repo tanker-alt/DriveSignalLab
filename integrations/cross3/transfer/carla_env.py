@@ -71,7 +71,10 @@ class CarlaEnv:
         from agents.navigation.local_planner import RoadOption
         c=self.carla; route=self.base.route_cache[(row['road'],row['lane'])]
         loc=route[0].transform.location
-        if any(v['actor'].get_location().distance(loc)<9 for v in self.fleet.values()): return False
+        snapshot=self.world.get_snapshot()
+        if any((snapshot.find(v['actor'].id).get_transform().location
+                if snapshot.find(v['actor'].id) is not None else v['spawn_location']).distance(loc)<9
+               for v in self.fleet.values()): return False
         bp=self.world.get_blueprint_library().find('vehicle.lincoln.mkz_2017' if row['ego'] else 'vehicle.tesla.model3')
         bp.set_attribute('role_name','hero_%d'%self.ego_ids.index(row['id']) if row['ego'] else 'transfer_background')
         actor=self.world.try_spawn_actor(bp,c.Transform(c.Location(loc.x,loc.y,loc.z+.4),route[0].transform.rotation))
@@ -85,7 +88,7 @@ class CarlaEnv:
         else:
             driver=self.Driver(actor,target_speed=20,opt_dict={})
             driver.set_global_plan([(w,RoadOption.LANEFOLLOW) for w in route])
-        self.fleet[row['id']]=dict(actor=actor,sensor=sensor,driver=driver,row=row)
+        self.fleet[row['id']]=dict(actor=actor,sensor=sensor,driver=driver,row=row,spawn_location=loc)
         self.metrics.spawned(row['id'],self.time)
         return True
     def setup_vla(self,waypoint_head):
@@ -132,10 +135,17 @@ class CarlaEnv:
         for i,vid in enumerate(self.ego_ids): self.wrapper.setup_sensors(self.fleet[vid]['actor'],i,self.folder)
     def vehicles(self):
         vs={}; locations={}
+        snapshot=self.world.get_snapshot()
         for vid,item in self.fleet.items():
-            a=item['actor']; wp=self.base.map.get_waypoint(a.get_location()); vel=a.get_velocity()
+            a=item['actor']; physical=snapshot.find(a.id)
+            # A newly spawned actor has no physics snapshot until the next tick.
+            # Actor RPC getters can return a default origin in this interval.
+            # Do not turn that placeholder into a measured position/TTC.
+            if physical is None: continue
+            transform=physical.get_transform()
+            wp=self.base.map.get_waypoint(transform.location); vel=physical.get_velocity()
             row=item['row']; speed=(vel.x**2+vel.y**2+vel.z**2)**.5
-            transform=a.get_transform(); half=a.bounding_box.extent.x
+            half=a.bounding_box.extent.x
             yaw=math.radians(transform.rotation.yaw); loc=transform.transform(a.bounding_box.location)
             # Project the oriented front onto the lane tangent at the stop line.
             stop_wp=self.base.map.get_waypoint_xodr(row['road'],row['lane'],144.)
@@ -153,7 +163,7 @@ class CarlaEnv:
                 raw_edge=wp.road_id if wp else None,raw_lane=wp.lane_id if wp else None,spawn_time=self.metrics.rows[vid]['spawn'],
                 stop_x=stop_wp.transform.location.x,stop_y=stop_wp.transform.location.y,stop_dx=tangent.x,stop_dy=tangent.y,
                 occupied=bool(wp and (wp.is_junction or (approach and front_distance<=0) or (outgoing and wp.s>150-half-1))),wp=wp)
-            locations[vid]=(a.get_transform(),a.bounding_box.extent.x)
+            locations[vid]=(transform,a.bounding_box.extent.x)
         for vid,v in vs.items():
             wp=v['wp']; transform,length=locations[vid]; forward=transform.get_forward_vector()
             for oid,other in vs.items():
@@ -193,8 +203,8 @@ class CarlaEnv:
                 if row['time']<=self.time and row['id'] not in self.fleet and row['id'] not in self.completed:
                     if not row['ego']: self.spawn(row)
             vs=self.vehicles(); desired=self.apply_signals()
-            for item in self.fleet.values():
-                if item['driver']: item['actor'].apply_control(item['driver'].run_step())
+            for vid,item in self.fleet.items():
+                if item['driver'] and vid in vs: item['actor'].apply_control(item['driver'].run_step())
             snap=self.world.get_snapshot(); self.game_time.on_carla_tick(snap.timestamp); self.provider.on_carla_tick()
             if self.wrapper and any(v in self.fleet for v in self.ego_ids):
                 from agent_interfaces import validate_controls
