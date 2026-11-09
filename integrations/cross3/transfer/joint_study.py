@@ -28,33 +28,37 @@ def main():
         demand_profile='cycle',arrival_seconds=10,duration=150,starting_signal=str(cp),
         starting_signal_sha256=sha(cp),starting_vla_head=str(head),starting_vla_head_sha256=sha(head),
         trainable_vla='waypoints_predictor.2, 40970 internal parameters; upstream frozen',
+        episode_isolation='Fresh process each episode to isolate upstream sensor globals; training restores both optimizers and both policies',
         authorization='User explicitly requested joint experiment despite failed signal adaptation; not stage-2 acceptance',
         success='all complete; no collision/red crossing increase; mean wait at least 5% lower; VLA ego outcomes reported')
     write(b/'protocol.json',protocol)
     def run(name,checkpoint,train=False):
-        out=b/name
-        cmd=[sys.executable,'-m','integrations.cross3.transfer.run','--backend','carla','--port','31600',
-             '--vla','--exploratory-joint','--waypoint-head',str(head),'--checkpoint',str(checkpoint),
-             '--metrics-acceptance',str(metrics),'--sumo-acceptance',str(sg),'--output',str(out),
-             '--episodes','4','--seed','41001' if train else '42001','--demand-profile','cycle',
-             '--arrival-seconds','10','--duration','150','--lr','.0003']
-        if train:cmd+=['--train']
-        print(name,flush=True)
-        with (b/(name+'.log')).open('w') as log:subprocess.run(cmd,stdout=log,stderr=subprocess.STDOUT,check=True)
-        rows=json.loads((out/'results.json').read_text());egos=[]
-        for ep in sorted(out.glob('episode_*')):
-            checked=audit(ep)
+        out=b/name;out.mkdir();rows=[];egos=[];current=checkpoint
+        for i,profile in enumerate(('balanced','east_west','north_south','left_heavy')):
+            episode=out/('run_%03d'%i)
+            cmd=[sys.executable,'-m','integrations.cross3.transfer.run','--backend','carla','--port','31600',
+                 '--vla','--exploratory-joint','--waypoint-head',str(head),'--checkpoint',str(current),
+                 '--metrics-acceptance',str(metrics),'--sumo-acceptance',str(sg),'--output',str(episode),
+                 '--episodes','1','--seed',str((41001 if train else 42001)+i),'--demand-profile',profile,
+                 '--arrival-seconds','10','--duration','150','--lr','.0003']
+            if train:cmd+=['--train']
+            print(name,i,flush=True)
+            with (out/('run_%03d.log'%i)).open('w') as log:subprocess.run(cmd,stdout=log,stderr=subprocess.STDOUT,check=True)
+            row=json.loads((episode/'results.json').read_text())[0];rows.append(row)
+            ep=episode/'episode_000';checked=audit(ep)
             if not checked['passed']:raise ValueError('Physical metric audit failed: '+str(ep))
             vehicles=json.loads((ep/'vehicles.json').read_text())
-            egos.extend(dict(episode=ep.name,**v) for v in vehicles if v['ego'])
-        write(out/'ego_results.json',egos)
-        return rows,egos
-    before,be=run('before',cp)
-    training,te=run('train',cp,True)
+            egos.extend(dict(episode=i,**v) for v in vehicles if v['ego'])
+            if train:current=episode/'checkpoint_000.pt'
+            write(out/'results.json',rows);write(out/'ego_results.json',egos)
+        return rows,egos,current
+    before,be,_=run('before',cp)
+    training,te,trained=run('train',cp,True)
     if any(r['training']['head_parameter_change_l1']<=0 or r['training']['signal_parameter_change_l1']<=0 for r in training):
         raise ValueError('Both policies must actually update')
-    after,ae=run('after',b/'train/checkpoint_003.pt')
-    write(b/'paired_comparison.json',compare([b/'before',b/'after']))
+    after,ae,_=run('after',trained)
+    comparisons=[compare([b/'before'/('run_%03d'%i),b/'after'/('run_%03d'%i)]) for i in range(4)]
+    write(b/'paired_comparison.json',comparisons)
     bs,ads=score(before),score(after)
     def ego_summary(rows):return dict(total=len(rows),completed=sum(v['finish'] is not None for v in rows),mean_wait=sum(v['waiting'] for v in rows)/len(rows))
     result=dict(before=bs,after=ads,ego_before=ego_summary(be),ego_after=ego_summary(ae),
