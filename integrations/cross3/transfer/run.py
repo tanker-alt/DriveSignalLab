@@ -52,7 +52,7 @@ def run(args):
     if args.train and not args.vla: policy.save(args.output/'initial.pt',dict(provenance,episode=-1))
     for ep in range(args.episodes):
         folder=args.output/('episode_%03d'%ep); seed=args.seed+ep
-        profile=PROFILES[ep%len(PROFILES)] if args.demand_profile=='cycle' else args.demand_profile
+        profile=PROFILES[(ep+args.profile_offset)%len(PROFILES)] if args.demand_profile=='cycle' else args.demand_profile
         rows=demand(seed,args.arrival_seconds,args.rate,args.vla,profile)
         env=None
         if not rows: raise ValueError('No generated demand; increase --arrival-seconds')
@@ -124,6 +124,7 @@ def main():
     p.add_argument('--duration',type=float,default=420)
     p.add_argument('--rate',type=float,default=.035)
     p.add_argument('--demand-profile',choices=list(PROFILES)+['cycle'],default='balanced')
+    p.add_argument('--profile-offset',type=int,default=0,help='Cycle offset when continuing a partial run')
     p.add_argument('--fixed-green',type=float,default=15)
     p.add_argument('--port',type=int,default=31610)
     p.add_argument('--lr',type=float,default=3e-4)

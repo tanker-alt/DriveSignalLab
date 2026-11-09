@@ -1,0 +1,120 @@
+{
+  "before": {
+    "unfinished": 0,
+    "due": 209,
+    "collisions": 0,
+    "red_violations": 0,
+    "mean_wait": 28.843815574763024,
+    "scenario_wait_std": 5.9366251877602325
+  },
+  "after": {
+    "unfinished": 1,
+    "due": 209,
+    "collisions": 0,
+    "red_violations": 0,
+    "mean_wait": 28.1598462994612,
+    "scenario_wait_std": 4.772429583378651
+  },
+  "selected": {
+    "episode": 20,
+    "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/carla_existing_60/carla_train/checkpoint_019.pt",
+    "score": {
+      "unfinished": 1,
+      "due": 209,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 28.1598462994612,
+      "scenario_wait_std": 4.772429583378651
+    }
+  },
+  "candidates": [
+    {
+      "episode": 20,
+      "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/carla_existing_60/carla_train/checkpoint_019.pt",
+      "score": {
+        "unfinished": 1,
+        "due": 209,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 28.1598462994612,
+        "scenario_wait_std": 4.772429583378651
+      },
+      "wait_change_percent": -2.3712857043097446,
+      "independent_audits_passed": 8
+    },
+    {
+      "episode": 40,
+      "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/carla_existing_60/carla_train/checkpoint_039.pt",
+      "score": {
+        "unfinished": 2,
+        "due": 209,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 29.54374986098651,
+        "scenario_wait_std": 4.265806851590988
+      },
+      "wait_change_percent": 2.4266355621684665,
+      "independent_audits_passed": 8
+    },
+    {
+      "episode": 60,
+      "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/carla_existing_60/carla_train_continued/checkpoint_017.pt",
+      "score": {
+        "unfinished": 3,
+        "due": 209,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 29.090571912383815,
+        "scenario_wait_std": 5.255980117779869
+      },
+      "wait_change_percent": 0.8554913166089362,
+      "independent_audits_passed": 8
+    }
+  ],
+  "passed": false,
+  "protocol": {
+    "selected": "extended_fair_30101",
+    "checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/ablation_multiflow/extended_fair_30101_train/checkpoint_019.pt",
+    "selection": {
+      "unfinished": 0,
+      "due": 216,
+      "collisions": 0,
+      "red_violations": 0,
+      "mean_wait": 19.80719269647457,
+      "scenario_wait_std": 2.431688550834821
+    },
+    "sumo_training_episodes_this_study": 0,
+    "carla_training_episodes": 60,
+    "learning_rate": 0.001,
+    "training_seed": 35001,
+    "validation_seed": 36001,
+    "test_seed": 37001,
+    "eval_episodes": 8,
+    "candidate_episodes": [
+      20,
+      40,
+      60
+    ],
+    "reward": "original vehicle-time and collision reward",
+    "acceptance": ">=5% lower mean wait than the SAME frozen SUMO model in CARLA; all complete; no collision/red crossings",
+    "selection_scope": "existing SUMO validation only, not an independent test",
+    "arguments": {
+      "arrival_seconds": 40,
+      "duration": 200,
+      "port": 31600
+    }
+  },
+  "recovery": {
+    "completed_before_crash": 42,
+    "remaining": 18,
+    "seed": 35043,
+    "profile_offset": 2,
+    "source_checkpoint": "/home/zlj/DriveSignalLab/outputs/staged/carla_existing_60/carla_train/checkpoint_041.pt",
+    "note": "Optimizer and weights restored; fresh RNG seed after simulator crash, not bit-exact uninterrupted run"
+  },
+  "evidence_sha256": {
+    "outputs/staged/carla_existing_60/carla_adaptation.json": "bb2a65a7b7ed43fb8c0fcf19c26fb455bf6c4a254beefb3f8dabaf86f8fda645",
+    "outputs/staged/carla_existing_60/protocol.json": "02ea8ad632c359fae950cd29fd54bfae3121d3e983c1e20cb96eae939ad869d3",
+    "outputs/staged/carla_existing_60/recovery.json": "ecde6b7aec7b4635e038d1804450ebab6027cd74b349cb1d7e3c400830cc14c0"
+  }
+}
