@@ -1,0 +1,18 @@
+{
+  "ab_state_plain_eval": {
+    "episodes": 8,
+    "mean_wait": 20.84631467468891,
+    "unfinished": 0,
+    "collisions": 0,
+    "red": 0,
+    "max_wait_mean": 63.59182962500947
+  },
+  "ab_state_fair_eval": {
+    "episodes": 8,
+    "mean_wait": 21.273849865304747,
+    "unfinished": 0,
+    "collisions": 0,
+    "red": 0,
+    "max_wait_mean": 65.19288329336624
+  }
+}
