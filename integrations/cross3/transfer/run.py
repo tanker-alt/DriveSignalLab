@@ -1,5 +1,6 @@
 """Train/evaluate real SUMO → CARLA, optionally jointly updating LMDrive's head."""
 import argparse
+import copy
 import hashlib
 import json
 from pathlib import Path
@@ -29,7 +30,11 @@ def run(args):
         raise ValueError('Requested signal prior differs from checkpoint')
     if args.state_mode!='auto' and policy.state_mode!=args.state_mode:
         raise ValueError('Checkpoint state mode mismatch')
-    validate_progress(args,source)
+    gate_args=copy.copy(args)
+    if args.exploratory_joint:
+        # Explicit user-authorized experiment, not a fabricated CARLA acceptance.
+        gate_args.vla=False
+    validate_progress(gate_args,source)
     if source and source.get('map_sha256') != hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest():
         raise ValueError('Checkpoint map fingerprint mismatch')
     if policy.loaded_head and not args.vla:
@@ -116,6 +121,7 @@ def main():
     p.add_argument('--carla-acceptance',type=Path)
     p.add_argument('--controller',choices=['learned','fixed','maxpressure'],default='learned')
     p.add_argument('--train',action='store_true')
+    p.add_argument('--exploratory-joint',action='store_true',help='Explicitly run joint experiment before CARLA adaptation acceptance; retains metric and SUMO gates')
     p.add_argument('--vla',action='store_true',help='Use two real LMDrive egos; --train updates its internal final waypoint layer and signal actor')
     p.add_argument('--waypoint-head',type=Path)
     p.add_argument('--episodes',type=int,default=1)
@@ -136,6 +142,7 @@ def main():
     a=p.parse_args()
     if a.episodes<1 or a.epochs<1 or a.rate<=0 or not 0<a.arrival_seconds<=a.duration: p.error('Invalid episode, demand or horizon settings')
     if a.lr<=0: p.error('--lr must be positive')
+    if a.exploratory_joint and (not a.vla or a.backend!='carla'): p.error('--exploratory-joint requires CARLA VLA')
     if a.waypoint_head and not a.vla: p.error('--waypoint-head requires --vla')
     if a.vla and a.backend!='carla': p.error('--vla requires real CARLA')
     if a.train and a.controller!='learned': p.error('Only learned controller can train')
