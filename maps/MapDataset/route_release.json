@@ -1,0 +1,119 @@
+{
+  "schema_version": "map_route_release.1",
+  "passed": true,
+  "maps": [
+    {
+      "map": "cross3",
+      "passed": true,
+      "opendrive_sha256": "f7004754e20b1b20ded09c5f9279a130e5244af38737eac21a5cc6b44efaae88",
+      "route_sha256": "81e0bc8dc71db04a6b7cd8e4595e8600a3a6eec1e83a915d0d8f73aa2b2c30c0",
+      "planner": "continuous_route_planner",
+      "samples": 255,
+      "length_m": 254.0,
+      "max_sample_gap_m": 1.0,
+      "required_junctions": 1
+    },
+    {
+      "map": "cross_1x6",
+      "passed": true,
+      "opendrive_sha256": "32e73cd18e5581f6cfbf5aaa236bca39db7cf7a6c1d74f87ada3e7f817bead3f",
+      "route_sha256": "942319fb39f4d99564659cf55b25f9ad424ef7340232f1d86bd9e48d5b9ba004",
+      "planner": "continuous_route_planner",
+      "samples": 1980,
+      "length_m": 1974.0,
+      "max_sample_gap_m": 1.0,
+      "required_junctions": 6
+    },
+    {
+      "map": "cross_3x3",
+      "passed": true,
+      "opendrive_sha256": "0bf7316ae70eedbabd6cc2cb9c7f9179d4ebcd3470f9ecb166da5f9df67abdf4",
+      "route_sha256": "9fa24bb8a6eb5dd1d9211fc689b76c6df6b40f24c659dc19970a9384ad73cd18",
+      "planner": "continuous_route_planner",
+      "samples": 3008,
+      "length_m": 2997.2183721079664,
+      "max_sample_gap_m": 1.107377452144374,
+      "required_junctions": 9
+    },
+    {
+      "map": "heterogeneous_1x6",
+      "passed": true,
+      "opendrive_sha256": "2960e17f08fe193ae792a3ef02a05b0cfe861ffbf42698dcc667874eb681409d",
+      "route_sha256": "aac18b98b3c8b931044bfdfbc353ca0cde5f45981b46ee18d702a56f160015ce",
+      "planner": "heterogeneous_route",
+      "samples": 2759,
+      "length_m": 2747.0,
+      "max_sample_gap_m": 1.0000004768371582,
+      "required_junctions": 6
+    },
+    {
+      "map": "heterogeneous_3x3",
+      "passed": true,
+      "opendrive_sha256": "4aadae8158f611decf099ec3d7f8a940b45af603712f0c172a7a4302f5e5d23d",
+      "route_sha256": "1a01bf346025112f74f42086b605b0af3c157c2acd80ece65e281bbbc9335ec3",
+      "planner": "heterogeneous_route",
+      "samples": 4209,
+      "length_m": 4190.459228608061,
+      "max_sample_gap_m": 1.1270748185114075,
+      "required_junctions": 9
+    },
+    {
+      "map": "heterogeneous_3x3_roundabout",
+      "passed": true,
+      "opendrive_sha256": "5b4ea42c24f0e94d5254504ec76988620efa2dbe3a6ba1907b927a4ceaf090ab",
+      "route_sha256": "7b7fd2ad097ddfab781e6d90d837b7711436920f9bb248eb32dd64152905306f",
+      "planner": "heterogeneous_route",
+      "samples": 4395,
+      "length_m": 4406.527304118293,
+      "max_sample_gap_m": 1.1858589368111052,
+      "required_junctions": 12
+    },
+    {
+      "map": "roundabout4_8groups",
+      "passed": true,
+      "opendrive_sha256": "7607014d01fb54c23fd6b9daa5c91493a958d47106c29f64eb2df47ef22509fa",
+      "route_sha256": "ffe5e46fdf39b065fc9ca2f70f87ccc211715fb64d23465e9d9d1fe0935fe7ba",
+      "planner": "roundabout_route",
+      "samples": 331,
+      "length_m": 338.23209892470805,
+      "max_sample_gap_m": 1.0618940353481088,
+      "required_junctions": 4
+    },
+    {
+      "map": "t_1x6",
+      "passed": true,
+      "opendrive_sha256": "e43714fb705ab574c552d7b21064d2317378f5468bc26b57274b672718873dda",
+      "route_sha256": "e623c169d90feab3c2d02e2a1392f21e48a9e065a514969cd0233196c611ec76",
+      "planner": "continuous_route_planner",
+      "samples": 1743,
+      "length_m": 1732.7432748946153,
+      "max_sample_gap_m": 1.017407486816791,
+      "required_junctions": 6
+    },
+    {
+      "map": "t_3x3",
+      "passed": true,
+      "opendrive_sha256": "94ae3d8f5404517503b42692badc6b296b5ab36b38bfd87d19610014d19f7b52",
+      "route_sha256": "55733155e946cb3b4cfbcbadb41925cacda8f2b6539908d801c4ff9e47922620",
+      "planner": "continuous_route_planner",
+      "samples": 2607,
+      "length_m": 2610.21837332435,
+      "max_sample_gap_m": 1.127091419124274,
+      "required_junctions": 9
+    },
+    {
+      "map": "t_north",
+      "passed": true,
+      "opendrive_sha256": "999c5d419858a17849e8024cff9d4af9d60b20e6fde2ac5c8d2cbb72aa8868b8",
+      "route_sha256": "54ca64211a7fee4152c2638a3c66d5958d345f26cc3245259e187da9daa14045",
+      "planner": "continuous_route_planner",
+      "samples": 248,
+      "length_m": 247.0,
+      "max_sample_gap_m": 1.0000004768371653,
+      "required_junctions": 1
+    }
+  ],
+  "planner_sha256": "2c852c506f4285e33e3f439350e2c81d5e71dde844b35b818fc5158d77097966",
+  "physical_vehicle_validated": false,
+  "scope": "Offline CARLA topology/continuity only; stop-line alignment and traffic safety not certified"
+}

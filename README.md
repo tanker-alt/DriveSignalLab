@@ -3,7 +3,7 @@
 
 Haoyu Fu<sup>1\*</sup>, Diankun Zhang<sup>2\*</sup>, Zongchuang Zhao<sup>1</sup>, <br>Jianfeng Cui<sup>2</sup>, Hongwei Xie<sup>2†</sup>,  Bing Wang<sup>2</sup>, Guang Chen<sup>2</sup>, Dingkang Liang<sup>1†</sup>, Xiang Bai<sup>1</sup>
 
-<sup>1</sup>  Huazhong University of Science & Technology, <sup>2</sup>  Xiaomi EV 
+<sup>1</sup>  Huazhong University of Science & Technology, <sup>2</sup>  Xiaomi EV
 
 (\*) Equal contribution. (†) Project leader.
 
@@ -109,7 +109,7 @@ python rl_projects/convert_checkpoint.py
 ```
 
 ### Reinforcement Learning
-#### Rollout (data collection) 
+#### Rollout (data collection)
 If you are using the 3B model, remember to update the CONFIG in the file.
 ```
 bash adzoo/minddrive/minddrive_run_collection_multi.sh
@@ -161,3 +161,8 @@ If this work is helpful for your research, please consider citing:
   year={2025}
 }
 ```
+
+
+## CARLA maps branch
+
+See [maps/README.md](maps/README.md) for the ten camera-validated maps, generator, beautification modules and portable route adapter.

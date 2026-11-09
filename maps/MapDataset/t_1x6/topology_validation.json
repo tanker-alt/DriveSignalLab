@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "opendrive_sha256": "e43714fb705ab574c552d7b21064d2317378f5468bc26b57274b672718873dda",
+  "method": "CARLA before/after lane graph equality and 5m waypoint geometry equivalence",
+  "waypoint_checks": 2292,
+  "limits": "Regression equivalence to existing map; not a new traffic or route certification",
+  "physical_pose_only_revalidation": {
+    "source_sha256": "761485e38abad7b069ae9b261047f1f54c8d4eb233d173cde554e87e5cdef070",
+    "road_lane_signal_control_xml_unchanged": true
+  }
+}

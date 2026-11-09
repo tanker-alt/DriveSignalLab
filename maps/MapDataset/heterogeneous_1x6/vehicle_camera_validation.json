@@ -1,0 +1,3420 @@
+{
+  "passed": true,
+  "opendrive_sha256": "2960e17f08fe193ae792a3ef02a05b0cfe861ffbf42698dcc667874eb681409d",
+  "signals": 54,
+  "camera": {
+    "width": 1920,
+    "height": 1080,
+    "fov": 100,
+    "x": -1.5,
+    "z": 2,
+    "pitch": 0,
+    "vehicle": "lincoln.mkz_2020"
+  },
+  "rows": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.6994708602853,
+        472.2887284329116,
+        963.3005311020132,
+        492.1852515511862
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.6994688979868,
+        472.2887284329116,
+        963.3005311020132,
+        492.1852515511862
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4738044493055,
+        488.1743969758036,
+        962.5261970526202,
+        503.33890780971154
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.4738029473798,
+        488.1743969758036,
+        962.5261970526202,
+        503.33890780971154
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9538498904308,
+        498.0226624667681,
+        962.0461513260885,
+        510.27322247099687
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9538486739115,
+        498.0226624667681,
+        962.0461513260885,
+        510.27322247099687
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.6999967252132,
+        472.2887320167493,
+        963.3010546382823,
+        492.1852543072385
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.6999967056526,
+        472.2887316153938,
+        963.3010585824459,
+        492.18525402593144
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4743254839987,
+        488.174397529234,
+        962.526716521489,
+        503.338908342507
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.474327049812,
+        488.1743988401765,
+        962.5267209633521,
+        503.3389092645594
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9543680137859,
+        498.02266282984954,
+        962.0466681910036,
+        510.27322282130115
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9543704887363,
+        498.0226636899015,
+        962.0466730151473,
+        510.27322342753536
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010310864077,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        955.9908357677184,
+        450.24964728072985,
+        964.0092229110166,
+        476.8323788068609
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        955.9908280266419,
+        450.2496486669295,
+        964.0092202480945,
+        476.8323797720055
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1490832365402,
+        476.1793505279558,
+        962.850884508833,
+        494.94220964951836
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.149070321024,
+        476.17935122888787,
+        962.8508752297885,
+        494.94221014058803
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7880869338702,
+        490.4847678929421,
+        962.2118277732056,
+        504.9817645911366
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7880783428961,
+        490.48476831486306,
+        962.2118220144773,
+        504.9817648877507
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11011",
+      "road_id": 10001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.6994538101602,
+        472.288781215528,
+        963.3005481521368,
+        492.1853403389908
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11012",
+      "road_id": 10001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.6994557724571,
+        472.288781215528,
+        963.3005442275429,
+        492.1853403389908
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11011",
+      "road_id": 10001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4737901836692,
+        488.1744124364596,
+        962.5262113182561,
+        503.3389491318741
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11012",
+      "road_id": 10001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.4737916855945,
+        488.1744124364596,
+        962.5262083144055,
+        503.3389491318741
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11011",
+      "road_id": 10001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9538382196561,
+        498.022672609828,
+        962.0461629968629,
+        510.2732496396433
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11012",
+      "road_id": 10001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.953839436175,
+        498.022672609828,
+        962.046160563825,
+        510.2732496396433
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96009822851047,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11031",
+      "road_id": 10003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.6999768230257,
+        472.2887795211017,
+        963.301071313212,
+        492.1852802037133
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.9600982257165,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11032",
+      "road_id": 10003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.699988448625,
+        472.2887764806179,
+        963.3010773483335,
+        492.18527807265923
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.9600982257165,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11031",
+      "road_id": 10003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4743103626678,
+        488.1744361808552,
+        962.5267291724931,
+        503.33893117845025
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96009822571651,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11032",
+      "road_id": 10003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.4743147816366,
+        488.17443439966837,
+        962.5267292593339,
+        503.338929925651
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96009822571651,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11031",
+      "road_id": 10003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9543554759312,
+        498.02268818748934,
+        962.0466787279637,
+        510.27323783555914
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96009822571651,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11032",
+      "road_id": 10003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9543602850589,
+        498.02268701893036,
+        962.0466800014574,
+        510.2732370118641
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96009822571651,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11041",
+      "road_id": 10004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        955.9908592370521,
+        450.2496486314999,
+        964.009095401705,
+        476.83237974733544
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11042",
+      "road_id": 10004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        955.9908590918512,
+        450.2496453809714,
+        964.0090955469042,
+        476.8323774841481
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11041",
+      "road_id": 10004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1491367991752,
+        476.17934886641063,
+        962.850830946197,
+        494.94220848544677
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11042",
+      "road_id": 10004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1491368304858,
+        476.17934956734274,
+        962.8508309148867,
+        494.94220897651644
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11041",
+      "road_id": 10004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.788158637709,
+        490.48476689278704,
+        962.2118163381193,
+        504.9817638880183
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "11042",
+      "road_id": 10004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7881586565562,
+        490.48476731470805,
+        962.2118163192723,
+        504.9817641846324
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21011",
+      "road_id": 20001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1130479557908,
+        480.76217762725594,
+        962.8869537609439,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21012",
+      "road_id": 20001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1130496725254,
+        480.76217762725594,
+        962.8869571944133,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21013",
+      "road_id": 20001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1130428055867,
+        480.76217762725594,
+        962.8869571944133,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21011",
+      "road_id": 20001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7235173817709,
+        493.28849564931517,
+        962.2764839719464,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21012",
+      "road_id": 20001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.723518735488,
+        493.28849564931517,
+        962.2764866793808,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21013",
+      "road_id": 20001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7235133206192,
+        493.28849564931517,
+        962.2764866793808,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21011",
+      "road_id": 20001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1208738482561,
+        501.441915387453,
+        961.8791272691719,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21012",
+      "road_id": 20001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.120874965684,
+        501.441915387453,
+        961.8791295040279,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21013",
+      "road_id": 20001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1208704959721,
+        501.441915387453,
+        961.8791295040279,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013729097322,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21021",
+      "road_id": 20002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3524276430986,
+        480.74454972726204,
+        962.6471490296677,
+        498.1423223630421
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21022",
+      "road_id": 20002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.35242757377,
+        480.74454817561275,
+        962.6471490989854,
+        498.1423212747712
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21023",
+      "road_id": 20002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.3524275044413,
+        480.7445466239634,
+        962.647149168303,
+        498.14232018650017
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21021",
+      "road_id": 20002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9117160521645,
+        493.27752780106806,
+        962.0865636275696,
+        506.94575991256545
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21022",
+      "road_id": 20002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9117160090472,
+        493.2775268363763,
+        962.0865636706515,
+        506.94575923392284
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21023",
+      "road_id": 20002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9117159659297,
+        493.2775258716844,
+        962.0865637137333,
+        506.9457585552802
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21021",
+      "road_id": 20002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2762934570308,
+        501.43444423998255,
+        961.7222865612106,
+        512.6896362930751
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21022",
+      "road_id": 20002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.2762935041843,
+        501.4344452949794,
+        961.7222865140958,
+        512.6896370367049
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21023",
+      "road_id": 20002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2762933982777,
+        501.43444292546576,
+        961.7222866199152,
+        512.6896353665189
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21031",
+      "road_id": 20003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1135692354002,
+        480.76217633040255,
+        962.8874751539681,
+        498.1298154193482
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21032",
+      "road_id": 20003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1135656885389,
+        480.7621740032782,
+        962.8874735506662,
+        498.1298137852392
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21033",
+      "road_id": 20003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1135793090257,
+        480.76217167615334,
+        962.8874942649173,
+        498.1298121511305
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21031",
+      "road_id": 20003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7240393011992,
+        493.2885752263146,
+        962.2769981269346,
+        506.9380230165075
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21032",
+      "road_id": 20003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.724037876981,
+        493.2885737793176,
+        962.27699819747,
+        506.93802199761376
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21033",
+      "road_id": 20003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7240486361976,
+        493.2885723323203,
+        962.2770145125853,
+        506.9380209787202
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21031",
+      "road_id": 20003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1213923843466,
+        501.4419696088727,
+        961.8796405148022,
+        512.6843536777909
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21032",
+      "road_id": 20003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.1213923363099,
+        501.4419686229313,
+        961.8796416802917,
+        512.6843529822955
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21033",
+      "road_id": 20003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1213922882733,
+        501.4419676369898,
+        961.8796461980608,
+        512.6843522868004
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96013728864492,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21041",
+      "road_id": 20004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3525880491583,
+        480.7445519148256,
+        962.6473092491092,
+        498.14232375838066
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21042",
+      "road_id": 20004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.3525878955539,
+        480.74454847679095,
+        962.6473094027075,
+        498.1423213470669
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21043",
+      "road_id": 20004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.3525879225502,
+        480.7445490810319,
+        962.6473093757123,
+        498.1423217708598
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21041",
+      "road_id": 20004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9125357807792,
+        493.2775291611207,
+        962.0873832401575,
+        506.94576078269455
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21042",
+      "road_id": 20004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9125356852802,
+        493.2775270236249,
+        962.0873833356527,
+        506.94575927900627
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21043",
+      "road_id": 20004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9125357020644,
+        493.2775273992937,
+        962.0873833188692,
+        506.94575954328224
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21041",
+      "road_id": 20004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2769699902859,
+        501.4344434543508,
+        961.7229631684121,
+        512.6896356801643
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21042",
+      "road_id": 20004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.2769700017211,
+        501.4344437102993,
+        961.7229631569774,
+        512.6896358605734
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "21043",
+      "road_id": 20004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2769700131564,
+        501.4344439662479,
+        961.7229631455425,
+        512.6896360409825
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31011",
+      "road_id": 30001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1130542560294,
+        480.7623069028417,
+        962.8869474607015,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31012",
+      "road_id": 30001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1130559727603,
+        480.7623069028417,
+        962.8869508941634,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31013",
+      "road_id": 30001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1130491058366,
+        480.7623069028417,
+        962.8869508941634,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31011",
+      "road_id": 30001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7235212992504,
+        493.2885760326931,
+        962.2764800544645,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31012",
+      "road_id": 30001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7235226529652,
+        493.2885760326931,
+        962.2764827618943,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31013",
+      "road_id": 30001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7235172381057,
+        493.2885760326931,
+        962.2764827618943,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31011",
+      "road_id": 30001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1208765175111,
+        501.4419701583153,
+        961.8791245999154,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31012",
+      "road_id": 30001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.1208776349375,
+        501.4419701583153,
+        961.8791268347682,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31013",
+      "road_id": 30001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1208731652318,
+        501.4419701583153,
+        961.8791268347682,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31021",
+      "road_id": 30002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3533068765532,
+        480.7445498108188,
+        962.6462697962183,
+        498.14232242158494
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31022",
+      "road_id": 30002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.3533068072475,
+        480.74454825916956,
+        962.6462698655129,
+        498.142321333314
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31023",
+      "road_id": 30002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.3533067379418,
+        480.74454670752016,
+        962.6462699348075,
+        498.142320245043
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31021",
+      "road_id": 30002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9131025863941,
+        493.27752785301703,
+        962.0865636252507,
+        506.94575994907257
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31022",
+      "road_id": 30002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9131025433054,
+        493.2775268883252,
+        962.0865636683326,
+        506.94575927042996
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31023",
+      "road_id": 30002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9131025002166,
+        493.2775259236334,
+        962.0865637114144,
+        506.9457585917873
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31021",
+      "road_id": 30002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2774379265976,
+        501.43444427537617,
+        961.7222865596306,
+        512.6896363179968
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31022",
+      "road_id": 30002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.2774379737199,
+        501.43444533037297,
+        961.7222865125158,
+        512.6896370616265
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31023",
+      "road_id": 30002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2774378678837,
+        501.4344429608593,
+        961.7222866183351,
+        512.6896353914407
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31031",
+      "road_id": 30003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1135749824075,
+        480.76230560599396,
+        962.8874683004939,
+        498.12981541934806
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31032",
+      "road_id": 30003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1135765857472,
+        480.7623032788797,
+        962.8874718473883,
+        498.1298137852392
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31033",
+      "road_id": 30003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1135833392804,
+        480.76230095176504,
+        962.8874856946697,
+        498.12981215113064
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31031",
+      "road_id": 30003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7240388658499,
+        493.2885752263146,
+        962.2769976915853,
+        506.9379664150659
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31032",
+      "road_id": 30003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7240415027765,
+        493.2885737793176,
+        962.2770018232656,
+        506.93796539616875
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31033",
+      "road_id": 30003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7240468471333,
+        493.2885723323203,
+        962.277012723521,
+        506.9379643772717
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31031",
+      "road_id": 30003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1213920249867,
+        501.4419696088727,
+        961.8796401554423,
+        512.6843150417437
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31032",
+      "road_id": 30003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.1213908595236,
+        501.4419686229313,
+        961.8796402035053,
+        512.6843143462465
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31033",
+      "road_id": 30003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1213997508988,
+        501.4419676369898,
+        961.8796536606862,
+        512.6843136507493
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31041",
+      "road_id": 30004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3534672148776,
+        480.7445504824962,
+        962.6464300833892,
+        498.1423227537816
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31042",
+      "road_id": 30004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.3534672418649,
+        480.7445510867371,
+        962.646430056403,
+        498.14232317757444
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31043",
+      "road_id": 30004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.3534672688522,
+        480.74455169097797,
+        962.6464300294168,
+        498.1423236013672
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31041",
+      "road_id": 30004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9132290069414,
+        493.2775282706125,
+        962.0866900139948,
+        506.9457601562295
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31042",
+      "road_id": 30004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9132290237199,
+        493.27752864628127,
+        962.0866899972169,
+        506.94576042050545
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31043",
+      "road_id": 30004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9132290404984,
+        493.27752902195004,
+        962.086689980439,
+        506.9457606847814
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31041",
+      "road_id": 30004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2775422736679,
+        501.4344445598899,
+        961.7223908850328,
+        512.6896364594134
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31042",
+      "road_id": 30004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.2775422850993,
+        501.4344448158385,
+        961.7223908736019,
+        512.6896366398223
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "31043",
+      "road_id": 30004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2775422965308,
+        501.434445071787,
+        961.7223908621708,
+        512.6896368202314
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41011",
+      "road_id": 40001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1130542560294,
+        480.7623069028417,
+        962.8869474607015,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41012",
+      "road_id": 40001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1130559727603,
+        480.7623069028417,
+        962.8869508941634,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41013",
+      "road_id": 40001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1130491058366,
+        480.7623069028417,
+        962.8869508941634,
+        498.1298161428069
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41011",
+      "road_id": 40001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7235212992504,
+        493.2885760326931,
+        962.2764800544645,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41012",
+      "road_id": 40001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7235226529652,
+        493.2885760326931,
+        962.2764827618943,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41013",
+      "road_id": 40001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7235172381057,
+        493.2885760326931,
+        962.2764827618943,
+        506.9379668661559
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41011",
+      "road_id": 40001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1208765175111,
+        501.4419701583153,
+        961.8791245999154,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41012",
+      "road_id": 40001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.1208776349375,
+        501.4419701583153,
+        961.8791268347682,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41013",
+      "road_id": 40001,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1208731652318,
+        501.4419701583153,
+        961.8791268347682,
+        512.6843153496569
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41021",
+      "road_id": 40002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3533068802834,
+        480.7445498943322,
+        962.6462697924887,
+        498.14232248015816
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41022",
+      "road_id": 40002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.3533068109778,
+        480.7445483426829,
+        962.6462698617833,
+        498.1423213918872
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41023",
+      "road_id": 40002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.353306741672,
+        480.74454679103354,
+        962.6462699310779,
+        498.1423203036162
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41021",
+      "road_id": 40002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9131025887133,
+        493.27752790493895,
+        962.086563622932,
+        506.94575998559867
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41022",
+      "road_id": 40002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9131025456245,
+        493.2775269402472,
+        962.0865636660138,
+        506.94575930695606
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41023",
+      "road_id": 40002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9131025025357,
+        493.27752597555536,
+        962.0865637090957,
+        506.94575862831346
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41021",
+      "road_id": 40002,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2774379281777,
+        501.4344443107513,
+        961.7222865580507,
+        512.6896363429315
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41022",
+      "road_id": 40002,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.2774378223414,
+        501.43444194123754,
+        961.72228666387,
+        512.6896346727456
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41023",
+      "road_id": 40002,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2774378694637,
+        501.4344429962345,
+        961.7222866167552,
+        512.6896354163754
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41031",
+      "road_id": 40003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1135761459409,
+        480.76230560599396,
+        962.8874694640274,
+        498.12981541934806
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41032",
+      "road_id": 40003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1135743158186,
+        480.7623032788797,
+        962.8874695774597,
+        498.1298137852392
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41033",
+      "road_id": 40003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.1135810693517,
+        480.76230095176504,
+        962.887483424741,
+        498.12981215113064
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41031",
+      "road_id": 40003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7240397833451,
+        493.2885752263146,
+        962.2769986090806,
+        506.9379664150659
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41032",
+      "road_id": 40003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7240397128419,
+        493.2885737793176,
+        962.2770000333309,
+        506.93796539616875
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41033",
+      "road_id": 40003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.7240450571986,
+        493.2885723323203,
+        962.2770109335863,
+        506.9379643772717
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41031",
+      "road_id": 40003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.1213981193554,
+        501.4420791501337,
+        961.8796355728332,
+        512.6843923137286
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41032",
+      "road_id": 40003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.1213991887423,
+        501.44207816419794,
+        961.8796378557425,
+        512.6843916182353
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41033",
+      "road_id": 40003,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.1214036103993,
+        501.44207717826197,
+        961.8796468431918,
+        512.6843909227421
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41041",
+      "road_id": 40004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.3534671509049,
+        480.74454905015625,
+        962.6464301473595,
+        498.1423217491899
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41042",
+      "road_id": 40004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.3534671778922,
+        480.74454965439713,
+        962.6464301203733,
+        498.14232217298274
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41043",
+      "road_id": 40004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.3534672048794,
+        480.744550258638,
+        962.646430093387,
+        498.1423225967755
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 18,
+        "green": 19
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41041",
+      "road_id": 40004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9132289671682,
+        493.27752738009764,
+        962.0866900537665,
+        506.94575952976896
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41042",
+      "road_id": 40004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9132289839467,
+        493.27752775576647,
+        962.0866900369886,
+        506.945759794045
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41043",
+      "road_id": 40004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        957.9132290007253,
+        493.27752813143525,
+        962.0866900202107,
+        506.94576005832096
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41041",
+      "road_id": 40004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        958.2775423230445,
+        501.43444566542456,
+        961.7223908356581,
+        512.6896372386653
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41042",
+      "road_id": 40004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        958.277542334476,
+        501.43444592137314,
+        961.7223908242271,
+        512.6896374190744
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "41043",
+      "road_id": 40004,
+      "lane_id": -3,
+      "head_bbox_pixels": [
+        958.2775423459075,
+        501.43444617732166,
+        961.7223908127961,
+        512.6896375994834
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 8,
+        "green": 8
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51011",
+      "road_id": 50001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.7000871541046,
+        472.28857008456873,
+        963.2999148081984,
+        492.18531074309254
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51012",
+      "road_id": 50001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.7000891164078,
+        472.28857008456873,
+        963.2999187328046,
+        492.18531074309254
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51011",
+      "road_id": 50001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4742779929245,
+        488.174313488102,
+        962.5257235090037,
+        503.3389491318741
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51012",
+      "road_id": 50001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.4742794948527,
+        488.174313488102,
+        962.52572651286,
+        503.3389491318741
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51011",
+      "road_id": 50001,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9542340742141,
+        498.0226076941598,
+        962.0457671423068,
+        510.2732496396433
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51012",
+      "road_id": 50001,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9542352907349,
+        498.0226076941598,
+        962.0457695753485,
+        510.2732496396433
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916558207,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51031",
+      "road_id": 50003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        956.7006260617703,
+        472.28890619908555,
+        963.3004209378374,
+        492.1855465657951
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51032",
+      "road_id": 50003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        956.70062787591,
+        472.28890315861344,
+        963.3004250106251,
+        492.18554443476455
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 25,
+        "green": 25
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51031",
+      "road_id": 50003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.4748061756303,
+        488.1745103918273,
+        962.5262324895773,
+        503.33908776699184
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51032",
+      "road_id": 50003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.4748090926873,
+        488.1745086106458,
+        962.5262370821684,
+        503.3390865142032
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 15
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51031",
+      "road_id": 50003,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.9547565144246,
+        498.0227368740857,
+        962.0462769848381,
+        510.27334079005175
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51032",
+      "road_id": 50003,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.9547552409723,
+        498.0227357055295,
+        962.046277041802,
+        510.27333996636236
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 10,
+        "green": 10
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96005916325376,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51041",
+      "road_id": 50004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        955.9888614965151,
+        450.2496447610931,
+        964.0110931422261,
+        476.832377052607
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51042",
+      "road_id": 50004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        955.9888615584674,
+        450.249646147293,
+        964.0110930802745,
+        476.8323780177516
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 44,
+        "green": 42
+      },
+      "passed": true,
+      "requested_distance_m": 0,
+      "actual_distance_m": 0.0,
+      "vehicle_station": 139.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51041",
+      "road_id": 50004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.1477164693182,
+        476.1793515984634,
+        962.8522512760468,
+        494.9422103995355
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51042",
+      "road_id": 50004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.1477165006444,
+        476.17935229939553,
+        962.852251244721,
+        494.94221089060517
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 22,
+        "green": 24
+      },
+      "passed": true,
+      "requested_distance_m": 15,
+      "actual_distance_m": 15.0,
+      "vehicle_station": 124.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51041",
+      "road_id": 50004,
+      "lane_id": -1,
+      "head_bbox_pixels": [
+        957.7870566539797,
+        490.48476853732643,
+        962.2129183218434,
+        504.9817650441593
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    },
+    {
+      "signal_id": "51042",
+      "road_id": 50004,
+      "lane_id": -2,
+      "head_bbox_pixels": [
+        957.7870566728362,
+        490.48476895924745,
+        962.2129183029871,
+        504.98176534077345
+      ],
+      "fully_in_frame": true,
+      "state_changed_pixels": {
+        "yellow": 14,
+        "green": 12
+      },
+      "passed": true,
+      "requested_distance_m": 30,
+      "actual_distance_m": 30.0,
+      "vehicle_station": 109.96010311096907,
+      "short_approach_clamped": false
+    }
+  ],
+  "errors": [],
+  "limits": "Static attached real RGB camera; no ML classifier. Short ring approaches sampled only within their road, actual distances recorded. Clear daylight; no moving-traffic occlusion."
+}

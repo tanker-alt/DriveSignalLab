@@ -1,0 +1,92 @@
+[
+  {
+    "map": "cross3",
+    "signals": 12,
+    "cases": 36,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 8,
+    "appearance": "complete"
+  },
+  {
+    "map": "t_north",
+    "signals": 6,
+    "cases": 18,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 10,
+    "appearance": "complete"
+  },
+  {
+    "map": "cross_1x6",
+    "signals": 72,
+    "cases": 216,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 8,
+    "appearance": "simple"
+  },
+  {
+    "map": "cross_3x3",
+    "signals": 108,
+    "cases": 324,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 8,
+    "appearance": "simple"
+  },
+  {
+    "map": "t_1x6",
+    "signals": 36,
+    "cases": 108,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 10,
+    "appearance": "simple"
+  },
+  {
+    "map": "t_3x3",
+    "signals": 54,
+    "cases": 162,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 10,
+    "appearance": "simple"
+  },
+  {
+    "map": "roundabout4_8groups",
+    "signals": 16,
+    "cases": 48,
+    "passed": true,
+    "adjusted_cases": 16,
+    "minimum_changed_pixels": 22,
+    "appearance": "complete"
+  },
+  {
+    "map": "heterogeneous_1x6",
+    "signals": 54,
+    "cases": 162,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 8,
+    "appearance": "simple"
+  },
+  {
+    "map": "heterogeneous_3x3",
+    "signals": 90,
+    "cases": 270,
+    "passed": true,
+    "adjusted_cases": 0,
+    "minimum_changed_pixels": 8,
+    "appearance": "simple"
+  },
+  {
+    "map": "heterogeneous_3x3_roundabout",
+    "signals": 88,
+    "cases": 264,
+    "passed": true,
+    "adjusted_cases": 16,
+    "minimum_changed_pixels": 8,
+    "appearance": "simple"
+  }
+]

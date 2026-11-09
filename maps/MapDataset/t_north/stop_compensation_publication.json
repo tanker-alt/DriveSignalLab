@@ -1,0 +1,14 @@
+{
+  "opendrive_sha256": "3a28307e9180b70cc203981632a905b1ce8060071c7e635011540eb44a53e7bf",
+  "clearance_m": 2.4,
+  "invalidated_reports": [
+    "admission_topology.json",
+    "load_report.json",
+    "project_preflight.json",
+    "release_drive_validation.json"
+  ],
+  "profiles_require_regeneration": true,
+  "note": "Existing experiment_profiles retain their old map hashes and must be regenerated before use. Existing preview images are historical. No all-vehicle stopping certification.",
+  "superseded_by": "signal_control_geometry_validation.json",
+  "historical_before_physical_relocation": true
+}

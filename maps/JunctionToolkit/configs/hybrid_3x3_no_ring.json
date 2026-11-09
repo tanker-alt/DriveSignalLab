@@ -1,0 +1,12 @@
+{
+    "name":  "hybrid_3x3_no_ring",
+    "rows":  3,
+    "columns":  3,
+    "spacing_m":  344,
+    "arm_length_m":  150,
+    "lane_width_m":  3.5,
+    "sidewalk_width_m":  2,
+    "seed":  43,
+    "roadside_props":  false,
+    "include_roundabout":  false
+}

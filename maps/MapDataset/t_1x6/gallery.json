@@ -1,0 +1,10 @@
+{
+  "opendrive_sha256": "e43714fb705ab574c552d7b21064d2317378f5468bc26b57274b672718873dda",
+  "images": {
+    "overview.png": "aa718d81443deaaac01a42859e60017f90e47060f0100c045b70d09e40ad8688",
+    "street.png": "fd007c96962b66d2d900b751105e5fe3c6db9391a56365fee045cc1085a6114b"
+  },
+  "source": "CARLA RGB after all-lane vehicle camera acceptance",
+  "updated": "2026-11-09",
+  "camera_validation": "vehicle_camera_validation.json"
+}

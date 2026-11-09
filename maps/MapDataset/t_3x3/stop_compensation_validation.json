@@ -1,0 +1,658 @@
+{
+  "map": "t_3x3",
+  "opendrive_sha256": "ea809abe84c5954467863743e76e4ab6a04b3a611ff3e51bfdbd6aed489caf4a",
+  "passed": true,
+  "scope": "Native signal/lane/stop-waypoint alignment only; not vehicle stopping certification",
+  "signals": [
+    {
+      "signal": "1021",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1022",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1031",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -1,
+          "s": 121.44998931884768
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1032",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -2,
+          "s": 121.44998931884768
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1041",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 4,
+          "lane": -1,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1042",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 4,
+          "lane": -2,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11011",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 10001,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11012",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 10001,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11021",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 10002,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11022",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 10002,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11041",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 10004,
+          "lane": -1,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "11042",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 10004,
+          "lane": -2,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21021",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 20002,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21022",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 20002,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21031",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 20003,
+          "lane": -1,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21032",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 20003,
+          "lane": -2,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21041",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 20004,
+          "lane": -1,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "21042",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 20004,
+          "lane": -2,
+          "s": 121.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31011",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 30001,
+          "lane": -1,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31012",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 30001,
+          "lane": -2,
+          "s": 140.44999694824222
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31021",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 30002,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31022",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 30002,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31041",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 30004,
+          "lane": -1,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "31042",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 30004,
+          "lane": -2,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41011",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40001,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41012",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40001,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41021",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40002,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41022",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40002,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41031",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40003,
+          "lane": -1,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "41032",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 40003,
+          "lane": -2,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51011",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50001,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51012",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50001,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51021",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50002,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51022",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50002,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51041",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50004,
+          "lane": -1,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "51042",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 50004,
+          "lane": -2,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61021",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 60002,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61022",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 60002,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61031",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 60003,
+          "lane": -1,
+          "s": 121.44998931884768
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61032",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 60003,
+          "lane": -2,
+          "s": 121.44998931884768
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61041",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 60004,
+          "lane": -1,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "61042",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 60004,
+          "lane": -2,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71011",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 70001,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71012",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 70001,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71031",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 70003,
+          "lane": -1,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71032",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 70003,
+          "lane": -2,
+          "s": 121.44997406005862
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71041",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 70004,
+          "lane": -1,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "71042",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 70004,
+          "lane": -2,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81011",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 80001,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81012",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 80001,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81021",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 80002,
+          "lane": -1,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81022",
+      "expected_s": 121.44999999999999,
+      "actual": [
+        {
+          "road": 80002,
+          "lane": -2,
+          "s": 121.45000457763675
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81041",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 80004,
+          "lane": -1,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "81042",
+      "expected_s": 140.45,
+      "actual": [
+        {
+          "road": 80004,
+          "lane": -2,
+          "s": 140.45001220703128
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "superseded_by": "signal_control_geometry_validation.json",
+  "historical_before_physical_relocation": true
+}

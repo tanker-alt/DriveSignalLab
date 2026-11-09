@@ -1,0 +1,288 @@
+{
+  "source": "main-project/MapDataset/cross3",
+  "source_hashes": {
+    "admission_topology.json": "3134df75b685e925e0606d3f5a52123f62e329773691ad8138b3beec9dbb9657",
+    "config.json": "4746a2e09ca1aa90ab0a7eb2a7946bce7d1ef03b8dba3b20eeb67ead5c99decf",
+    "gallery.json": "bb34a89559730f21d35b9a20f8c5c359db660ed07d6460abcd586b8bb39e0a78",
+    "load_report.json": "19da53daea6537b481ccda3edce19b361cd80f2ca3ff7f3cfa55bde8456bbe2c",
+    "manifest.json": "9cb1ba927f575fccc085a4e9c6f3240579cb3771ec8a4fc327a23b12a09b4ab9",
+    "map.xodr": "d8faf3551c0d6ee4f1b829b1d2dc2f28b9e2a464b9b8a8a4e112308c35129e80",
+    "overview.png": "4e6adb3356102dafa63d268179b98ee1ab90e5d4349ecf161643cdc7aeb981d3",
+    "project_preflight.json": "d1a04e83c1b55c4b500bcf936b7818601dfc179c28cd12339e90dae6948732e3",
+    "release_drive_validation.json": "772c9d6a2f0515f89d00fc6efb530c1f93fcfa295566e5aa3fd5b2e0cce6740a",
+    "safety_rules.json": "40dbdceadc4ff981b646d7bf000525f65c0f99c3ab12a1dbf04587e8ed8af915",
+    "stop_compensation_patch.json": "fab10a6b8c48c494822adec91b7f2d0baf2caacdd01ba20a42c5e4eaf077f621",
+    "stop_compensation_publication.json": "152b5f98acde5c58a0a7c30e79d1a40426b5602c552c5ef661d38bdf28260b9e",
+    "stop_compensation_validation.json": "023bf6d3a1b04e530a8d5b6871bc49e8af1efc5df13f24de40a0f60ea281665c",
+    "street.png": "1fd45c278a677cb81722103e6b0379e3aefd49ded359e7d058d309070fcd8677",
+    "topology_validation.json": "81dc38622d100fd37d6be14ebe1ea4cf3a3ea5b97ce8167c81973d934463f549"
+  },
+  "opendrive_sha256": "f7004754e20b1b20ded09c5f9279a130e5244af38737eac21a5cc6b44efaae88",
+  "only_physical_pose_changed": true,
+  "changes": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-29.05000000000001",
+        "y": "-7.75",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "22.5",
+        "y": "-7.75",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-29.05000000000001",
+        "y": "-11.25",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "22.5",
+        "y": "-11.25",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1013",
+      "road_id": 1,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-29.05000000000001",
+        "y": "-14.75",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "22.5",
+        "y": "-14.75",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1021",
+      "road_id": 2,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "7.750000000000015",
+        "y": "-29.050000000000015",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "7.750000000000031",
+        "y": "22.499999999999996",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1022",
+      "road_id": 2,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "11.250000000000016",
+        "y": "-29.050000000000015",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "11.250000000000032",
+        "y": "22.499999999999996",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1023",
+      "road_id": 2,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "14.750000000000016",
+        "y": "-29.050000000000015",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "14.750000000000032",
+        "y": "22.499999999999996",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "29.05000000000001",
+        "y": "7.750000000000018",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-22.5",
+        "y": "7.750000000000024",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "29.05000000000001",
+        "y": "11.250000000000018",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-22.5",
+        "y": "11.250000000000025",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1033",
+      "road_id": 3,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "29.050000000000015",
+        "y": "14.750000000000018",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-22.499999999999996",
+        "y": "14.750000000000025",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-7.7500000000000835",
+        "y": "29.05000000000001",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-7.750000000000093",
+        "y": "-22.5",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-11.250000000000083",
+        "y": "29.050000000000015",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-11.250000000000092",
+        "y": "-22.499999999999996",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1043",
+      "road_id": 4,
+      "policy": "far_side_junction_boundary",
+      "offset_m": 51.55000000000001,
+      "before": {
+        "x": "-14.750000000000083",
+        "y": "29.050000000000015",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-14.750000000000092",
+        "y": "-22.499999999999996",
+        "z": "0",
+        "hdg": "4.71238898038469",
+        "pitch": "0",
+        "roll": "0"
+      }
+    }
+  ]
+}

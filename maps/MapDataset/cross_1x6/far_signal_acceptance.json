@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "opendrive_sha256": "32e73cd18e5581f6cfbf5aaa236bca39db7cf7a6c1d74f87ada3e7f817bead3f",
+  "signals": 72,
+  "camera_cases": 216,
+  "appearance_mode": "simple",
+  "controls_unchanged": true,
+  "previews_refreshed": true
+}

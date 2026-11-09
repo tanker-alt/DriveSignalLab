@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "signal_policy": "one_signal_per_incoming_lane",
+  "config": {
+    "name": "t_north",
+    "rows": 1,
+    "columns": 1,
+    "type": "t",
+    "missing_arm": "north",
+    "incoming_lanes": 2,
+    "arm_length_m": 150.0,
+    "lane_width_m": 3.5,
+    "junction_radius_m": 19.0,
+    "spacing_m": 300,
+    "sidewalk_width_m": 2.0,
+    "roadside_props": false,
+    "seed": 42,
+    "arm_turns": {
+      "west": [
+        [
+          "straight"
+        ],
+        [
+          "right"
+        ]
+      ],
+      "south": [
+        [
+          "left"
+        ],
+        [
+          "right"
+        ]
+      ],
+      "east": [
+        [
+          "left"
+        ],
+        [
+          "straight"
+        ]
+      ]
+    },
+    "standard_profile": "urban_cross3_v1",
+    "curb_width_m": 0.2,
+    "curb_height_m": 0.15,
+    "corner_radius_m": 12.0,
+    "road_class": "urban_uniform",
+    "shoulder_enabled": false,
+    "shoulder_width_m": 0.0
+  },
+  "junctions": [
+    {
+      "id": 10,
+      "center": [
+        0,
+        0
+      ],
+      "roads": [
+        1,
+        2,
+        3
+      ],
+      "lengths": [
+        150.0,
+        150.0,
+        150.0
+      ],
+      "arms": {
+        "west": 1,
+        "south": 2,
+        "east": 3
+      }
+    }
+  ],
+  "movements": [
+    {
+      "road": 1,
+      "lane": -1,
+      "target_road": 3,
+      "target_lane": 1,
+      "movement": "straight",
+      "junction_id": 10
+    },
+    {
+      "road": 1,
+      "lane": -2,
+      "target_road": 2,
+      "target_lane": 2,
+      "movement": "right",
+      "junction_id": 10
+    },
+    {
+      "road": 2,
+      "lane": -1,
+      "target_road": 1,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 2,
+      "lane": -2,
+      "target_road": 3,
+      "target_lane": 2,
+      "movement": "right",
+      "junction_id": 10
+    },
+    {
+      "road": 3,
+      "lane": -1,
+      "target_road": 2,
+      "target_lane": 1,
+      "movement": "left",
+      "junction_id": 10
+    },
+    {
+      "road": 3,
+      "lane": -2,
+      "target_road": 1,
+      "target_lane": 2,
+      "movement": "straight",
+      "junction_id": 10
+    }
+  ],
+  "seams": [],
+  "signals": {
+    "1011": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 0,
+      "approach_slot": 0,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -1
+      ],
+      "physical_forward_offset_m": 44.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "19.0",
+        "y": "-7.75",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "far_side_junction_boundary"
+    },
+    "1012": {
+      "road_id": 1,
+      "junction_id": 10,
+      "phase_slot": 1,
+      "approach_slot": 0,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -2
+      ],
+      "physical_forward_offset_m": 44.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "19.0",
+        "y": "-11.25",
+        "z": "0",
+        "hdg": "0.0",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "far_side_junction_boundary"
+    },
+    "1021": {
+      "road_id": 2,
+      "junction_id": 10,
+      "phase_slot": 2,
+      "approach_slot": 1,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -1
+      ],
+      "physical_forward_offset_m": 32.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "7.750000000000025",
+        "y": "6.9999999999999964",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "t_closed_side_pavement_boundary"
+    },
+    "1022": {
+      "road_id": 2,
+      "junction_id": 10,
+      "phase_slot": 3,
+      "approach_slot": 1,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -2
+      ],
+      "physical_forward_offset_m": 32.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "11.250000000000027",
+        "y": "6.9999999999999964",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "t_closed_side_pavement_boundary"
+    },
+    "1031": {
+      "road_id": 3,
+      "junction_id": 10,
+      "phase_slot": 4,
+      "approach_slot": 2,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -1
+      ],
+      "physical_forward_offset_m": 44.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "-19.0",
+        "y": "7.750000000000023",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "far_side_junction_boundary"
+    },
+    "1032": {
+      "road_id": 3,
+      "junction_id": 10,
+      "phase_slot": 5,
+      "approach_slot": 2,
+      "reference_s": 142.85,
+      "signal_s": 143.45,
+      "incoming_lanes": [
+        -2
+      ],
+      "physical_forward_offset_m": 44.55000000000001,
+      "physical_pose_opendrive": {
+        "x": "-19.0",
+        "y": "11.250000000000023",
+        "z": "0",
+        "hdg": "3.141592653589793",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "physical_placement_policy": "far_side_junction_boundary"
+    }
+  },
+  "status": "generated_requires_validation",
+  "coordinate_system": "OpenDRIVE XY; CARLA flips Y",
+  "opendrive_sha256": "999c5d419858a17849e8024cff9d4af9d60b20e6fde2ac5c8d2cbb72aa8868b8",
+  "stop_compensation": {
+    "clearance_m": 2.4,
+    "assumed_trigger_offset_m": 3.0,
+    "all_vehicle_compliance_certified": false
+  },
+  "physical_signal_layout_version": "far_side_20261109"
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "maps": 10,
+  "signals": 536,
+  "camera_cases": 1608,
+  "routes_rebuilt": true,
+  "unit_tests": 10,
+  "python37_sources_parse_except_historical_wizard": true,
+  "known_limit": "Existing wizard.py has encoding-damaged strings; use toolkit.py or generate.py CLI. Wizard functionality was not changed.",
+  "commercial_asset_binaries": false,
+  "maximum_file_bytes": 3469827,
+  "file_count": 832
+}

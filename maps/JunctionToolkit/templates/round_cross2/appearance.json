@@ -1,0 +1,17 @@
+{
+  "source": "D:/Maps/MapDataset/FourLeggedIntersection/Exports/Round-Cross2",
+  "runtime_mode": "cooked_CARLA_equivalents",
+  "road": "native OpenDRIVE asphalt",
+  "markings": "native OpenDRIVE roadMark",
+  "grass": "/Game/Carla/Static/Ground/Town10HD/Town10HD_Terrain_Ground_26Node.Town10HD_Terrain_Ground_26Node",
+  "trees": [
+    "/Game/Carla/Static/Vegetation/Trees/SM_Acer_02.SM_Acer_02",
+    "/Game/Carla/Static/Vegetation/Trees/SM_Beech.SM_Beech"
+  ],
+  "tree_spacing_m": 10,
+  "road_clearance_m": 12,
+  "sidewalk_width_m": 2.0,
+  "tree_rows_per_side": 4,
+  "tree_layout": "parallel roadside rows; stop 24m before ring access",
+  "inner_sidewalk_width_m": 2
+}

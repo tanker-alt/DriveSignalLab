@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "opendrive_sha256": "d8faf3551c0d6ee4f1b829b1d2dc2f28b9e2a464b9b8a8a4e112308c35129e80",
-  "method": "CARLA before/after lane graph equality and 5m waypoint geometry equivalence",
-  "waypoint_checks": 812,
-  "limits": "Regression equivalence to existing map; not a new traffic or route certification"
-}

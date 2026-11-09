@@ -1,0 +1,379 @@
+{
+  "source": "main-project/MapDataset/roundabout4_8groups",
+  "source_hashes": {
+    "config.json": "602a842f4fd677556d9b1d09fcf3d16b087c51f7fecd21573854f950475cacb5",
+    "CONTINUOUS_ACCEPTANCE.md": "ccb545a2561b8c9914c9750e915340c76a89bcb59e0ba77e2f01503a43eae209",
+    "continuous_route.json": "724aeb74175457e8f385de46b175194c565507fe7173a8f8c2c04ad1a2554b2a",
+    "gallery.json": "24bb7026a4936ac090098126d33216f87b1cac9b6ad95bec2dd1db71ff08233b",
+    "load_report.json": "c077c93b357c56ad91df010422d915e897613fad5a7061b37d8467e74bc519f3",
+    "manifest.json": "852076b188bdd00ba689be7ccb151d45952e8bf8f4a55a2d0642d428937b9fe5",
+    "map.xodr": "d979299995927ac80f72b0fff160669d2454eedf1d00575e2840a8c1bebea687",
+    "observer_before_load.json": "a4ddb1b1112a1cc954d6fbbbb96dab4aebaf9a1baa63aa908d6b09779392bdcd",
+    "overview.png": "6c9fe8d3c34b4dd685bedc89351c9aaaa2d75109a5e0ab160b3da769c714b0fe",
+    "phase_example.json": "8ceb1e90b699714dc2a9f430e6ae9a4d06be9e75395d46f320a07f680e5a6ffe",
+    "roundabout_continuous_validation.json": "ef8763ac5cc744c1e0b0f0c9cc2f3b31208f5c108f7d2b1a4c632b907a690829",
+    "roundabout_topology_explanation.json": "c1a18d7f8b97458d323597dbc6a8d43dcae3d5d1f7e23e887bc930bbe6e06ca3",
+    "stop_compensation_patch.json": "21c50c5c0c6bf30cdf149714eedc075675c4d977bcb53b0c65769c079c9a2520",
+    "stop_compensation_publication.json": "634b3bda902a6a81b5e824858232e96519e1d6b09897991f2f94119a4b22dd6e",
+    "stop_compensation_validation.json": "e818d60a427f319e99bea472642ebcdac4f0036fb988b62110559b956e461964",
+    "street.png": "2644af6a884b0b021db2d8bdf8dd9cae951e69d17aafa35680b7e2fd1909908c",
+    "topology_validation.json": "c89448498779b1fc9d80b4cbf467d608dc7797d8bd1a5b631d4def383b85a9fb",
+    "waypoint_preview.json": "d5e0de9470d82ebb2c4daf84821cd82fb428b3d3788d65a5f2e7109893aee1df"
+  },
+  "opendrive_sha256": "7607014d01fb54c23fd6b9daa5c91493a958d47106c29f64eb2df47ef22509fa",
+  "only_physical_pose_changed": true,
+  "changes": [
+    {
+      "signal_id": "1011",
+      "road_id": 1,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-59.400000000000006",
+        "y": "-7.750000000000007",
+        "z": "0",
+        "hdg": "6.283185307179586",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-41.400000000000006",
+        "y": "-7.7500000000000115",
+        "z": "0",
+        "hdg": "6.283185307179586",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1012",
+      "road_id": 1,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-59.400000000000006",
+        "y": "-11.250000000000007",
+        "z": "0",
+        "hdg": "6.283185307179586",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-41.400000000000006",
+        "y": "-11.25000000000001",
+        "z": "0",
+        "hdg": "6.283185307179586",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20201",
+      "road_id": 20,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-23.595409164492782",
+        "y": "-27.189274840645723",
+        "z": "0",
+        "hdg": "5.568436089103411",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-10.000771744169928",
+        "y": "-38.98697942289212",
+        "z": "0",
+        "hdg": "5.568436089103411",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20202",
+      "road_id": 20,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-25.889407277707363",
+        "y": "-29.832676561264055",
+        "z": "0",
+        "hdg": "5.568436089103411",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-12.294769857384509",
+        "y": "-41.63038114351045",
+        "z": "0",
+        "hdg": "5.568436089103411",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1021",
+      "road_id": 2,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "7.7500000000000036",
+        "y": "-59.400000000000006",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "7.750000000000009",
+        "y": "-41.400000000000006",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1022",
+      "road_id": 2,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "11.250000000000004",
+        "y": "-59.400000000000006",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "11.250000000000009",
+        "y": "-41.400000000000006",
+        "z": "0",
+        "hdg": "7.853981633974483",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20211",
+      "road_id": 21,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "27.189274840645734",
+        "y": "-23.595409164492764",
+        "z": "0",
+        "hdg": "7.1392324158983085",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "38.98697942289212",
+        "y": "-10.0007717441699",
+        "z": "0",
+        "hdg": "7.1392324158983085",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20212",
+      "road_id": 21,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "29.83267656126407",
+        "y": "-25.889407277707342",
+        "z": "0",
+        "hdg": "7.1392324158983085",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "41.630381143510455",
+        "y": "-12.294769857384477",
+        "z": "0",
+        "hdg": "7.1392324158983085",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1031",
+      "road_id": 3,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "59.400000000000006",
+        "y": "7.749999999999999",
+        "z": "0",
+        "hdg": "9.42477796076938",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "41.400000000000006",
+        "y": "7.750000000000005",
+        "z": "0",
+        "hdg": "9.42477796076938",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1032",
+      "road_id": 3,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "59.40000000000001",
+        "y": "11.25",
+        "z": "0",
+        "hdg": "9.42477796076938",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "41.40000000000001",
+        "y": "11.250000000000007",
+        "z": "0",
+        "hdg": "9.42477796076938",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20221",
+      "road_id": 22,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "23.59540916449275",
+        "y": "27.189274840645723",
+        "z": "0",
+        "hdg": "8.710028742693206",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "10.000771744169878",
+        "y": "38.98697942289209",
+        "z": "0",
+        "hdg": "8.710028742693206",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20222",
+      "road_id": 22,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "25.889407277707324",
+        "y": "29.83267656126406",
+        "z": "0",
+        "hdg": "8.710028742693206",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "12.294769857384452",
+        "y": "41.630381143510434",
+        "z": "0",
+        "hdg": "8.710028742693206",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1041",
+      "road_id": 4,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-7.749999999999996",
+        "y": "59.400000000000006",
+        "z": "0",
+        "hdg": "10.995574287564276",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-7.7500000000000036",
+        "y": "41.400000000000006",
+        "z": "0",
+        "hdg": "10.995574287564276",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "1042",
+      "road_id": 4,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-11.249999999999996",
+        "y": "59.40000000000001",
+        "z": "0",
+        "hdg": "10.995574287564276",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-11.250000000000004",
+        "y": "41.40000000000001",
+        "z": "0",
+        "hdg": "10.995574287564276",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20231",
+      "road_id": 23,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-27.189274840645705",
+        "y": "23.595409164492793",
+        "z": "0",
+        "hdg": "10.2808250694881",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-38.986979422892105",
+        "y": "10.00077174416994",
+        "z": "0",
+        "hdg": "10.2808250694881",
+        "pitch": "0",
+        "roll": "0"
+      }
+    },
+    {
+      "signal_id": "20232",
+      "road_id": 23,
+      "policy": "roundabout_local_downstream_tangent",
+      "offset_m": 18.0,
+      "before": {
+        "x": "-29.83267656126404",
+        "y": "25.88940727770737",
+        "z": "0",
+        "hdg": "10.2808250694881",
+        "pitch": "0",
+        "roll": "0"
+      },
+      "after": {
+        "x": "-41.630381143510434",
+        "y": "12.294769857384518",
+        "z": "0",
+        "hdg": "10.2808250694881",
+        "pitch": "0",
+        "roll": "0"
+      }
+    }
+  ]
+}

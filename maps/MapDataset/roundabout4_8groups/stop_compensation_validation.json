@@ -1,0 +1,202 @@
+{
+  "map": "roundabout4_8groups",
+  "opendrive_sha256": "d979299995927ac80f72b0fff160669d2454eedf1d00575e2840a8c1bebea687",
+  "passed": true,
+  "scope": "Native signal/lane/stop-waypoint alignment only; not vehicle stopping certification",
+  "signals": [
+    {
+      "signal": "1011",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 1,
+          "lane": -1,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1012",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 1,
+          "lane": -2,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20201",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 20,
+          "lane": -1,
+          "s": 6.380772620439538
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20202",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 20,
+          "lane": -2,
+          "s": 6.429292380809793
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1021",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -1,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1022",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 2,
+          "lane": -2,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20211",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 21,
+          "lane": -1,
+          "s": 6.260112613439569
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20212",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 21,
+          "lane": -2,
+          "s": 6.308634161949167
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1031",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -1,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1032",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 3,
+          "lane": -2,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20221",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 22,
+          "lane": -1,
+          "s": 6.380772620439538
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20222",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 22,
+          "lane": -2,
+          "s": 6.429297745227823
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1041",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 4,
+          "lane": -1,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "1042",
+      "expected_s": 111.6,
+      "actual": [
+        {
+          "road": 4,
+          "lane": -2,
+          "s": 111.60000610351565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20231",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 23,
+          "lane": -1,
+          "s": 6.260112732648858
+        }
+      ],
+      "passed": true
+    },
+    {
+      "signal": "20232",
+      "expected_s": 6.391665410651944,
+      "actual": [
+        {
+          "road": 23,
+          "lane": -2,
+          "s": 6.308634340763101
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "superseded_by": "signal_control_geometry_validation.json",
+  "historical_before_physical_relocation": true
+}
