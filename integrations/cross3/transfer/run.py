@@ -26,6 +26,7 @@ def run(args):
     policy=Policy(args.seed, args.lr,signal_prior='none' if args.signal_prior=='auto' else args.signal_prior,
                   state_mode='extended' if args.state_mode=='auto' else args.state_mode)
     source=policy.load(args.checkpoint) if args.checkpoint else None
+    if args.waypoint_std is not None: policy.std=args.waypoint_std
     if args.signal_prior!='auto' and policy.signal_prior!=args.signal_prior:
         raise ValueError('Requested signal prior differs from checkpoint')
     if args.state_mode!='auto' and policy.state_mode!=args.state_mode:
@@ -122,6 +123,7 @@ def main():
     p.add_argument('--controller',choices=['learned','fixed','maxpressure'],default='learned')
     p.add_argument('--train',action='store_true')
     p.add_argument('--exploratory-joint',action='store_true',help='Explicitly run joint experiment before CARLA adaptation acceptance; retains metric and SUMO gates')
+    p.add_argument('--waypoint-std',type=float,help='Waypoint exploration standard deviation in metres')
     p.add_argument('--vla',action='store_true',help='Use two real LMDrive egos; --train updates its internal final waypoint layer and signal actor')
     p.add_argument('--waypoint-head',type=Path)
     p.add_argument('--episodes',type=int,default=1)
@@ -142,6 +144,7 @@ def main():
     a=p.parse_args()
     if a.episodes<1 or a.epochs<1 or a.rate<=0 or not 0<a.arrival_seconds<=a.duration: p.error('Invalid episode, demand or horizon settings')
     if a.lr<=0: p.error('--lr must be positive')
+    if a.waypoint_std is not None and (not a.vla or a.waypoint_std<=0): p.error('Positive --waypoint-std requires VLA')
     if a.exploratory_joint and (not a.vla or a.backend!='carla'): p.error('--exploratory-joint requires CARLA VLA')
     if a.waypoint_head and not a.vla: p.error('--waypoint-head requires --vla')
     if a.vla and a.backend!='carla': p.error('--vla requires real CARLA')

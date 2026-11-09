@@ -7,7 +7,7 @@ from .compare import compare
 from .stages import sha,load_receipt
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True);p.add_argument('--reuse-baseline',type=Path);a=p.parse_args()
     b=a.output.resolve();b.mkdir(parents=True,exist_ok=False)
     metrics=Path('outputs/staged/stage1_joint_retirement/acceptance.json').resolve()
     load_receipt(metrics,1)
@@ -24,7 +24,8 @@ def main():
     gate(sg,'sumo_validation',cp,evidence,dict(scope='Reaudited existing SUMO validation after CARLA retired-ego control fix; no SUMO retraining',score=score(rows)))
     head=Path('/home/zlj/Drive/models/lmdrive/cross3_waypoint_head.pt')
     protocol=dict(platform='CARLA 0.9.12',sumo_training_episodes=0,joint_training_episodes=4,
-        evaluation_episodes_per_policy=4,training_seed=41001,evaluation_seed=42001,
+        evaluation_episodes_per_policy=4,waypoint_exploration_std_m=.005,
+        reused_baseline=str(a.reuse_baseline),training_seed=41001,evaluation_seed=42001,
         demand_profile='cycle',arrival_seconds=10,duration=150,starting_signal=str(cp),
         starting_signal_sha256=sha(cp),starting_vla_head=str(head),starting_vla_head_sha256=sha(head),
         trainable_vla='waypoints_predictor.2, 40970 internal parameters; upstream frozen',
@@ -41,7 +42,7 @@ def main():
                  '--metrics-acceptance',str(metrics),'--sumo-acceptance',str(sg),'--output',str(episode),
                  '--episodes','1','--seed',str((41001 if train else 42001)+i),'--demand-profile',profile,
                  '--arrival-seconds','10','--duration','150','--lr','.0003']
-            if train:cmd+=['--train']
+            if train:cmd+=['--train','--waypoint-std','.005']
             print(name,i,flush=True)
             with (out/('run_%03d.log'%i)).open('w') as log:subprocess.run(cmd,stdout=log,stderr=subprocess.STDOUT,check=True)
             row=json.loads((episode/'results.json').read_text())[0];rows.append(row)
@@ -52,7 +53,18 @@ def main():
             if train:current=episode/'checkpoint_000.pt'
             write(out/'results.json',rows);write(out/'ego_results.json',egos)
         return rows,egos,current
-    before,be,_=run('before',cp)
+    if a.reuse_baseline:
+        import shutil
+        for i in range(4):
+            source=a.reuse_baseline/('run_%03d'%i)
+            if not audit(source/'episode_000')['passed']:raise ValueError('Baseline audit failed')
+            config=json.loads((source/'protocol.json').read_text())['arguments']
+            if sha(Path(config['checkpoint']))!=sha(cp) or config['train'] or not config['vla']:
+                raise ValueError('Wrong baseline')
+        shutil.copytree(a.reuse_baseline,b/'before')
+        before=json.loads((b/'before/results.json').read_text());be=json.loads((b/'before/ego_results.json').read_text())
+    else:
+        before,be,_=run('before',cp)
     training,te,trained=run('train',cp,True)
     if any(r['training']['head_parameter_change_l1']<=0 or r['training']['signal_parameter_change_l1']<=0 for r in training):
         raise ValueError('Both policies must actually update')

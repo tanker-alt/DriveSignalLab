@@ -1,0 +1,384 @@
+{
+  "platform": "CARLA 0.9.12",
+  "sumo_training_episodes": 0,
+  "planned_joint_training_episodes": 4,
+  "completed_joint_training_episodes": 2,
+  "training_third_episode": "aborted on VLA wrong exit; no update",
+  "evaluation_scenarios": 4,
+  "after_wrong_exit_scenarios": 3,
+  "improved": false,
+  "trainable_vla_parameters": 40970,
+  "exploration_std_m": 0.005,
+  "training_updates": [
+    {
+      "signal_parameter_change_l1": 1.8820024051237851,
+      "loss": 22.159923553466797,
+      "head_loss": -0.009476698935031891,
+      "head_parameter_change_l1": 0.08301535896316636,
+      "head_samples": 2143,
+      "transitions": 150
+    },
+    {
+      "signal_parameter_change_l1": 1.7334134655538946,
+      "loss": 29.704320907592773,
+      "head_loss": -0.00833383109420538,
+      "head_parameter_change_l1": 0.05944608195568435,
+      "head_samples": 2021,
+      "transitions": 150
+    }
+  ],
+  "scenes": [
+    {
+      "seed": 42001,
+      "status": "wrong_exit",
+      "failure": {
+        "episode": 0,
+        "error": "RuntimeError('Wrong exit for v0')"
+      },
+      "baseline": {
+        "schema": "cross3_metrics_v2",
+        "duration_s": 150.00000223517418,
+        "planned": 18,
+        "due": 18,
+        "completed": 16,
+        "unfinished": 2,
+        "future_demand": 0,
+        "completion_rate": 0.8888888888888888,
+        "completed_travel_time_mean_s": 64.39347042866854,
+        "completed_travel_time_p95_s": 99.2039503714169,
+        "censored_vehicle_time_s": 1328.1503894679706,
+        "observed_time_per_due_vehicle_s": 73.7861327482206,
+        "waiting_vehicle_seconds": 656.9503794663112,
+        "external_waiting_vehicle_seconds": 79.70037086461598,
+        "in_sim_waiting_vehicle_seconds": 577.2500086016953,
+        "mean_observed_wait_s": 36.497243303683966,
+        "max_observed_wait_s": 132.1000019684434,
+        "max_queue_vehicles": 14,
+        "max_external_queue_vehicles": 10,
+        "throughput_veh_per_hour": 383.99999427795416,
+        "stops": 34,
+        "collision_pairs": 0,
+        "rear_end_min_ttc_s": 1.8161810248432626,
+        "rear_end_ttc_below_1_5_vehicle_seconds": 0.0,
+        "red_light_violations": 1,
+        "crossing_min_ttc_s": 2.488047737992991,
+        "by_approach": {
+          "1": {
+            "due": 5,
+            "waiting_vehicle_seconds": 122.55666482816054
+          },
+          "2": {
+            "due": 4,
+            "waiting_vehicle_seconds": 95.35481468678071
+          },
+          "3": {
+            "due": 5,
+            "waiting_vehicle_seconds": 345.066375091404
+          },
+          "4": {
+            "due": 4,
+            "waiting_vehicle_seconds": 93.97252485996604
+          }
+        },
+        "stop_line_crossings": 16,
+        "crossing_ttc_model": "constant_velocity_fixed_heading_oriented_rectangles_10s",
+        "crossing_ttc_below_1_5_pair_seconds": 0.0,
+        "safety_samples": 2999,
+        "safety_observed_vehicle_seconds": 1247.6500185914338,
+        "seed": 42001,
+        "reward": -66.40751947339854,
+        "terminated": false,
+        "truncated": true,
+        "controller": "learned",
+        "backend": "carla",
+        "transport": "carla_rpc",
+        "demand_profile": "balanced",
+        "signal_switches": 7,
+        "training": {}
+      }
+    },
+    {
+      "seed": 42002,
+      "status": "horizon_finished",
+      "before": {
+        "schema": "cross3_metrics_v2",
+        "duration_s": 104.00000154972076,
+        "planned": 17,
+        "due": 17,
+        "completed": 17,
+        "unfinished": 0,
+        "future_demand": 0,
+        "completion_rate": 1.0,
+        "completed_travel_time_mean_s": 68.42094564390969,
+        "completed_travel_time_p95_s": 99.7208718252453,
+        "censored_vehicle_time_s": 1163.1560759464646,
+        "observed_time_per_due_vehicle_s": 68.42094564390969,
+        "waiting_vehicle_seconds": 477.056065722778,
+        "external_waiting_vehicle_seconds": 74.00605971686498,
+        "in_sim_waiting_vehicle_seconds": 403.050006005913,
+        "mean_observed_wait_s": 28.062121513104586,
+        "max_observed_wait_s": 59.16816647507024,
+        "max_queue_vehicles": 13,
+        "max_external_queue_vehicles": 10,
+        "throughput_veh_per_hour": 588.4615296927783,
+        "stops": 32,
+        "collision_pairs": 0,
+        "rear_end_min_ttc_s": 1.8377444554456288,
+        "rear_end_ttc_below_1_5_vehicle_seconds": 0.0,
+        "red_light_violations": 0,
+        "crossing_min_ttc_s": 2.4907750538057583,
+        "by_approach": {
+          "1": {
+            "due": 5,
+            "waiting_vehicle_seconds": 120.29603573326384
+          },
+          "2": {
+            "due": 4,
+            "waiting_vehicle_seconds": 125.82167105105522
+          },
+          "3": {
+            "due": 5,
+            "waiting_vehicle_seconds": 129.1880618195018
+          },
+          "4": {
+            "due": 3,
+            "waiting_vehicle_seconds": 101.75029711895716
+          }
+        },
+        "stop_line_crossings": 17,
+        "crossing_ttc_model": "constant_velocity_fixed_heading_oriented_rectangles_10s",
+        "crossing_ttc_below_1_5_pair_seconds": 0.0,
+        "safety_samples": 2078,
+        "safety_observed_vehicle_seconds": 1088.4000162184238,
+        "seed": 42002,
+        "reward": -58.15780379732322,
+        "terminated": true,
+        "truncated": false,
+        "controller": "learned",
+        "backend": "carla",
+        "transport": "carla_rpc",
+        "demand_profile": "east_west",
+        "signal_switches": 6,
+        "training": {}
+      },
+      "after": {
+        "schema": "cross3_metrics_v2",
+        "duration_s": 150.00000223517418,
+        "planned": 17,
+        "due": 17,
+        "completed": 2,
+        "unfinished": 15,
+        "future_demand": 0,
+        "completion_rate": 0.11764705882352941,
+        "completed_travel_time_mean_s": 37.133415138710475,
+        "completed_travel_time_p95_s": 37.96357237089378,
+        "censored_vehicle_time_s": 2277.5060925515736,
+        "observed_time_per_due_vehicle_s": 133.9709466206808,
+        "waiting_vehicle_seconds": 1919.8060872214282,
+        "external_waiting_vehicle_seconds": 74.20605971984521,
+        "in_sim_waiting_vehicle_seconds": 1845.600027501583,
+        "mean_observed_wait_s": 112.92976983655458,
+        "max_observed_wait_s": 131.51645830708705,
+        "max_queue_vehicles": 15,
+        "max_external_queue_vehicles": 10,
+        "throughput_veh_per_hour": 47.99999928474427,
+        "stops": 34,
+        "collision_pairs": 0,
+        "rear_end_min_ttc_s": 1.8200445368040563,
+        "rear_end_ttc_below_1_5_vehicle_seconds": 0.0,
+        "red_light_violations": 0,
+        "crossing_min_ttc_s": 0.0,
+        "by_approach": {
+          "1": {
+            "due": 5,
+            "waiting_vehicle_seconds": 501.79604141805686
+          },
+          "2": {
+            "due": 4,
+            "waiting_vehicle_seconds": 512.6716768155695
+          },
+          "3": {
+            "due": 5,
+            "waiting_vehicle_seconds": 522.6880676831088
+          },
+          "4": {
+            "due": 3,
+            "waiting_vehicle_seconds": 382.6503013046933
+          }
+        },
+        "stop_line_crossings": 3,
+        "crossing_ttc_model": "constant_velocity_fixed_heading_oriented_rectangles_10s",
+        "crossing_ttc_below_1_5_pair_seconds": 2.550000037997961,
+        "safety_samples": 3000,
+        "safety_observed_vehicle_seconds": 2202.5500328205526,
+        "seed": 42002,
+        "reward": -113.87530462757869,
+        "terminated": false,
+        "truncated": true,
+        "controller": "learned",
+        "backend": "carla",
+        "transport": "carla_rpc",
+        "demand_profile": "east_west",
+        "signal_switches": 2,
+        "training": {}
+      }
+    },
+    {
+      "seed": 42003,
+      "status": "wrong_exit",
+      "failure": {
+        "episode": 0,
+        "error": "RuntimeError('Wrong exit for v0')"
+      },
+      "baseline": {
+        "schema": "cross3_metrics_v2",
+        "duration_s": 125.15000186488032,
+        "planned": 19,
+        "due": 19,
+        "completed": 19,
+        "unfinished": 0,
+        "future_demand": 0,
+        "completion_rate": 1.0,
+        "completed_travel_time_mean_s": 75.82496171073542,
+        "completed_travel_time_p95_s": 113.77035014464529,
+        "censored_vehicle_time_s": 1440.674272503973,
+        "observed_time_per_due_vehicle_s": 75.82496171073542,
+        "waiting_vehicle_seconds": 660.8742608840477,
+        "external_waiting_vehicle_seconds": 106.4742526228439,
+        "in_sim_waiting_vehicle_seconds": 554.4000082612038,
+        "mean_observed_wait_s": 34.78285583600251,
+        "max_observed_wait_s": 73.31639058688333,
+        "max_queue_vehicles": 14,
+        "max_external_queue_vehicles": 11,
+        "throughput_veh_per_hour": 546.5441388794294,
+        "stops": 37,
+        "collision_pairs": 0,
+        "rear_end_min_ttc_s": 1.8412610735583212,
+        "rear_end_ttc_below_1_5_vehicle_seconds": 0.0,
+        "red_light_violations": 0,
+        "crossing_min_ttc_s": 2.4877526852296143,
+        "by_approach": {
+          "1": {
+            "due": 4,
+            "waiting_vehicle_seconds": 135.54151183387975
+          },
+          "2": {
+            "due": 5,
+            "waiting_vehicle_seconds": 210.3461887013088
+          },
+          "3": {
+            "due": 6,
+            "waiting_vehicle_seconds": 202.5096564565701
+          },
+          "4": {
+            "due": 4,
+            "waiting_vehicle_seconds": 112.47690389228904
+          }
+        },
+        "stop_line_crossings": 19,
+        "crossing_ttc_model": "constant_velocity_fixed_heading_oriented_rectangles_10s",
+        "crossing_ttc_below_1_5_pair_seconds": 0.0,
+        "safety_samples": 2501,
+        "safety_observed_vehicle_seconds": 1333.3500198684633,
+        "seed": 42003,
+        "reward": -72.03371362519866,
+        "terminated": true,
+        "truncated": false,
+        "controller": "learned",
+        "backend": "carla",
+        "transport": "carla_rpc",
+        "demand_profile": "north_south",
+        "signal_switches": 8,
+        "training": {}
+      }
+    },
+    {
+      "seed": 42004,
+      "status": "wrong_exit",
+      "failure": {
+        "episode": 0,
+        "error": "RuntimeError('Wrong exit for v0')"
+      },
+      "baseline": {
+        "schema": "cross3_metrics_v2",
+        "duration_s": 150.00000223517418,
+        "planned": 17,
+        "due": 17,
+        "completed": 15,
+        "unfinished": 2,
+        "future_demand": 0,
+        "completion_rate": 0.8823529411764706,
+        "completed_travel_time_mean_s": 72.50551820125376,
+        "completed_travel_time_p95_s": 112.37819973834893,
+        "censored_vehicle_time_s": 1384.4646384746773,
+        "observed_time_per_due_vehicle_s": 81.43909638086336,
+        "waiting_vehicle_seconds": 745.9646289602858,
+        "external_waiting_vehicle_seconds": 90.16461918810431,
+        "in_sim_waiting_vehicle_seconds": 655.8000097721815,
+        "mean_observed_wait_s": 43.88027229178152,
+        "max_observed_wait_s": 131.03186298451334,
+        "max_queue_vehicles": 14,
+        "max_external_queue_vehicles": 11,
+        "throughput_veh_per_hour": 359.999994635582,
+        "stops": 34,
+        "collision_pairs": 0,
+        "rear_end_min_ttc_s": 1.8714671185685314,
+        "rear_end_ttc_below_1_5_vehicle_seconds": 0.0,
+        "red_light_violations": 0,
+        "crossing_min_ttc_s": 2.4883064790194926,
+        "by_approach": {
+          "1": {
+            "due": 4,
+            "waiting_vehicle_seconds": 124.18634018313344
+          },
+          "2": {
+            "due": 6,
+            "waiting_vehicle_seconds": 216.78609089293712
+          },
+          "3": {
+            "due": 4,
+            "waiting_vehicle_seconds": 331.5322066565228
+          },
+          "4": {
+            "due": 3,
+            "waiting_vehicle_seconds": 73.45999122769243
+          }
+        },
+        "stop_line_crossings": 15,
+        "crossing_ttc_model": "constant_velocity_fixed_heading_oriented_rectangles_10s",
+        "crossing_ttc_below_1_5_pair_seconds": 0.0,
+        "safety_samples": 2999,
+        "safety_observed_vehicle_seconds": 1293.550019275397,
+        "seed": 42004,
+        "reward": -69.22323192373388,
+        "terminated": false,
+        "truncated": true,
+        "controller": "learned",
+        "backend": "carla",
+        "transport": "carla_rpc",
+        "demand_profile": "left_heavy",
+        "signal_switches": 8,
+        "training": {}
+      }
+    }
+  ],
+  "evidence_sha256": {
+    "outputs/staged/joint_small_noise/before/run_000/episode_000/metric_audit.json": "8071fc5e224dc2fae6a8761867e2391327432ddb38d3ad390d524fa8b6d4db15",
+    "outputs/staged/joint_small_noise/before/run_003/episode_000/metric_audit.json": "13ad1f920b7d882a9d739644bb92666d82cd510b910a3d937a86264b00c4b78d",
+    "outputs/staged/joint_small_noise/before/run_002/episode_000/metric_audit.json": "863ee2cf2711d1e614527874b9ad82c5507e8f2a26529ffbff0a6d744f6ea124",
+    "outputs/staged/joint_small_noise/before/run_001/episode_000/metric_audit.json": "acecc4a664aff735715a1f022373e5feaed9399664c78452053c79226ddcc7f3",
+    "outputs/staged/joint_small_noise/after_two_updates/run_000/failure.json": "4cf71547197dac6459fc03f805bfb4a34940ef6e4a72dfff6a50add8659b8656",
+    "outputs/staged/joint_small_noise/after_two_updates/run_003/failure.json": "4cf71547197dac6459fc03f805bfb4a34940ef6e4a72dfff6a50add8659b8656",
+    "outputs/staged/joint_small_noise/after_two_updates/run_002/failure.json": "f73f85dfb9a1e79cf65f2777037b36e0f8fe8348c3308339ddccc1499746b2e6",
+    "outputs/staged/joint_small_noise/after_two_updates/run_002_retry/failure.json": "4cf71547197dac6459fc03f805bfb4a34940ef6e4a72dfff6a50add8659b8656",
+    "outputs/staged/joint_small_noise/after_two_updates/run_001/results.json": "7d243bba4ae8ee577c9f1ab8b85b973213de1764a43b42fa26a11ef5bbd88cc6",
+    "outputs/staged/joint_small_noise/train/results.json": "850e95448eaa02a505db2cd798122f3dd612f0611861bf92f259c00d37a146dc",
+    "outputs/staged/joint_small_noise/train/run_002/failure.json": "4cf71547197dac6459fc03f805bfb4a34940ef6e4a72dfff6a50add8659b8656"
+  },
+  "limitations": [
+    "Exploratory two-update experiment, not a general conclusion about joint training.",
+    "Three after scenarios abort at wrong exit; do not compare a one-scenario after average to four-scenario before average.",
+    "Seed 42003 infrastructure failure was rerun and then failed due to wrong exit.",
+    "Initial 0.05m noise training also failed before first update."
+  ]
+}
