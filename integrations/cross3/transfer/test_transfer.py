@@ -38,7 +38,7 @@ class ContractTests(unittest.TestCase):
         s=Signals()
         obs=observation({'a':dict(road=2,lane=-2,approach=True,speed=0),
                          'b':dict(road=1,lane=-1,approach=False,outgoing=True,speed=4)},s)
-        self.assertEqual(obs['light'].shape,(20,)); self.assertEqual(obs['global_state'].shape,(27,))
+        self.assertEqual(obs['light'].shape,(28,)); self.assertEqual(obs['global_state'].shape,(35,))
         self.assertAlmostEqual(obs['light'][0],.05); self.assertAlmostEqual(obs['light'][11],.05)
     def test_real_internal_head_updates_and_backbone_unchanged(self):
         p=Policy(2); layer=torch.nn.Linear(8,10); p.bind_head(layer)

@@ -14,12 +14,12 @@ from .core import CONTRACT
 class Policy:
     def __init__(self, seed=0, lr=3e-4, signal_prior='none'):
         torch.manual_seed(seed)
-        self.light = nn.Sequential(nn.Linear(20,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,4))
+        self.light = nn.Sequential(nn.Linear(28,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,4))
         if signal_prior not in ('none','maxpressure'): raise ValueError('Unknown signal prior')
         self.signal_prior=signal_prior
         if signal_prior=='maxpressure':
             nn.init.zeros_(self.light[-1].weight); nn.init.zeros_(self.light[-1].bias)
-        self.critic = nn.Sequential(nn.Linear(27,128),nn.Tanh(),nn.Linear(128,1))
+        self.critic = nn.Sequential(nn.Linear(35,128),nn.Tanh(),nn.Linear(128,1))
         self.optimizer = torch.optim.Adam(list(self.light.parameters())+list(self.critic.parameters()),lr=lr)
         self.head = self.reference_head = self.head_optimizer = None
         self.std = .05
