@@ -1,5 +1,11 @@
 # 分阶段验收协议
 
+最新进展：服务间隔与队列差值状态的两个边界错误已修复，第一阶段以
+`outputs/staged/stage1_history_fixed_retry/acceptance.json` 重新通过。
+四类需求、四组方法、两个训练种子的完整 SUMO 消融已结束；尚无稳定优于
+MaxPressure 的方案。详见 [最新消融记录](ABLATION.md)。下文原阶段实验作为历史证据保留。
+
+
 当前第一阶段已通过；第二阶段 SUMO 和 CARLA 直接迁移已验证，但两次 CARLA 微调均未改善，
 第二阶段尚未通过，第三阶段未启动。完整结果见 [stage2_results.json](stage2_results.json)。
 原 [VALIDATION.md](VALIDATION.md) 是 v1 先导记录，不是新协议的通过凭据。
@@ -114,7 +120,7 @@ CARLA 直接迁移 8 场为 225/225 完成，平均等待 27.50 s，无观测到
 快照的 actor 不作为位置/速度观测，也不提前调用背景驾驶器；生成占位仍保留。
 修复后第一阶段重新通过，72,232 对车辆连续位置没有超过速度上界加 0.5 m 的跳变。
 旧 CARLA 结果仅为故障诊断历史，不能支持现版本效果结论。
-当前有效第一阶段凭据为 `stage1_acceptance_snapshot/acceptance.json`，
+该轮第一阶段凭据为 `stage1_acceptance_snapshot/acceptance.json`，
 第二阶段已在 `stage2_snapshot/` 完成重跑，结果如下。
 
 ### 修复版第二阶段的最终结果

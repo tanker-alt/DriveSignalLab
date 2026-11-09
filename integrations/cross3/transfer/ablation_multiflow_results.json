@@ -1,0 +1,215 @@
+{
+  "protocol": {
+    "arms": {
+      "base_plain": [
+        "base",
+        0.0,
+        0.0
+      ],
+      "extended_plain": [
+        "extended",
+        0.0,
+        0.0
+      ],
+      "base_fair": [
+        "base",
+        0.5,
+        0.25
+      ],
+      "extended_fair": [
+        "extended",
+        0.5,
+        0.25
+      ]
+    },
+    "train_seeds": [
+      30001,
+      30101
+    ],
+    "training_episodes": 20,
+    "validation_seed": 31001,
+    "validation_episodes": 8,
+    "demand_profile": "cycle",
+    "arrival_seconds": 40,
+    "duration": 200,
+    "prior": "maxpressure",
+    "learning_rate": 0.0003,
+    "comparison": "same network size/initialization; base masks eight history inputs in actor AND critic",
+    "scope": "SUMO validation screening only; no held-out test and no CARLA acceptance",
+    "state": "service age and stable decision-interval queue difference; no wait-history features yet",
+    "reward": "existing direction-total-wait disparity and max-wait shaping, not revised fairness",
+    "metric_sources": {
+      "core.py": "927ad001994aaf1c2aacd9e1d8c4b9c214f5eab6741a892f78551265e2807c2d",
+      "safety.py": "04098a69811e2b2cc6947816b2b242abaf2c13253466ce0ab5632832b32f2705",
+      "measurements.py": "f74dd1d0db893a1cecb630d6efa9e6e29714d5bfc37bac36c3f41954fa0b026d",
+      "sumo_env.py": "e3b458337a97806ffc99d89db397ed7d35a83d46fe224a5bb366aa388043a19a",
+      "carla_env.py": "8610e6e8583469b39768cf11c8e2ef639a1dc98e4d9eb9877e5c68dd37d4a842",
+      "audit_metrics.py": "becc269b16fd47306e6e4bb7ede722f0e2f628edbeae9a5ff23a50e4e9bc1779",
+      "test_metrics_stage1.py": "917af7b6c8ad00eac93460f84b4f54b369ead2ab5b671bc98982439f953c72f8",
+      "stages.py": "80ce620904cbd43e4d01578fd64880752f65265a03c8bebbc16521acf89f01f9",
+      "stage1.py": "1c4acf26df50bfc838fc278dea1117c6fd26be1ae4698764e85528b34eee7320",
+      "test_stages.py": "3519c9a29b6beb7672d2e18d0eea5b6a680000b2db33878165f08380e261a0ce"
+    }
+  },
+  "summary": {
+    "base_plain": {
+      "wait_by_training_seed": [
+        19.87167331531809,
+        19.89399474388952
+      ],
+      "mean_wait": 19.882834029603806,
+      "mean_episode_max_wait": 57.05534460629147,
+      "families": {
+        "balanced": 21.140666855164774,
+        "east_west": 18.32703700026677,
+        "north_south": 17.749051058869284,
+        "left_heavy": 22.31458120411439
+      }
+    },
+    "extended_plain": {
+      "wait_by_training_seed": [
+        19.89399474388952,
+        19.89399474388952
+      ],
+      "mean_wait": 19.89399474388952,
+      "mean_episode_max_wait": 57.45534460629147,
+      "families": {
+        "balanced": 21.140666855164774,
+        "east_west": 18.32703700026677,
+        "north_south": 17.749051058869284,
+        "left_heavy": 22.359224061257247
+      }
+    },
+    "base_fair": {
+      "wait_by_training_seed": [
+        20.10026628954816,
+        20.183442696474568
+      ],
+      "mean_wait": 20.141854493011365,
+      "mean_episode_max_wait": 57.928509130936234,
+      "families": {
+        "balanced": 20.750215242261554,
+        "east_west": 18.961885485115253,
+        "north_south": 18.506807469125697,
+        "left_heavy": 22.348509775542954
+      }
+    },
+    "extended_fair": {
+      "wait_by_training_seed": [
+        20.450504384786257,
+        19.80719269647457
+      ],
+      "mean_wait": 20.128848540630415,
+      "mean_episode_max_wait": 57.7087922288486,
+      "families": {
+        "balanced": 20.750215242261554,
+        "east_west": 18.961885485115253,
+        "north_south": 18.564307469125698,
+        "left_heavy": 22.238985966019143
+      }
+    }
+  },
+  "baselines": {
+    "fixed": {
+      "score": {
+        "unfinished": 0,
+        "due": 216,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 29.31183022292661,
+        "scenario_wait_std": 5.120709154303093
+      },
+      "families": {
+        "balanced": {
+          "unfinished": 0,
+          "due": 56,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 33.49247330677769,
+          "scenario_wait_std": 5.1056103174915455
+        },
+        "east_west": {
+          "unfinished": 0,
+          "due": 55,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 24.509612757842532,
+          "scenario_wait_std": 2.8012768720236463
+        },
+        "north_south": {
+          "unfinished": 0,
+          "due": 56,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 32.15148695630518,
+          "scenario_wait_std": 2.2567485545188775
+        },
+        "left_heavy": {
+          "unfinished": 0,
+          "due": 49,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 27.093747870781048,
+          "scenario_wait_std": 6.123650472793675
+        }
+      }
+    },
+    "maxpressure": {
+      "score": {
+        "unfinished": 0,
+        "due": 216,
+        "collisions": 0,
+        "red_violations": 0,
+        "mean_wait": 19.641290425358587,
+        "scenario_wait_std": 2.622062153085808
+      },
+      "families": {
+        "balanced": {
+          "unfinished": 0,
+          "due": 56,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 21.16486040355187,
+          "scenario_wait_std": 2.7794970687928227
+        },
+        "east_west": {
+          "unfinished": 0,
+          "due": 55,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 18.133097606327375,
+          "scenario_wait_std": 2.818079290587628
+        },
+        "north_south": {
+          "unfinished": 0,
+          "due": 56,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 17.749051058869284,
+          "scenario_wait_std": 2.9767283053116427
+        },
+        "left_heavy": {
+          "unfinished": 0,
+          "due": 49,
+          "collisions": 0,
+          "red_violations": 0,
+          "mean_wait": 21.51815263268582,
+          "scenario_wait_std": 0.4474349661973851
+        }
+      }
+    }
+  },
+  "training_episodes": 160,
+  "validation_episodes": 80,
+  "audits_all_passed": true,
+  "validation_due": 2160,
+  "zero_unfinished_and_safety_events": true,
+  "detailed_results": "outputs/staged/ablation_multiflow/results.json",
+  "stage2_accepted": false,
+  "heldout_used": false,
+  "tests_passed": 38,
+  "evidence_sha256": {
+    "outputs/staged/ablation_multiflow/results.json": "6a47bb5ace7cf2b4c99a2b5ef8e39fc07639c11c8fbc258b23c3304685f8d412",
+    "outputs/staged/stage1_history_fixed_retry/acceptance.json": "33a07172d2547e235d97bd749551c6511ee1731c25147ad1687dab2e7547876f"
+  }
+}
