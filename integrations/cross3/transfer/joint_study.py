@@ -1,7 +1,7 @@
 """Exploratory before/after joint VLA internal-head and signal PPO experiment."""
 import argparse,json,subprocess,sys
 from pathlib import Path
-from .stage2 import score,write
+from .stage2 import score,write,gate
 from .audit_metrics import audit
 from .compare import compare
 from .stages import sha,load_receipt
@@ -9,11 +9,19 @@ from .stages import sha,load_receipt
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
     b=a.output.resolve();b.mkdir(parents=True,exist_ok=False)
-    metrics=Path('outputs/staged/stage1_history_fixed_retry/acceptance.json').resolve()
-    sg=Path('outputs/staged/carla_existing_60/sumo_acceptance.json').resolve()
-    load_receipt(metrics,1);g=load_receipt(sg,2)
+    metrics=Path('outputs/staged/stage1_joint_retirement/acceptance.json').resolve()
+    load_receipt(metrics,1)
     cp=Path('outputs/staged/ablation_multiflow/extended_fair_30101_train/checkpoint_019.pt').resolve()
-    if sha(cp)!=g['checkpoint_sha256']:raise ValueError('Wrong starting checkpoint')
+    sg=b/'sumo_acceptance.json'
+    source=Path('outputs/staged/ablation_multiflow/extended_fair_30101_eval')
+    evidence=[metrics,source/'results.json',source/'protocol.json']
+    for ep in sorted(source.glob('episode_*')):
+        if not audit(ep)['passed']:raise ValueError('SUMO evidence audit failed')
+        evidence.extend(ep/name for name in ('metric_audit.json','metrics.json','measurements.jsonl.gz'))
+    rows=json.loads((source/'results.json').read_text())
+    if any(r['unfinished'] or r['collision_pairs'] or r['red_light_violations'] for r in rows):
+        raise ValueError('Unsafe or incomplete source model')
+    gate(sg,'sumo_validation',cp,evidence,dict(scope='Reaudited existing SUMO validation after CARLA retired-ego control fix; no SUMO retraining',score=score(rows)))
     head=Path('/home/zlj/Drive/models/lmdrive/cross3_waypoint_head.pt')
     protocol=dict(platform='CARLA 0.9.12',sumo_training_episodes=0,joint_training_episodes=4,
         evaluation_episodes_per_policy=4,training_seed=41001,evaluation_seed=42001,

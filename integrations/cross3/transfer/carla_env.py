@@ -208,7 +208,11 @@ class CarlaEnv:
             snap=self.world.get_snapshot(); self.game_time.on_carla_tick(snap.timestamp); self.provider.on_carla_tick()
             if self.wrapper and any(v in self.fleet for v in self.ego_ids):
                 from agent_interfaces import validate_controls
-                controls=validate_controls(self.wrapper(),2)
+                controls=self.wrapper()
+                if not isinstance(controls,(list,tuple)) or len(controls)!=len(self.ego_ids):
+                    raise ValueError('VLA controls must retain ego route order')
+                validate_controls([controls[i] for i,vid in enumerate(self.ego_ids) if vid in self.fleet],
+                                  sum(vid in self.fleet for vid in self.ego_ids))
                 for i,vid in enumerate(self.ego_ids):
                     if vid in self.fleet: self.fleet[vid]['actor'].apply_control(controls[i])
             previous=self.time
