@@ -33,6 +33,32 @@ def polygons_overlap(a,b,t):
 
 
 class MeasurementAcceptance(unittest.TestCase):
+    def test_queue_trend_is_stable_across_repeated_observations(self):
+        from .core import Signals, observation
+        s=Signals();v=dict(road=2,lane=-2,speed=0.,approach=True)
+        observation({'a':v},s)
+        s.tick(1.)
+        a=observation({'a':v,'b':v},s)['light']
+        b=observation({'a':v,'b':v},s)['light']
+        self.assertEqual(a.tolist(),b.tolist())
+        self.assertAlmostEqual(float(a[24]),1/20)
+        s.tick(1.)
+        self.assertEqual(float(observation({'a':v,'b':v},s)['light'][24]),0.)
+
+    def test_service_age_only_resets_on_actual_green(self):
+        from .core import Signals
+        s=Signals();s.stage='GREEN';s.age=6.;s.service_age[:]=10.
+        s.request(1,[1,1,0,0])
+        self.assertEqual(s.service_age[1],10.)
+        s.tick(3.)
+        self.assertEqual(s.service_age[0],13.)
+        self.assertEqual(s.service_age[1],13.)
+        s.tick(2.,occupied=True)
+        self.assertEqual(s.service_age[1],15.)
+        s.tick(.1,occupied=False)
+        self.assertEqual(s.stage,'GREEN');self.assertEqual(s.active,1)
+        self.assertEqual(s.service_age[1],0.)
+
     def test_new_carla_actor_without_physics_snapshot_is_not_measured(self):
         from unittest.mock import Mock
         from .carla_env import CarlaEnv

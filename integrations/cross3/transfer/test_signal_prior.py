@@ -7,6 +7,17 @@ from .core import Signals,observation
 from .learning import Policy
 
 class SignalPrior(unittest.TestCase):
+    def test_base_state_hides_history_from_actor_and_critic_and_roundtrips(self):
+        p=Policy(state_mode='base');obs=observation({},Signals())
+        changed={k:v.copy() for k,v in obs.items()}
+        changed['light'][20:28]=3.;changed['global_state'][20:28]=3.
+        self.assertEqual(p.act(obs,True),p.act(changed,True))
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'base.pt';p.save(path,{})
+            q=Policy();q.load(path)
+            self.assertEqual(q.state_mode,'base')
+            self.assertEqual(p.act(obs,True),q.act(changed,True))
+
     def test_initial_policy_serves_each_demand_and_respects_mask(self):
         p=Policy(signal_prior='maxpressure')
         for active in range(4):

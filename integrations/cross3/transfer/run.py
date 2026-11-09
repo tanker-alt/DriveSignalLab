@@ -22,10 +22,13 @@ def run(args):
     if args.waypoint_head: args.waypoint_head=args.waypoint_head.resolve()
     args.output.mkdir(parents=True,exist_ok=False)
     torch.set_num_threads(2); random.seed(args.seed); np.random.seed(args.seed)
-    policy=Policy(args.seed, args.lr,signal_prior='none' if args.signal_prior=='auto' else args.signal_prior)
+    policy=Policy(args.seed, args.lr,signal_prior='none' if args.signal_prior=='auto' else args.signal_prior,
+                  state_mode='extended' if args.state_mode=='auto' else args.state_mode)
     source=policy.load(args.checkpoint) if args.checkpoint else None
     if args.signal_prior!='auto' and policy.signal_prior!=args.signal_prior:
         raise ValueError('Requested signal prior differs from checkpoint')
+    if args.state_mode!='auto' and policy.state_mode!=args.state_mode:
+        raise ValueError('Checkpoint state mode mismatch')
     validate_progress(args,source)
     if source and source.get('map_sha256') != hashlib.sha256((MAP/'map.xodr').read_bytes()).hexdigest():
         raise ValueError('Checkpoint map fingerprint mismatch')
@@ -125,6 +128,7 @@ def main():
     p.add_argument('--port',type=int,default=31610)
     p.add_argument('--lr',type=float,default=3e-4)
     p.add_argument('--signal-prior',choices=['auto','none','maxpressure'],default='auto')
+    p.add_argument('--state-mode',choices=['auto','base','extended'],default='auto')
     p.add_argument('--epochs',type=int,default=4)
     p.add_argument('--fairness-weight',type=float,default=0.)
     p.add_argument('--max-wait-weight',type=float,default=0.)

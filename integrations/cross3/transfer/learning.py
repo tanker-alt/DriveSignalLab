@@ -12,7 +12,9 @@ from torch.distributions import Categorical, Normal
 from .core import CONTRACT
 
 class Policy:
-    def __init__(self, seed=0, lr=3e-4, signal_prior='none'):
+    def __init__(self, seed=0, lr=3e-4, signal_prior='none', state_mode='extended'):
+        if state_mode not in ('base','extended'): raise ValueError('Unknown state mode')
+        self.state_mode=state_mode
         torch.manual_seed(seed)
         self.light = nn.Sequential(nn.Linear(28,64),nn.Tanh(),nn.Linear(64,64),nn.Tanh(),nn.Linear(64,4))
         if signal_prior not in ('none','maxpressure'): raise ValueError('Unknown signal prior')
@@ -42,7 +44,12 @@ class Policy:
                     self.head_optimizer.load_state_dict(self.loaded_head['head_optimizer'])
         layer.load_state_dict(self.head.state_dict())
         self.live_layer = layer
+    def state_features(self, features):
+        if self.state_mode=='base':
+            features=features.clone();features[...,20:28]=0.
+        return features
     def light_logits(self, features):
+        features=self.state_features(features)
         residual=self.light(features)
         if self.signal_prior=='maxpressure':
             # Explicit fixed inductive bias, not a post-sampling action override.
@@ -57,7 +64,7 @@ class Policy:
     def act(self, obs, deterministic=False):
         d = self.distribution(obs)
         a = d.probs.argmax() if deterministic else d.sample()
-        return int(a), float(d.log_prob(a)), float(self.critic(torch.as_tensor(obs['global_state'])).squeeze())
+        return int(a), float(d.log_prob(a)), float(self.critic(self.state_features(torch.as_tensor(obs['global_state']))).squeeze())
     def update(self, rows, bootstrap, epochs=4):
         if not rows:
             raise ValueError('No real transitions')
@@ -87,7 +94,7 @@ class Policy:
             logratio=d.log_prob(acts)-old
             ratio=logratio.exp()
             loss=-torch.minimum(ratio*advantage,ratio.clamp(.8,1.2)*advantage).mean()
-            value=self.critic(glob).squeeze(-1)
+            value=self.critic(self.state_features(glob)).squeeze(-1)
             loss=loss+.5*(value-returns).square().mean()-.01*d.entropy().mean()
             self.optimizer.zero_grad(); loss.backward()
             nn.utils.clip_grad_norm_(list(self.light.parameters())+list(self.critic.parameters()),1.)
@@ -122,7 +129,7 @@ class Policy:
     def save(self, path, provenance):
         payload=dict(contract=CONTRACT,light=self.light.state_dict(),critic=self.critic.state_dict(),
                      optimizer=self.optimizer.state_dict(),updates=self.updates,provenance=provenance,std=self.std,
-                     policy_spec=dict(schema='signal_residual_logits_v1',prior=self.signal_prior))
+                     policy_spec=dict(schema='signal_residual_logits_v1',prior=self.signal_prior,state_mode=self.state_mode))
         if self.head is not None:
             payload.update(head=self.head.state_dict(),reference_head=self.reference_head.state_dict(),
                            head_optimizer=self.head_optimizer.state_dict())
@@ -135,6 +142,8 @@ class Policy:
         if spec.get('schema')!='signal_residual_logits_v1' or spec.get('prior') not in ('none','maxpressure'):
             raise ValueError('Unknown signal policy semantics')
         self.signal_prior=spec['prior']
+        self.state_mode=spec.get('state_mode','extended')
+        if self.state_mode not in ('base','extended'): raise ValueError('Invalid checkpoint state mode')
         self.light.load_state_dict(data['light']); self.critic.load_state_dict(data['critic'])
         self.optimizer.load_state_dict(data['optimizer']); self.updates=data['updates']; self.std=data['std']
         if 'head' in data: self.loaded_head=data

@@ -3,7 +3,7 @@ import numpy as np
 
 PHASES = ('NS_STRAIGHT', 'NS_LEFT', 'EW_STRAIGHT', 'EW_LEFT')
 CONTRACT = dict(schema='cross3_transfer_v2', phases=list(PHASES),
-    light_features='queue4,incoming4,outgoing4,phase4,green_yellow_red3,age1,service_age4,queue_delta4',
+    light_features='queue4,incoming4,outgoing4,phase4,green_yellow_red3,age1,service_age4,decision_queue_delta4_v2',
     vehicle_features='speed,distance,green,leader_gap,approach,active',
     count_scale=20., speed_scale=15., distance_scale=150., stop_speed=.1,
     decision_seconds=1., min_green=5., max_green=20., yellow=3., all_red=2.,
@@ -23,6 +23,9 @@ class Signals:
         self.switches = 0
         self.service_age = np.zeros(4, dtype=np.float32)
         self.previous_queue = np.zeros(4, dtype=np.float32)
+        self.time = 0.
+        self.queue_time = None
+        self.queue_delta = np.zeros(4, dtype=np.float32)
     def mask(self, incoming):
         mask = np.zeros(4, dtype=bool)
         mask[self.active] = True
@@ -37,18 +40,19 @@ class Signals:
             raise ValueError('Action violates stored signal mask')
         if action != self.active:
             self.target = int(action)
-            self.service_age[action] = 0.
             self.stage, self.age = 'YELLOW', 0.
             self.switches += 1
     def tick(self, dt, occupied=False):
         self.age += dt
+        self.time += dt
         self.service_age += dt
-        self.service_age[self.active] = 0.
+        if self.stage == 'GREEN': self.service_age[self.active] = 0.
         if self.stage == 'YELLOW' and self.age >= CONTRACT['yellow'] - 1e-7:
             self.stage, self.age = 'RED', 0.
         elif self.stage == 'RED' and self.age >= CONTRACT['all_red'] - 1e-7 and not occupied:
             self.active = self.target
             self.stage, self.age = 'GREEN', 0.
+            self.service_age[self.active] = 0.
     def permits(self, road, lane):
         return self.stage == 'GREEN' and phase_for(road, lane) == self.active
 
@@ -165,8 +169,13 @@ def observation(vehicles, signals, ego_ids=()):
             queue[p] += v['speed'] < CONTRACT['stop_speed']
         elif v.get('outgoing'):
             outgoing[p] += 1
-    queue_delta = queue - signals.previous_queue
-    signals.previous_queue = queue.copy()
+    # Repeated reads at the same physics time must not consume the queue trend.
+    if signals.queue_time != signals.time:
+        signals.queue_delta = (queue - signals.previous_queue if signals.queue_time is not None
+                               else np.zeros(4, dtype=np.float32))
+        signals.previous_queue = queue.copy()
+        signals.queue_time = signals.time
+    queue_delta = signals.queue_delta
     light = np.r_[queue/20, incoming/20, outgoing/20, np.eye(4)[signals.active],
                   [signals.stage==s for s in ('GREEN','YELLOW','RED')], min(signals.age/20,2),
                   np.minimum(signals.service_age/20, 5.), queue_delta/20].astype(np.float32)
