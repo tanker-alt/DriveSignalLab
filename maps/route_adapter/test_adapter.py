@@ -1,3 +1,4 @@
+import os
 import copy
 import hashlib
 import json
@@ -11,6 +12,8 @@ try:
 except ImportError:
     from adapter import DEFAULT_DATASET, read_map, load_route, validate_route, carla_locations, spawn_transform
 
+
+DEFAULT_DATASET = Path(os.environ.get('ROUTE_ADAPTER_DATASET', str(DEFAULT_DATASET)))
 
 class AdapterTests(unittest.TestCase):
     def setUp(self):

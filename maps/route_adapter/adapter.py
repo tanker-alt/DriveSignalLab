@@ -123,7 +123,12 @@ def load_world(folder, host, port):
     if any(world.get_actors().filter(pattern) for pattern in ('vehicle.*','sensor.*','walker.*')):
         raise RuntimeError('Finish the current actors/experiment before loading')
     # Run in a separate interpreter to isolate the toolkit's legacy module names.
-    subprocess.run([sys.executable, '-B', str(HERE.parent / 'JunctionToolkit' / 'view.py'),
+    viewer = HERE.parent / 'JunctionToolkit' / 'view.py'
+    if not viewer.is_file():
+        viewer = HERE.parents[1] / 'Toolkits' / 'JunctionToolkit' / 'view.py'
+    if not viewer.is_file():
+        raise FileNotFoundError('Bundled JunctionToolkit/view.py is missing')
+    subprocess.run([sys.executable, '-B', str(viewer),
                     str(Path(folder).resolve()), '--host', host, '--port', str(port),
                     '--beautify', 'auto', '--no-photos'], check=True)
     world = client.get_world()
@@ -166,15 +171,28 @@ def batch(dataset, rebuild):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('command', choices=['build','batch','verify','load'])
+    p.add_argument('command', choices=['build','batch','verify','load','od'])
     p.add_argument('--map-dir', type=Path)
     p.add_argument('--dataset', type=Path, default=DEFAULT_DATASET)
+    p.add_argument('--output', type=Path, help='JSON output for the offline od command')
     p.add_argument('--host', default='localhost')
     p.add_argument('--port', type=int, default=2000)
     a=p.parse_args()
-    if a.command in ('build','load') and a.map_dir is None:
+    if a.command in ('build','load','od') and a.map_dir is None:
         p.error('--map-dir is required')
-    if a.command=='batch': batch(a.dataset, True)
+    if a.command=='od':
+        if __package__:
+            from . import build_od_catalog
+        else:
+            sys.path.insert(0, str(HERE.parent))
+            from route_adapter import build_od_catalog
+        result=build_od_catalog(a.map_dir)
+        if a.output:
+            a.output.parent.mkdir(parents=True, exist_ok=True)
+            a.output.write_text(json.dumps(result, indent=2, allow_nan=False), encoding='utf-8')
+        print(json.dumps(dict(map=result['map_name'], routes=len(result['route_catalog']),
+                             opendrive_sha256=result['opendrive_sha256'], server_connected=False)))
+    elif a.command=='batch': batch(a.dataset, True)
     elif a.command=='verify':
         if a.map_dir: print(json.dumps({k:v for k,v in load_route(a.map_dir).items() if k!='points'}, indent=2))
         else: batch(a.dataset, False)

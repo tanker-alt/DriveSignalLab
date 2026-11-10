@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CARLA boundary OD adapter, map_adapter.2",
+  "type": "object",
+  "required": ["schema_version", "map_name", "source", "opendrive_sha256", "classification", "junctions", "entries", "exits", "od_connections", "route_catalog", "topology_checks", "signals", "stop_lines", "diagnostics", "passed", "capabilities"],
+  "properties": {
+    "schema_version": {"const": "map_adapter.2"},
+    "map_name": {"type": "string"},
+    "source": {"type": "string"},
+    "opendrive_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "passed": {"type": "boolean"},
+    "classification": {
+      "type": "object", "required": ["kind", "junction_count", "road_count"],
+      "properties": {"kind": {"type": "string"}, "junction_count": {"type": "integer", "minimum": 0}, "road_count": {"type": "integer", "minimum": 0}}
+    },
+    "junctions": {"type": "array", "items": {"type": "object"}},
+    "entries": {"type": "array", "items": {"$ref": "#/definitions/lane"}},
+    "exits": {"type": "array", "items": {"$ref": "#/definitions/lane"}},
+    "od_connections": {"type": "array", "items": {
+      "type": "object", "required": ["movement_id", "route_id", "origin_road", "origin_lane", "destination_road", "destination_lane"],
+      "properties": {"movement_id": {"type": "string"}, "route_id": {"type": "string"}, "origin_road": {"type": "integer"}, "origin_lane": {"type": "integer"}, "destination_road": {"type": "integer"}, "destination_lane": {"type": "integer"}}
+    }},
+    "route_catalog": {"type": "array", "items": {
+      "type": "object", "required": ["route_id", "origin", "lane", "destination", "destination_lane", "route"],
+      "properties": {"route_id": {"type": "string"}, "origin": {"type": "integer"}, "lane": {"type": "integer"}, "destination": {"type": "integer"}, "destination_lane": {"type": "integer"}, "route": {"type": "array", "minItems": 2, "items": {"$ref": "#/definitions/point"}}}
+    }},
+    "topology_checks": {"type": "array", "items": {
+      "type": "object", "required": ["route_id", "passed", "errors"],
+      "properties": {"route_id": {"type": "string"}, "passed": {"type": "boolean"}, "errors": {"type": "array", "items": {
+        "type": "object", "required": ["index", "reason"], "properties": {"index": {"type": "integer"}, "reason": {"type": "string"}}
+      }}}
+    }},
+    "signals": {"type": "array", "items": {
+      "type": "object", "required": ["signal_id", "junction_id", "road_id", "lane_id", "reference_s"],
+      "properties": {"signal_id": {"type": "string"}, "junction_id": {"type": ["integer", "null"]}, "road_id": {"type": ["integer", "null"]}, "lane_id": {"type": ["integer", "null"]}, "reference_s": {"type": ["number", "null"]}}
+    }},
+    "stop_lines": {"type": "array", "items": {
+      "type": "object", "required": ["id", "road_id", "lane_id", "signal_opendrive_id", "s_m"],
+      "properties": {"id": {"type": "string"}, "road_id": {"type": ["integer", "null"]}, "lane_id": {"type": ["integer", "null"]}, "signal_opendrive_id": {"type": ["string", "integer"]}, "s_m": {"type": ["number", "null"]}}
+    }},
+    "diagnostics": {"type": "array", "items": {
+      "type": "object", "required": ["code", "detail", "severity"],
+      "properties": {"code": {"type": "string"}, "detail": {"type": "string"}, "severity": {"enum": ["warning", "error"]}}
+    }},
+    "capabilities": {
+      "type": "object", "required": ["junction_identification", "od_extraction", "signal_stop_mapping", "special_right_of_way", "dynamic_validation", "topology_source"],
+      "properties": {"junction_identification": {"type": "boolean"}, "od_extraction": {"type": "boolean"}, "signal_stop_mapping": {"type": "boolean"}, "special_right_of_way": {"const": false}, "dynamic_validation": {"const": false}, "topology_source": {"type": "string"}}
+    }
+  },
+  "definitions": {
+    "lane": {"type": "object", "required": ["road_id", "lane_id"], "properties": {"road_id": {"type": "integer"}, "lane_id": {"type": "integer"}}},
+    "point": {
+      "type": "object", "required": ["x", "y", "z", "yaw", "road_id", "lane_id", "section_id", "s"],
+      "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "z": {"type": "number"}, "yaw": {"type": "number"}, "s": {"type": "number", "minimum": 0}, "road_id": {"type": "integer"}, "lane_id": {"type": "integer"}, "section_id": {"type": "integer", "minimum": 0}}
+    }
+  }
+}
