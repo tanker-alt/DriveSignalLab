@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "maps": [
+    {
+      "map": "cross3",
+      "signals": 12,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "t_north",
+      "signals": 6,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "cross_1x6",
+      "signals": 72,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "cross_3x3",
+      "signals": 108,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "t_1x6",
+      "signals": 36,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "t_3x3",
+      "signals": 54,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "roundabout4_8groups",
+      "signals": 16,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "heterogeneous_1x6",
+      "signals": 54,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "heterogeneous_3x3",
+      "signals": 90,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    },
+    {
+      "map": "heterogeneous_3x3_roundabout",
+      "signals": 88,
+      "accepted_map_unchanged": true,
+      "generation_idempotent": true,
+      "physical_manifest_matches_xml": true
+    }
+  ]
+}

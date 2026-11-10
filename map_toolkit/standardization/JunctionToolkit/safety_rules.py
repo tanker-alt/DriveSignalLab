@@ -1,4 +1,4 @@
-﻿"""Map-owned stop-line geometry; no violation thresholds or scoring policy.
+"""Map-owned stop-line geometry; no violation thresholds or scoring policy.
 
 OpenDRIVE road/lane/s is authoritative. CARLA resolves the endpoints, so the
 renderer and future evaluators can share resolve_stop_lines(). Python 3.7+.
@@ -161,5 +161,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

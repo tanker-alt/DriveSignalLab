@@ -3,7 +3,7 @@ import json,time,faulthandler
 from pathlib import Path
 import carla
 import view,runtime_finish
-folder=Path('standardization/maps/cross_3x3')
+folder=Path('standardization/maps/cross_3x3_connected_20261103')
 report={'map':'cross_3x3','trees_enabled':False,'stages':[]}
 original=runtime_finish.build
 start=time.monotonic()

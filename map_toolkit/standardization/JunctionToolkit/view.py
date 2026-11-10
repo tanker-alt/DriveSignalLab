@@ -138,9 +138,3 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('map_dir');p.add_argument('--host',default='localhost');p.add_argument('--port',type=int,default=2000);p.add_argument('--no-photos',action='store_true');p.add_argument('--show-during-load',action='store_true')
     p.add_argument('--beautify',choices=('auto','simple','complete','off'),default='auto',help='auto: complete for a single junction, simple for a network')
     a=p.parse_args();load(a.map_dir,a.host,a.port,not a.no_photos,not a.show_during_load,beautify=a.beautify)
-
-
-
-
-
-

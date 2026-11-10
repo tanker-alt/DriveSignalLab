@@ -1,4 +1,4 @@
-﻿"""Build a full cross grid, then prune planned arms with their dependent objects."""
+"""Build a full cross grid, then prune planned arms with their dependent objects."""
 import argparse
 import hashlib
 import json
@@ -137,6 +137,8 @@ def build(c, out):
     root[:] = [root.find('header')]+root.findall('road')+root.findall('controller')+root.findall('junction')
     out.mkdir(parents=True, exist_ok=True)
     ET.indent(root)
+    from signal_placement import apply as place_signals
+    place_signals(root,m)
     ET.ElementTree(root).write(out/'map.xodr',encoding='utf-8',xml_declaration=True)
     m['opendrive_sha256'] = hashlib.sha256((out/'map.xodr').read_bytes()).hexdigest()
     (out/'manifest.json').write_text(json.dumps(m,indent=2),encoding='utf-8')

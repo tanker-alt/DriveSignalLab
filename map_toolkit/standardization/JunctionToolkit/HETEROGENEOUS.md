@@ -1,4 +1,4 @@
-﻿# 异构道路随机路网
+# 异构道路随机路网
 
 现有两车道三叉、三车道四叉模板通过 scenariogeneration LaneDef 和 create_lane_links_from_ids 拼接，可选加入一个双车道环岛。
 

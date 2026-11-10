@@ -1,4 +1,4 @@
-﻿"""CARLA runtime preview of standard markings; native XODR supplies pavement/curbs.
+"""CARLA runtime preview of standard markings; native XODR supplies pavement/curbs.
 
 OpenDRIVE objects also retain stop/crosswalk footprints for RoadRunner transfer.
 Debug paint is a preview, not a baked material or semantic segmentation asset.
@@ -73,7 +73,3 @@ def build(world, design):
                 curb_geometry='Native raised straight/arc sidewalk lanes, 0.20m curb + 2m sidewalk',
                 collision_policy='Native OpenDRIVE road/sidewalk physics; ground decoration has no collision',
                 markings='XODR roadMark + crosswalk/stop objects; debug preview requires reload through view')
-
-
-
-

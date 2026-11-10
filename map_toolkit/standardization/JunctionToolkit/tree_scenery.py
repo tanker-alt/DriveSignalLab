@@ -1,4 +1,4 @@
-﻿"""Deterministic roadside trees based on generated arm geometry."""
+"""Deterministic roadside trees based on generated arm geometry."""
 import math, random
 import carla
 from appearance_standard import settings
@@ -40,5 +40,3 @@ def build(world,design,client=None):
     if result.error: rejected['spawn']+=1
     else: owned.append(result.actor_id)
  return dict(actor_ids=owned,count=len(owned),rejected=rejected,assets=[a[0] for a in TREE_ASSETS],grid_spacing_m=step,lane_edge_buffer_m=8.0,tree_rows_per_side=rows,density_scale=density_scale,ground_z_m=-.2,collision_policy='CARLA-native meshes; collisions disabled',boundary_policy='Generated-arm corridors; both sidewalk sides, junction visibility buffer')
-
-

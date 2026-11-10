@@ -1,4 +1,4 @@
-﻿"""Offline CARLA waypoint validation; no server or map switch required (Python 3.7)."""
+"""Offline CARLA waypoint validation; no server or map switch required (Python 3.7)."""
 import argparse
 import hashlib
 import json
@@ -130,6 +130,3 @@ def validate(folder):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('map_dir');a=p.parse_args()
     if not validate(a.map_dir)['passed']:raise SystemExit(1)
-
-
-

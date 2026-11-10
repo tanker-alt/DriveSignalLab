@@ -1,4 +1,4 @@
-﻿import copy, math, xml.etree.ElementTree as ET
+import copy, math, xml.etree.ElementTree as ET
 from pathlib import Path
 
 TEMPLATES=Path(__file__).parent.parent/'references'/'transition'

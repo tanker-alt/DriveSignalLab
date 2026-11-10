@@ -1,4 +1,4 @@
-﻿import json,sys,math
+import json,sys,math
 from pathlib import Path
 import xml.etree.ElementTree as E
 import carla

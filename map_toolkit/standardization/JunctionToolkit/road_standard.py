@@ -206,5 +206,3 @@ def junction_surface(root, c, center_x):
 
 def is_standard(design):
     return design['config'].get('standard_profile') == PROFILE
-
-

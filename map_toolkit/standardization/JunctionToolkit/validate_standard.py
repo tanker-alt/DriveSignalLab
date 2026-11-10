@@ -1,4 +1,4 @@
-﻿"""Independent geometric and marking acceptance for the standard road profile."""
+"""Independent geometric and marking acceptance for the standard road profile."""
 import math
 from layout import ARM_NAMES, is_t
 from appearance_standard import settings as appearance_settings
@@ -94,6 +94,3 @@ def audit(tree, design, road_map):
         errors.append('Driving lane edges cross rounded curb: %s samples' % len(outside))
     return dict(passed=not errors, errors=errors, lane_edge_samples=checked,
                 limits='Offline geometry only; no vehicle swept-body, renderer, collision or pedestrian navigation certification')
-
-
-

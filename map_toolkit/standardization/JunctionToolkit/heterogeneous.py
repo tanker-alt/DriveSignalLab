@@ -218,6 +218,8 @@ def build(config,out):
         d['seams'].append(bridge(root,roads[a],roads[b],900000+i,owners[a]['incoming_lanes'],owners[b]['incoming_lanes'],3.5))
     d['junction_route']=[v['junction_id'] for v in itinerary(d)]
     root[:]=[h]+root.findall('road')+root.findall('controller')+root.findall('junction')
+    from signal_placement import apply as place_signals
+    place_signals(root,d)
     out.mkdir(parents=True,exist_ok=True);ET.indent(root);ET.ElementTree(root).write(out/'map.xodr',encoding='utf-8',xml_declaration=True)
     d['opendrive_sha256']=hashlib.sha256((out/'map.xodr').read_bytes()).hexdigest()
     for name,data in [('config.json',c),('manifest.json',d)]: (out/name).write_text(json.dumps(data,indent=2))

@@ -1,4 +1,4 @@
-﻿# Random grid appearance repair
+# Random grid appearance repair
 
 The old merge path removed all template roads numbered 900 and higher. That removed the rounded pavement fill and junction curb/sidewalk geometry. It also copied signal elements without their top-level controllers and remapped road references but not junction references. Deleting an arm removed only its approach, leaving turn roads to the deleted approach.
 

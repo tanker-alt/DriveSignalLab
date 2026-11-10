@@ -7,13 +7,13 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 87,
-      "sha256": "bcf8d92aa2cc1e84350ba9e6637d009c66bae2afb7e3c1a97e32b0ca57e4fbe8"
+      "bytes": 80,
+      "sha256": "92f723618d6c8d47ad8a307cb24dc60193716cfc49df5950e9b07a4bfb2620e7"
     },
     {
       "path": "README.md",
-      "bytes": 12215,
-      "sha256": "aecbf707329eed979532cbbcf0f2387ccba5b4c8a5260ff03ea0f4e22146048d"
+      "bytes": 13424,
+      "sha256": "0bc55490789d2be47f74594dc22b0c588105d419bd197d28920d17f77d940bed"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -22,8 +22,13 @@
     },
     {
       "path": "reports/carla_beautify_regression.json",
-      "bytes": 1336,
-      "sha256": "1aa41e9f369d720e7055b9cd9aa9ec6e194c07924912f0224bcfdaecbe6f2126"
+      "bytes": 1257,
+      "sha256": "f81f8a0a3d76a99fe1359660b859e81af928a1b3a4c41a159c804fadcd80f130"
+    },
+    {
+      "path": "reports/generator_validation.json",
+      "bytes": 1934,
+      "sha256": "cabfb6471a4fa983bff35bb8683ff7b630949d7bd81e6011daa22bd7c4b28af4"
     },
     {
       "path": "reports/heterogeneous_acceptance_20261103.json",
@@ -42,8 +47,8 @@
     },
     {
       "path": "reports/package_audit.json",
-      "bytes": 587,
-      "sha256": "ac668d3a34be0951e572d00b3e036ad3e355f7b328307d75f6af1330d4fdbf66"
+      "bytes": 574,
+      "sha256": "bebe09792d8c47709321f4f92f8ec94dd33d189522800f247baa68d537cd01d7"
     },
     {
       "path": "reports/schematic_inventory.json",
@@ -52,13 +57,13 @@
     },
     {
       "path": "reports/unit_tests.txt",
-      "bytes": 120,
-      "sha256": "be404217f33b2cb73a3155955e03de1077b4f9618dfb4a6502e9d74ee7649cfa"
+      "bytes": 115,
+      "sha256": "9c687aeb0f78307636c958942c450234e3e9aac1428a8588ef7a38ccf330553a"
     },
     {
       "path": "standardization/JunctionToolkit/APPEARANCE.md",
-      "bytes": 1503,
-      "sha256": "645e40fc5ed599efbe8af12f89ba535390c57c20281d8f1883a3443b456ae68e"
+      "bytes": 1479,
+      "sha256": "4e6c76d394e57a1c410d57197e3a4812168b9d491d09325a806f5388efe0fe49"
     },
     {
       "path": "standardization/JunctionToolkit/appearance_sample.py",
@@ -92,8 +97,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/configs/all_cross_then_delete.json",
-      "bytes": 166,
-      "sha256": "cc4526d0e8010ac408b22041464a44b463067b70ed0fe4373d5f88114bb4df5d"
+      "bytes": 165,
+      "sha256": "6dcf12329b6c3b2b8d3b2bcb0381e04cf9397103c7ffa4c8f50d0f940cde3af5"
     },
     {
       "path": "standardization/JunctionToolkit/configs/appearance_standard.json",
@@ -102,58 +107,58 @@
     },
     {
       "path": "standardization/JunctionToolkit/configs/cross3.json",
-      "bytes": 85,
-      "sha256": "28d5116b67d958a4ddae891fc28ea75e1ea0d4dee389d31cf603c31416a3d17b"
+      "bytes": 81,
+      "sha256": "e7651bacdb21a4e4c4779c7c2b6995451fdd49d895c8e8bbaf47ed616ef5420a"
     },
     {
       "path": "standardization/JunctionToolkit/configs/cross_1x6.json",
-      "bytes": 300,
-      "sha256": "4cb4e26d933c4b851b96e1f0e70421e4a58fa16c2f0d2ef4117d966333cb2497"
+      "bytes": 285,
+      "sha256": "5acaa8c68b7b9905e9cf29b76ff946eb8f3c45d939f898f39ff348e9cba4d9fc"
     },
     {
       "path": "standardization/JunctionToolkit/configs/cross_probe.json",
-      "bytes": 93,
-      "sha256": "2dd872c4239f760f51b5cf64b628bc576196e410c083ac53974559e25117b61d"
+      "bytes": 92,
+      "sha256": "ba0c8ad0c9d2ff742750feb2f2cd9fcf0fc8ab86c663242101e69f4d3ab6aa65"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/grid6x6_limit_check.json",
-      "bytes": 595,
-      "sha256": "81996b30dab46108ebba662c1464378ef9d192de5ec726b8fbe820ff037ce9c3"
+      "bytes": 566,
+      "sha256": "5dfbb909c4b614422d645d4c2d8ae43e4d9bdf5d18533a78451a938e1c7d3d1d"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/package_smoke_20261027.json",
-      "bytes": 597,
-      "sha256": "3515746b1019c9d2b94dae205c995b266ddcf1c9e70677865f7d13bd77d78278"
+      "bytes": 568,
+      "sha256": "208843437377062d1decabacf2f06eb4003406069945daa9d848cb3759b2f9f6"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/t_grid2x2.json",
-      "bytes": 606,
-      "sha256": "97ad684226b44d9aea9704d4ee898d977c2bb144fc33b356ff5c08030c47005e"
+      "bytes": 567,
+      "sha256": "c25495b1a5f66ff0f7f5672917060d13bd71086d156ff54e7d2cc432bf612c8a"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/t_single2.json",
-      "bytes": 606,
-      "sha256": "cfe28c80dbfc4464107020f8d53733f71dd70054e33fdad93b97efa0fc750db2"
+      "bytes": 567,
+      "sha256": "344b608c7bf42e5921a2cfc8b44973610e0d3a5702c47096b5bbe7098b7af9d6"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/t_single2b.json",
-      "bytes": 607,
-      "sha256": "00f542f344f87393f1cac565239cf6148c82c09c8b7db66ba7a85f34c33ee953"
+      "bytes": 568,
+      "sha256": "2a37738faebafea758a98d468e74702bae96071abc4485e334face831ce4ad2b"
     },
     {
       "path": "standardization/JunctionToolkit/configs/generated/t_single2c.json",
-      "bytes": 1347,
-      "sha256": "b6b59a68c602082f752fe463f9d5adac10a2f568b66cdb8db09535ee75b39834"
+      "bytes": 1303,
+      "sha256": "26daebfbc92b2af0ad3277ee163f645c536748e20ce256348179d1d3597415a9"
     },
     {
       "path": "standardization/JunctionToolkit/configs/grid2x2.json",
-      "bytes": 86,
-      "sha256": "0e13f57c5d3b3f074a29626472c872c6feceaca8446f7e4052735030a76393ed"
+      "bytes": 82,
+      "sha256": "1e9fe7a9ef8ff80db8cf044c76c944e3bdb2765d46000ee9dde38673b75a0cca"
     },
     {
       "path": "standardization/JunctionToolkit/configs/heterogeneous_1x6.json",
-      "bytes": 107,
-      "sha256": "07d99282e073d56affa07766d81d01d06ac356664e7bf57ab4d89cdb978c7c89"
+      "bytes": 103,
+      "sha256": "611748f13f92580c7a89e3ff3a7041b8b8075a524fb8c744170c58977eba6ae0"
     },
     {
       "path": "standardization/JunctionToolkit/configs/heterogeneous_3x3.json",
@@ -162,43 +167,43 @@
     },
     {
       "path": "standardization/JunctionToolkit/configs/heterogeneous_3x3_roundabout.json",
-      "bytes": 114,
-      "sha256": "bd7776774ef768eee92b623004534de10ae99aac5ad12d38db65191dbbf60104"
+      "bytes": 113,
+      "sha256": "bd4a158b19e1b4e6d0d87bdf52a94a50faa1341f3875d1fe905a64754fc03a0d"
     },
     {
       "path": "standardization/JunctionToolkit/configs/hybrid_1x2_transition.json",
-      "bytes": 149,
-      "sha256": "fb4a05cb2430f1183458186c66cc81612f91f4f6e1e7bcf6b93a355cc9f8173e"
+      "bytes": 148,
+      "sha256": "996461a2bc672365c17057081e4db0e8829a2487e818e4693f3e8dc115b823e9"
     },
     {
       "path": "standardization/JunctionToolkit/configs/hybrid_3x3_no_ring.json",
-      "bytes": 269,
-      "sha256": "1e4cddd3f3d4b61d096d3443222b8412d019485a1f997fb0ba199eb3191a0d07"
+      "bytes": 257,
+      "sha256": "142d95dc5fc841eeac5dd8d83a84661dd2dfb8667f860b0f0b26757e215fd2d7"
     },
     {
       "path": "standardization/JunctionToolkit/configs/hybrid_3x3_ring.json",
-      "bytes": 265,
-      "sha256": "f7535421fbe035231e57c38a4717be571bcf2f69d066b4dbf6f079554597c7b6"
+      "bytes": 253,
+      "sha256": "29ea3a5a857f5a252395f7c14915dc84ec445073de7db35673978ad840f3a933"
     },
     {
       "path": "standardization/JunctionToolkit/configs/mixed_1x6.json",
-      "bytes": 288,
-      "sha256": "2dd44f0d9b9acf43f55962d48456c055191e6a2ab2bc2039c24356e7375d0fee"
+      "bytes": 273,
+      "sha256": "c5dfa70da0fc5a02dc4f7dbb5fca42453bc0344b408a1d84363dfab7c18a12d2"
     },
     {
       "path": "standardization/JunctionToolkit/configs/random_grid_3x3.json",
-      "bytes": 118,
-      "sha256": "625d1fca78bb02bb53aa8000b6b3de6e936fca05af03e029ea3d9aa09073f3df"
+      "bytes": 117,
+      "sha256": "a3a2f34d3fe04265070a49f8998f26ac85fb8a47dd012666a20b1c62f277dfc8"
     },
     {
       "path": "standardization/JunctionToolkit/configs/t_1x6.json",
-      "bytes": 272,
-      "sha256": "3300abd2f97e4bbf114e7ba7e90ba17f7099f4be22764bcc20321a7d07e38cb3"
+      "bytes": 257,
+      "sha256": "66f3c2ac7dc03e4af990f9ebe730253e9150c5c78ebae6be247ea030b56122d7"
     },
     {
       "path": "standardization/JunctionToolkit/configs/t_single_probe.json",
-      "bytes": 161,
-      "sha256": "37415a6ad0ea0531bf9bff5103534ff4ae913d8baec27941341107661369a51f"
+      "bytes": 160,
+      "sha256": "a19643fbf6ad15e655af3789de765d8133bbf6aaf8e364ab319181f12997ed7d"
     },
     {
       "path": "standardization/JunctionToolkit/drive_check.py",
@@ -207,13 +212,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/experiment.py",
-      "bytes": 5501,
-      "sha256": "68845475522d61f8df93c8200d3c60dad3f26e6106aad7474a1450963f54482e"
+      "bytes": 5413,
+      "sha256": "461302a12b73161fc444ae5c471f246bf18f83e47355ba178e6a3fae2bf5dd43"
     },
     {
       "path": "standardization/JunctionToolkit/generate.py",
-      "bytes": 18966,
-      "sha256": "699c8a14e7498c4d2d7d5c2bfc1b82292fa575cd8315bff7a60858baf984d055"
+      "bytes": 19182,
+      "sha256": "39ba657b8cb10c973a27b075ba0652976a2f4e7b74148f77a9e62e66bcb81efa"
     },
     {
       "path": "standardization/JunctionToolkit/generate_map.cmd",
@@ -222,13 +227,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/HETEROGENEOUS.md",
-      "bytes": 5283,
-      "sha256": "c7d96f8891c6770219a66cf720ba589f46260069f0d7b37fb2f4fe1c93c782d4"
+      "bytes": 5279,
+      "sha256": "9381d46ce66ee9fd4a33ab584891577938a97f7247367d8bc49e10e12b9d59d8"
     },
     {
       "path": "standardization/JunctionToolkit/heterogeneous.py",
-      "bytes": 15455,
-      "sha256": "cdffa9152b00076425280b5380bc8368620ab83c129d0b5f4c865d6c90abd1d2"
+      "bytes": 15537,
+      "sha256": "e63271c6743c1209294663426a8644a7b3cf45a2fe1245a05986a9550a615732"
     },
     {
       "path": "standardization/JunctionToolkit/heterogeneous_route.py",
@@ -237,13 +242,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/hybrid.py",
-      "bytes": 10694,
-      "sha256": "a80f6272d1b1f31f8aaf16c27f92e73452b5963e02eae7448216c36d9eedf416"
+      "bytes": 10771,
+      "sha256": "89aa4c05a0e66c43a01ddaf0aff18d87547e3bfd9deba06622fd0bb4b69b882d"
     },
     {
       "path": "standardization/JunctionToolkit/lane_signals.py",
-      "bytes": 5424,
-      "sha256": "b1ab55c169b7745e4e29ca999ed4c8a4c74dbdd38c1b5374d88da39d42415c7c"
+      "bytes": 6081,
+      "sha256": "89b595bf6fe21689911587538653e7b19bd3493fbf7d0bfacc4dcbcda659df70"
     },
     {
       "path": "standardization/JunctionToolkit/lane_transition.py",
@@ -267,8 +272,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/NETWORK_APPEARANCE.md",
-      "bytes": 317,
-      "sha256": "170ead2e111091f02db6f9b738d813418a58d7d4b68beadc439634f59187fac5"
+      "bytes": 311,
+      "sha256": "02cab997a46df694ddaea572cf6f09369f29b6c522cca54a0482c6d3f08daf4a"
     },
     {
       "path": "standardization/JunctionToolkit/network_appearance_plan.py",
@@ -277,8 +282,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/NETWORK_APPEARANCE_REPAIR.md",
-      "bytes": 2063,
-      "sha256": "e119732dcd9da4e8d9861c98609f0aafb6be5669858c2ca09ebe6b32c11de8b7"
+      "bytes": 2059,
+      "sha256": "86d1167306ce9223adff10f24234b61afe6ae56e15e67226241c09b1a1d04ee5"
     },
     {
       "path": "standardization/JunctionToolkit/network_itinerary.py",
@@ -317,8 +322,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/project_bridge.py",
-      "bytes": 3403,
-      "sha256": "b7c6427828bdbf9b54554425f44038980aa0ae27b2c7916005392c90ad5e2ce1"
+      "bytes": 3339,
+      "sha256": "c04a686aeb59ccfb1d2dc1ecc9528a65c69e76b7c977a28370714e85791cf075"
     },
     {
       "path": "standardization/JunctionToolkit/PURE_T_NETWORK.md",
@@ -327,8 +332,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/random_grid.py",
-      "bytes": 1372,
-      "sha256": "c0babb44a73cb07ebe4524ede15249cefc276f592dcfb88b0f32dc2ef36e2883"
+      "bytes": 1340,
+      "sha256": "dc1dc32787d687f1d716d0c937db391cc6144284c21cdc1dae41226a1bbea598"
     },
     {
       "path": "standardization/JunctionToolkit/RANDOM_NETWORK.md",
@@ -342,23 +347,23 @@
     },
     {
       "path": "standardization/JunctionToolkit/release_drive_check.py",
-      "bytes": 7105,
-      "sha256": "e24a3be973ff97dcddbe981ddb6fe7b02da8b772254082138e1d1b3a13774eed"
+      "bytes": 7101,
+      "sha256": "a18b27e61fe127866bfe71240660635fda847fd56afdadab37b339c19e4cfbc0"
     },
     {
       "path": "standardization/JunctionToolkit/render_networks.py",
-      "bytes": 565,
-      "sha256": "1af3f6a9b5583b59016169c58f84edee78af9ceac1edd03d55927aa53085af72"
+      "bytes": 554,
+      "sha256": "19c652645681f96a2d6b1698b96c30f696806e31437c3d84cab3a2b9f5cc797d"
     },
     {
       "path": "standardization/JunctionToolkit/requirements-carla.txt",
-      "bytes": 61,
-      "sha256": "f6fb00ddfa102a61d601bf53b6cc399c62a9afe57e65accc9a252e8779a57953"
+      "bytes": 59,
+      "sha256": "677ae010398bfca68fd7a5d84f298e1ee7700ed2e9737fa2fdf704396ad9e10b"
     },
     {
       "path": "standardization/JunctionToolkit/requirements-generator-lock.txt",
-      "bytes": 145,
-      "sha256": "96ed35b0c630f9620154a315a27e39b69ef4ec8c993348b0da1bbbf0d7b7f3f2"
+      "bytes": 137,
+      "sha256": "cc7e0a95f24c473eb1844a08522191205856fe2cbf6c1ea6ed52fe20f13a77f4"
     },
     {
       "path": "standardization/JunctionToolkit/ring_sidewalk_finish.py",
@@ -367,8 +372,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/road_standard.py",
-      "bytes": 10638,
-      "sha256": "0cf1d72bb625d110250122b2dd1d42a3f8a7cacc97cd9b19d9a667141909429b"
+      "bytes": 10426,
+      "sha256": "c7713971c973282d618f96cd007bf69502c297c0eb3784edb95bd6096f9db804"
     },
     {
       "path": "standardization/JunctionToolkit/roadrunner_base.py",
@@ -377,8 +382,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/roundabout.py",
-      "bytes": 11765,
-      "sha256": "c9e01fb698916b0eeef2adf5074622d82717b9ca1c13636792b03d642d4dabdf"
+      "bytes": 12031,
+      "sha256": "eade44c8f96e2094a9bff45786a6d9c8fe9d95a24dbb13518b9310311fd5b623"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_conflicts.py",
@@ -387,13 +392,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_drive_check.py",
-      "bytes": 7018,
-      "sha256": "5f9e4924d3df21245507561a5063fee4de2ecf28b2a8850be1a7f3314cee6374"
+      "bytes": 6914,
+      "sha256": "e7c1f93d21f5fb0e5e050ec21ed3d47a710123df6dd26c56f26234da35ff7c6f"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_finish.py",
-      "bytes": 10338,
-      "sha256": "f4927468fed5e8366656fd950ee9d3708249450995a8c805712a41e38e95a8c5"
+      "bytes": 10168,
+      "sha256": "de961c32d149b80825a0ddc95a97e4619c5dc7f434f60b920098721a095d2753"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_lane_plan.py",
@@ -417,8 +422,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_random_trial.py",
-      "bytes": 5888,
-      "sha256": "f33e0cbca49cd70a293e15bff591e59f200077bb602027a69b71530883fae966"
+      "bytes": 5887,
+      "sha256": "33d859cad5826f7eb31b12e34bb9a676ce174052bfe19dbbc02cf7c44f81b322"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_route.py",
@@ -432,13 +437,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_signal_check.py",
-      "bytes": 6503,
-      "sha256": "9f89f5f890a9a75b3f11547088b5bc735a0264bd7931c2f0b1c63f860f6aa887"
+      "bytes": 6402,
+      "sha256": "5b518ea20fa31dc86e5888bd88eae27382a52a998498efe0ffae4229345113d8"
     },
     {
       "path": "standardization/JunctionToolkit/roundabout_view.py",
-      "bytes": 4808,
-      "sha256": "5015b404e20e44d243d5d97d77e61df5e0969d52240cb4f54a32c5307deea4cb"
+      "bytes": 4748,
+      "sha256": "53f245a552600a6edae59dbc086ecd4ed461e0a892c585165c315592bd47eadd"
     },
     {
       "path": "standardization/JunctionToolkit/runtime_config.py",
@@ -447,23 +452,23 @@
     },
     {
       "path": "standardization/JunctionToolkit/runtime_finish.py",
-      "bytes": 5811,
-      "sha256": "999e564dada883b237add8f2832c58cd80505f58f62fc7f842bc340481527b51"
+      "bytes": 5839,
+      "sha256": "d03943714314dd8f84f95bb409c4f9d46cf33cf8a7dfb36c9d7de4e3315bf601"
     },
     {
       "path": "standardization/JunctionToolkit/runtime_sidewalks.py",
-      "bytes": 2539,
-      "sha256": "1e6b048cdda8092b8a168bf0821b0215030345b978e76872a8765c983eb436ae"
+      "bytes": 2488,
+      "sha256": "f079cc5e9b2df051974ee6abd4dc9e5b5951ffddb56f7950f03432ed60c952a2"
     },
     {
       "path": "standardization/JunctionToolkit/safety_rules.py",
-      "bytes": 8850,
-      "sha256": "9e6f4ab0d3b47a29744c1fbba602c6e10ccda4817c1ba990bd7199d2dd1a10da"
+      "bytes": 8680,
+      "sha256": "4cad6a5b971d3998adac295f4be62886b3c0e17f4a4e84b7ef8c67e75b7e8d95"
     },
     {
       "path": "standardization/JunctionToolkit/scenery.py",
-      "bytes": 5217,
-      "sha256": "6d21bce8f97da55cd7e104147f2ab7d55810eb171125b09b6a307003bff19e5d"
+      "bytes": 5134,
+      "sha256": "aad852ca2033099bcdb54bc9598c799b5b213dc58d11393da886c14cd1a326bc"
     },
     {
       "path": "standardization/JunctionToolkit/settings.json",
@@ -471,9 +476,14 @@
       "sha256": "8ad471ad61130e75f43e46e86b9dbcc4b0462e57a66ac4e57b54031c3bb103b9"
     },
     {
+      "path": "standardization/JunctionToolkit/signal_placement.py",
+      "bytes": 3118,
+      "sha256": "1065b5bb02f92c942e2d9a734dde4cfcb56bd2c3c6cf944956d7da8ae175a441"
+    },
+    {
       "path": "standardization/JunctionToolkit/standard_preview.py",
-      "bytes": 4038,
-      "sha256": "3804ecdc86cc4fdd4aba36957481547e7292515a2ed99747051e39e05960623b"
+      "bytes": 4019,
+      "sha256": "d2d6ce2a0f02d466f313de6f4feeeaca719a9e9e5f6b232aaa74c11e73baf637"
     },
     {
       "path": "standardization/JunctionToolkit/standard_surface_check.py",
@@ -482,28 +492,28 @@
     },
     {
       "path": "standardization/JunctionToolkit/static_transition.py",
-      "bytes": 5679,
-      "sha256": "6373040b49d094257e784809b8f1ceb50a36f9ae35613033987bdb5b78410e52"
+      "bytes": 5562,
+      "sha256": "133ad13c4adf3ba009a284cdb1e62463baf32097631769d426d591c23733ba86"
     },
     {
       "path": "standardization/JunctionToolkit/template_network.py",
-      "bytes": 7910,
-      "sha256": "fc8fb73c2c9d93b264dd2f9e327a7099d937409c80d71bf614da22e0b3b0e2f0"
+      "bytes": 7840,
+      "sha256": "6fe2ef900c4b0c3682b816a322f9bf68f153831df3ba1a6ff9446326c2fbd578"
     },
     {
       "path": "standardization/JunctionToolkit/templates/round_cross2/appearance.json",
-      "bytes": 684,
-      "sha256": "f25ed42ef4f6817170fa500c816cda63f86bf016f364c910324bfc424d1680b1"
+      "bytes": 669,
+      "sha256": "3353de95c28972f78f6a4a137a8af10685d5802408de9c12759b0e80c558a9cb"
     },
     {
       "path": "standardization/JunctionToolkit/templates/t_cross2/appearance.json",
-      "bytes": 1158,
-      "sha256": "96dd40ba41fce58e1328e7b0ac618193727b0ffe3cf05dc5f1dadbfbe4cc9f80"
+      "bytes": 1131,
+      "sha256": "15246e87a759ee88de2d2c8641b1a8da5728393237a493c009a547d7a37505c8"
     },
     {
       "path": "standardization/JunctionToolkit/templates/t_cross2/profile.json",
-      "bytes": 550,
-      "sha256": "592747d0081388d55c46ebd2edba0524ed150527d0cdd683a08c3aff6938c745"
+      "bytes": 539,
+      "sha256": "b1c11a46f7f2dc8913f93b10e7d590f5b02809fa1de102fbc81a755dee62f770"
     },
     {
       "path": "standardization/JunctionToolkit/templates/t_cross2/README.md",
@@ -522,8 +532,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/test_layout.py",
-      "bytes": 1184,
-      "sha256": "5bc9a20b26b47ea1e5551c864b7ddcafc88f584bf35f9c40baca4ea94d69cd77"
+      "bytes": 1183,
+      "sha256": "e2030de4d88ad9be33254aa70ec8a58d90dda5f66886a7937b0134d08c837495"
     },
     {
       "path": "standardization/JunctionToolkit/test_network_appearance_plan.py",
@@ -537,8 +547,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/test_network_display.py",
-      "bytes": 1524,
-      "sha256": "ba7374ad0e9b98498b4b034e7be9e0b7c76be2a11b15765b0c8334907741aa41"
+      "bytes": 1513,
+      "sha256": "082add6441805a618d81c815cfe1fd08e86f70518908b34d089a13571897ccac"
     },
     {
       "path": "standardization/JunctionToolkit/test_network_plan.py",
@@ -552,13 +562,18 @@
     },
     {
       "path": "standardization/JunctionToolkit/test_road_standard.py",
-      "bytes": 1997,
-      "sha256": "fb63ce2a7554100ea47f0c8a30f8205c2b646b94197596604cab3360db7074c2"
+      "bytes": 1948,
+      "sha256": "efa2ba2e9094c0fe03087a667feafa44c8eb8ce5eac0e1fa5932bda709b216b5"
     },
     {
       "path": "standardization/JunctionToolkit/test_runtime_config.py",
       "bytes": 884,
       "sha256": "eb4a4d2427b71e58c4e463c705c884c2609f6faf72d2d5058ab7bfdc06a52c02"
+    },
+    {
+      "path": "standardization/JunctionToolkit/test_signal_placement.py",
+      "bytes": 2572,
+      "sha256": "0f7e1537766d2dc683ed17b5d4fd081888f55aa66c9a9d006981a8c74211fc22"
     },
     {
       "path": "standardization/JunctionToolkit/test_t_surface.py",
@@ -572,8 +587,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/toolkit.py",
-      "bytes": 5636,
-      "sha256": "7fb31bac50a7e25df584751d4af8ac528903a214e78a9215f289dc4e1bcf3015"
+      "bytes": 5545,
+      "sha256": "b6432b2dd955c1802d8cb0d81d4369ff312c21f4b6e1b1a24d8688b3c294a8c0"
     },
     {
       "path": "standardization/JunctionToolkit/transition_connector.py",
@@ -587,13 +602,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/tree_scenery.py",
-      "bytes": 2963,
-      "sha256": "3851aeda82098af66a8382e8f51937b7788886f2e733e0efb4744ce22514cd05"
+      "bytes": 2914,
+      "sha256": "daac7b196a98e7ac38d84047a5b681bfa3fd4186f11a0f3d6750fccb121c3541"
     },
     {
       "path": "standardization/JunctionToolkit/validate.py",
-      "bytes": 8385,
-      "sha256": "16a6c479f4c1ca6d4b09ab5b99ea2d514ecac3803d48cee9d62ba4ec12b88d37"
+      "bytes": 8244,
+      "sha256": "8a82a63b1827a9595db0c048ddd4b1f997470c58a5884a690e0405171e7db5c3"
     },
     {
       "path": "standardization/JunctionToolkit/validate_heterogeneous.py",
@@ -607,8 +622,8 @@
     },
     {
       "path": "standardization/JunctionToolkit/validate_network.py",
-      "bytes": 2433,
-      "sha256": "fc41ee7b9b7f45c95dc760af7c92261248866d97829223a2042f829ef275c523"
+      "bytes": 2429,
+      "sha256": "e3fea0c4f91ac07875f039b1c18d3b9e78035be673d89ef4e6e9ace92373c761"
     },
     {
       "path": "standardization/JunctionToolkit/validate_roundabout.py",
@@ -617,13 +632,13 @@
     },
     {
       "path": "standardization/JunctionToolkit/validate_standard.py",
-      "bytes": 6125,
-      "sha256": "709d1ea378e42ff0c77bdff3bbac79afa4c40ea55f37ffae96d831be1cb60a55"
+      "bytes": 6020,
+      "sha256": "ec6aa71ffbde69ca0f8958f4dec8ee946f9e7fd9df8e44c795b523d9e016bdf5"
     },
     {
       "path": "standardization/JunctionToolkit/view.py",
-      "bytes": 8855,
-      "sha256": "81420b7cfc210ead087f999eed38b0691edc1814d023d984983c3626fc4bdaa4"
+      "bytes": 8703,
+      "sha256": "247aa4663c6d5b8d2d8966ec32b31226357ef42cef41387ac4440332fd05e049"
     },
     {
       "path": "standardization/maps/cross_1x6_connected_20261103/config.json",
@@ -1217,8 +1232,8 @@
     },
     {
       "path": "standardization/maps/mixed_1x6/admission_topology.json",
-      "bytes": 10618,
-      "sha256": "95c99472a7bb6b23b90499f15b369318f8256b743e7fdb070b13b1e7ec4eaaf5"
+      "bytes": 9916,
+      "sha256": "eda1fc19e66be135d70dd13a427a05d156bced794f374086e68fb4e13c13fe4e"
     },
     {
       "path": "standardization/maps/mixed_1x6/config.json",
@@ -1257,8 +1272,8 @@
     },
     {
       "path": "standardization/maps/mixed_1x6/release_drive_validation.json",
-      "bytes": 32019,
-      "sha256": "627caa9a232f867efdd470edf836ab13caf33b0358ad617a9ed91258ed6671a7"
+      "bytes": 30708,
+      "sha256": "adc0de8a1dacfbffa5ac55bf0bab68516c1eb650ed1e2c7e179af6b54e80e701"
     },
     {
       "path": "standardization/maps/mixed_1x6/safety_rules.json",
@@ -1357,8 +1372,8 @@
     },
     {
       "path": "standardization/maps/package_smoke_t/admission_topology.json",
-      "bytes": 6244,
-      "sha256": "3610ae11bd466dce6dae235c86bf224d82dc26fdca5e8408331312126e0bc953"
+      "bytes": 5839,
+      "sha256": "ce06380c71edb6d92af85bb95898bb34f1c125990761cd6a6eec1b94cdf0bdad"
     },
     {
       "path": "standardization/maps/package_smoke_t/config.json",
@@ -1467,8 +1482,8 @@
     },
     {
       "path": "standardization/maps/t_1x6/admission_topology.json",
-      "bytes": 6244,
-      "sha256": "e6ce4a1e7674923680c077ef6e0b8325a36f1af57cde0426f888536e4d40495c"
+      "bytes": 5839,
+      "sha256": "b064e449a571a721bec9872faf34b790cb88bc14ab05fa571b7f23a8538e999a"
     },
     {
       "path": "standardization/maps/t_1x6/config.json",
@@ -1507,8 +1522,8 @@
     },
     {
       "path": "standardization/maps/t_1x6/release_drive_validation.json",
-      "bytes": 19472,
-      "sha256": "83e1ca6ab702b10b8992fe5a6fb35ad08cb585a85ff8885460e23d185a81f524"
+      "bytes": 18679,
+      "sha256": "96629b75d9151e18be52b179d76ca363730f0394475f5114e2664a7b3f4d4908"
     },
     {
       "path": "standardization/maps/t_1x6/safety_rules.json",
@@ -1609,6 +1624,106 @@
       "path": "standardization/render_schematic.ps1",
       "bytes": 2737,
       "sha256": "118b0adc4c995b438a7f6c6733a3d340ac9c99331ba4f257058df961db3cbb61"
+    },
+    {
+      "path": "standardization/route_adapter/__init__.py",
+      "bytes": 1688,
+      "sha256": "9aa0478aebb9dbc2192e8b7f7955d0c5d9883d8c9d3b2d677c38de6c8ac8f079"
+    },
+    {
+      "path": "standardization/route_adapter/adapter.py",
+      "bytes": 9923,
+      "sha256": "47f14747152cdbb4abb8efae83d5a2c86ed1b39a904226016096d6b87c8b4eac"
+    },
+    {
+      "path": "standardization/route_adapter/CHANGELOG.md",
+      "bytes": 2254,
+      "sha256": "45ab81e51ffe901fd0f2097f5d1379bfa333ccc0916503ca00362ea9962c89a1"
+    },
+    {
+      "path": "standardization/route_adapter/compatibility.py",
+      "bytes": 4094,
+      "sha256": "769f5b25e92ac26804967b009023f864e2830514c127fc4a0d87c7f0f5ea2709"
+    },
+    {
+      "path": "standardization/route_adapter/continuous_route_planner.py",
+      "bytes": 5063,
+      "sha256": "91dbace6aad01dde211d55dec9a62ff7806d7251802f89e4a5355fac65ab694e"
+    },
+    {
+      "path": "standardization/route_adapter/contract.py",
+      "bytes": 4297,
+      "sha256": "067524bb105db64523e590a476e65ee2fe7bcf553b2a495413088a5c45e37cf3"
+    },
+    {
+      "path": "standardization/route_adapter/errors.py",
+      "bytes": 243,
+      "sha256": "92e617618bc4de1125d50e55daa4e3b16ca77de0cb9d05e54331a7a7266bb6d7"
+    },
+    {
+      "path": "standardization/route_adapter/heterogeneous_route.py",
+      "bytes": 6136,
+      "sha256": "425cb2dd8ec776f755a3b97bed042b108dd518f5a38e28aabb541fdb6b359395"
+    },
+    {
+      "path": "standardization/route_adapter/network_itinerary.py",
+      "bytes": 1719,
+      "sha256": "297c097c801a027c026e7be2fc186096f5c81089d20741400731f08159b3e7d7"
+    },
+    {
+      "path": "standardization/route_adapter/output.schema.json",
+      "bytes": 4428,
+      "sha256": "014a58346aef91ac7444b9dd232cd44d2908d4f323358acfa2ca6c300f3509b2"
+    },
+    {
+      "path": "standardization/route_adapter/README.md",
+      "bytes": 8740,
+      "sha256": "90141a761fae6369144ed23cd8c605240775519290e0cb1563f5c2e839b78f9c"
+    },
+    {
+      "path": "standardization/route_adapter/requirements-test.txt",
+      "bytes": 113,
+      "sha256": "9590aab437693c626b2fa1a7becc6173f1423c5e9b93163edd9a56f95b64dd9e"
+    },
+    {
+      "path": "standardization/route_adapter/requirements.txt",
+      "bytes": 15,
+      "sha256": "e9a87c4460fb20bb9d4182cf95821bdca1c8f58b4f116ad5cd6a8fefcc04fe1b"
+    },
+    {
+      "path": "standardization/route_adapter/roundabout_route.py",
+      "bytes": 2138,
+      "sha256": "24d8403f9ac8b75be28970b3bfd4775375701b848fac4f992041e7a899d91af1"
+    },
+    {
+      "path": "standardization/route_adapter/route_topology.py",
+      "bytes": 10544,
+      "sha256": "2f9485c972efe805ba1a2f73aa20521cabbc7cd16ce24ab95ef9144904fe8cac"
+    },
+    {
+      "path": "standardization/route_adapter/SOURCE.md",
+      "bytes": 1931,
+      "sha256": "96f857b4f278d122655f71da263a4c634aee9a553bc7934c5aa926ef77a56ea3"
+    },
+    {
+      "path": "standardization/route_adapter/test_adapter.py",
+      "bytes": 4187,
+      "sha256": "06a0d0fb52c8a62d801361e7fcc9c14ea77c79de97dd61477bcda72771f76077"
+    },
+    {
+      "path": "standardization/route_adapter/test_contract.py",
+      "bytes": 8429,
+      "sha256": "b2d0ab0a21dc7e89db112114b5460e582d29d33777c2a86f869d9ba0076c1d72"
+    },
+    {
+      "path": "standardization/route_adapter/test_topology_api.py",
+      "bytes": 1230,
+      "sha256": "a7cc96bd241af518b5e068f00f1576808e73082bef86b99ca90d4bbecf9ba7e9"
+    },
+    {
+      "path": "standardization/route_adapter/topology_adapter.py",
+      "bytes": 9798,
+      "sha256": "026ca514ace81ccb659a6e4ffb15d88f27dca942641d78fdc7027e06a3c7738d"
     }
   ]
 }

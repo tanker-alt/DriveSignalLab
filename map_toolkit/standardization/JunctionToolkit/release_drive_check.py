@@ -1,4 +1,4 @@
-﻿"""Release gate: actual vehicle motion, all-green isolated routes, project preflight."""
+"""Release gate: actual vehicle motion, all-green isolated routes, project preflight."""
 import argparse,collections,hashlib,json,math,sys,time
 from pathlib import Path
 import carla

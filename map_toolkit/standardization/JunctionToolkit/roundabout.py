@@ -131,6 +131,10 @@ def generate(out,radius=30.,arm_length=120.,width=3.5):
     for sid,cfg in signalmap.items():
         group=road_groups[cfg['road_id']];cfg['signal_group']=group;groups[str(group)]['signal_ids'].append(sid)
     design['signal_groups']=groups
+    from signal_placement import apply as place_signals
+    place_signals(root,design)
+    ET.ElementTree(root).write(str(out/'map.xodr'),encoding='utf-8',xml_declaration=True)
+    design['opendrive_sha256']=hashlib.sha256((out/'map.xodr').read_bytes()).hexdigest()
     phase_example=dict(status='visual_demo_only_not_traffic_validated',source='User-supplied eight-group roundabout phase diagram',
         phases=[dict(name='A',green_groups=[5,6,7,8],seconds=24),dict(name='B',green_groups=[2,4,6,8],seconds=36),
                 dict(name='C',green_groups=[5,6,7,8],seconds=24),dict(name='D',green_groups=[1,3,5,7],seconds=36)],

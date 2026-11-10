@@ -32,6 +32,8 @@ def build(world, design, client=None):
         def point(s,t):
             tr=m.get_waypoint_xodr(rid,-1,max(.01,min(length-.01,s))).transform
             r=tr.get_right_vector()
+            # t is measured from the centre of lane -1, which is the
+            # reference used by the rest of this renderer.
             return tr.location.x+r.x*(t-width/2),tr.location.y+r.y*(t-width/2),tr.rotation.yaw
         def white(s0,t0,s1,t1,width):
             distance=math.hypot(s1-s0,t1-t0)

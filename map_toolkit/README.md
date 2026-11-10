@@ -213,3 +213,12 @@ CARLA 启动后加载、应用默认简化美化并截图：
 ```
 
 本工作区的 GitHub 发布副本位于 `github/DriveSignalLab/map_toolkit`，使用独立发布分支。发布前按最终仓库目录调整文档链接及命令路径，携带入口脚本的全部源码依赖、JSON配置、精选示例与报告。不要上传虚拟环境、机器专属 `settings.local.json` 或 CARLA/RoadRunner 商业资产二进制。向主工程部署地图或工具需另行明确授权。
+
+
+## 2026-11-10 generator and runtime update
+
+The complete generator and beautification sources from the maps release now live in `standardization/JunctionToolkit/` on this toolkit branch. Physical far-side lamps preserve logical signal stations and lane validity. Run `python standardization/JunctionToolkit/generate.py --config standardization/JunctionToolkit/configs/cross3.json --out standardization/maps/new_cross3` from `map_toolkit` with the generator dependencies installed.
+
+The route adapter, including the subsequent OD catalog updates, is in `standardization/route_adapter/`. Pass `--dataset /path/to/maps/MapDataset` to batch/verify, or `--map-dir /path/to/map` to single-map commands. `ROUTE_ADAPTER_DATASET` also sets the default dataset. Its historical docs refer to the former `maps/route_adapter` location. The existing illustrative toolkit maps are historical examples, not the newly camera-certified release.
+
+Accepted experimental maps, camera evidence and standalone beautification runtime remain on the `maps` branch. No maps were regenerated for this branch reorganization. Use CLI entry points; the historical interactive wizard was not modified or certified by this update.

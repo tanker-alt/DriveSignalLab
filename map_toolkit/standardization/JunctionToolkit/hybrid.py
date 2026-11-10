@@ -75,7 +75,7 @@ def generate_hybrid(config, out):
             for sig in road.findall('./signals/signal'):
                 pos=sig.find('positionInertial')
                 if pos is not None:
-                    s=float(sig.get('s')); t=float(sig.get('t'))
+                    s=float(sig.get('s'))+float(manifest['signals'][sig.get('id')].get('physical_forward_offset_m',0)); t=float(sig.get('t'))
                     pos.set('x',str(sx+s*math.cos(h)-t*math.sin(h)))
                     pos.set('y',str(sy+s*math.sin(h)+t*math.cos(h)))
                     pos.set('hdg',str(h))

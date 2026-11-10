@@ -18,6 +18,9 @@ import road_standard as standard
 from runtime_config import map_output
 from network_seams import stitch
 
+STANDARD_SIGNAL_TRIGGER_DISTANCE_M = 3.0
+STANDARD_VEHICLE_FRONT_CLEARANCE_M = 2.4
+
 
 def child(parent, tag, **attrs):
     return ET.SubElement(parent, tag, {k: str(v) for k, v in attrs.items()})
@@ -152,7 +155,8 @@ def make_tile(c, lengths):
         for lane_index in range(1,n+1):
             sid=1000+rid*10+lane_index
             cid=2000+rid*10+lane_index
-            s = child(signals, 'signal', s=length-3, t=-(lane_index-.5)*width-6.0, id=sid,
+            signal_station = (standard.stop_s(length) + STANDARD_SIGNAL_TRIGGER_DISTANCE_M - STANDARD_VEHICLE_FRONT_CLEARANCE_M) if c.get('standard_profile') == standard.PROFILE else length-3
+            s = child(signals, 'signal', s=signal_station, t=-(lane_index-.5)*width-6.0, id=sid,
                       name='LaneSignal_{}_{}'.format(rid,lane_index), dynamic='yes', orientation='+', zOffset=5.5,
                       country='OpenDRIVE', type='1000001', subtype=-1, value=-1, height=3, width=.3, hOffset=0)
             child(s, 'validity', fromLane=-lane_index, toLane=-lane_index)
@@ -274,7 +278,7 @@ def generate(config, out):
                     manifest['signals'][str(base+1000+(i+1)*10+lane_index)] = dict(road_id=base+i+1, junction_id=base+10,
                         phase_slot=slot*c['incoming_lanes']+lane_index-1, approach_slot=slot,
                         reference_s=standard.stop_s(lengths[i]) if c.get('standard_profile') == standard.PROFILE else lengths[i]-6,
-                        signal_s=lengths[i]-3, incoming_lanes=[-lane_index])
+                        signal_s=(standard.stop_s(lengths[i]) + STANDARD_SIGNAL_TRIGGER_DISTANCE_M - STANDARD_VEHICLE_FRONT_CLEARANCE_M) if c.get('standard_profile') == standard.PROFILE else lengths[i]-3, incoming_lanes=[-lane_index])
     # Each pair of inward-oriented arms meets start-to-start. Lane signs invert.
     for row in range(c['rows']):
         for col in range(c['columns']):
@@ -292,6 +296,8 @@ def generate(config, out):
     manifest['seam_policy']='start-to-start, reciprocal road/lane predecessors, inverted lane IDs'
     # Keep the OpenDRIVE element order compatible with its schema.
     root[:] = [h]+root.findall('road')+root.findall('controller')+root.findall('junction')
+    from signal_placement import apply as place_signals
+    place_signals(root, manifest)
     out.mkdir(parents=True,exist_ok=True)
     ET.indent(root)
     path=out/'map.xodr';ET.ElementTree(root).write(path,encoding='utf-8',xml_declaration=True)
@@ -307,5 +313,3 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--config',required=True);p.add_argument('--out',required=True)
     a=p.parse_args();generate(json.loads(Path(a.config).read_text(encoding='utf-8-sig')),a.out)
-
-

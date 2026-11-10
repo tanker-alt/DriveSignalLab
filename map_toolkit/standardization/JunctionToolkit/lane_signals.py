@@ -17,10 +17,14 @@ def build(world, design):
         head=boxes[0];wp=road_map.get_waypoint_xodr(cfg['road_id'],cfg['incoming_lanes'][0],cfg.get('signal_s',cfg['reference_s']+3))
         right=wp.transform.get_right_vector();delta=head.location-wp.transform.location
         error=abs(delta.x*right.x+delta.y*right.y)
+        forward=wp.transform.get_forward_vector()
+        longitudinal_error=abs(delta.x*forward.x+delta.y*forward.y-float(cfg.get('physical_forward_offset_m',0)))
+        if 'physical_forward_offset_m' in cfg and longitudinal_error>.5:
+            raise RuntimeError('Native head differs from physical placement: '+sid)
         if error>.1 or head.location.z-head.extent.z<4.5:
             raise RuntimeError('Native head not safely aligned over its lane: '+sid)
         poses.append(dict(signal_id=sid,road_id=cfg['road_id'],lane_id=cfg['incoming_lanes'][0],lateral_error_m=error,
-                          head=[head.location.x,head.location.y,head.location.z]))
+                          head=[head.location.x,head.location.y,head.location.z],physical_longitudinal_error_m=longitudinal_error))
     poles=[o.id for o in world.get_environment_objects(carla.CityObjectLabel.Poles) if 'BP_TLOpenDrive' in o.name]
     if len(poles)!=3*len(lights):raise RuntimeError('Unknown stock support layout; refusing partial hiding')
     world.enable_environment_objects(set(poles),False)
@@ -50,12 +54,15 @@ def build(world, design):
             rid=approach['road_id'];n=approach['incoming_lanes'];width=approach['lane_width_m']
             wp=road_map.get_waypoint_xodr(rid,-1,approach['signal_s'])
             right=wp.transform.get_right_vector();forward=wp.transform.get_forward_vector()
+            offsets={float(design['signals'][sid].get('physical_forward_offset_m',0)) for sid in approach['signal_ids']}
+            if len(offsets)!=1:raise RuntimeError('Inconsistent physical mast offsets')
+            physical_offset=offsets.pop()
             # Official complete mast/curved arm/street-lamp mesh; local +X
             # points from the roadside pole into the road.
             def point(lateral,z):
                 p=wp.transform.location
-                return carla.Location(p.x+right.x*(lateral-width/2)-forward.x*.42,
-                                      p.y+right.y*(lateral-width/2)-forward.y*.42,z)
+                return carla.Location(p.x+right.x*(lateral-width/2)+forward.x*(physical_offset-.42),
+                                      p.y+right.y*(lateral-width/2)+forward.y*(physical_offset-.42),z)
             curb=n*width+approach['shoulder_width_m']+.8
             model='SM_TrafficLight01' if n>=3 else 'SM_TrafficLight02'
             span=11.879336 if n>=3 else 7.31334
