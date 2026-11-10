@@ -165,4 +165,4 @@ If this work is helpful for your research, please consider citing:
 
 ## CARLA maps branch
 
-See [maps/README.md](maps/README.md) for the ten camera-validated maps, generator, beautification modules and portable route adapter.
+See [maps/README.md](maps/README.md) for the ten camera-validated maps, standalone beautification runtime and acceptance evidence.

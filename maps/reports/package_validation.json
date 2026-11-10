@@ -1,13 +1,28 @@
 {
   "passed": true,
+  "operation": "branch_split_20261110",
+  "map_files_unchanged": 698,
   "maps": 10,
   "signals": 536,
   "camera_cases": 1608,
-  "routes_rebuilt": true,
-  "unit_tests": 10,
-  "python37_sources_parse_except_historical_wizard": true,
-  "known_limit": "Existing wizard.py has encoding-damaged strings; use toolkit.py or generate.py CLI. Wizard functionality was not changed.",
-  "commercial_asset_binaries": false,
-  "maximum_file_bytes": 3469827,
-  "file_count": 832
+  "beautification_modules": [
+    "appearance_standard",
+    "lane_signals",
+    "layout",
+    "network_appearance_plan",
+    "network_preview",
+    "network_simple_finish",
+    "ring_sidewalk_finish",
+    "road_standard",
+    "roundabout_finish",
+    "roundabout_view",
+    "runtime_finish",
+    "runtime_sidewalks",
+    "safety_rules",
+    "scenery",
+    "standard_preview",
+    "tree_scenery",
+    "view"
+  ],
+  "toolkit_branch": "toolkit/map-toolkit-2026-11-02"
 }

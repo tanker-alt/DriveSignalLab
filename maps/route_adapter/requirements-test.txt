@@ -1,3 +1,0 @@
--r requirements.txt
-jsonschema==4.17.3; python_version < "3.8"
-jsonschema>=4.17.3,<5; python_version >= "3.8"
